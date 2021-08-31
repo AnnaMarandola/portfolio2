@@ -4,6 +4,8 @@ import PortfolioPreview from "./PortfolioPreview";
 const styles = (theme) => ({
   root: {
     width: "100%",
+    paddingBottom: "10rem",
+
     [theme.breakpoints.up("md")]: {},
   },
 

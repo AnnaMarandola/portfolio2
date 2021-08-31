@@ -1,4 +1,5 @@
 import AboutSection from "./components/AboutSection";
+import ContactSection from "./components/ContactSection";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import PortfolioSection from "./components/PortfolioSection";
@@ -12,6 +13,7 @@ function App() {
       <AboutSection />
       <ServicesSection />
       <PortfolioSection />
+      <ContactSection />
     </div>
   );
 }

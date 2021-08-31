@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
-import { withStyles, Typography, Card, Button } from "@material-ui/core";
+import { withStyles, Typography, Card, Button, Fab } from "@material-ui/core";
 import { projects } from "../components/ProjectsData";
 import Pagination from "@material-ui/lab/Pagination";
 import ScrollAnimation from "react-animate-on-scroll";
 import "animate.css";
+import AddIcon from "@material-ui/icons/Add";
+import VisibilityOutlinedIcon from "@material-ui/icons/VisibilityOutlined";
 
 const styles = (theme) => ({
   root: {
@@ -23,6 +25,10 @@ const styles = (theme) => ({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+    "&:hover": {
+      transform: "scale(1.1)",
+      transition: "0.7s",
+    },
     [theme.breakpoints.up("sm")]: {
       margin: "3rem",
     },
@@ -33,17 +39,23 @@ const styles = (theme) => ({
       width: "auto",
     },
   },
-  descriptionContainer: {
+  descriptionCard: {
     borderRadius: "12px",
     border: "1px solid rgba(209,213,219,0.3)",
     color: "black",
     padding: "1rem",
     width: "80%",
+    display: "flex",
+    justifyContent: "space-between",
+  },
+  fab: {
+    margin: "0.5rem",
+
   },
   pagination: {
     display: "flex",
     flexDirection: "column",
-    alignItems: "center"
+    alignItems: "center",
   },
   page: {
     paddingBottom: "1rem",
@@ -73,8 +85,8 @@ const PortfolioPreview = ({ classes }) => {
   };
 
   const handleSeeAll = (e, value) => {
-    setPageSize(projects.length)
-  }
+    setPageSize(projects.length);
+  };
   return (
     <div className={classes.root}>
       <div className={classes.projectsContainer}>
@@ -94,9 +106,19 @@ const PortfolioPreview = ({ classes }) => {
               />
               <span className={classes.imageBackdrop} />
 
-              <Card className={classes.descriptionContainer}>
-                <Typography>{project.title}</Typography>
-                <Typography>{project.date}</Typography>
+              <Card className={classes.descriptionCard}>
+                <div>
+                  <Typography>{project.title}</Typography>
+                  <Typography>{project.date}</Typography>
+                </div>
+                <div className={classes.buttons}>
+                  <Fab size="small" className={classes.fab}>
+                    <AddIcon />
+                  </Fab>
+                  <Fab size="small" className={classes.fab}>
+                    <VisibilityOutlinedIcon />
+                  </Fab>
+                </div>
               </Card>
             </div>
           </ScrollAnimation>
@@ -109,9 +131,9 @@ const PortfolioPreview = ({ classes }) => {
           page={page}
           onChange={handleChangePage}
         />
-        <Button 
-        className={classes.allButton}
-        onClick={handleSeeAll}>tous</Button>
+        <Button className={classes.allButton} onClick={handleSeeAll}>
+          tous
+        </Button>
       </div>
     </div>
   );
