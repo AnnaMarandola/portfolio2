@@ -1,10 +1,17 @@
+import { useState, useEffect } from "react";
 import { withStyles, Typography, Card } from "@material-ui/core";
 import { projects } from "../components/ProjectsData";
+import Pagination from "@material-ui/lab/Pagination";
 import ScrollAnimation from "react-animate-on-scroll";
 import "animate.css";
 
 const styles = (theme) => ({
   root: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center"
+  },
+  projectsContainer: {
     width: "100%",
     display: "flex",
     flexWrap: "wrap",
@@ -33,35 +40,65 @@ const styles = (theme) => ({
     padding: "1rem",
     width: "80%",
   },
+  page: {
+    textAlign: "center",
+    paddingBottom: "1rem"
+  }
+
 });
 
 const PortfolioPreview = ({ classes }) => {
+  const firstIndex = 0;
+  const pageSize = 4;
+  const [page, setPage] = useState(1);
+  const [data, setData] = useState(projects.slice(firstIndex, pageSize));
+
+  useEffect(() => {
+    setData(projects.slice(0, pageSize));
+  }, [pageSize]);
+
+  const handleChangePage = (e, value) => {
+    setPage(value);
+    setData(
+      projects.slice(firstIndex + pageSize * (value - 1), pageSize * value)
+    );
+  };
   return (
     <div className={classes.root}>
-        {projects.map((project, index) => (
-          <ScrollAnimation
-            animateIn="animate__fadeIn"
-            animateOut="animate__fadeOut"
-            duration={1}
-            delay={300}
-            key={index}
-          >
-            <div className={classes.project} key={index}>
-              <img
-                src={project.url}
-                alt={project.title}
-                className={classes.imageSrc}
-              />
-              <span className={classes.imageBackdrop} />
+    <div className={classes.projectsContainer}>
+      {data.map((project, index) => (
+        <ScrollAnimation
+          animateIn="animate__fadeIn"
+          animateOut="animate__fadeOut"
+          duration={1}
+          delay={300}
+          key={index}
+        >
+          <div className={classes.project} key={index}>
+            <img
+              src={project.url}
+              alt={project.title}
+              className={classes.imageSrc}
+            />
+            <span className={classes.imageBackdrop} />
 
-              <Card className={classes.descriptionContainer}>
-                <Typography>{project.title}</Typography>
-                <Typography>{project.date}</Typography>
-              </Card>
-            </div>
-          </ScrollAnimation>
-        ))}
+            <Card className={classes.descriptionContainer}>
+              <Typography>{project.title}</Typography>
+              <Typography>{project.date}</Typography>
+            </Card>
+          </div>
+        </ScrollAnimation>
+      ))}
       </div>
+      <div className={classes.pagination}>
+        <Typography className={classes.page}> page: {page}</Typography>
+        <Pagination
+          count={Math.ceil(projects.length / pageSize)}
+          page={page}
+          onChange={handleChangePage}
+        />
+      </div>
+    </div>
   );
 };
 
