@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { withStyles, Typography, Card } from "@material-ui/core";
+import { withStyles, Typography, Card, Button } from "@material-ui/core";
 import { projects } from "../components/ProjectsData";
 import Pagination from "@material-ui/lab/Pagination";
 import ScrollAnimation from "react-animate-on-scroll";
@@ -9,7 +9,7 @@ const styles = (theme) => ({
   root: {
     display: "flex",
     flexDirection: "column",
-    alignItems: "center"
+    alignItems: "center",
   },
   projectsContainer: {
     width: "100%",
@@ -40,16 +40,24 @@ const styles = (theme) => ({
     padding: "1rem",
     width: "80%",
   },
+  pagination: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center"
+  },
   page: {
-    textAlign: "center",
-    paddingBottom: "1rem"
-  }
-
+    paddingBottom: "1rem",
+  },
+  allButton: {
+    marginTop: "3rem",
+    backgroundColor: "black",
+    color: "white",
+  },
 });
 
 const PortfolioPreview = ({ classes }) => {
   const firstIndex = 0;
-  const pageSize = 4;
+  const [pageSize, setPageSize] = useState(4);
   const [page, setPage] = useState(1);
   const [data, setData] = useState(projects.slice(firstIndex, pageSize));
 
@@ -63,32 +71,36 @@ const PortfolioPreview = ({ classes }) => {
       projects.slice(firstIndex + pageSize * (value - 1), pageSize * value)
     );
   };
+
+  const handleSeeAll = (e, value) => {
+    setPageSize(projects.length)
+  }
   return (
     <div className={classes.root}>
-    <div className={classes.projectsContainer}>
-      {data.map((project, index) => (
-        <ScrollAnimation
-          animateIn="animate__fadeIn"
-          animateOut="animate__fadeOut"
-          duration={1}
-          delay={300}
-          key={index}
-        >
-          <div className={classes.project} key={index}>
-            <img
-              src={project.url}
-              alt={project.title}
-              className={classes.imageSrc}
-            />
-            <span className={classes.imageBackdrop} />
+      <div className={classes.projectsContainer}>
+        {data.map((project, index) => (
+          <ScrollAnimation
+            animateIn="animate__fadeIn"
+            animateOut="animate__fadeOut"
+            duration={1}
+            delay={300}
+            key={index}
+          >
+            <div className={classes.project} key={index}>
+              <img
+                src={project.url}
+                alt={project.title}
+                className={classes.imageSrc}
+              />
+              <span className={classes.imageBackdrop} />
 
-            <Card className={classes.descriptionContainer}>
-              <Typography>{project.title}</Typography>
-              <Typography>{project.date}</Typography>
-            </Card>
-          </div>
-        </ScrollAnimation>
-      ))}
+              <Card className={classes.descriptionContainer}>
+                <Typography>{project.title}</Typography>
+                <Typography>{project.date}</Typography>
+              </Card>
+            </div>
+          </ScrollAnimation>
+        ))}
       </div>
       <div className={classes.pagination}>
         <Typography className={classes.page}> page: {page}</Typography>
@@ -97,6 +109,9 @@ const PortfolioPreview = ({ classes }) => {
           page={page}
           onChange={handleChangePage}
         />
+        <Button 
+        className={classes.allButton}
+        onClick={handleSeeAll}>tous</Button>
       </div>
     </div>
   );
