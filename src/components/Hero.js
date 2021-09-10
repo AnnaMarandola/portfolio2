@@ -1,18 +1,19 @@
 import { Typography, withStyles } from "@material-ui/core";
-import BG from "../assets/nick-demou.png";
+import BG from "../assets/hero/5.jpg";
 
 const styles = (theme) => ({
   root: {
     backgroundImage: `url(${BG})`,
     backgroundRepeat: "no-repeat",
-    backgroundPosition: "center 20% ",
+    backgroundPosition: "left 50% ",
     backgroundSize: "cover",
     backgroundColor: "#3A3054",
-    height: "40rem",
+    height: "50rem",
     display: "flex",
     alignItems: "center",
     paddingLeft: "5%",
     marginTop: "-5rem",
+    opacity: 1,
   },
   textContainer: {
     backgroundColor: "#white",

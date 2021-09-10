@@ -25,10 +25,10 @@ const styles = (theme) => ({
     width: "90%",
     padding: "0.5rem",
     marginBottom: "6rem",
+    // backgroundColor: "#f3f3f4",
     [theme.breakpoints.up("md")]: {
-      width: "25%",
+      width: "35%",
       padding: "3rem",
-
     },
   },
   form: {
@@ -37,10 +37,16 @@ const styles = (theme) => ({
   },
   contactInputs: {
     marginBottom: "1rem",
-    backgroundColor: "transparent",
+    borderRadius: "10px",
+    backgroundColor: "#f3f3f4",
+    border: "4px solid grey"
+
   },
   textArea: {
     marginBottom: "2rem",
+    backgroundColor: "#f3f3f4",
+    borderRadius: "10px",
+    border: "4px solid grey"
   },
   list: {},
   heading: {
@@ -48,8 +54,18 @@ const styles = (theme) => ({
     color: "grey",
   },
   submitButton: {
+    padding: "1rem 2rem",
+    borderRadius: "30px",
+    color: "white",
     width: "30%",
     marginLeft: "70%",
+    background:
+    "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
+    border: "2px solid #855aee",
+    "&:hover": {
+      background: "linear-gradient(to right top, #2d7dfe, #457ffe, #5780ff, #6582ff, #7284ff)",
+      border: "2px solid #7284ff",
+        },
   },
   cguSection: {
     display: "flex",
@@ -57,6 +73,7 @@ const styles = (theme) => ({
   },
   cgutext: {
     fontSize: "1rem",
+    color: "#D3D3D3",
   },
   cgulink: {
     fontWeight: 600,
@@ -66,13 +83,18 @@ const styles = (theme) => ({
       color: theme.palette.primary.yellow,
     },
   },
+  title: {
+    textAlign: "center",
+    paddingBottom: "2rem",
+    color: "#bcbdbc",
+  },
 });
 
 const OrangeCheckbox = withStyles({
   root: {
-    color: "black",
+    color: "#2c7dfe",
     "&$checked": {
-      color: "black",
+      color: "#2c7dfe",
     },
   },
   checked: {},
@@ -138,7 +160,10 @@ const ContactForm = ({ classes }) => {
 
   return (
     <div className={classes.root}>
-    <Typography> Demandez votre devis gratuit!</Typography>
+      <Typography className={classes.title}>
+        {" "}
+        Demandez votre devis gratuit!
+      </Typography>
       <form className={classes.form} onSubmit={handleSubmit}>
         <TextField
           label="nom"
@@ -185,7 +210,7 @@ const ContactForm = ({ classes }) => {
                   <ListItem key={value} button>
                     <ListItemText id={labelId} primary={` ${value}`} />
                     <ListItemSecondaryAction>
-                      <Checkbox
+                      <OrangeCheckbox
                         edge="end"
                         onChange={handleToggle(value)}
                         checked={checked.indexOf(value) !== -1}
@@ -230,7 +255,7 @@ const ContactForm = ({ classes }) => {
         <Button
           type="submit"
           onSubmit={handleSubmit}
-        //   style={{ background: loader ? "#ccc" : " rgb(2, 2, 110)" }}
+          //   style={{ background: loader ? "#ccc" : " rgb(2, 2, 110)" }}
           className={classes.submitButton}
         >
           Envoyer

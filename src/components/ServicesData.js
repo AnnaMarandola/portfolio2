@@ -33,7 +33,7 @@ export const servicesData= [
         description: "code optimisé pour le référencement naturel, analyses sématiques,  ",
     },
     {
-        feature: "Conseils et accompagnement",
+        feature: "Gestion de projet",
         img: PROJECT,
         description: "rédaction de backlog, rédaction des mentions légales, nom de domaine, conformité RGPD..",
     },

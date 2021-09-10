@@ -6,12 +6,17 @@ import ScrollAnimation from "react-animate-on-scroll";
 import "animate.css";
 import AddIcon from "@material-ui/icons/Add";
 import VisibilityOutlinedIcon from "@material-ui/icons/VisibilityOutlined";
+import Title from "./Title";
 
 const styles = (theme) => ({
   root: {
     display: "flex",
     flexDirection: "column",
-    alignItems: "center",
+    // alignItems: "center",
+    backgroundColor: "#29282e",
+
+    width: "90%",
+    marginLeft: "5%",
   },
   projectsContainer: {
     width: "100%",
@@ -35,35 +40,73 @@ const styles = (theme) => ({
   },
   imageSrc: {
     width: "100%",
+    zIndex: 2,
     [theme.breakpoints.up("sm")]: {
       width: "auto",
     },
   },
   descriptionCard: {
     borderRadius: "12px",
-    border: "1px solid rgba(209,213,219,0.3)",
-    color: "black",
-    padding: "1rem",
-    width: "80%",
+    color: "#ffffff",
+    width: "90%",
+    display: "flex",
+    alignItems: "flex-end",
+    justifyContent: "space-between",
+    height: "18rem",
+    marginTop: "-12rem",
+    zIndex: 1,
+    backgroundColor: "#78787a",
+    // background: "linear-gradient(to right top, #4ea78f, #48a390, #439f91, #3f9b91, #3b9791, #3a9591, #389490, #379290, #379290, #369391, #369391, #359391)",
+  },
+  container: {
     display: "flex",
     justifyContent: "space-between",
+    width: "100%",
+    padding: "1rem",
+    backgroundColor: "#040506",
+    opacity: 0.9,
+  },
+  texts: {
+    backgroundColor: "#040506",
+    color:"#ededee",
+
   },
   fab: {
     margin: "0.5rem",
-
+    color:
+      "linear-gradient(to right top, #2d7dfe, #457ffe, #5780ff, #6582ff, #7284ff)",
+    "&:hover": {
+      color: "white",
+      background:
+        "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
+    },
   },
-  pagination: {
+  paginationContainer: {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+    color: "white",
   },
   page: {
     paddingBottom: "1rem",
   },
+  pagination: {
+    backgroundColor: "#78787a",
+    padding: "0.5rem",
+  },
   allButton: {
-    marginTop: "3rem",
-    backgroundColor: "black",
+    marginTop: "5rem",
+    padding: "1rem 2rem",
+    borderRadius: "30px",
     color: "white",
+    background:
+      "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
+    border: "2px solid #855aee",
+    "&:hover": {
+      background:
+        "linear-gradient(to right top, #2d7dfe, #457ffe, #5780ff, #6582ff, #7284ff)",
+      border: "2px solid #7284ff",
+    },
   },
 });
 
@@ -89,6 +132,8 @@ const PortfolioPreview = ({ classes }) => {
   };
   return (
     <div className={classes.root}>
+      <Title title={"Portfolio"} />
+
       <div className={classes.projectsContainer}>
         {data.map((project, index) => (
           <ScrollAnimation
@@ -107,32 +152,35 @@ const PortfolioPreview = ({ classes }) => {
               <span className={classes.imageBackdrop} />
 
               <Card className={classes.descriptionCard}>
-                <div>
-                  <Typography>{project.title}</Typography>
-                  <Typography>{project.date}</Typography>
-                </div>
-                <div className={classes.buttons}>
-                  <Fab size="small" className={classes.fab}>
-                    <AddIcon />
-                  </Fab>
-                  <Fab size="small" className={classes.fab}>
-                    <VisibilityOutlinedIcon />
-                  </Fab>
+                <div className={classes.container}>
+                  <div className={classes.texts}>
+                    <Typography>{project.title}</Typography>
+                    <Typography>{project.date}</Typography>
+                  </div>
+                  <div className={classes.buttons}>
+                    <Fab size="small" className={classes.fab}>
+                      <AddIcon />
+                    </Fab>
+                    <Fab size="small" className={classes.fab}>
+                      <VisibilityOutlinedIcon />
+                    </Fab>
+                  </div>
                 </div>
               </Card>
             </div>
           </ScrollAnimation>
         ))}
       </div>
-      <div className={classes.pagination}>
+      <div className={classes.paginationContainer}>
         <Typography className={classes.page}> page: {page}</Typography>
         <Pagination
           count={Math.ceil(projects.length / pageSize)}
           page={page}
           onChange={handleChangePage}
+          className={classes.pagination}
         />
         <Button className={classes.allButton} onClick={handleSeeAll}>
-          tous
+          voir tous
         </Button>
       </div>
     </div>

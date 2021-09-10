@@ -1,24 +1,24 @@
-import { Typography, withStyles } from "@material-ui/core";
+import { withStyles } from "@material-ui/core";
 import PortfolioPreview from "./PortfolioPreview";
+import Title from "./Title";
 
 const styles = (theme) => ({
   root: {
     width: "100%",
-    paddingBottom: "10rem",
+    paddingBottom: "5rem",
+    backgroundColor: "#29282e",
 
-    [theme.breakpoints.up("md")]: {},
-  },
+    [theme.breakpoints.up("md")]: {
+      // width: "95%",
+      // marginLeft: "5%"
 
-  title: {
-    fontSize: "4rem",
-    padding: "5rem 5%",
-    textAlign: "center"
+    },
   },
 });
 const PortfolioSection = ({ classes }) => {
   return (
     <div className={classes.root}>
-      <Typography className={classes.title}>Portfolio</Typography>
+    {/* <Title title={"Portfolio"}/> */}
       <PortfolioPreview />
     </div>
   );

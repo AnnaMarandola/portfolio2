@@ -6,15 +6,17 @@ import {
     ListItemText,
     Toolbar,
     Link,
+    Typography,
   } from "@material-ui/core";
   import { withStyles } from "@material-ui/core/styles";
 import AM from "../assets/logoAm.png";
   
   const styles = (theme) => ({
     root: {
-      backgroundColor: "transparent",
+      backgroundColor: "#29282e",
       position: "relative",
-      height: "5rem"
+      height: "5rem",
+      boxShadow: "none"
     },
     logo: {
       width: "60%",
@@ -36,10 +38,9 @@ import AM from "../assets/logoAm.png";
     },
     navText: {
       color: "white",
-      weight: 600,
       minWidth: "8rem",
       "&:hover": {
-        color: "blue",
+        color: "white",
       },
     },
     linkText: {
@@ -48,7 +49,7 @@ import AM from "../assets/logoAm.png";
         display: "block",
         textTransform: `uppercase`,
         textUnderlineOffset: "1rem",
-        color: theme.palette.primary.whiteish,
+        color: "#a75ed7",
         "&:hover": {
           color: theme.palette.primary.yellow,
           fontWeight: 600,
@@ -79,7 +80,8 @@ import AM from "../assets/logoAm.png";
           <AppBar className={classes.root}>
             <Toolbar component="nav">
               <Container maxWidth="lg" className={classes.navbarDisplayFlex}>
-                <a href="/" style={{ color: `yellow` }}>
+                <a href="/" >
+                <Typography>AM</Typography>
                   <img src={AM} alt="initials AM" className={classes.logo} />
                 </a>
   
