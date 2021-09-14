@@ -1,7 +1,5 @@
-import { Button, Typography, withStyles, Card } from "@material-ui/core";
-import OPENQUOTE from "../assets/openQuote.png";
-import CLOSEQUOTE from "../assets/closeQuote.png";
-import ILLUS from "../assets/about/about (1).png";
+import { Typography, withStyles } from "@material-ui/core";
+import ILLUS from "../assets/z4.png";
 import Title from "./Title";
 import SkillsCharts from "./SkillsCharts";
 import Certifications from "./Certifications";
@@ -10,69 +8,40 @@ const styles = (theme) => ({
   root: {
     display: "flex",
     flexDirection: "column",
-    alignItems: "center",
-    padding: "5rem",
     backgroundColor: "#29282e",
+    paddingTop: "10rem",
     [theme.breakpoints.up("md")]: {
       alignItems: "flex-start",
       width: "100%",
     },
   },
-  card: {
+  firstSection: {
     display: "flex",
     flexDirection: "column",
-    alignItems: "center",
+    background:
+    "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
+    boxShadow: "5px 5px 23px -8px",
+    zIndex: 2,
     [theme.breakpoints.up("md")]: {
-      justifyContent: "space-evenly",
-    },
-  },
-
-  content: {
-    display: "flex",
-    flexDirection: "column",
-    [theme.breakpoints.up("md")]: {
+      alignItems: "flex-start",
+      width: "70%",
+      marginLeft: "15%",
       flexDirection: "row",
-      justifyContent: "space-evenly",
     },
   },
-
   textContainer: {
     display: "flex",
     flexDirection: "column",
-    [theme.breakpoints.up("md")]: {
-      width: "40%",
-      padding: "2rem",
-      alignItems: "start",
-    },
-  },
-  quoteImg: {
-    width: "25%",
-    height: "25%",
-    opacity: 0.5,
-    [theme.breakpoints.up("sm")]: {
-      width: "15%",
-      height: "15%",
-    },
-    [theme.breakpoints.up("md")]: {
-      width: "8%",
-      height: "8%",
-    },
-  },
+    padding: "5rem",
 
+    [theme.breakpoints.up("md")]: {
+      width: "65%",
+},
+  },
   presentationText: {
-    zIndex: 2,
-    marginTop: "-3rem",
-    color: "#b2a9a6",
-  },
-  openQuoteContainer: {
-    textAlign: "left",
-    width: "100%",
-  },
-
-  closeQuoteContainer: {
-    textAlign: "right",
-    width: "100%",
-    marginTop: "-3rem",
+    color: "white",
+    fontSize: "1.5rem",
+    marginLeft: "8rem",
   },
   aboutButton: {
     marginTop: "3rem",
@@ -82,73 +51,59 @@ const styles = (theme) => ({
     width: "30%",
     marginLeft: "70%",
     background:
-    "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
+      "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
     border: "2px solid #855aee",
     "&:hover": {
-      background: "linear-gradient(to right top, #2d7dfe, #457ffe, #5780ff, #6582ff, #7284ff)",
+      background:
+        "linear-gradient(to right top, #2d7dfe, #457ffe, #5780ff, #6582ff, #7284ff)",
       border: "2px solid #7284ff",
-        },
+    },
   },
   illustrationContainer: {
-    width: "30%",
-    textAlign: "center",
+    width: "40%",
+    height: "25.25rem",
+    textAlign: "right",
   },
   illusImg: {
-    width: "90%",
-    borderRadius: "10px",
+    width: "80%",
   },
   skillsSection: {
     display: "flex",
-    justifyContent: "space-between",
-    width: "80%",
-    marginTop: "6rem",
-  }
+    justifyContent: "space-evenly",
+    width: "100%",
+    paddingTop: "20rem",
+    backgroundColor: "#f4f4f4",
+    padding: "5rem",
+    marginTop: "-10rem",
+    zIndex: 1,
+  },
 });
 
 const AboutSection = ({ classes }) => {
   return (
     <div className={classes.root}>
-      <Title title={"A propos ..."} />
-      <div className={classes.card}>
-        <div className={classes.content}>
-          <div className={classes.textContainer}>
-            <div className={classes.openQuoteContainer}>
-              <img
-                src={OPENQUOTE}
-                alt="opening quotation mark"
-                className={classes.quoteImg}
-              />
-            </div>
-            <Typography className={classes.presentationText}>
-              Lorem ipsum felis eu interdum maximus, metus velit consectetur
-              magna, et condimentum nisi turpis nec ligula. Nam tempor volutpat
-              lacus non lobortis. Ut id velit ac arcu semper viverra. Morbi
-              ipsum lacus, pellentesque non dictum lacinia, tristique gravida
-              mauris. Donec justo neque, ultrices a tempus eu, laoreet pretium
-              turpis. Lorem ipsum felis eu interdum maximus, metus velit
-              consectetur magna, et condimentum nisi turpis nec ligula.
-            </Typography>
-            <div className={classes.closeQuoteContainer}>
-              <img
-                src={CLOSEQUOTE}
-                alt="closing quotation mark"
-                className={classes.quoteImg}
-              />
-            </div>
-            <Button className={classes.aboutButton}>en savoir +</Button>
-          </div>
-          <div className={classes.illustrationContainer}>
-            <img
-              src={ILLUS}
-              alt="girl with big phone"
-              className={classes.illusImg}
-            />
-          </div>
+          <Title title={"A propos ..."} color={"white"}/>
+      <div className={classes.firstSection}>
+        <div className={classes.textContainer}>
+          <Typography className={classes.presentationText}>
+            Lorem ipsum felis eu interdum maximus, metus velit consectetur
+            magna. Nam tempor volutpat lacus non lobortis. Ut id velit ac arcu
+            semper viverra. Morbi ipsum lacus, pellentesque non dictum lacinia,
+            tristique gravida mauris.
+          </Typography>
+          {/* <Button className={classes.aboutButton}>en savoir +</Button> */}
         </div>
-        <div className={classes.skillsSection}>
-      <SkillsCharts />
-      <Certifications />
+        <div className={classes.illustrationContainer}>
+          <img
+            src={ILLUS}
+            alt="girl with big phone"
+            className={classes.illusImg}
+          />
+        </div>
       </div>
+      <div className={classes.skillsSection}>
+        <SkillsCharts />
+        <Certifications />
       </div>
     </div>
   );

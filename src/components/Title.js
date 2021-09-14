@@ -5,12 +5,11 @@ const styles = (theme) => ({
     display: "flex",
     flexDirection: "column",
     // justifyContent: "center",
-    padding: "8rem 4rem 4rem 4rem",
+    padding: "0rem 4rem 4rem 10rem",
   },
   title: {
-    color: "#ecebed",
-    paddingBottom: "2rem",
-    fontSize: "6rem",
+    color: "#27282c",
+    fontSize: "4rem",
     fontWeight: 700,
 
   },
@@ -23,11 +22,11 @@ const styles = (theme) => ({
 
 });
 
-const Title = ({ classes, title }) => {
+const Title = ({ classes, title, color }) => {
   return (
     <div className={classes.root}>
 
-      <Typography className={classes.title}>
+      <Typography className={classes.title} style={{color: color}}>
         {title}
       </Typography>
       {/* <div className={classes.underline}/> */}

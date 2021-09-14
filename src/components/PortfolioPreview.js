@@ -12,8 +12,9 @@ const styles = (theme) => ({
   root: {
     display: "flex",
     flexDirection: "column",
+    
     // alignItems: "center",
-    backgroundColor: "#29282e",
+    // backgroundColor: "#29282e",
 
     width: "90%",
     marginLeft: "5%",
@@ -30,6 +31,8 @@ const styles = (theme) => ({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+        // boxShadow: "5px 5px 23px -10px ",
+
     "&:hover": {
       transform: "scale(1.1)",
       transition: "0.7s",
@@ -55,7 +58,7 @@ const styles = (theme) => ({
     height: "18rem",
     marginTop: "-12rem",
     zIndex: 1,
-    backgroundColor: "#78787a",
+    backgroundColor: "#cccccc",
     // background: "linear-gradient(to right top, #4ea78f, #48a390, #439f91, #3f9b91, #3b9791, #3a9591, #389490, #379290, #379290, #369391, #369391, #359391)",
   },
   container: {
@@ -63,11 +66,11 @@ const styles = (theme) => ({
     justifyContent: "space-between",
     width: "100%",
     padding: "1rem",
-    backgroundColor: "#040506",
-    opacity: 0.9,
+    backgroundColor: "#27282c",
+    // opacity: 0.9,
   },
   texts: {
-    backgroundColor: "#040506",
+    backgroundColor: "#27282c",
     color:"#ededee",
 
   },
@@ -85,27 +88,25 @@ const styles = (theme) => ({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    color: "white",
   },
   page: {
     paddingBottom: "1rem",
   },
   pagination: {
-    backgroundColor: "#78787a",
     padding: "0.5rem",
   },
   allButton: {
     marginTop: "5rem",
-    padding: "1rem 2rem",
+    padding: "1rem",
     borderRadius: "30px",
-    color: "white",
-    background:
+    // color: "white",
+    color:
       "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
-    border: "2px solid #855aee",
+    border: "1px solid",
     "&:hover": {
       background:
         "linear-gradient(to right top, #2d7dfe, #457ffe, #5780ff, #6582ff, #7284ff)",
-      border: "2px solid #7284ff",
+      border: "1px solid #7284ff",
     },
   },
 });

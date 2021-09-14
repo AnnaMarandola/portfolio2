@@ -10,8 +10,6 @@ const styles = (theme) => ({
     alignItems: "center",
     width: "100%",
     color: "#D3D3D3",
-
-
     [theme.breakpoints.up("md")]: {
       flexDirection: "row",
       padding: "3rem",
@@ -25,7 +23,10 @@ const styles = (theme) => ({
   },
   map: {
     width: "95%",
-    paddingTop: "2rem",
+    // padding: "2rem 0",
+    marginBottom: "2rem",
+    boxShadow: "5px 5px 23px -14px",
+
     [theme.breakpoints.up("md")]: {
       width: "100%",
     },
@@ -35,21 +36,22 @@ const styles = (theme) => ({
     marginBottom: "0.5rem",
     padding: "1rem",
     boxShadow: "5px 5px 23px -5px",
-
   },
   title: {
     textTransform: "uppercase",
         color: "#b2a9a6",
-
   },
   separator: {
-    // background: "linear-gradient(to right top, #4dcc95, #58cb90, #62cb8b, #6bca86, #73c982)",
-    height: "0.2rem",
+    height: "1px",
     width: "100%",
+    marginTop: "1rem",
     marginBottom :"1rem",
-    background:
-    "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
-
+    backgroundColor: "#c4c4c4"
+    // background:
+    // "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
+  },
+  text: {
+    color: "#b2a9a6"
   }
 });
 
@@ -64,22 +66,22 @@ const ContactDetails = ({ classes }) => {
         <Card className={classes.contactCard}>
         <Typography variant="h6" className={classes.title}>e-mail</Typography>
         <div className={classes.separator}/>
-        <Typography>anna.yws@gmail.com</Typography>
+        <Typography className={classes.text}>anna.yws@gmail.com</Typography>
         </Card>
         <Card className={classes.contactCard}>
         <Typography variant="h6" className={classes.title}>téléphone</Typography>
         <div className={classes.separator} />
-        <Typography>(+33)6.15.42.10.45</Typography>
+        <Typography className={classes.text}>(+33)6.15.42.10.45</Typography>
         </Card>
         <Card className={classes.contactCard}>
         <Typography variant="h6" className={classes.title}>adresse</Typography>
         <div className={classes.separator}/>
-        <Typography>85 bvd Gabriel Koenigs, 31300 Toulouse</Typography>
+        <Typography className={classes.text}>85 bvd Gabriel Koenigs, 31300 Toulouse</Typography>
         </Card>
         <Card className={classes.contactCard}>
         <Typography variant="h6" className={classes.title}>SIREN</Typography>
         <div className={classes.separator}/>
-        <Typography>424 242 424</Typography>
+        <Typography className={classes.text}>424 242 424</Typography>
         </Card>
 
       </div>
@@ -88,8 +90,8 @@ const ContactDetails = ({ classes }) => {
         <Card className={classes.contactCard}>
         <Typography variant="h6" className={classes.title}>horaires</Typography>
         <div className={classes.separator}/>
-        <Typography>Lundi - Vendredi</Typography>
-        <Typography>9h00 - 19h30</Typography>
+        <Typography className={classes.text}>Lundi - Vendredi</Typography>
+        <Typography className={classes.text}>9h00 - 19h30</Typography>
         </Card>
 
       </div>

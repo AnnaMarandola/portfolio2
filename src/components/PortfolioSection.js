@@ -5,8 +5,8 @@ import Title from "./Title";
 const styles = (theme) => ({
   root: {
     width: "100%",
-    paddingBottom: "5rem",
-    backgroundColor: "#29282e",
+    padding: "5rem 0",
+    backgroundColor: "white",
 
     [theme.breakpoints.up("md")]: {
       // width: "95%",

@@ -6,12 +6,14 @@ import Navbar from "./components/Navbar";
 import PortfolioSection from "./components/PortfolioSection";
 import ServicesSection from "./components/ServicesSection";
 import "./App.css";
+import SubHeader from "./components/SubHeader";
 
 function App() {
   return (
     <div className="App">
       <Navbar />
       <Hero2 />
+      <SubHeader />
       <ServicesSection />
       <PortfolioSection />
       <AboutSection />

@@ -6,15 +6,17 @@ import Title from "./Title";
 
 const styles = (theme) => ({
   root: {
-    padding: "5rem 5%",
-    backgroundColor: "#29282e",
+    padding: "5rem",
+    backgroundColor: "#f4f4f4",
+    display: "flex",
+    flexDirection: "column",
     [theme.breakpoints.up("md")]: {},
   },
   subtitle: {
-    fontSize: "1.5rem",
+    fontSize: "2rem",
     // paddingBottom: "6rem",
     textAlign: "center",
-    color: "#bcbdbc"
+    color: "#27282c"
   }
 });
 
@@ -23,14 +25,14 @@ const ServicesSection = ({ classes }) => {
     <div className={classes.root}>
     <Title title={"Services"} />
       <Typography className={classes.subtitle}>Lorem ipsum felis eu interdum maximus, et conditmentum nisi turpis nec ligula.</Typography>
-      {/* <ScrollAnimation
+      <ScrollAnimation
         animateIn="animate__fadeIn"
         animateOut="animate__fadeIn"
         duration={1}
         delay={300}
-      > */}
+      >
         <ServiceCards />
-      {/* </ScrollAnimation> */}
+      </ScrollAnimation>
     </div>
   );
 };

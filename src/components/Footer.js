@@ -66,7 +66,7 @@ const styles = (theme) => ({
     },
   },
   logo: {
-    color: "#a75ed7"
+    color: "white"
   },
   link: {
     textDecoration: "none",

@@ -2,17 +2,17 @@ import { Button, Typography, withStyles, Card } from "@material-ui/core";
 import { Avatar } from "@material-ui/core";
 import TWITTER from "../assets/twitter.png";
 import LINKEDIN from "../assets/linkedin.png";
-import CODE from "../assets/Code_perspective_matte_s.png";
 
 const styles = (theme) => ({
   root: {
-    paddingTop: "3rem",
-    paddingBottom: "3rem",
+    paddingTop: "13rem",
+    paddingBottom: "5rem",
     backgroundColor: "#29282e",
-    height: "45rem",
+    height: "fit-content",
     display: "flex",
     alignItems: "center",
     width: "100%",
+    marginTop: "-5rem",
   },
   textContainer: {
     display: "flex",
@@ -40,23 +40,30 @@ const styles = (theme) => ({
     padding: "1rem 2rem",
     borderRadius: "30px",
     color: "white",
+    boxShadow: "5px 5px 23px -12px gray",
     background:
-      "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
-    border: "2px solid #855aee",
+      "linear-gradient(to right top, #2d7dfe, #457ffe, #5780ff, #6582ff, #7284ff)",
+    border: "1px solid #7284ff",
     "&:hover": {
       background:
-        "linear-gradient(to right top, #2d7dfe, #457ffe, #5780ff, #6582ff, #7284ff)",
-      border: "2px solid #7284ff",
+        "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
+      border: "1px solid #b01df6",
     },
   },
   imgContainer: {
     width: "100%",
     display: "flex",
+    marginTop: "-10rem",
+    animation: "$slideTop 1.5s",
     justifyContent: "center",
   },
   codeImg: {
-    width: "40%",
-    paddingTop: "6rem",
+    width: "100%",
+    // marginTop: "8rem",
+  },
+  "@keyframes slideTop": {
+    from: { left: "-4rem" },
+    to: { left: "0rem" },
   },
 });
 
@@ -83,7 +90,7 @@ const Hero = ({ classes }) => {
         </div>
       </div>
       <div className={classes.imgContainer}>
-        {/* <img src={CODE} alt="3d balise html" className={classes.codeImg}/> */}
+        {/* <img src={KEYBOARD} alt="3d balise html" className={classes.codeImg}/> */}
       </div>
     </header>
   );

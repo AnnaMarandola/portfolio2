@@ -12,7 +12,6 @@ import {
   AccordionSummary,
   AccordionDetails,
   FormControlLabel,
-  Card,
   Button,
 } from "@material-ui/core";
 //   import { NavLink } from "react-router-dom";
@@ -25,10 +24,14 @@ const styles = (theme) => ({
     width: "90%",
     padding: "0.5rem",
     marginBottom: "6rem",
-    // backgroundColor: "#f3f3f4",
+    background:
+    "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
+    borderRadius: "40px",
+    boxShadow: "5px 5px 23px -5px",
+
     [theme.breakpoints.up("md")]: {
       width: "35%",
-      padding: "3rem",
+      padding: "3rem 3rem",
     },
   },
   form: {
@@ -39,14 +42,11 @@ const styles = (theme) => ({
     marginBottom: "1rem",
     borderRadius: "10px",
     backgroundColor: "#f3f3f4",
-    border: "4px solid grey"
-
   },
   textArea: {
     marginBottom: "2rem",
     backgroundColor: "#f3f3f4",
     borderRadius: "10px",
-    border: "4px solid grey"
   },
   list: {},
   heading: {
@@ -56,15 +56,16 @@ const styles = (theme) => ({
   submitButton: {
     padding: "1rem 2rem",
     borderRadius: "30px",
-    color: "white",
+    color: "black",
     width: "30%",
     marginLeft: "70%",
-    background:
-    "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
-    border: "2px solid #855aee",
+    backgroundColor: "#f4f4f4",
+    // background:
+    // "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
+    border: "1px solid black",
     "&:hover": {
       background: "linear-gradient(to right top, #2d7dfe, #457ffe, #5780ff, #6582ff, #7284ff)",
-      border: "2px solid #7284ff",
+      border: "1px solid black",
         },
   },
   cguSection: {
@@ -92,9 +93,9 @@ const styles = (theme) => ({
 
 const OrangeCheckbox = withStyles({
   root: {
-    color: "#2c7dfe",
+    color: "#040506",
     "&$checked": {
-      color: "#2c7dfe",
+      color: "#040506",
     },
   },
   checked: {},
