@@ -1,4 +1,5 @@
 import { withStyles } from "@material-ui/core";
+import ChipSet from "./ChipSet";
 import PortfolioPreview from "./PortfolioPreview";
 import Title from "./Title";
 
@@ -18,7 +19,8 @@ const styles = (theme) => ({
 const PortfolioSection = ({ classes }) => {
   return (
     <div className={classes.root}>
-    {/* <Title title={"Portfolio"}/> */}
+    <Title title={"Portfolio"}/>
+    <ChipSet/>
       <PortfolioPreview />
     </div>
   );

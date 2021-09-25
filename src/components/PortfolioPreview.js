@@ -133,8 +133,6 @@ const PortfolioPreview = ({ classes }) => {
   };
   return (
     <div className={classes.root}>
-      <Title title={"Portfolio"} />
-
       <div className={classes.projectsContainer}>
         {data.map((project, index) => (
           <ScrollAnimation

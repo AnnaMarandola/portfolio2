@@ -15,7 +15,7 @@ const styles = (theme) => ({
     width: "24%",
     margin: "2rem 3rem",
     padding: "3rem",
-    border: "1px solid gray",
+    // border: "1px solid gray",
   },
   titleSection: {
     display: "flex",
@@ -24,7 +24,7 @@ const styles = (theme) => ({
   },
   separator: {
     height: ".3rem",
-    width: "22%",
+    width: "28%",
     marginLeft: ".2rem",
     backgroundColor: "#27282c",
     marginTop: "1.5rem",
@@ -70,7 +70,7 @@ const ServiceCards2 = ({ classes }) => {
               alt={service.feature}
               className={classes.featureIcon}
             />
-          {/* <div className={classes.separator}/> */}
+          <div className={classes.separator}/>
             <Typography className={classes.title}>{service.feature}</Typography>
           </div>
           <Typography className={classes.description}>

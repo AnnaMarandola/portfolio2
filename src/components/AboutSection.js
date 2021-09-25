@@ -61,7 +61,7 @@ const styles = (theme) => ({
   },
   illustrationContainer: {
     width: "40%",
-    height: "25.25rem",
+    height: "24.2rem",
     textAlign: "right",
   },
   illusImg: {

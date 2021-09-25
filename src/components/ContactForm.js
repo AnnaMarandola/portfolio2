@@ -74,7 +74,7 @@ const styles = (theme) => ({
   },
   cgutext: {
     fontSize: "1rem",
-    color: "#D3D3D3",
+    color: "white",
   },
   cgulink: {
     fontWeight: 600,
@@ -87,7 +87,7 @@ const styles = (theme) => ({
   title: {
     textAlign: "center",
     paddingBottom: "2rem",
-    color: "#bcbdbc",
+    color: "white",
   },
 });
 
