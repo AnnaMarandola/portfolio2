@@ -1,10 +1,10 @@
 import { Typography, Avatar, Card, Button } from "@material-ui/core";
 import { withStyles } from "@material-ui/core/styles";
-import OPQUAST from "../assets/certifs/opquast.jpg";
-import GOOGLE from "../assets/certifs/googlecertif.png";
-import RF from "../assets/certifs/rf.png";
-import WCS from "../assets/certifs/wcs.jpg";
-import OCR from "../assets/certifs/ocr.png";
+import OPQUAST from "../../assets/certifs/opquast.jpg";
+import GOOGLE from "../../assets/certifs/googlecertif.png";
+import RF from "../../assets/certifs/rf.png";
+import WCS from "../../assets/certifs/wcs.jpg";
+import OCR from "../../assets/certifs/ocr.png";
 import GetAppIcon from '@material-ui/icons/GetApp';
 
 

@@ -1,5 +1,5 @@
 import { Card, Typography, withStyles } from "@material-ui/core";
-import MAP from "../assets/map.png";
+import MAP from "../../assets/map.png";
 
 const styles = (theme) => ({
   root: {

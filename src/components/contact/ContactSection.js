@@ -1,7 +1,7 @@
 import { withStyles } from "@material-ui/core";
 import ContactDetails from "./ContactDetails";
 import ContactForm from "./ContactForm";
-import Title from "./Title";
+import Title from "../Title";
 
 const styles = (theme) => ({
   root: {

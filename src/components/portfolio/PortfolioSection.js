@@ -1,7 +1,7 @@
 import { withStyles } from "@material-ui/core";
 import ChipSet from "./ChipSet";
 import PortfolioPreview from "./PortfolioPreview";
-import Title from "./Title";
+import Title from "../Title";
 
 const styles = (theme) => ({
   root: {

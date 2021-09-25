@@ -1,9 +1,9 @@
-import CODE from "../assets/features/code.svg";
-import INTEGRATION from "../assets/features/integration.svg";
-import UX from "../assets/features/ux.svg";
-import RESPONSIVE  from "../assets/features/responsive.svg";
-import SEO from "../assets/features/seo.svg";
-import PROJECT from "../assets/features/audit.svg";
+import CODE from "../../assets/features/code.svg";
+import INTEGRATION from "../../assets/features/integration.svg";
+import UX from "../../assets/features/ux.svg";
+import RESPONSIVE  from "../../assets/features/responsive.svg";
+import SEO from "../../assets/features/seo.svg";
+import PROJECT from "../../assets/features/audit.svg";
 
 
 export const servicesData= [

@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 import { withStyles, Typography, Card, Button, Fab } from "@material-ui/core";
-import { projects } from "../components/ProjectsData";
+import { projects } from "./ProjectsData";
 import Pagination from "@material-ui/lab/Pagination";
 import ScrollAnimation from "react-animate-on-scroll";
 import "animate.css";
 import AddIcon from "@material-ui/icons/Add";
 import VisibilityOutlinedIcon from "@material-ui/icons/VisibilityOutlined";
-import Title from "./Title";
+import Title from "../Title";
 
 const styles = (theme) => ({
   root: {

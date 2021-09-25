@@ -1,6 +1,6 @@
 import { Typography, withStyles } from "@material-ui/core";
-import ILLUS from "../assets/z4.png";
-import Title from "./Title";
+import ILLUS from "../../assets/z4.png";
+import Title from "../Title";
 import SkillsCharts from "./SkillsCharts";
 import Certifications from "./Certifications";
 

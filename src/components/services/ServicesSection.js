@@ -2,7 +2,7 @@ import { Typography, withStyles } from "@material-ui/core";
 import ServiceCards from "./ServiceCards";
 import ScrollAnimation from "react-animate-on-scroll";
 import "animate.css/animate.min.css";
-import Title from "./Title";
+import Title from "../Title";
 
 const styles = (theme) => ({
   root: {

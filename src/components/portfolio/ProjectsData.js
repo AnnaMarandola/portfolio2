@@ -1,13 +1,13 @@
-import SHORTLY from "../assets/projects/shortly/shortly-preview.png";
-import GALLERIA from "../assets/projects/galleria/galleria-preview.png";
-import PHOTOSNAP from "../assets/projects/photosnap/photosnap-preview.png";
-import SANFELIU from "../assets/projects/sanfeliu/SanFeliu-preview.png";
-import YUMIPREZ from "../assets/projects/yumiPro/yumi-preview.png";
-import AWESOMEPREZ from "../assets/projects/awesome/awesomeTable-preview.png";
-import NEOBSERVER from "../assets/projects/neobserver/neobserver-preview.png";
-import BOUSSOLE from "../assets/projects/bousole/boussole-preview.png";
-import GAME from "../assets/projects/deathQuizz/deathQuizz-preview.png";
-import ALLERGEEK  from "../assets/projects/allergeek/allergeek-preview.png";
+import SHORTLY from "../../assets/projects/shortly/shortly-preview.png";
+import GALLERIA from "../../assets/projects/galleria/galleria-preview.png";
+import PHOTOSNAP from "../../assets/projects/photosnap/photosnap-preview.png";
+import SANFELIU from "../../assets/projects/sanfeliu/SanFeliu-preview.png";
+import YUMIPREZ from "../../assets/projects/yumiPro/yumi-preview.png";
+import AWESOMEPREZ from "../../assets/projects/awesome/awesomeTable-preview.png";
+import NEOBSERVER from "../../assets/projects/neobserver/neobserver-preview.png";
+import BOUSSOLE from "../../assets/projects/bousole/boussole-preview.png";
+import GAME from "../../assets/projects/deathQuizz/deathQuizz-preview.png";
+import ALLERGEEK  from "../../assets/projects/allergeek/allergeek-preview.png";
 
 export const projects = [
   {

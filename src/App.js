@@ -1,24 +1,10 @@
-import AboutSection from "./components/AboutSection";
-import ContactSection from "./components/ContactSection";
-import Footer from "./components/Footer";
-import Hero2 from "./components/Hero2";
-import Navbar from "./components/Navbar";
-import PortfolioSection from "./components/PortfolioSection";
-import ServicesSection from "./components/ServicesSection";
+import LandingPage from "./components/LandingPage";
 import "./App.css";
-import SubHeader from "./components/SubHeader";
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <Hero2 />
-      <SubHeader />
-      <ServicesSection />
-      <PortfolioSection />
-      <AboutSection />
-      <ContactSection />
-      <Footer />
+<LandingPage />
     </div>
   );
 }
