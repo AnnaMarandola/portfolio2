@@ -6,16 +6,11 @@ import ScrollAnimation from "react-animate-on-scroll";
 import "animate.css";
 import AddIcon from "@material-ui/icons/Add";
 import VisibilityOutlinedIcon from "@material-ui/icons/VisibilityOutlined";
-import Title from "../Title";
 
 const styles = (theme) => ({
   root: {
     display: "flex",
     flexDirection: "column",
-    
-    // alignItems: "center",
-    // backgroundColor: "#29282e",
-
     width: "90%",
     marginLeft: "5%",
   },
@@ -31,8 +26,6 @@ const styles = (theme) => ({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-        // boxShadow: "5px 5px 23px -10px ",
-
     "&:hover": {
       transform: "scale(1.1)",
       transition: "0.7s",
@@ -59,7 +52,6 @@ const styles = (theme) => ({
     marginTop: "-12rem",
     zIndex: 1,
     backgroundColor: "#cccccc",
-    // background: "linear-gradient(to right top, #4ea78f, #48a390, #439f91, #3f9b91, #3b9791, #3a9591, #389490, #379290, #379290, #369391, #369391, #359391)",
   },
   container: {
     display: "flex",
@@ -67,7 +59,6 @@ const styles = (theme) => ({
     width: "100%",
     padding: "1rem",
     backgroundColor: "#27282c",
-    // opacity: 0.9,
   },
   texts: {
     backgroundColor: "#27282c",
@@ -99,7 +90,6 @@ const styles = (theme) => ({
     marginTop: "5rem",
     padding: "1rem",
     borderRadius: "30px",
-    // color: "white",
     color:
       "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
     border: "1px solid",
@@ -157,10 +147,10 @@ const PortfolioPreview = ({ classes }) => {
                     <Typography>{project.date}</Typography>
                   </div>
                   <div className={classes.buttons}>
-                    <Fab size="small" className={classes.fab}>
+                    <Fab size="small" aria-label="voir +" className={classes.fab}>
                       <AddIcon />
                     </Fab>
-                    <Fab size="small" className={classes.fab}>
+                    <Fab size="small" aria-label="visiter le site" className={classes.fab}>
                       <VisibilityOutlinedIcon />
                     </Fab>
                   </div>
@@ -178,7 +168,7 @@ const PortfolioPreview = ({ classes }) => {
           onChange={handleChangePage}
           className={classes.pagination}
         />
-        <Button className={classes.allButton} onClick={handleSeeAll}>
+        <Button className={classes.allButton} aria-label="Voir tous" onClick={handleSeeAll}>
           voir tous
         </Button>
       </div>

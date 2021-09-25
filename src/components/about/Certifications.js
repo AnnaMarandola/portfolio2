@@ -1,4 +1,4 @@
-import { Typography, Avatar, Card, Button } from "@material-ui/core";
+import { Typography, Card, Button } from "@material-ui/core";
 import { withStyles } from "@material-ui/core/styles";
 import OPQUAST from "../../assets/certifs/opquast.jpg";
 import GOOGLE from "../../assets/certifs/googlecertif.png";
@@ -123,7 +123,7 @@ const Certifications = ({ classes }) => {
         <Card key={certif.title} className={classes.certifCard}>
           <div className={classes.avatarContainer}>
           <img className={classes.avatar} src={certif.icon} alt="logo-certif"/>
-          <Button><GetAppIcon className={classes.downloadIcon} style={{color:     "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)"}}/></Button>
+          <Button aria-label="download"><GetAppIcon className={classes.downloadIcon} style={{color:     "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)"}}/></Button>
           </div>
           <div className={classes.textCard}>
           <div className={classes.certifTitleCard}>

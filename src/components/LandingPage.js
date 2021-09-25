@@ -13,10 +13,18 @@ function LandingPage() {
       <Navbar />
       <Hero />
       <SubHeader />
-      <ServicesSection />
-      <PortfolioSection />
-      <AboutSection />
-      <ContactSection />
+      <section id="services">
+        <ServicesSection />
+      </section>
+      <section id="portfolio">
+        <PortfolioSection />
+      </section>
+      <section id="about">
+        <AboutSection />
+      </section>
+      <section id="contact">
+        <ContactSection />
+      </section>
       <Footer />
     </div>
   );

@@ -1,4 +1,4 @@
-import { Button, Typography, withStyles, Card } from "@material-ui/core";
+import { Button, Typography, withStyles } from "@material-ui/core";
 import { Avatar } from "@material-ui/core";
 import TWITTER from "../assets/twitter.png";
 import LINKEDIN from "../assets/linkedin.png";
@@ -86,7 +86,7 @@ const Hero = ({ classes }) => {
             src={TWITTER}
             alt="twitter link"
           />
-          <Button className={classes.contactButton}>Contact</Button>
+          <Button className={classes.contactButton} aria-label="Contact">Contact</Button>
         </div>
       </div>
       <div className={classes.imgContainer}>

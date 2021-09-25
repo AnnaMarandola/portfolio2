@@ -1,14 +1,9 @@
-import {
-  AppBar,
-  Container,
-  List,
-  ListItem,
-  ListItemText,
-  Toolbar,
-  Link,
-  Typography,
-} from "@material-ui/core";
+import { AppBar, Toolbar, Typography, Fab } from "@material-ui/core";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 import { withStyles } from "@material-ui/core/styles";
+import BackToTop from "./BackToTop";
+import { KeyboardArrowUp } from "@material-ui/icons";
+
 import AM from "../assets/logoAm.png";
 
 const styles = (theme) => ({
@@ -55,54 +50,50 @@ const styles = (theme) => ({
     },
   },
   topButton: {
-    color: "yellow",
-    background:
-      "linear-gradient(90deg, rgba(242,168,29,1) 0%, rgba(242,123,19,1) 99%)",
+    color: "blue",
     "&:hover": {
+      color: "white",
       background:
-        "linear-gradient(56deg, rgba(35,17,64,1) 0%, rgba(19,29,38,1) 99%)",
+      "linear-gradient(to right top, #2d7dfe, #457ffe, #5780ff, #6582ff, #7284ff)",
     },
   },
 });
 
 const navLinks = [
-  { id: 2, title: `portfolio`, path: `/portfolio` },
-  { id: 1, title: `services`, path: `/services` },
-  { id: 3, title: `à propos`, path: `/about` },
-  { id: 4, title: `contact`, path: `/contact` },
+  { id: 2, title: `portfolio`, path: `#portfolio` },
+  { id: 1, title: `services`, path: `#services` },
+  { id: 3, title: `à propos`, path: `#about` },
+  { id: 4, title: `contact`, path: `#contact` },
 ];
 
 const Header = ({ classes }) => {
   return (
     <>
       <AppBar className={classes.root}>
-        <Toolbar component="nav">
-          <Container maxWidth="lg" className={classes.navbarDisplayFlex}>
-            <a href="/">
-              <Typography>AM</Typography>
-              <img src={AM} alt="initials AM" className={classes.logo} />
-            </a>
+        <Toolbar component="nav" id="back-to-top-anchor">
+          <a href="/" >
+            <Typography>AM</Typography>
+            <img src={AM} alt="initials AM" className={classes.logo} />
+          </a>
 
-            <List
-              component="nav"
-              aria-labelledby="main navigation"
-              className={classes.navListDisplayFlex}
-            >
-              {navLinks.map(({ id, title, path }) => (
-                <div key={id}>
-                  <Link to={path} className={classes.linkText}>
-                    <ListItem>
-                      <ListItemText className={classes.navText}>
-                        {title}
-                      </ListItemText>
-                    </ListItem>
-                  </Link>
-                </div>
-              ))}
-            </List>
-          </Container>
+          {navLinks.map(({ id, title, path }) => (
+            <div key={id}>
+              <AnchorLink href={path} className={classes.linkText}>
+                <Typography className={classes.navText}>{title}</Typography>
+              </AnchorLink>
+            </div>
+          ))}
         </Toolbar>
       </AppBar>
+      <BackToTop>
+        <Fab
+          className={classes.topButton}
+          size="large"
+          aria-label="scroll back to top"
+        >
+          <KeyboardArrowUp />
+        </Fab>
+      </BackToTop>
     </>
   );
 };

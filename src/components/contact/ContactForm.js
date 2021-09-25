@@ -14,19 +14,16 @@ import {
   FormControlLabel,
   Button,
 } from "@material-ui/core";
-//   import { NavLink } from "react-router-dom";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 //   import { db } from "../../../firebase";
-//   import CTAButton from "../../material-ui/CTAButton";
 
 const styles = (theme) => ({
   root: {
     width: "90%",
     padding: "0.5rem",
     marginBottom: "6rem",
-    background:
-    "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
-    borderRadius: "40px",
+    backgroundColor: "#f4f4f4",
+    borderRadius: "10px",
     boxShadow: "5px 5px 23px -5px",
 
     [theme.breakpoints.up("md")]: {
@@ -41,14 +38,16 @@ const styles = (theme) => ({
   contactInputs: {
     marginBottom: "1rem",
     borderRadius: "10px",
-    backgroundColor: "#f3f3f4",
   },
   textArea: {
     marginBottom: "2rem",
-    backgroundColor: "#f3f3f4",
     borderRadius: "10px",
   },
-  list: {},
+  needs: {
+    backgroundColor: "transparent"
+  },
+  list: {
+  },
   heading: {
     fontWeight: 700,
     color: "grey",
@@ -58,14 +57,16 @@ const styles = (theme) => ({
     borderRadius: "30px",
     color: "black",
     width: "30%",
+    minWidth: "7rem",
     marginLeft: "70%",
     backgroundColor: "#f4f4f4",
-    // background:
-    // "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
     border: "1px solid black",
+    background: "linear-gradient(to right top, #2d7dfe, #457ffe, #5780ff, #6582ff, #7284ff)",
     "&:hover": {
-      background: "linear-gradient(to right top, #2d7dfe, #457ffe, #5780ff, #6582ff, #7284ff)",
       border: "1px solid black",
+      background:
+      "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
+  
         },
   },
   cguSection: {
@@ -74,7 +75,7 @@ const styles = (theme) => ({
   },
   cgutext: {
     fontSize: "1rem",
-    color: "white",
+    color: "grey",
   },
   cgulink: {
     fontWeight: 600,
@@ -87,7 +88,7 @@ const styles = (theme) => ({
   title: {
     textAlign: "center",
     paddingBottom: "2rem",
-    color: "white",
+    color: "black",
   },
 });
 
@@ -208,7 +209,7 @@ const ContactForm = ({ classes }) => {
               ].map((value) => {
                 const labelId = `checkbox-list-secondary-label-${value}`;
                 return (
-                  <ListItem key={value} button>
+                  <ListItem key={value} button label="besoins">
                     <ListItemText id={labelId} primary={` ${value}`} />
                     <ListItemSecondaryAction>
                       <OrangeCheckbox
@@ -216,6 +217,7 @@ const ContactForm = ({ classes }) => {
                         onChange={handleToggle(value)}
                         checked={checked.indexOf(value) !== -1}
                         inputProps={{ "aria-labelledby": labelId }}
+                        label="besoins"
                       />
                     </ListItemSecondaryAction>
                   </ListItem>
@@ -258,6 +260,7 @@ const ContactForm = ({ classes }) => {
           onSubmit={handleSubmit}
           //   style={{ background: loader ? "#ccc" : " rgb(2, 2, 110)" }}
           className={classes.submitButton}
+          aria-label= "Accepter"
         >
           Envoyer
         </Button>

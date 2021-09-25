@@ -9441,6 +9441,11 @@
     "iconv-lite" "0.4.24"
     "unpipe" "1.0.0"
 
+"react-anchor-link-smooth-scroll@^1.0.12":
+  "integrity" "sha512-aaY+9X0yh8YnC0jBfoTKpsiCLdO/Y6pCltww+VB+NnTBPDOvnIdnp1AlazajsDitc1j+cVSQ+yNtaVeTIMQbxw=="
+  "resolved" "https://registry.npmjs.org/react-anchor-link-smooth-scroll/-/react-anchor-link-smooth-scroll-1.0.12.tgz"
+  "version" "1.0.12"
+
 "react-animate-on-scroll@^2.1.5":
   "integrity" "sha1-w1/1sZRSsjJwx6QjKbjcOR8nMCA="
   "resolved" "https://registry.npmjs.org/react-animate-on-scroll/-/react-animate-on-scroll-2.1.5.tgz"
