@@ -4,6 +4,7 @@ const styles = (theme) => ({
   root: {
     padding: "8rem 0",
     backgroundColor: "white",
+    marginTop: "-0.3rem",
     [theme.breakpoints.up("md")]: {},
   },
   subtitle: {

@@ -1,4 +1,4 @@
-import { AppBar, Toolbar, Typography, Fab } from "@material-ui/core";
+import { Typography, Fab } from "@material-ui/core";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { withStyles } from "@material-ui/core/styles";
 import BackToTop from "./BackToTop";
@@ -8,45 +8,47 @@ import AM from "../assets/logoAm.png";
 
 const styles = (theme) => ({
   root: {
-    backgroundColor: "transparent",
-    position: "relative",
+    display: "flex",
+    width: "100%",
     height: "5rem",
-    boxShadow: "none",
+    alignItems: "center",
+    justifyContent: "space-between",
   },
   logo: {
-    width: "60%",
-    marginLeft: "-2rem",
+    width: "40%",
   },
-  navbarDisplayFlex: {
-    display: `flex`,
-    justifyContent: `space-between`,
-    padding: `0.5rem`,
-    width: "100%",
-  },
-  navListDisplayFlex: {
-    display: `flex`,
-    justifyContent: `space-between`,
-    paddingTop: "3.2rem",
-    // width: "100%",
+  navContainer: {
+    display: "none",
+    [theme.breakpoints.up("md")]: {
+      display: "flex",
+      justifyContent: "space-around",
+      width: "55%",
+    },
   },
   navText: {
     color: "white",
     minWidth: "8rem",
+    fontSize: "1.4rem",
+    fontWeight: 550,
+    mixBlendMode: "difference",
     "&:hover": {
+      mixBlendMode: "difference",
       color: "white",
     },
   },
   linkText: {
-    display: "none",
+    textDecoration: "none",
+    display: "block",
+    textTransform: `uppercase`,
+    textUnderlineOffset: "1rem",
+
+    "&:hover": {
+      textDecoration: "underline",
+      mixBlendMode: "difference",
+      color: "white",
+      fontWeight: 600,
+    },
     [theme.breakpoints.up("md")]: {
-      display: "block",
-      textTransform: `uppercase`,
-      textUnderlineOffset: "1rem",
-      color: "#a75ed7",
-      "&:hover": {
-        color: theme.palette.primary.yellow,
-        fontWeight: 600,
-      },
     },
   },
   topButton: {
@@ -54,7 +56,7 @@ const styles = (theme) => ({
     "&:hover": {
       color: "white",
       background:
-      "linear-gradient(to right top, #2d7dfe, #457ffe, #5780ff, #6582ff, #7284ff)",
+        "linear-gradient(to right top, #2d7dfe, #457ffe, #5780ff, #6582ff, #7284ff)",
     },
   },
 });
@@ -69,13 +71,12 @@ const navLinks = [
 const Header = ({ classes }) => {
   return (
     <>
-      <AppBar className={classes.root}>
-        <Toolbar component="nav" id="back-to-top-anchor">
-          <a href="/" >
-            <Typography>AM</Typography>
-            <img src={AM} alt="initials AM" className={classes.logo} />
-          </a>
-
+      <div className={classes.root} id="back-to-top-anchor">
+        <a href="/">
+          <Typography>AM</Typography>
+          <img src={AM} alt="initials AM" className={classes.logo} />
+        </a>
+        <div className={classes.navContainer}>
           {navLinks.map(({ id, title, path }) => (
             <div key={id}>
               <AnchorLink href={path} className={classes.linkText}>
@@ -83,8 +84,9 @@ const Header = ({ classes }) => {
               </AnchorLink>
             </div>
           ))}
-        </Toolbar>
-      </AppBar>
+        </div>
+      </div>
+
       <BackToTop>
         <Fab
           className={classes.topButton}

@@ -3,7 +3,9 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import Typography from "@material-ui/core/Typography";
 import { withStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
-import { Avatar, Link } from "@material-ui/core";
+import { Avatar } from "@material-ui/core";
+import AnchorLink from "react-anchor-link-smooth-scroll";
+
 import TWITTER from "../assets/twitter.png";
 import LINKEDIN from "../assets/linkedin.png";
 
@@ -68,7 +70,7 @@ const styles = (theme) => ({
   logo: {
     color: "white"
   },
-  link: {
+  linkText: {
     textDecoration: "none",
     "&:hover": {},
   },
@@ -84,42 +86,45 @@ function Footer({ classes }) {
             <Typography variant="h5" className={classes.logo} >
               Anna Marandola
             </Typography>
+
+            <AnchorLink href="#back-to-top-anchor" className={classes.linkText}>
             <Typography variant="h5" className={classes.logo} >
               Développeur web freelance
             </Typography>
+            </AnchorLink>
 
 
-            <Link to="/about" className={classes.link}>
+            <AnchorLink href="#about" className={classes.linkText}>
               <Typography variant="body2" className={classes.footerText}>
                 A propos
               </Typography>
-            </Link>
+            </AnchorLink>
 
-            <Link to="/services" className={classes.link}>
+            <AnchorLink href="#services" className={classes.linkText}>
               <Typography variant="body2" className={classes.footerText}>
                 Services
               </Typography>
-            </Link>
+            </AnchorLink>
 
-            <Link to="/portfolio" className={classes.link}>
+            <AnchorLink href="#porfolio" className={classes.linkText}>
               <Typography variant="body2" className={classes.footerText}>
                 Portfolio
               </Typography>
-            </Link>
+            </AnchorLink>
           </div>
 
           <div className={classes.footerNav2}>
-            <Link to="/portfolio" className={classes.link}>
+          <AnchorLink href="#contact" className={classes.linkText}>
               <Typography variant="body2" className={classes.footerText}>
                 Contact
               </Typography>
-            </Link>
+            </AnchorLink>
 
-            <Link to="/portfolio" className={classes.link}>
+            {/* <Link to="/portfolio" className={classes.link}> */}
               <Typography variant="body2" className={classes.footerText}>
                 Mentions légales
               </Typography>
-            </Link>
+            {/* </Link> */}
           </div>
           <div className={classes.footerNav3}>
             <Avatar

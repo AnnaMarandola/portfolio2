@@ -2,42 +2,42 @@ import { Button, Typography, withStyles } from "@material-ui/core";
 import { Avatar } from "@material-ui/core";
 import TWITTER from "../assets/twitter.png";
 import LINKEDIN from "../assets/linkedin.png";
+import HAND from "../assets/hand4.jpg";
 
 const styles = (theme) => ({
   root: {
-    paddingTop: "13rem",
-    paddingBottom: "5rem",
     backgroundColor: "#29282e",
     height: "fit-content",
     display: "flex",
+    justifyContent: "space-between",
     alignItems: "center",
-    width: "100%",
-    marginTop: "-5rem",
+    marginTop: "-5rem"
   },
   textContainer: {
     display: "flex",
     flexDirection: "column",
-    paddingLeft: "8rem",
-    width: "100%",
+    marginLeft: "10%",
+    paddingTop: "10rem",
+    paddingBottom: "5rem"
   },
   annaM: {
     fontSize: "2.5rem",
     color: "white",
   },
   developer: {
-    fontSize: "5rem",
+    fontSize: "4rem",
     color: "white",
-    paddingBottom: "3rem",
     fontFamily: "Poppins",
     fontWeight: 600,
   },
   buttonsContainer: {
     display: "flex",
-    justifyContent: "space-evenly",
-    width: "50%",
+    padding: "3rem 0",
+    justifyContent: "space-between",
+    width: "40%",
   },
   contactButton: {
-    padding: "1rem 2rem",
+    padding: "0rem 1rem",
     borderRadius: "30px",
     color: "white",
     boxShadow: "5px 5px 23px -12px gray",
@@ -51,19 +51,10 @@ const styles = (theme) => ({
     },
   },
   imgContainer: {
-    width: "100%",
-    display: "flex",
-    marginTop: "-10rem",
-    animation: "$slideTop 1.5s",
-    justifyContent: "center",
+    width: "40%",
   },
   codeImg: {
-    width: "100%",
-    // marginTop: "8rem",
-  },
-  "@keyframes slideTop": {
-    from: { left: "-4rem" },
-    to: { left: "0rem" },
+    width: "110%",
   },
 });
 
@@ -86,11 +77,17 @@ const Hero = ({ classes }) => {
             src={TWITTER}
             alt="twitter link"
           />
-          <Button className={classes.contactButton} aria-label="Contact">Contact</Button>
+          <Button className={classes.contactButton} aria-label="Contact">
+            Contact
+          </Button>
         </div>
       </div>
       <div className={classes.imgContainer}>
-        {/* <img src={KEYBOARD} alt="3d balise html" className={classes.codeImg}/> */}
+        {/* <img
+          src={HAND}
+          alt="hand typing on keyboard"
+          className={classes.codeImg}
+        /> */}
       </div>
     </header>
   );
