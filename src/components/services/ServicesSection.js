@@ -6,7 +6,7 @@ import Title from "../Title";
 
 const styles = (theme) => ({
   root: {
-    padding: "5rem",
+    padding: "5%",
     backgroundColor: "#f4f4f4",
     display: "flex",
     flexDirection: "column",

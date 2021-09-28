@@ -64,7 +64,7 @@ const Hero = ({ classes }) => {
       <div className={classes.textContainer}>
         <Typography className={classes.annaM}>Anna Marandola</Typography>
         <Typography className={classes.developer}>
-          Frontend developer
+          Développeur web
         </Typography>
         <div className={classes.buttonsContainer}>
           <Avatar
@@ -83,11 +83,11 @@ const Hero = ({ classes }) => {
         </div>
       </div>
       <div className={classes.imgContainer}>
-        {/* <img
+        <img
           src={HAND}
           alt="hand typing on keyboard"
           className={classes.codeImg}
-        /> */}
+        />
       </div>
     </header>
   );

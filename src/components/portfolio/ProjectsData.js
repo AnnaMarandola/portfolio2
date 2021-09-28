@@ -9,6 +9,20 @@ import BOUSSOLE from "../../assets/projects/bousole/boussole-preview.png";
 import GAME from "../../assets/projects/deathQuizz/deathQuizz-preview.png";
 import ALLERGEEK  from "../../assets/projects/allergeek/allergeek-preview.png";
 
+export const tags =  [
+  "site vitrine",
+  "e-commerce",
+  "click & collect",
+  "application web/mobile",
+  "Restauration",
+  "conception",
+  "géolocalisation",
+  "API",
+  "dévelopement back-end",
+  "dévelopement front-end",
+  "audio/video",
+];
+
 export const projects = [
   {
     id: 0,
@@ -41,6 +55,7 @@ export const projects = [
       { img: SHORTLY, subtitle: "Header" },
     ],
     draft: false,
+    tag: "API"
   },
   {
     id: 1,
@@ -73,9 +88,10 @@ export const projects = [
       { img: GALLERIA, subtitle: "Header" },
     ],
     draft: false,
+    tag: "site vitrine",
   },
   {
-    id: 0,
+    id: 2,
     url: SANFELIU,
     logo: SANFELIU,
     width: "28%",
@@ -105,10 +121,11 @@ export const projects = [
       { img: SANFELIU, subtitle: "Header" },
     ],
     draft: false,
+    tag: "Restauration"
   },
 
   {
-    id: 1,
+    id: 3,
     url: YUMIPREZ,
     title: "Application web/mobile Yumi Pro",
     logo: YUMIPREZ,
@@ -142,9 +159,10 @@ export const projects = [
       { img: YUMIPREZ, subtitle: "interface de gestion de contenu dynamique et intuitive" },
     ],
     draft: false,
+    tag: "application web/mobile"
   },
   {
-    id: 0,
+    id: 4,
     url: PHOTOSNAP,
     logo: PHOTOSNAP,
     width: "28%",
@@ -174,11 +192,12 @@ export const projects = [
       { img: PHOTOSNAP, subtitle: "Header" },
     ],
     draft: false,
+    tag: "dévelopement front-end",
   },
 
 
   {
-    id: 4,
+    id: 5,
     url: NEOBSERVER,
     title: "Blogs - API",
     width: "28%",
@@ -196,10 +215,12 @@ export const projects = [
       { img: NEOBSERVER, subtitle: "Header" },
     ],
     draft: true,
+    tag: "dévelopement back-end",
+
   },
 
   {
-    id: 5,
+    id: 6,
     width: "28%",
     url: BOUSSOLE,
     title: "application web/mobile",
@@ -220,9 +241,10 @@ export const projects = [
       { img: BOUSSOLE, subtitle: "Header" },
     ],
     draft: true,
+    tag: "audio/video",
   },
   {
-    id: 5,
+    id: 7,
     width: "28%",
     url: ALLERGEEK,
     title: "application web/mobile",
@@ -243,10 +265,11 @@ export const projects = [
       { img: ALLERGEEK, subtitle: "Header" },
     ],
     draft: true,
+    tag: "click & collect"
   },
 
   {
-    id: 6,
+    id: 8,
     url: AWESOMEPREZ,
     title: "Visualisation de fichiers clients",
     logo: AWESOMEPREZ,
@@ -264,10 +287,11 @@ export const projects = [
       { img: AWESOMEPREZ, subtitle: "map markers, filtres de rcherche" },
     ],
     draft: false,
+    tag: "géolocalisation"
   },
 
   {
-    id: 7,
+    id: 9,
     url: GAME,
     title: "jeux",
     width: "28%",
@@ -284,6 +308,7 @@ export const projects = [
       { img: GAME, subtitle: "Header" },
     ],
     draft: true,
+    tag: "e-commerce"
   },
 
 

@@ -9,7 +9,6 @@ const styles = (theme) => ({
     display: "flex",
     flexDirection: "column",
     backgroundColor: "#29282e",
-    paddingTop: "10rem",
     [theme.breakpoints.up("md")]: {
       alignItems: "flex-start",
       width: "100%",
@@ -27,13 +26,13 @@ const styles = (theme) => ({
       width: "70%",
       marginLeft: "15%",
       flexDirection: "row",
+      marginTop:  "5rem"
     },
   },
   textContainer: {
     display: "flex",
     flexDirection: "column",
     padding: "5rem",
-
     [theme.breakpoints.up("md")]: {
       width: "65%",
 },
@@ -61,7 +60,7 @@ const styles = (theme) => ({
   },
   illustrationContainer: {
     width: "40%",
-    height: "24.2rem",
+    height: "24.1rem",
     textAlign: "right",
   },
   illusImg: {
@@ -73,8 +72,8 @@ const styles = (theme) => ({
     width: "100%",
     paddingTop: "20rem",
     backgroundColor: "#f4f4f4",
-    padding: "5rem",
-    marginTop: "-10rem",
+    // padding: "5rem",
+    marginTop: "-12rem",
     zIndex: 1,
   },
 });

@@ -5,7 +5,8 @@ const styles = (theme) => ({
     display: "flex",
     flexDirection: "column",
     // justifyContent: "center",
-    padding: "0rem 4rem 4rem 10rem",
+    paddingLeft: "5%",
+    paddingBottom: "5%"
   },
   title: {
     color: "#27282c",

@@ -1,6 +1,13 @@
 import { useState, useEffect } from "react";
-import { withStyles, Typography, Card, Button, Fab } from "@material-ui/core";
-import { projects } from "./ProjectsData";
+import {
+  withStyles,
+  Typography,
+  Card,
+  Button,
+  Fab,
+  Chip,
+} from "@material-ui/core";
+import { projects, tags } from "./ProjectsData";
 import Pagination from "@material-ui/lab/Pagination";
 import ScrollAnimation from "react-animate-on-scroll";
 import "animate.css";
@@ -14,6 +21,16 @@ const styles = (theme) => ({
     width: "90%",
     marginLeft: "5%",
   },
+  chipsetContainer: {
+    textAlign: "left",
+    width: "50%",
+    marginLeft: "25%",
+    marginBottom: "5rem",
+  },
+  chip: {
+    margin: "0.5rem",
+  },
+
   projectsContainer: {
     width: "100%",
     display: "flex",
@@ -62,8 +79,7 @@ const styles = (theme) => ({
   },
   texts: {
     backgroundColor: "#27282c",
-    color:"#ededee",
-
+    color: "#ededee",
   },
   fab: {
     margin: "0.5rem",
@@ -106,10 +122,43 @@ const PortfolioPreview = ({ classes }) => {
   const [pageSize, setPageSize] = useState(4);
   const [page, setPage] = useState(1);
   const [data, setData] = useState(projects.slice(firstIndex, pageSize));
+  const [filters, setFilters] = useState([]);
+  const [selectedProjects, setSelectedProjects] = useState([]);
 
   useEffect(() => {
-    setData(projects.slice(0, pageSize));
-  }, [pageSize]);
+    if (selectedProjects.length > 0) {
+      setData(selectedProjects.slice(0, pageSize));
+    } else {
+      setData(projects.slice(0, pageSize));
+    }
+  }, [pageSize, selectedProjects]);
+
+  console.log("data", data);
+
+  const handleFilter = (tag) => () => {
+    const newFilters = filters;
+    newFilters.push(tag);
+    setFilters(newFilters);
+    console.info("you clicked the chip:", filters);
+
+    const selectedIds = filters.map((filter) =>
+      projects.findIndex((project) => project.tag === filter)
+    );
+    console.log("selectedIds", selectedIds);
+
+    const cleanIds = selectedIds.filter((id) => id >= 0);
+    console.log("cleanIds", cleanIds);
+
+    const newProjects = cleanIds.map((cleanId) =>
+      projects.find((project) => project.id === cleanId)
+    );
+    console.log("newProjects", newProjects);
+    let unique = [...new Set(newProjects)];
+    console.log("unique", unique);
+
+    setSelectedProjects(unique);
+    console.log("selectedProjects", selectedProjects);
+  };
 
   const handleChangePage = (e, value) => {
     setPage(value);
@@ -123,6 +172,18 @@ const PortfolioPreview = ({ classes }) => {
   };
   return (
     <div className={classes.root}>
+      <div className={classes.chipsetContainer}>
+        {tags.map((tag, id) => (
+          <Chip
+            key={id}
+            variant="outlined"
+            label={tag}
+            value={tag}
+            onClick={handleFilter(tag)}
+            className={classes.chip}
+          />
+        ))}
+      </div>
       <div className={classes.projectsContainer}>
         {data.map((project, index) => (
           <ScrollAnimation
@@ -147,10 +208,18 @@ const PortfolioPreview = ({ classes }) => {
                     <Typography>{project.date}</Typography>
                   </div>
                   <div className={classes.buttons}>
-                    <Fab size="small" aria-label="voir +" className={classes.fab}>
+                    <Fab
+                      size="small"
+                      aria-label="voir +"
+                      className={classes.fab}
+                    >
                       <AddIcon />
                     </Fab>
-                    <Fab size="small" aria-label="visiter le site" className={classes.fab}>
+                    <Fab
+                      size="small"
+                      aria-label="visiter le site"
+                      className={classes.fab}
+                    >
                       <VisibilityOutlinedIcon />
                     </Fab>
                   </div>
@@ -160,15 +229,24 @@ const PortfolioPreview = ({ classes }) => {
           </ScrollAnimation>
         ))}
       </div>
+
       <div className={classes.paginationContainer}>
-        <Typography className={classes.page}> page: {page}</Typography>
-        <Pagination
-          count={Math.ceil(projects.length / pageSize)}
-          page={page}
-          onChange={handleChangePage}
-          className={classes.pagination}
-        />
-        <Button className={classes.allButton} aria-label="Voir tous" onClick={handleSeeAll}>
+        {data > 3 && (
+          <div>
+            <Typography className={classes.page}> page: {page}</Typography>
+            <Pagination
+              count={Math.ceil(projects.length / pageSize)}
+              page={page}
+              onChange={handleChangePage}
+              className={classes.pagination}
+            />
+          </div>
+        )}
+        <Button
+          className={classes.allButton}
+          aria-label="Voir tous"
+          onClick={handleSeeAll}
+        >
           voir tous
         </Button>
       </div>

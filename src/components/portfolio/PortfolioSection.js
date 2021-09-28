@@ -1,26 +1,18 @@
 import { withStyles } from "@material-ui/core";
-import ChipSet from "./ChipSet";
 import PortfolioPreview from "./PortfolioPreview";
 import Title from "../Title";
 
 const styles = (theme) => ({
   root: {
-    width: "100%",
-    padding: "5rem 0",
+    padding: "5%",
     backgroundColor: "white",
-
-    [theme.breakpoints.up("md")]: {
-      // width: "95%",
-      // marginLeft: "5%"
-
-    },
+    [theme.breakpoints.up("md")]: {},
   },
 });
 const PortfolioSection = ({ classes }) => {
   return (
     <div className={classes.root}>
-    <Title title={"Portfolio"}/>
-    <ChipSet/>
+      <Title title={"Portfolio"} />
       <PortfolioPreview />
     </div>
   );

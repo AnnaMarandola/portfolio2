@@ -1,25 +1,31 @@
 import { Typography, withStyles } from "@material-ui/core";
+import WAVE from "../assets/Meteor.svg";
 
 const styles = (theme) => ({
   root: {
-    padding: "8rem 0",
+    display: "flex",
+    flexDirection: "column",
+    padding: "5rem 0",
+    // paddingBottom: "14rem",
     backgroundColor: "white",
     marginTop: "-0.3rem",
+    // backgroundImage: `url(${WAVE})`,
+    // backgroundSize: "cover",
+    // backgroundRepeat: "no-repeat",
     [theme.breakpoints.up("md")]: {},
   },
   subtitle: {
-    fontSize: "1.5rem",
-    // paddingBottom: "6rem",
-    textAlign: "center",
-    // color: "#bcbdbc"
+    // fontSize: "2rem",
+    textAlign: "left",
+    marginLeft: "10%",
   }
 });
 
 const SubHeader = ({ classes }) => {
   return (
     <div className={classes.root}>
-      <Typography variant="h2" className={classes.subtitle}>Lorem ipsum felis eu interdum maximus, et conditmentum nisi turpis nec ligula.</Typography>
-      <Typography variant="h2" className={classes.subtitle}>Lorem ipsum felis eu interdum maximus, et conditmentum nisi turpis nec ligula.</Typography>
+      <Typography variant="h5" className={classes.subtitle}>Création de sites web et applications web/mobiles à Toulouse:</Typography>
+      <Typography variant="h5" className={classes.subtitle}>site vitrine, corporate, événementiel, e-commerce, solutions sur mesure  </Typography>
     </div>
   );
 };
