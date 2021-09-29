@@ -1,17 +1,12 @@
 import { Typography, withStyles } from "@material-ui/core";
-import WAVE from "../assets/Meteor.svg";
 
 const styles = (theme) => ({
   root: {
     display: "flex",
     flexDirection: "column",
     padding: "5rem 0",
-    // paddingBottom: "14rem",
     backgroundColor: "white",
     marginTop: "-0.3rem",
-    // backgroundImage: `url(${WAVE})`,
-    // backgroundSize: "cover",
-    // backgroundRepeat: "no-repeat",
     [theme.breakpoints.up("md")]: {},
   },
   subtitle: {

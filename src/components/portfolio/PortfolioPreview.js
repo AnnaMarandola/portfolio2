@@ -131,33 +131,25 @@ const PortfolioPreview = ({ classes }) => {
     } else {
       setData(projects.slice(0, pageSize));
     }
-  }, [pageSize, selectedProjects]);
+    if (filters.length === 0){
+      setSelectedProjects([])
 
-  console.log("data", data);
+    }
+  }, [pageSize, selectedProjects, filters]);
 
-  const handleFilter = (tag) => () => {
+  const handleFilters = (tag) => () => {
     const newFilters = filters;
     newFilters.push(tag);
     setFilters(newFilters);
-    console.info("you clicked the chip:", filters);
-
     const selectedIds = filters.map((filter) =>
       projects.findIndex((project) => project.tag === filter)
     );
-    console.log("selectedIds", selectedIds);
-
     const cleanIds = selectedIds.filter((id) => id >= 0);
-    console.log("cleanIds", cleanIds);
-
     const newProjects = cleanIds.map((cleanId) =>
       projects.find((project) => project.id === cleanId)
     );
-    console.log("newProjects", newProjects);
     let unique = [...new Set(newProjects)];
-    console.log("unique", unique);
-
     setSelectedProjects(unique);
-    console.log("selectedProjects", selectedProjects);
   };
 
   const handleChangePage = (e, value) => {
@@ -167,23 +159,43 @@ const PortfolioPreview = ({ classes }) => {
     );
   };
 
-  const handleSeeAll = (e, value) => {
+  const handleDelete = (tag) => () => {
+    const newFilters = filters.filter((filter) => filter !== tag);
+    setFilters(newFilters);
+  };
+
+  const handleSeeAll = () => {
+    setFilters([]);
     setPageSize(projects.length);
   };
+
   return (
     <div className={classes.root}>
       <div className={classes.chipsetContainer}>
-        {tags.map((tag, id) => (
-          <Chip
-            key={id}
-            variant="outlined"
-            label={tag}
-            value={tag}
-            onClick={handleFilter(tag)}
-            className={classes.chip}
-          />
-        ))}
+        {tags.map((tag, id) =>
+          filters.includes(tag) ? (
+            <Chip
+              key={id}
+              variant="outlined"
+              label={tag}
+              value={tag}
+              onClick={handleFilters(tag)}
+              className={classes.chip}
+              onDelete={filters.includes(tag) && handleDelete(tag)}
+            />
+          ) : (
+            <Chip
+              key={id}
+              variant="outlined"
+              label={tag}
+              value={tag}
+              onClick={handleFilters(tag)}
+              className={classes.chip}
+            />
+          )
+        )}
       </div>
+
       <div className={classes.projectsContainer}>
         {data.map((project, index) => (
           <ScrollAnimation
