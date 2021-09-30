@@ -15,7 +15,7 @@ import {
   Button,
 } from "@material-ui/core";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-//   import { db } from "../../../firebase";
+  import { db } from "../../firebase";
 
 const styles = (theme) => ({
   root: {
@@ -127,32 +127,32 @@ const ContactForm = ({ classes }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoader(true);
-    //   if (checkedCGU) {
-    //     db.collection("contacts")
-    //       .add({
-    //         name: name,
-    //         email: email,
-    //         message: message,
-    //         needs: checked,
-    //       })
-    //       .then(() => {
-    //         setLoader(false);
-    //         alert(
-    //           "Votre message a bien été envoyé 👍. Nous vous répondrons dans les plus brefs délais"
-    //         );
-    //       })
-    //       .catch((error) => {
-    //         alert(error.message);
-    //         setLoader(false);
-    //       });
+      if (checkedCGU) {
+        db.collection("contacts")
+          .add({
+            name: name,
+            email: email,
+            message: message,
+            needs: checked,
+          })
+          .then(() => {
+            setLoader(false);
+            alert(
+              "Votre message a bien été envoyé 👍. Nous vous répondrons dans les plus brefs délais"
+            );
+          })
+          .catch((error) => {
+            alert(error.message);
+            setLoader(false);
+          });
 
-    //     setName("");
-    //     setEmail("");
-    //     setMessage("");
-    //     setChecked([]);
-    //   } else {
-    //     alert("merci de lire et d'accepter les CGU");
-    //   }
+        setName("");
+        setEmail("");
+        setMessage("");
+        setChecked([]);
+      } else {
+        alert("merci de lire et d'accepter les CGU");
+      }
   };
 
   const handleCGU = (event) => {
