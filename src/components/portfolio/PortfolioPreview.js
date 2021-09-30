@@ -126,14 +126,10 @@ const PortfolioPreview = ({ classes }) => {
   const [selectedProjects, setSelectedProjects] = useState([]);
 
   useEffect(() => {
-    if (selectedProjects.length > 0) {
+    if (selectedProjects.length && filters.length) {
       setData(selectedProjects.slice(0, pageSize));
     } else {
       setData(projects.slice(0, pageSize));
-    }
-    if (filters.length === 0){
-      setSelectedProjects([])
-
     }
   }, [pageSize, selectedProjects, filters]);
 
@@ -162,6 +158,10 @@ const PortfolioPreview = ({ classes }) => {
   const handleDelete = (tag) => () => {
     const newFilters = filters.filter((filter) => filter !== tag);
     setFilters(newFilters);
+        if (filters.length === 0){
+      setSelectedProjects([])
+    }
+
   };
 
   const handleSeeAll = () => {

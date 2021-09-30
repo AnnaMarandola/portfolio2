@@ -83,11 +83,11 @@ const Hero = ({ classes }) => {
         </div>
       </div>
       <div className={classes.imgContainer}>
-        <img
+        {/* <img
           src={HAND}
           alt="hand typing on keyboard"
           className={classes.codeImg}
-        />
+        /> */}
       </div>
     </header>
   );
