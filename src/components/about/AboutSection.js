@@ -10,7 +10,7 @@ const styles = (theme) => ({
     flexDirection: "column",
     backgroundColor: "#29282e",
     [theme.breakpoints.up("md")]: {
-      alignItems: "flex-start",
+      alignItems: "center",
       width: "100%",
     },
   },
@@ -24,9 +24,7 @@ const styles = (theme) => ({
     [theme.breakpoints.up("md")]: {
       alignItems: "flex-start",
       width: "70%",
-      marginLeft: "15%",
       flexDirection: "row",
-      marginTop:  "5rem"
     },
   },
   textContainer: {

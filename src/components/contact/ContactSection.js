@@ -5,7 +5,7 @@ import Title from "../Title";
 
 const styles = (theme) => ({
   root: {
-    padding: "8rem 5%",
+    padding: "0 5% 5% 5%",
     backgroundColor: "#29282e",
     [theme.breakpoints.up("md")]: {},
   },

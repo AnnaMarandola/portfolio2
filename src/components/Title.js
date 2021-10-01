@@ -4,14 +4,14 @@ const styles = (theme) => ({
   root: {
     display: "flex",
     flexDirection: "column",
-    // justifyContent: "center",
-    paddingLeft: "5%",
-    paddingBottom: "5%"
+    paddingBottom: "5%",
+    paddingTop: "5%",
   },
   title: {
     color: "#27282c",
     fontSize: "4rem",
     fontWeight: 700,
+    textAlign: "center"
 
   },
   underline: {
