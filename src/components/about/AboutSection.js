@@ -18,7 +18,7 @@ const styles = (theme) => ({
     display: "flex",
     flexDirection: "column",
     background:
-    "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
+      "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
     boxShadow: "5px 5px 23px -8px",
     zIndex: 2,
     [theme.breakpoints.up("md")]: {
@@ -30,10 +30,10 @@ const styles = (theme) => ({
   textContainer: {
     display: "flex",
     flexDirection: "column",
-    padding: "5rem",
+    padding: "4rem",
     [theme.breakpoints.up("md")]: {
       width: "65%",
-},
+    },
   },
   presentationText: {
     color: "white",
@@ -58,11 +58,12 @@ const styles = (theme) => ({
   },
   illustrationContainer: {
     width: "40%",
-    height: "24.1rem",
-    textAlign: "right",
-  },
-  illusImg: {
-    width: "80%",
+    backgroundImage: `url(${ILLUS})`,
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center 35%",
+    backgroundSize: "cover",
+    zIndex: 3,
+    height: "25rem"
   },
   skillsSection: {
     display: "flex",
@@ -70,7 +71,6 @@ const styles = (theme) => ({
     width: "100%",
     paddingTop: "20rem",
     backgroundColor: "#f4f4f4",
-    // padding: "5rem",
     marginTop: "-12rem",
     zIndex: 1,
   },
@@ -79,7 +79,7 @@ const styles = (theme) => ({
 const AboutSection = ({ classes }) => {
   return (
     <div className={classes.root}>
-          <Title title={"A propos ..."} color={"white"}/>
+      <Title title={"A propos ..."} color={"white"} />
       <div className={classes.firstSection}>
         <div className={classes.textContainer}>
           <Typography className={classes.presentationText}>
@@ -90,13 +90,7 @@ const AboutSection = ({ classes }) => {
           </Typography>
           {/* <Button className={classes.aboutButton}>en savoir +</Button> */}
         </div>
-        <div className={classes.illustrationContainer}>
-          <img
-            src={ILLUS}
-            alt="girl with big phone"
-            className={classes.illusImg}
-          />
-        </div>
+        <div className={classes.illustrationContainer} / >
       </div>
       <div className={classes.skillsSection}>
         <SkillsCharts />
