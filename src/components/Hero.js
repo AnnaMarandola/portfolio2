@@ -2,23 +2,27 @@ import { Button, Typography, withStyles } from "@material-ui/core";
 import { Avatar } from "@material-ui/core";
 import TWITTER from "../assets/twitter.png";
 import LINKEDIN from "../assets/linkedin.png";
-import HAND from "../assets/hand4.jpg";
+import HAND from "../assets/hand.jpg";
 
 const styles = (theme) => ({
   root: {
+    // backgroundImage: `url(${HAND})`,
+    // backgroundRepeat: "no-repeat",
+    // backgroundPosition: "right 20%",
+    // backgroundSize: "cover",
     backgroundColor: "#29282e",
     height: "fit-content",
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    marginTop: "-5rem"
+    marginTop: "-5rem",
   },
   textContainer: {
     display: "flex",
     flexDirection: "column",
     marginLeft: "10%",
     paddingTop: "10rem",
-    paddingBottom: "5rem"
+    paddingBottom: "5rem",
   },
   annaM: {
     fontSize: "2.5rem",
@@ -37,17 +41,18 @@ const styles = (theme) => ({
     width: "40%",
   },
   contactButton: {
-    padding: "0rem 1rem",
+    padding: "1rem 2rem",
     borderRadius: "30px",
     color: "white",
     boxShadow: "5px 5px 23px -12px gray",
     background:
-      "linear-gradient(to right top, #2d7dfe, #457ffe, #5780ff, #6582ff, #7284ff)",
-    border: "1px solid #7284ff",
+    "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
+    // border: "1px solid #b01df6",
     "&:hover": {
+      // border: "1px solid #7284ff",
       background:
-        "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
-      border: "1px solid #b01df6",
+      "linear-gradient(to right top, #2d7dfe, #457ffe, #5780ff, #6582ff, #7284ff)",
+
     },
   },
   imgContainer: {
@@ -66,8 +71,10 @@ const Hero = ({ classes }) => {
         <Typography className={classes.developer}>
           Développeur web
         </Typography>
+        <Typography className={classes.annaM}>spécialisée en dévelopement front-end - React.js</Typography>
+
         <div className={classes.buttonsContainer}>
-          <Avatar
+          {/* <Avatar
             className={classes.mediaIcon}
             src={LINKEDIN}
             alt="linkedin link"
@@ -76,7 +83,7 @@ const Hero = ({ classes }) => {
             className={classes.mediaIcon}
             src={TWITTER}
             alt="twitter link"
-          />
+          /> */}
           <Button className={classes.contactButton} aria-label="Contact">
             Contact
           </Button>

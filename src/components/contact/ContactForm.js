@@ -15,16 +15,19 @@ import {
   Button,
 } from "@material-ui/core";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-  import { db } from "../../firebase";
+import { db } from "../../firebase";
+import SendOutlinedIcon from "@material-ui/icons/SendOutlined";
 
 const styles = (theme) => ({
   root: {
     width: "90%",
     padding: "0.5rem",
     marginBottom: "6rem",
-    backgroundColor: "#f4f4f4",
-    borderRadius: "10px",
+    // backgroundColor: "#f4f4f4",
+    // borderRadius: "10px",
     boxShadow: "5px 5px 23px -5px",
+    background:
+      "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
 
     [theme.breakpoints.up("md")]: {
       width: "35%",
@@ -37,49 +40,56 @@ const styles = (theme) => ({
   },
   contactInputs: {
     marginBottom: "1rem",
-    borderRadius: "10px",
+    borderRadius: "5px",
+    backgroundColor: "#f4f4f4",
   },
   textArea: {
     marginBottom: "2rem",
-    borderRadius: "10px",
+    borderRadius: "5px",
+    backgroundColor: "#f4f4f4",
   },
   needs: {
-    backgroundColor: "transparent"
+    backgroundColor: "transparent",
   },
-  list: {
-  },
+  list: {},
   heading: {
     fontWeight: 700,
     color: "grey",
   },
   submitButton: {
-    padding: "1rem 2rem",
+    padding: "1rem 1rem",
     borderRadius: "30px",
-    color: "black",
+    color: "white",
     width: "30%",
     minWidth: "7rem",
     marginLeft: "70%",
-    backgroundColor: "#f4f4f4",
-    border: "1px solid black",
-    background: "linear-gradient(to right top, #2d7dfe, #457ffe, #5780ff, #6582ff, #7284ff)",
+    // backgroundColor: "#29282e",
+    boxShadow: "5px 5px 23px -10px",
+    // border: "1px solid #29282e",
     "&:hover": {
-      border: "1px solid black",
-      background:
-      "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
-  
-        },
+      backgroundColor: "#29282e",
+      color: "white",
+      opacity: 0.8,
+    },
   },
+  sendIcon: {
+    marginRight: "1rem",
+    background:
+      "-webkit-linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
+      webkitBackgroundClip: "text",
+      WebkitTextFillColor: "transparent"
+    },
   cguSection: {
     display: "flex",
     alignItems: "center",
   },
   cgutext: {
     fontSize: "1rem",
-    color: "grey",
+    color: "white",
   },
   cgulink: {
     fontWeight: 600,
-    color: theme.palette.primary.main,
+    color: "white",
     textUnderlineOffset: "0.3rem",
     "&:hover": {
       color: theme.palette.primary.yellow,
@@ -88,13 +98,13 @@ const styles = (theme) => ({
   title: {
     textAlign: "center",
     paddingBottom: "2rem",
-    color: "black",
+    color: "white"
   },
 });
 
 const OrangeCheckbox = withStyles({
   root: {
-    color: "#040506",
+    color: "white",
     "&$checked": {
       color: "#040506",
     },
@@ -127,32 +137,32 @@ const ContactForm = ({ classes }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoader(true);
-      if (checkedCGU) {
-        db.collection("contacts")
-          .add({
-            name: name,
-            email: email,
-            message: message,
-            needs: checked,
-          })
-          .then(() => {
-            setLoader(false);
-            alert(
-              "Votre message a bien été envoyé 👍. Nous vous répondrons dans les plus brefs délais"
-            );
-          })
-          .catch((error) => {
-            alert(error.message);
-            setLoader(false);
-          });
+    if (checkedCGU) {
+      db.collection("contacts")
+        .add({
+          name: name,
+          email: email,
+          message: message,
+          needs: checked,
+        })
+        .then(() => {
+          setLoader(false);
+          alert(
+            "Votre message a bien été envoyé 👍. Nous vous répondrons dans les plus brefs délais"
+          );
+        })
+        .catch((error) => {
+          alert(error.message);
+          setLoader(false);
+        });
 
-        setName("");
-        setEmail("");
-        setMessage("");
-        setChecked([]);
-      } else {
-        alert("merci de lire et d'accepter les CGU");
-      }
+      setName("");
+      setEmail("");
+      setMessage("");
+      setChecked([]);
+    } else {
+      alert("merci de lire et d'accepter les CGU");
+    }
   };
 
   const handleCGU = (event) => {
@@ -162,9 +172,9 @@ const ContactForm = ({ classes }) => {
 
   return (
     <div className={classes.root}>
-      <Typography className={classes.title}>
+      <Typography className={classes.title} variant="h4">
         {" "}
-        Demandez votre devis gratuit!
+        Demandez votre devis !
       </Typography>
       <form className={classes.form} onSubmit={handleSubmit}>
         <TextField
@@ -260,8 +270,9 @@ const ContactForm = ({ classes }) => {
           onSubmit={handleSubmit}
           //   style={{ background: loader ? "#ccc" : " rgb(2, 2, 110)" }}
           className={classes.submitButton}
-          aria-label= "Accepter"
+          aria-label="Accepter"
         >
+          <SendOutlinedIcon className={classes.sendIcon} />
           Envoyer
         </Button>
       </form>

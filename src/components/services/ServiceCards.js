@@ -14,23 +14,27 @@ const styles = (theme) => ({
   featureCard: {
     width: "24%",
     margin: "2rem 3rem",
-    padding: "3rem",
+    padding: "2rem",
     // border: "1px solid gray",
+    // backgroundColor: "white",
+    // borderRadius: "10px",
+    // boxShadow: "5px 5px 23px -8px",
+
   },
   titleSection: {
     display: "flex",
     flexDirection: "column",
     minHeight: "6rem",
+    
   },
   separator: {
     height: ".3rem",
     width: "28%",
     marginLeft: ".2rem",
-    backgroundColor: "#27282c",
-    marginTop: "1.5rem",
+    marginTop: "0.5rem",
     background:
-    "linear-gradient(to right top, #2d7dfe, #457ffe, #5780ff, #6582ff, #7284ff)",
-  },
+    "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
+},
   title: {
     padding: "1rem 0",
     marginTop: "1rem",
@@ -46,8 +50,7 @@ const styles = (theme) => ({
     height: "11%",
     minWidth: "5rem",
     minHeight: "5rem",
-    marginTop: "1rem",
-    backgroundColor: "#27282c",
+    // backgroundColor: "#27282c",
     borderRadius: "10px"
   },
   description: {
@@ -70,7 +73,7 @@ const ServiceCards2 = ({ classes }) => {
               alt={service.feature}
               className={classes.featureIcon}
             />
-          <div className={classes.separator}/>
+          {/* <div className={classes.separator}/> */}
             <Typography className={classes.title}>{service.feature}</Typography>
           </div>
           <Typography className={classes.description}>

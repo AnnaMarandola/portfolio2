@@ -11,8 +11,7 @@ const styles = (theme) => ({
   },
   subtitle: {
     // fontSize: "2rem",
-    textAlign: "left",
-    marginLeft: "10%",
+    textAlign: "center",
   }
 });
 
