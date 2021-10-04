@@ -18,19 +18,30 @@ const styles = (theme) => ({
   root: {
     display: "flex",
     flexDirection: "column",
-    width: "90%",
-    marginLeft: "5%",
+    width: "95%",
+    marginLeft: "2.5%",
   },
   chipsetContainer: {
     textAlign: "left",
-    width: "50%",
-    marginLeft: "25%",
+    width: "100%",
     marginBottom: "5rem",
+    [theme.breakpoints.up("sm")]: {
+    },
+    [theme.breakpoints.up("lg")]: {
+      width: "60%",
+      marginLeft: "20%",
+      marginBottom: "5rem",
+    }
   },
   chip: {
-    margin: "0.5rem",
+    margin: "0.2rem",
+    [theme.breakpoints.up("sm")]: {
+      margin: "0.5rem",
+    },
+    [theme.breakpoints.up("lg")]: {
+      margin: "0.5rem",
+    }
   },
-
   projectsContainer: {
     width: "100%",
     display: "flex",
@@ -48,27 +59,40 @@ const styles = (theme) => ({
       transition: "0.7s",
     },
     [theme.breakpoints.up("sm")]: {
-      margin: "3rem",
+      marginBottom: "4rem",
     },
+    [theme.breakpoints.up("lg")]: {
+    }
   },
   imageSrc: {
-    width: "100%",
+    width: "140%",
     zIndex: 2,
     [theme.breakpoints.up("sm")]: {
-      width: "auto",
+      width: "90%",
     },
+    [theme.breakpoints.up("lg")]: {
+      width: "100%",
+
+    }
   },
   descriptionCard: {
     borderRadius: "12px",
     color: "#ffffff",
-    width: "90%",
+    width: "100%",
     display: "flex",
     alignItems: "flex-end",
     justifyContent: "space-between",
-    height: "18rem",
+    height: "22rem",
     marginTop: "-12rem",
     zIndex: 1,
     backgroundColor: "#cccccc",
+    [theme.breakpoints.up("sm")]: {
+
+    },
+    [theme.breakpoints.up("lg")]: {
+      height: "18rem",
+      width: "85%",
+    }
   },
   container: {
     display: "flex",

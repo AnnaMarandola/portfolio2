@@ -13,10 +13,14 @@ const styles = (theme) => ({
     [theme.breakpoints.up("md")]: {},
   },
   subtitle: {
-    fontSize: "2rem",
-    // paddingBottom: "6rem",
+    fontSize: "1.5rem",
     textAlign: "center",
-    color: "#27282c"
+    color: "#27282c",
+    [theme.breakpoints.up("sm")]: {
+    },
+    [theme.breakpoints.up("lg")]: {
+    }
+
   }
 });
 

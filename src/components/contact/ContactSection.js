@@ -12,6 +12,7 @@ const styles = (theme) => ({
   container: {
     display: "flex",
     flexDirection: "column",
+    alignItems: "center",
     [theme.breakpoints.up("md")]: {
       flexDirection: "row",
       justifyContent: "space-evenly",

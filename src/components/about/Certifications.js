@@ -13,7 +13,7 @@ const styles = (theme) => ({
     width: "100%",
     height: "fit-content",
     padding: "1rem",
-    margin: "2rem",
+    // margin: "2rem",
     [theme.breakpoints.up("md")]: {
       width: "50%",
       minWidth: "20rem",
@@ -35,7 +35,7 @@ const styles = (theme) => ({
   certifCard: {
     marginBottom: "2rem",
     display: "flex",
-    width: "85%",
+    width: "100%",
     padding: "0.5rem",
     borderRadius: "10px",
     [theme.breakpoints.up("md")]: {

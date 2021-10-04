@@ -4,15 +4,23 @@ const styles = (theme) => ({
   root: {
     display: "flex",
     flexDirection: "column",
-    paddingBottom: "5%",
-    paddingTop: "5%",
+    padding: "15% 0",
+    [theme.breakpoints.up("sm")]: {
+      padding: "5% 0",
+    },
+    [theme.breakpoints.up("lg")]: {
+    }
   },
   title: {
     color: "#27282c",
-    fontSize: "4rem",
+    fontSize: "3rem",
     fontWeight: 700,
-    textAlign: "center"
-
+    textAlign: "center",
+    [theme.breakpoints.up("sm")]: {
+    },
+    [theme.breakpoints.up("lg")]: {
+      fontSize: "4rem",
+    }
   },
   underline: {
     height: ".3rem",

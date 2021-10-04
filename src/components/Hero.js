@@ -6,16 +6,16 @@ import HAND from "../assets/hand.jpg";
 
 const styles = (theme) => ({
   root: {
-    // backgroundImage: `url(${HAND})`,
-    // backgroundRepeat: "no-repeat",
-    // backgroundPosition: "right 20%",
-    // backgroundSize: "cover",
     backgroundColor: "#29282e",
     height: "fit-content",
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
     marginTop: "-5rem",
+    [theme.breakpoints.up("sm")]: {
+    },
+    [theme.breakpoints.up("lg")]: {
+    }
   },
   textContainer: {
     display: "flex",
@@ -25,20 +25,37 @@ const styles = (theme) => ({
     paddingBottom: "5rem",
   },
   annaM: {
-    fontSize: "2.5rem",
+    fontSize: "2rem",
     color: "white",
+    [theme.breakpoints.up("sm")]: {
+    },
+    [theme.breakpoints.up("lg")]: {
+      fontSize: "2.5rem",
+    }
   },
   developer: {
-    fontSize: "4rem",
+    fontSize: "2.5rem",
     color: "white",
     fontFamily: "Poppins",
     fontWeight: 600,
+    [theme.breakpoints.up("sm")]: {
+    },
+    [theme.breakpoints.up("lg")]: {
+      fontSize: "4rem",
+    }
   },
   buttonsContainer: {
     display: "flex",
-    padding: "3rem 0",
+    padding: "2rem 0",
     justifyContent: "space-between",
-    width: "40%",
+    width: "100%",
+    [theme.breakpoints.up("sm")]: {
+      width: "60%",
+      padding: "3rem 0",
+    },
+    [theme.breakpoints.up("lg")]: {
+      width: "40%",
+    }
   },
   contactButton: {
     padding: "1rem 2rem",
@@ -47,12 +64,9 @@ const styles = (theme) => ({
     boxShadow: "5px 5px 23px -12px gray",
     background:
     "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
-    // border: "1px solid #b01df6",
     "&:hover": {
-      // border: "1px solid #7284ff",
       background:
       "linear-gradient(to right top, #2d7dfe, #457ffe, #5780ff, #6582ff, #7284ff)",
-
     },
   },
   imgContainer: {
@@ -74,7 +88,7 @@ const Hero = ({ classes }) => {
         <Typography className={classes.annaM}>spécialisée en dévelopement front-end - React.js</Typography>
 
         <div className={classes.buttonsContainer}>
-          {/* <Avatar
+          <Avatar
             className={classes.mediaIcon}
             src={LINKEDIN}
             alt="linkedin link"
@@ -83,7 +97,7 @@ const Hero = ({ classes }) => {
             className={classes.mediaIcon}
             src={TWITTER}
             alt="twitter link"
-          /> */}
+          />
           <Button className={classes.contactButton} aria-label="Contact">
             Contact
           </Button>

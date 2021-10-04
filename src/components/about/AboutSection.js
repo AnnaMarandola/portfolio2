@@ -9,8 +9,8 @@ const styles = (theme) => ({
     display: "flex",
     flexDirection: "column",
     backgroundColor: "#29282e",
+    alignItems: "center",
     [theme.breakpoints.up("md")]: {
-      alignItems: "center",
       width: "100%",
     },
   },
@@ -21,24 +21,36 @@ const styles = (theme) => ({
       "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
     boxShadow: "5px 5px 23px -8px",
     zIndex: 2,
-    [theme.breakpoints.up("md")]: {
-      alignItems: "flex-start",
+    width: "80%",
+    justifyContent: "center",
+    [theme.breakpoints.up("sm")]: {
       width: "70%",
-      flexDirection: "row",
     },
+    [theme.breakpoints.up("lg")]: {
+      alignItems: "flex-start",
+      flexDirection: "row",
+    }
   },
   textContainer: {
     display: "flex",
     flexDirection: "column",
-    padding: "4rem",
-    [theme.breakpoints.up("md")]: {
-      width: "65%",
+    padding: "2rem",
+    [theme.breakpoints.up("sm")]: {
     },
+    [theme.breakpoints.up("lg")]: {
+      padding: "4rem",
+      width: "65%",
+    }
+
   },
   presentationText: {
     color: "white",
-    fontSize: "1.5rem",
-    marginLeft: "8rem",
+    fontSize: "1rem",
+    [theme.breakpoints.up("sm")]: {
+    },
+    [theme.breakpoints.up("lg")]: {
+      fontSize: "1.5rem",
+    }
   },
   aboutButton: {
     marginTop: "3rem",
@@ -57,22 +69,35 @@ const styles = (theme) => ({
     },
   },
   illustrationContainer: {
-    width: "40%",
     backgroundImage: `url(${ILLUS})`,
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center 35%",
     backgroundSize: "cover",
     zIndex: 3,
-    height: "25rem"
+    height: "15rem",
+    [theme.breakpoints.up("sm")]: {
+      height: "18rem",
+    },
+    [theme.breakpoints.up("lg")]: {
+      width: "40%",
+      height: "25rem",
+    }
   },
   skillsSection: {
     display: "flex",
+    flexDirection: "column",
     justifyContent: "space-evenly",
     width: "100%",
     paddingTop: "20rem",
     backgroundColor: "#f4f4f4",
     marginTop: "-12rem",
     zIndex: 1,
+    [theme.breakpoints.up("sm")]: {
+    },
+    [theme.breakpoints.up("lg")]: {
+      flexDirection: "row",
+      justifyContent: "space-evenly",
+    }
   },
 });
 

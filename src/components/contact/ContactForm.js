@@ -20,7 +20,7 @@ import SendOutlinedIcon from "@material-ui/icons/SendOutlined";
 
 const styles = (theme) => ({
   root: {
-    width: "90%",
+    width: "100%",
     padding: "0.5rem",
     marginBottom: "6rem",
     // backgroundColor: "#f4f4f4",
@@ -28,7 +28,7 @@ const styles = (theme) => ({
     boxShadow: "5px 5px 23px -5px",
     background:
       "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
-
+      
     [theme.breakpoints.up("md")]: {
       width: "35%",
       padding: "3rem 3rem",
@@ -61,8 +61,8 @@ const styles = (theme) => ({
     borderRadius: "30px",
     color: "white",
     width: "30%",
-    minWidth: "7rem",
-    marginLeft: "70%",
+    minWidth: "9rem",
+    marginLeft: "50%",
     // backgroundColor: "#29282e",
     boxShadow: "5px 5px 23px -10px",
     // border: "1px solid #29282e",
@@ -71,6 +71,13 @@ const styles = (theme) => ({
       color: "white",
       opacity: 0.8,
     },
+    [theme.breakpoints.up("lg")]: {
+      marginLeft: "70%",
+      minWidth: "7rem",
+
+
+    },
+
   },
   sendIcon: {
     marginRight: "1rem",

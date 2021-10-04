@@ -5,9 +5,10 @@ const styles = (theme) => ({
   root: {
     width: "100%",
     padding: "1rem",
-    margin: "2rem",
     height: "fit-content",
-    [theme.breakpoints.up("md")]: {
+    [theme.breakpoints.up("sm")]: {
+    },
+    [theme.breakpoints.up("lg")]: {
       width: "30%",
       minWidth: "35rem",
       padding: "2rem",
@@ -15,10 +16,18 @@ const styles = (theme) => ({
     },
   },
   cardTitle: {
-    marginBottom :"4rem",
+    marginBottom :"2rem",
     color: "#27282c",
     fontWeight: 600,
     fontSize: "2rem",
+    paddingLeft: "1rem",
+    [theme.breakpoints.up("lg")]: {
+      paddingLeft: "0rem",
+      marginBottom :"4rem",
+
+
+    }
+
   },
   jauge: {
     display: "flex",

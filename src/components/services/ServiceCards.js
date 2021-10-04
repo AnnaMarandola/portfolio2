@@ -7,25 +7,36 @@ const styles = (theme) => ({
     flexWrap: "wrap",
     justifyContent: "center",
     borderRadius: "10px",
-    width: "90%",
-    marginLeft: "5%",
-    padding: "5rem 0",
+    [theme.breakpoints.up("sm")]: {
+    },
+    [theme.breakpoints.up("lg")]: {
+      width: "90%",
+      marginLeft: "5%",
+      padding: "5rem 0",
+  
+    }
   },
   featureCard: {
-    width: "24%",
-    margin: "2rem 3rem",
-    padding: "2rem",
-    // border: "1px solid gray",
-    // backgroundColor: "white",
-    // borderRadius: "10px",
-    // boxShadow: "5px 5px 23px -8px",
+    width: "80%",
+    margin: "1rem",
+    padding: "1rem",
+    [theme.breakpoints.up("sm")]: {
+      width: "40%",
+      margin: "1.5rem",
+      padding: "1rem",  
+    },
+    [theme.breakpoints.up("lg")]: {
+      width: "24%",
+      margin: "2rem 3rem",
+      padding: "2rem",
+  
+    }
 
   },
   titleSection: {
     display: "flex",
     flexDirection: "column",
-    minHeight: "6rem",
-    
+    minHeight: "6rem",  
   },
   separator: {
     height: ".3rem",
