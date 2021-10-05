@@ -1,8 +1,9 @@
 import { Button, Typography, withStyles } from "@material-ui/core";
 import { Avatar } from "@material-ui/core";
-import TWITTER from "../assets/twitter.png";
-import LINKEDIN from "../assets/linkedin.png";
 import HAND from "../assets/hand.jpg";
+import GITHUB from "../assets/contact-icons/github.svg";
+import LINKEDIN from "../assets/contact-icons/linkedin.svg";
+
 
 const styles = (theme) => ({
   root: {
@@ -90,14 +91,14 @@ const Hero = ({ classes }) => {
         <Typography className={classes.annaM}>spécialisée en dévelopement front-end - React.js</Typography>
 
         <div className={classes.buttonsContainer}>
-          <Avatar
+          <img
             className={classes.mediaIcon}
             src={LINKEDIN}
             alt="linkedin link"
           />
-          <Avatar
+          <img
             className={classes.mediaIcon}
-            src={TWITTER}
+            src={GITHUB}
             alt="twitter link"
           />
           <Button className={classes.contactButton} aria-label="Contact">
