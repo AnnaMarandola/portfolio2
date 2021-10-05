@@ -21,17 +21,17 @@ import SendOutlinedIcon from "@material-ui/icons/SendOutlined";
 const styles = (theme) => ({
   root: {
     width: "100%",
-    padding: "0.5rem",
+    padding: "2rem 0.5rem",
     marginBottom: "6rem",
-    // backgroundColor: "#f4f4f4",
-    // borderRadius: "10px",
     boxShadow: "5px 5px 23px -5px",
     background:
       "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
-      
-    [theme.breakpoints.up("md")]: {
-      width: "35%",
-      padding: "3rem 3rem",
+    [theme.breakpoints.up("sm")]: {
+      width: "40%",
+      padding: "2rem",
+    },
+    [theme.breakpoints.up("lg")]: {
+      padding: "3rem",
     },
   },
   form: {
@@ -63,9 +63,7 @@ const styles = (theme) => ({
     width: "30%",
     minWidth: "9rem",
     marginLeft: "50%",
-    // backgroundColor: "#29282e",
     boxShadow: "5px 5px 23px -10px",
-    // border: "1px solid #29282e",
     "&:hover": {
       backgroundColor: "#29282e",
       color: "white",
@@ -74,10 +72,7 @@ const styles = (theme) => ({
     [theme.breakpoints.up("lg")]: {
       marginLeft: "70%",
       minWidth: "7rem",
-
-
     },
-
   },
   sendIcon: {
     marginRight: "1rem",
@@ -111,9 +106,9 @@ const styles = (theme) => ({
 
 const OrangeCheckbox = withStyles({
   root: {
-    color: "white",
+    color: "#29282e",
     "&$checked": {
-      color: "#040506",
+      color: "#29282e",
     },
   },
   checked: {},

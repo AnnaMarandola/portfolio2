@@ -55,12 +55,13 @@ const styles = (theme) => ({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    "&:hover": {
-      transform: "scale(1.1)",
-      transition: "0.7s",
-    },
+
     [theme.breakpoints.up("sm")]: {
       marginBottom: "4rem",
+      "&:hover": {
+        transform: "scale(1.1)",
+        transition: "0.7s",
+      },
     },
     [theme.breakpoints.up("lg")]: {
     }
@@ -73,7 +74,6 @@ const styles = (theme) => ({
     },
     [theme.breakpoints.up("lg")]: {
       width: "100%",
-
     }
   },
   descriptionCard: {

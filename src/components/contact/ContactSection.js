@@ -7,16 +7,15 @@ const styles = (theme) => ({
   root: {
     padding: "0 5% 5% 5%",
     backgroundColor: "#29282e",
-    [theme.breakpoints.up("md")]: {},
   },
   container: {
     display: "flex",
-    flexDirection: "column",
+    flexDirection: "column-reverse",
     alignItems: "center",
-    [theme.breakpoints.up("md")]: {
+    [theme.breakpoints.up("sm")]: {
       flexDirection: "row",
       justifyContent: "space-evenly",
-      alignItems: "space-evenly",
+      alignItems: "flex-start",
     },
   },
   title: {
