@@ -48,6 +48,10 @@ const styles = (theme) => ({
     [theme.breakpoints.up("sm")]: {
       minWidth: "15rem",
     },
+    "&:nth-of-type(1)": {
+      justifyContent: "space-evenly",
+    },
+
   },
   title: {
     textTransform: "uppercase",
