@@ -5,9 +5,8 @@ import { withStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import { Avatar } from "@material-ui/core";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-
-import TWITTER from "../assets/twitter.png";
-import LINKEDIN from "../assets/linkedin.png";
+import GITHUB from "../assets/contact-icons/github.svg";
+import LINKEDIN from "../assets/contact-icons/linkedin.svg";
 
 const styles = (theme) => ({
   root: {
@@ -15,10 +14,12 @@ const styles = (theme) => ({
     flexDirection: "column",
   },
   footer: {
-    backgroundColor: "#272c2d",
-    opacity: 0.95,
-    paddingTop: "2rem",
-    paddingBottom: "2rem",
+    backgroundColor: "#29282e",
+    padding: "10rem 0 5rem 0",
+    [theme.breakpoints.up("lg")]: {
+      padding: "5rem 0",
+
+    }
   },
   footerContainer: {
     display: "flex",
@@ -32,14 +33,16 @@ const styles = (theme) => ({
   footerNav1: {
     display: "flex",
     flexDirection: "column",
+    textAlign: "center",
     [theme.breakpoints.up("sm")]: {
+      textAlign: "left",
       alignItems: "start",
       width: "33%",
     },
   },
   footerNav2: {
     display: "flex",
-    flexDirection: "column",
+    justifyContent: "center",
     [theme.breakpoints.up("sm")]: {
       alignItems: "center",
       width: "33%",
@@ -48,19 +51,16 @@ const styles = (theme) => ({
   footerNav3: {
     display: "flex",
     flexDirection: "column",
-
-   [theme.breakpoints.up("sm")]: {
-      flexDirection: "row",
-      justifyContent: "flex-end",
+    textAlign: "center",
+    [theme.breakpoints.up("sm")]: {
+      textAlign: "left",
+      alignItems: "flex-end",
       width: "33%",
     },
   },
   mediaIcon: {
     margin: "1rem",
-    width: theme.spacing(6),
-    height: theme.spacing(6),
   },
-
   footerText: {
     color: "white",
     "&:hover": {
@@ -68,7 +68,7 @@ const styles = (theme) => ({
     },
   },
   logo: {
-    color: "white"
+    color: "white",
   },
   linkText: {
     textDecoration: "none",
@@ -83,17 +83,30 @@ function Footer({ classes }) {
       <footer className={classes.footer}>
         <Container className={classes.footerContainer}>
           <div className={classes.footerNav1}>
-            <Typography variant="h5" className={classes.logo} >
+            <Typography variant="h6" className={classes.logo}>
               Anna Marandola
             </Typography>
 
             <AnchorLink href="#back-to-top-anchor" className={classes.linkText}>
-            <Typography variant="h5" className={classes.logo} >
-              Développeur web freelance
-            </Typography>
+              <Typography variant="h6" className={classes.logo}>
+                Développeur web freelance
+              </Typography>
             </AnchorLink>
+          </div>
+          <div className={classes.footerNav2}>
+            <img
+              className={classes.mediaIcon}
+              src={LINKEDIN}
+              alt="linkedin link"
+            />
+            <img
+              className={classes.mediaIcon}
+              src={GITHUB}
+              alt="twitter link"
+            />
+          </div>
 
-
+          <div className={classes.footerNav3}>
             <AnchorLink href="#about" className={classes.linkText}>
               <Typography variant="body2" className={classes.footerText}>
                 A propos
@@ -111,32 +124,17 @@ function Footer({ classes }) {
                 Portfolio
               </Typography>
             </AnchorLink>
-          </div>
-
-          <div className={classes.footerNav2}>
-          <AnchorLink href="#contact" className={classes.linkText}>
+            <AnchorLink href="#contact" className={classes.linkText}>
               <Typography variant="body2" className={classes.footerText}>
                 Contact
               </Typography>
             </AnchorLink>
 
             {/* <Link to="/portfolio" className={classes.link}> */}
-              <Typography variant="body2" className={classes.footerText}>
-                Mentions légales
-              </Typography>
+            <Typography variant="body2" className={classes.footerText}>
+              Mentions légales
+            </Typography>
             {/* </Link> */}
-          </div>
-          <div className={classes.footerNav3}>
-            <Avatar
-              className={classes.mediaIcon}
-              src={LINKEDIN}
-              alt="linkedin link"
-            />
-            <Avatar
-              className={classes.mediaIcon}
-              src={TWITTER}
-              alt="twitter link"
-            />
           </div>
         </Container>
       </footer>
