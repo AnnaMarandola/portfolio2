@@ -16,7 +16,7 @@ const styles = (theme) => ({
   },
   firstSection: {
     display: "flex",
-    flexDirection: "column",
+    flexDirection: "column-reverse",
     background:
       "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
     boxShadow: "5px 5px 23px -8px",
@@ -24,12 +24,15 @@ const styles = (theme) => ({
     width: "80%",
     justifyContent: "center",
     [theme.breakpoints.up("sm")]: {
-      width: "50%",
+      width: "60%",
+      flexDirection: "column",
+      marginTop: "-5rem"
     },
     [theme.breakpoints.up("lg")]: {
       width: "80%",
       flexDirection: "row",
       alignItems: "flex-start",
+      marginTop: 0,
     }
   },
   textContainer: {
@@ -78,14 +81,12 @@ const styles = (theme) => ({
     height: "15rem",
     [theme.breakpoints.up("sm")]: {
       height: "18rem",
-      backgroundPosition: "center 35%",
-
+      backgroundPosition: "center 65%",
     },
     [theme.breakpoints.up("lg")]: {
       width: "40%",
       height: "25rem",
       backgroundPosition: "center 35%",
-
     }
   },
   skillsSection: {

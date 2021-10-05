@@ -66,7 +66,7 @@ const styles = (theme) => ({
     }
   },
   imageSrc: {
-    width: "140%",
+    width: "120%",
     zIndex: 2,
     [theme.breakpoints.up("sm")]: {
       width: "90%",
