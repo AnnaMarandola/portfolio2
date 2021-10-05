@@ -46,10 +46,12 @@ const styles = (theme) => ({
   },
   buttonsContainer: {
     display: "flex",
+    flexDirection: "row-reverse",
     padding: "2rem 0",
     justifyContent: "space-between",
     width: "100%",
     [theme.breakpoints.up("sm")]: {
+      flexDirection: "row",
       width: "60%",
       padding: "3rem 0",
     },

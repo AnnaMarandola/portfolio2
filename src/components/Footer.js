@@ -3,7 +3,6 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import Typography from "@material-ui/core/Typography";
 import { withStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
-import { Avatar } from "@material-ui/core";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import GITHUB from "../assets/contact-icons/github.svg";
 import LINKEDIN from "../assets/contact-icons/linkedin.svg";
