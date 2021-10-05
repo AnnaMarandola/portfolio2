@@ -24,11 +24,12 @@ const styles = (theme) => ({
     width: "80%",
     justifyContent: "center",
     [theme.breakpoints.up("sm")]: {
-      width: "70%",
+      width: "50%",
     },
     [theme.breakpoints.up("lg")]: {
-      alignItems: "flex-start",
+      width: "80%",
       flexDirection: "row",
+      alignItems: "flex-start",
     }
   },
   textContainer: {
@@ -77,10 +78,14 @@ const styles = (theme) => ({
     height: "15rem",
     [theme.breakpoints.up("sm")]: {
       height: "18rem",
+      backgroundPosition: "center 35%",
+
     },
     [theme.breakpoints.up("lg")]: {
       width: "40%",
       height: "25rem",
+      backgroundPosition: "center 35%",
+
     }
   },
   skillsSection: {

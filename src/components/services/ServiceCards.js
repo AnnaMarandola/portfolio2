@@ -7,13 +7,13 @@ const styles = (theme) => ({
     flexWrap: "wrap",
     justifyContent: "center",
     borderRadius: "10px",
+    paddingBottom: "5rem",
     [theme.breakpoints.up("sm")]: {
     },
     [theme.breakpoints.up("lg")]: {
       width: "90%",
       marginLeft: "5%",
       padding: "5rem 0",
-  
     }
   },
   featureCard: {

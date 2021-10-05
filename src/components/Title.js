@@ -4,11 +4,13 @@ const styles = (theme) => ({
   root: {
     display: "flex",
     flexDirection: "column",
-    padding: "15% 0",
+    padding: "25% 0",
     [theme.breakpoints.up("sm")]: {
-      padding: "5% 0",
+      padding: "15% 0",
     },
     [theme.breakpoints.up("lg")]: {
+      padding: "10% 0",
+
     }
   },
   title: {

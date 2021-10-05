@@ -20,6 +20,7 @@ const styles = (theme) => ({
     flexDirection: "column",
     width: "95%",
     marginLeft: "2.5%",
+    paddingBottom: "5rem",
   },
   chipsetContainer: {
     textAlign: "left",
