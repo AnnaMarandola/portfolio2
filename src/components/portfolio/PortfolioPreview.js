@@ -55,7 +55,6 @@ const styles = (theme) => ({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-
     [theme.breakpoints.up("sm")]: {
       marginBottom: "4rem",
       "&:hover": {
@@ -101,13 +100,23 @@ const styles = (theme) => ({
     width: "100%",
     padding: "1rem",
     backgroundColor: "#27282c",
+    flexDirection: "column",
+    [theme.breakpoints.up("sm")]: {
+      padding: "1rem 2rem",
+      flexDirection: "row",
+      alignItems: "center",
+    },
+    [theme.breakpoints.up("lg")]: {
+    }
+
   },
   texts: {
     backgroundColor: "#27282c",
     color: "#ededee",
+    paddingBottom: "1rem"
   },
   fab: {
-    margin: "0.5rem",
+    margin: "0 0.5rem",
     color:
       "linear-gradient(to right top, #2d7dfe, #457ffe, #5780ff, #6582ff, #7284ff)",
     "&:hover": {
@@ -242,7 +251,6 @@ const PortfolioPreview = ({ classes }) => {
                 <div className={classes.container}>
                   <div className={classes.texts}>
                     <Typography>{project.title}</Typography>
-                    <Typography>{project.date}</Typography>
                   </div>
                   <div className={classes.buttons}>
                     <Fab
