@@ -7,7 +7,7 @@ import {
   Fab,
   Chip,
 } from "@material-ui/core";
-import { projects, tags } from "./ProjectsData";
+import { tags } from "./ProjectsData";
 import Pagination from "@material-ui/lab/Pagination";
 import ScrollAnimation from "react-animate-on-scroll";
 import "animate.css";
@@ -151,11 +151,11 @@ const styles = (theme) => ({
   },
 });
 
-const PortfolioPreview = ({ classes }) => {
+const PortfolioPreview = ({ classes, projects, handleOpen }) => {
   const firstIndex = 0;
   const [pageSize, setPageSize] = useState(4);
   const [page, setPage] = useState(1);
-  const [data, setData] = useState(projects.slice(firstIndex, pageSize));
+  const [data, setData] = useState([...projects].slice(firstIndex, pageSize));
   const [filters, setFilters] = useState([]);
   const [selectedProjects, setSelectedProjects] = useState([]);
 
@@ -257,6 +257,7 @@ const PortfolioPreview = ({ classes }) => {
                       size="small"
                       aria-label="voir +"
                       className={classes.fab}
+                      onClick={handleOpen}
                     >
                       <AddIcon />
                     </Fab>

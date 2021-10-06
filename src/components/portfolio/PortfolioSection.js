@@ -1,6 +1,9 @@
 import { withStyles } from "@material-ui/core";
 import PortfolioPreview from "./PortfolioPreview";
 import Title from "../Title";
+import { projects } from "./ProjectsData";
+import { useState } from "react";
+import Project from "./Project";
 
 const styles = (theme) => ({
   root: {
@@ -10,10 +13,21 @@ const styles = (theme) => ({
   },
 });
 const PortfolioSection = ({ classes }) => {
+  console.log("projects", projects);
+  const [isOpen, setOpen] = useState(false);
+
+  const handleOpen = () => (e) => {
+    isOpen ? setOpen(false) : setOpen(true);
+  };
+
   return (
     <div className={classes.root}>
       <Title title={"Portfolio"} />
-      <PortfolioPreview />
+      {isOpen ? (
+        <Project handleClose={handleOpen()} />
+      ) : (
+        <PortfolioPreview projects={projects} handleOpen={handleOpen()} />
+      )}
     </div>
   );
 };

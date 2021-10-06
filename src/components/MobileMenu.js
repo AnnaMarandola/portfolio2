@@ -10,7 +10,8 @@ const styles = (theme) => ({
   },
   separator: {
     width: "80%",
-    border: "1px solid linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
+    border:
+      "1px solid linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
     margin: "0.5rem 10%",
   },
   menuIcon: {
@@ -19,9 +20,6 @@ const styles = (theme) => ({
   },
   navLink: {
     textDecoration: "none",
-    "&:hover": {
-      textDecoration: "underline",
-    },
   },
   menuItem: {
     color: "black",
