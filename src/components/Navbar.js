@@ -5,6 +5,7 @@ import BackToTop from "./BackToTop";
 import { KeyboardArrowUp } from "@material-ui/icons";
 
 import AM from "../assets/logoAm.png";
+import MobileMenu from "./MobileMenu";
 
 const styles = (theme) => ({
   root: {
@@ -15,7 +16,7 @@ const styles = (theme) => ({
     justifyContent: "space-between",
   },
   logo: {
-    width: "40%",
+    width: "0%",
   },
   navContainer: {
     display: "none",
@@ -48,7 +49,11 @@ const styles = (theme) => ({
       color: "white",
       fontWeight: 600,
     },
+    [theme.breakpoints.up("md")]: {},
+  },
+  burgerMenu: {
     [theme.breakpoints.up("md")]: {
+      display: "none",
     },
   },
   topButton: {
@@ -73,7 +78,6 @@ const Header = ({ classes }) => {
     <>
       <div className={classes.root} id="back-to-top-anchor">
         <a href="/">
-          <Typography>AM</Typography>
           <img src={AM} alt="initials AM" className={classes.logo} />
         </a>
         <div className={classes.navContainer}>
@@ -84,6 +88,9 @@ const Header = ({ classes }) => {
               </AnchorLink>
             </div>
           ))}
+        </div>
+        <div className={classes.burgerMenu}>
+          <MobileMenu />
         </div>
       </div>
 
