@@ -7,9 +7,9 @@ import AWESOMEPREZ from "../../assets/projects/awesome/awesomeTable-preview.png"
 import NEOBSERVER from "../../assets/projects/neobserver/neobserver-preview.png";
 import BOUSSOLE from "../../assets/projects/bousole/boussole-preview.png";
 import GAME from "../../assets/projects/deathQuizz/deathQuizz-preview.png";
-import ALLERGEEK  from "../../assets/projects/allergeek/allergeek-preview.png";
+import ALLERGEEK from "../../assets/projects/allergeek/allergeek-preview.png";
 
-export const tags =  [
+export const tags = [
   "site vitrine",
   "e-commerce",
   "click & collect",
@@ -51,11 +51,9 @@ export const projects = [
     date: "novembre 2020",
     githubLink: "",
     visitLink: "https://le-san-feliu-bar-restaurant.netlify.app/",
-    gallery: [
-      { img: SHORTLY, subtitle: "Header" },
-    ],
+    gallery: [{ img: SHORTLY, subtitle: "Header" }],
     draft: false,
-    tag: "API"
+    tag: "API",
   },
   {
     id: 1,
@@ -84,9 +82,7 @@ export const projects = [
     date: "novembre 2020",
     githubLink: "",
     visitLink: "https://le-san-feliu-bar-restaurant.netlify.app/",
-    gallery: [
-      { img: GALLERIA, subtitle: "Header" },
-    ],
+    gallery: [{ img: GALLERIA, subtitle: "Header" }],
     draft: false,
     tag: "site vitrine",
   },
@@ -117,13 +113,10 @@ export const projects = [
     date: "novembre 2020",
     githubLink: "",
     visitLink: "https://le-san-feliu-bar-restaurant.netlify.app/",
-    gallery: [
-      { img: SANFELIU, subtitle: "Header" },
-    ],
+    gallery: [{ img: SANFELIU, subtitle: "Header" }],
     draft: false,
-    tag: "Restauration"
+    tag: "Restauration",
   },
-
   {
     id: 3,
     url: YUMIPREZ,
@@ -156,10 +149,13 @@ export const projects = [
     githubLink: "",
     visitLink: "",
     gallery: [
-      { img: YUMIPREZ, subtitle: "interface de gestion de contenu dynamique et intuitive" },
+      {
+        img: YUMIPREZ,
+        subtitle: "interface de gestion de contenu dynamique et intuitive",
+      },
     ],
     draft: false,
-    tag: "application web/mobile"
+    tag: "application web/mobile",
   },
   {
     id: 4,
@@ -188,14 +184,10 @@ export const projects = [
     date: "novembre 2020",
     githubLink: "",
     visitLink: "https://le-san-feliu-bar-restaurant.netlify.app/",
-    gallery: [
-      { img: PHOTOSNAP, subtitle: "Header" },
-    ],
+    gallery: [{ img: PHOTOSNAP, subtitle: "Header" }],
     draft: false,
     tag: "dévelopement front-end",
   },
-
-
   {
     id: 5,
     url: NEOBSERVER,
@@ -211,14 +203,10 @@ export const projects = [
       { label: "Javascript" },
       { label: "API" },
     ],
-    gallery: [
-      { img: NEOBSERVER, subtitle: "Header" },
-    ],
+    gallery: [{ img: NEOBSERVER, subtitle: "Header" }],
     draft: true,
     tag: "dévelopement back-end",
-
   },
-
   {
     id: 6,
     width: "28%",
@@ -237,9 +225,7 @@ export const projects = [
       { label: "Firebase" },
     ],
     date: "fev 2020 - mai 2020",
-    gallery: [
-      { img: BOUSSOLE, subtitle: "Header" },
-    ],
+    gallery: [{ img: BOUSSOLE, subtitle: "Header" }],
     draft: true,
     tag: "audio/video",
   },
@@ -261,13 +247,10 @@ export const projects = [
       { label: "Firebase" },
     ],
     date: "fev 2020 - mai 2020",
-    gallery: [
-      { img: ALLERGEEK, subtitle: "Header" },
-    ],
+    gallery: [{ img: ALLERGEEK, subtitle: "Header" }],
     draft: true,
-    tag: "click & collect"
+    tag: "click & collect",
   },
-
   {
     id: 8,
     url: AWESOMEPREZ,
@@ -277,7 +260,7 @@ export const projects = [
     client: "projet personnel",
     stack: [
       { label: "Google cloud" },
-      { label: "APIrest"},
+      { label: "APIrest" },
       { label: "HTML5" },
       { label: "CSS3" },
       { label: "Javascript" },
@@ -287,9 +270,8 @@ export const projects = [
       { img: AWESOMEPREZ, subtitle: "map markers, filtres de rcherche" },
     ],
     draft: false,
-    tag: "géolocalisation"
+    tag: "géolocalisation",
   },
-
   {
     id: 9,
     url: GAME,
@@ -304,12 +286,8 @@ export const projects = [
       { label: "Javascript" },
       { label: "Bootstrap" },
     ],
-    gallery: [
-      { img: GAME, subtitle: "Header" },
-    ],
+    gallery: [{ img: GAME, subtitle: "Header" }],
     draft: true,
-    tag: "e-commerce"
+    tag: "e-commerce",
   },
-
-
 ];

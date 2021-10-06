@@ -26,13 +26,12 @@ const styles = (theme) => ({
     textAlign: "left",
     width: "100%",
     marginBottom: "5rem",
-    [theme.breakpoints.up("sm")]: {
-    },
+    [theme.breakpoints.up("sm")]: {},
     [theme.breakpoints.up("lg")]: {
       width: "60%",
       marginLeft: "20%",
       marginBottom: "5rem",
-    }
+    },
   },
   chip: {
     margin: "0.2rem",
@@ -41,7 +40,7 @@ const styles = (theme) => ({
     },
     [theme.breakpoints.up("lg")]: {
       margin: "0.5rem",
-    }
+    },
   },
   projectsContainer: {
     width: "100%",
@@ -62,8 +61,7 @@ const styles = (theme) => ({
         transition: "0.7s",
       },
     },
-    [theme.breakpoints.up("lg")]: {
-    }
+    [theme.breakpoints.up("lg")]: {},
   },
   imageSrc: {
     width: "120%",
@@ -73,7 +71,7 @@ const styles = (theme) => ({
     },
     [theme.breakpoints.up("lg")]: {
       width: "100%",
-    }
+    },
   },
   descriptionCard: {
     borderRadius: "12px",
@@ -86,13 +84,11 @@ const styles = (theme) => ({
     marginTop: "-12rem",
     zIndex: 1,
     backgroundColor: "#cccccc",
-    [theme.breakpoints.up("sm")]: {
-
-    },
+    [theme.breakpoints.up("sm")]: {},
     [theme.breakpoints.up("lg")]: {
       height: "18rem",
       width: "85%",
-    }
+    },
   },
   container: {
     display: "flex",
@@ -106,14 +102,12 @@ const styles = (theme) => ({
       flexDirection: "row",
       alignItems: "center",
     },
-    [theme.breakpoints.up("lg")]: {
-    }
-
+    [theme.breakpoints.up("lg")]: {},
   },
   texts: {
     backgroundColor: "#27282c",
     color: "#ededee",
-    paddingBottom: "1rem"
+    paddingBottom: "1rem",
   },
   fab: {
     margin: "0 0.5rem",
@@ -165,7 +159,7 @@ const PortfolioPreview = ({ classes, projects, handleOpen }) => {
     } else {
       setData(projects.slice(0, pageSize));
     }
-  }, [pageSize, selectedProjects, filters]);
+  }, [pageSize, selectedProjects, filters, projects]);
 
   const handleFilters = (tag) => () => {
     const newFilters = filters;
@@ -192,10 +186,9 @@ const PortfolioPreview = ({ classes, projects, handleOpen }) => {
   const handleDelete = (tag) => () => {
     const newFilters = filters.filter((filter) => filter !== tag);
     setFilters(newFilters);
-        if (filters.length === 0){
-      setSelectedProjects([])
+    if (filters.length === 0) {
+      setSelectedProjects([]);
     }
-
   };
 
   const handleSeeAll = () => {
@@ -239,7 +232,7 @@ const PortfolioPreview = ({ classes, projects, handleOpen }) => {
             delay={300}
             key={index}
           >
-            <div className={classes.project} key={index}>
+            <div className={classes.project} key={project.id}>
               <img
                 src={project.url}
                 alt={project.title}
@@ -257,9 +250,8 @@ const PortfolioPreview = ({ classes, projects, handleOpen }) => {
                       size="small"
                       aria-label="voir +"
                       className={classes.fab}
-                      onClick={handleOpen}
                     >
-                      <AddIcon />
+                      <AddIcon onClick={handleOpen} id={project.title} />
                     </Fab>
                     <Fab
                       size="small"
