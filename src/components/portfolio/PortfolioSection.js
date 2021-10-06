@@ -18,22 +18,23 @@ const PortfolioSection = ({ classes }) => {
   const [projectId, setProjectId] = useState();
   const [index, setIndex] = useState()
 
+
+  const project = projects.find(project => project.title === projectId)
+
   const handleOpen = () => (e) => {
-    console.log("target", e.target.id)
     setProjectId(e.target.id)
     setIndex(projects.findIndex((project) => project.title === e.target.id))
     isOpen ? setOpen(false) && setProjectId() : setOpen(true);
   };
 
   useEffect(() => {
-    console.log("project id update",projectId)
   }, [projectId, index, isOpen])
 
   return (
     <div className={classes.root}>
       <Title title={"Portfolio"} />
       {isOpen ? (
-        <Project handleClose={handleOpen()} />
+        <Project handleClose={handleOpen()} project={project} />
       ) : (
         <PortfolioPreview projects={projects} handleOpen={handleOpen()} />
       )}

@@ -29,7 +29,7 @@ export const projects = [
     url: SHORTLY,
     logo: SHORTLY,
     width: "28%",
-    title: "sHORTLY",
+    title: "SHORTLY",
     prestation: "Developpement front-end et déploiement",
     description: [
       "Site responsive",
@@ -191,10 +191,11 @@ export const projects = [
   {
     id: 5,
     url: NEOBSERVER,
-    title: "Blogs - API",
+    title: "Neobserver",
     width: "28%",
     prestation: "Developpement front-end",
-    client: "Yumi pro",
+    client: "Wild Code School",
+    date: "octobre 2019",
     stack: [
       { label: "React" },
       { label: "HTML5" },
@@ -206,13 +207,25 @@ export const projects = [
     gallery: [{ img: NEOBSERVER, subtitle: "Header" }],
     draft: true,
     tag: "dévelopement back-end",
+    description: [
+      "Site vitrine responsive",
+      "présentation du concept de restauration et de l'équipe",
+      "intégration du menu",
+      "section info et accès avec localisation google map",
+      "section contact et reservation",
+      "section 'vin du mois'",
+    ],
   },
   {
     id: 6,
     width: "28%",
     url: BOUSSOLE,
-    title: "application web/mobile",
+    title: "Boussole pro",
     prestation: "Developpement full stack",
+    description: [
+      "Description",
+      "Site vitrine responsive...",
+    ],
     client: "Wake up - stage de fin de formation",
     stack: [
       { label: "React" },
@@ -233,7 +246,7 @@ export const projects = [
     id: 7,
     width: "28%",
     url: ALLERGEEK,
-    title: "application web/mobile",
+    title: "Allergeek",
     prestation: "Developpement full stack",
     client: "Wake up - stage de fin de formation",
     stack: [
@@ -275,7 +288,7 @@ export const projects = [
   {
     id: 9,
     url: GAME,
-    title: "jeux",
+    title: "Death Quizz",
     width: "28%",
     prestation: "Developpement front-end",
     client: "projet personnel",
