@@ -4,7 +4,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 const ProjectCarousel = ({ images }) => {
   console.log("images", images)
   return (
-    <Carousel autoPlay emulateTouch={true} width="75%">
+    <Carousel autoPlay emulateTouch={true} width="100%">
       {images &&
         images.map((image, id) => (
           <div key={id}>

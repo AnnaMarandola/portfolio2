@@ -24,12 +24,17 @@ const styles = (theme) => ({
     justifyContent: "center",
     flexWrap: "wrap",
     listStyle: "none",
-    padding: theme.spacing(3),
+    [theme.breakpoints.up("sm")]: {
+      width: "20rem",
+    },
+    [theme.breakpoints.up("lg")]: {
+      width: "30rem",
+    },
   },
   chip: {
     margin: theme.spacing(0.5),
     height: "3rem",
-    width: "10rem",
+    width: "9rem",
   },
   logo: {
     width: "30%",
@@ -38,8 +43,6 @@ const styles = (theme) => ({
 
 const Stack = ({ classes, stackData }) => {
   return (
-    <Fragment>
-      <Typography variant="h5">Stack technique</Typography>
       <div component="ul" className={classes.root}>
         {stackData.map((data, id) => {
           let icon;
@@ -116,7 +119,6 @@ const Stack = ({ classes, stackData }) => {
           );
         })}
       </div>
-    </Fragment>
   );
 };
 
