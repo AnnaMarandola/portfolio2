@@ -1,21 +1,31 @@
+import { withStyles } from "@material-ui/core";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-const ProjectCarousel = ({ images }) => {
-  console.log("images", images)
+const styles = (theme) => ({
+  root: {
+    width: "100%",
+    [theme.breakpoints.up("sm")]: {
+
+    },
+    [theme.breakpoints.up("lg")]: {
+      width: "70%"
+    },
+  },
+});
+
+const ProjectCarousel = ({ images, classes }) => {
+  console.log("images", images);
   return (
-    <Carousel autoPlay emulateTouch={true} width="100%">
+    <Carousel autoPlay emulateTouch className={classes.root}>
       {images &&
         images.map((image, id) => (
           <div key={id}>
-            <img
-              alt={image.subtitle}
-              src={image.img}
-            />
+            <img alt={image.subtitle} src={image.img} />
             <p className="legend">{image.subtitle}</p>
           </div>
         ))}
     </Carousel>
   );
 };
-export default ProjectCarousel;
+export default withStyles(styles)(ProjectCarousel);

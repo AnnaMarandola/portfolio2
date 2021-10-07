@@ -6,37 +6,49 @@ const styles = (theme) => ({
   root: {
     display: "flex",
     flexDirection: "column",
-    [theme.breakpoints.up("sm")]: {},
+    border: "2px solid #f4f4f4",
+    [theme.breakpoints.up("sm")]: {
+      padding: "1rem"
+    },
+
+    [theme.breakpoints.up("lg")]: {
+      width: "80%",
+      margin: "0 10%",
+      padding: "2rem"
+    },
   },
-  titleContainer: {},
-  title: {},
-  carouselAndDescription: {
+  container: {
     display: "flex",
     flexDirection: "column",
-    [theme.breakpoints.up("sm")]: {
+    [theme.breakpoints.up("md")]: {
       flexDirection: "row",
-      justifyContent: "center",
     },
-    [theme.breakpoints.up("lg")]: {},
   },
+  carouselAndInfo: {
+    padding: "1rem 0 0 1rem",
+    [theme.breakpoints.up("md")]: {
 
-  infoAndStack: {
+    },
+  },
+  descriptionAndButtons: {
+    padding: "1rem",
     display: "flex",
-    flexDirection: "column",
+    flexDirection: "column-reverse",
+    justifyContent: "space-between",
     [theme.breakpoints.up("sm")]: {
-      padding: "1rem",
-      flexDirection: "row",
-      justifyContent: "space-between",
-      alignItems: "center"
-
+      flexDirection: "column",
     },
-    [theme.breakpoints.up("lg")]: {},
   },
-  infoContainer: {
+  description: {
+    padding: "0.5rem 0",
   },
-  stackContainer: {
-
-  }
+  buttons: {
+    display: "flex",
+    padding: "0.5rem 0",
+    [theme.breakpoints.up("sm")]: {
+      justifyContent: "flex-end",
+    },
+  },
 });
 const Project = ({ classes, handleClose, project }) => {
   return (
@@ -50,39 +62,35 @@ const Project = ({ classes, handleClose, project }) => {
         </Typography>
       </div>
 
-      <div className={classes.carouselAndDescription}>
-
-        <div className={classes.carouselContainer}>
-          {project && <ProjectCarousel images={project.gallery} />}
+      <div className={classes.container}>
+        <div className={classes.carouselAndInfo}>
+          <div className={classes.carousel}>
+            {project && <ProjectCarousel images={project.gallery} />}
+          </div>
+          <div className={classes.infos}>
+            <Typography>{project.client}</Typography>
+            <Typography>{project.prestation}</Typography>
+            <Typography>{project.date}</Typography>
+          </div>
         </div>
 
-        <div className={classes.descriptionContainer}>
-          {project &&
-            project.description &&
-            project.description.map((item, id) => (
-              <Typography key={id} variant="body1">
-                {item}
-              </Typography>
-            ))}
-          <div className={classes.buttonsSection}>
+        <div className={classes.descriptionAndButtons}>
+          <div className={classes.description}>
+            {project &&
+              project.description &&
+              project.description.map((item, id) => (
+                <Typography key={id} variant="body1">
+                  {item}
+                </Typography>
+              ))}
+            <Stack stackData={project.stack} />
+          </div>
+          <div className={classes.buttons}>
             <Button>Visiter le site</Button>
             <Button>Github</Button>
           </div>
         </div>
       </div>
-
-      <div className={classes.infoAndStack}>
-        <div className={classes.infoContainer}>
-          <Typography>{project.client}</Typography>
-          <Typography>{project.prestation}</Typography>
-          <Typography>{project.date}</Typography>
-        </div>
-        <div className={classes.stackContainer}>
-          <Stack stackData={project.stack} />
-        </div>
-      </div>
-
-      <Button onClick={handleClose}>X</Button>
     </Card>
   );
 };

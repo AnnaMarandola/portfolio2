@@ -51,7 +51,7 @@ export const projects = [
     date: "novembre 2020",
     githubLink: "",
     visitLink: "https://le-san-feliu-bar-restaurant.netlify.app/",
-    gallery: [{ img: SHORTLY, subtitle: "Header" }],
+    gallery: [{ img: SHORTLY, subtitle: "Header" }, { img: NEOBSERVER, subtitle: "Header2" }],
     draft: false,
     tag: "API",
   },

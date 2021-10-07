@@ -24,11 +24,13 @@ const styles = (theme) => ({
     justifyContent: "center",
     flexWrap: "wrap",
     listStyle: "none",
+    padding: "2rem 0",
     [theme.breakpoints.up("sm")]: {
       width: "20rem",
+      padding: "10% 0 2rem 0"
     },
     [theme.breakpoints.up("lg")]: {
-      width: "30rem",
+      width: "20rem",
     },
   },
   chip: {
