@@ -75,7 +75,6 @@ const styles = (theme) => ({
 });
 const Project = ({ classes, handleClose, project }) => {
 
-  console.log("inner project", project)
   return (
     <Card className={classes.root}>
       <Button onClick={handleClose} className={classes.closeButton}>

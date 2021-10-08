@@ -19,7 +19,7 @@ const styles = (theme) => ({
   },
 });
 
-const Player = ({ classes, goBack, goNext, index }) => {
+const Player = ({ classes, goBack, goNext }) => {
   return (
     <div className={classes.player}>
       <div className={classes.buttonContainer}>

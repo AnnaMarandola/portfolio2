@@ -26,7 +26,7 @@ const styles = (theme) => ({
     padding: "2rem 0",
     [theme.breakpoints.up("sm")]: {
       width: "20rem",
-      padding: "10% 0 2rem 0"
+      padding: "10% 0 2rem 0",
     },
     [theme.breakpoints.up("lg")]: {
       width: "20rem",
@@ -43,13 +43,11 @@ const styles = (theme) => ({
 });
 
 const Stack = ({ classes, stackData }) => {
-  console.log("stack data", stackData)
-  const stack = [...stackData]
   return (
-      <div component="ul" className={classes.root}>
-        {stack && stack.map((data, id) => {
+    <div component="ul" className={classes.root}>
+      {stackData &&
+        stackData.map((data, id) => {
           let icon;
-
           if (data.label === "Redux") {
             icon = (
               <img className={classes.logo} src={REDUX} alt={data.label} />
@@ -121,7 +119,7 @@ const Stack = ({ classes, stackData }) => {
             </Fragment>
           );
         })}
-      </div>
+    </div>
   );
 };
 

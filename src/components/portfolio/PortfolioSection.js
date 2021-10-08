@@ -23,44 +23,39 @@ const PortfolioSection = ({ classes }) => {
   const [isOpen, setOpen] = useState(false);
   const [index, setIndex] = useState();
 
-  console.log("index", index)
-  
-  
   let project = projects.find((project) => project.id === index);
-  console.log("project", project)
-  
-  useEffect(() => {
-  }, [ index, isOpen, project]);
 
-  
+  useEffect(() => {}, [index, isOpen]);
+
   const handleOpen = () => (e) => {
     setIndex(projects.findIndex((project) => project.title === e.target.id));
     isOpen ? setOpen(false) : setOpen(true);
   };
 
   const goNext = () => (e) => {
-    if (index < projects.length -1){
-      setIndex(index + 1)
+    if (index < projects.length - 1) {
+      setIndex(index + 1);
+      project = projects.find((project) => project.id === index + 1);
     } else {
-      setOpen(false)
+      setOpen(false);
     }
-  }
+  };
 
   const goBack = () => (e) => {
-    if (index > 0){
-      setIndex(index - 1)
+    if (index > 0) {
+      setIndex(index - 1);
+      project = projects.find((project) => project.id === index - 1);
     } else {
-      setOpen(false)
+      setOpen(false);
     }
-  }
-
+  };
 
   return (
     <div className={classes.root}>
       <Title title={"Portfolio"} />
       {isOpen ? (
         <div className={classes.galleryContainer}>
-          <Player index={index} goNext={goNext()} goBack={goBack()}/>
+          <Player index={index} goNext={goNext()} goBack={goBack()} />
           <Project handleClose={handleOpen()} project={project} />
         </div>
       ) : (
