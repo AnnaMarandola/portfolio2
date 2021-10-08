@@ -1,6 +1,5 @@
 import { Fragment } from "react";
 import { withStyles } from "@material-ui/core/styles";
-import { Typography } from "@material-ui/core";
 
 import Chip from "@material-ui/core/Chip";
 import REDUX from "../../assets/stack/redux.png";
@@ -44,9 +43,11 @@ const styles = (theme) => ({
 });
 
 const Stack = ({ classes, stackData }) => {
+  console.log("stack data", stackData)
+  const stack = [...stackData]
   return (
       <div component="ul" className={classes.root}>
-        {stackData.map((data, id) => {
+        {stack && stack.map((data, id) => {
           let icon;
 
           if (data.label === "Redux") {

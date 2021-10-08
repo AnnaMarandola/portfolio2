@@ -15,7 +15,6 @@ const styles = (theme) => ({
 });
 
 const ProjectCarousel = ({ images, classes }) => {
-  console.log("images", images);
   return (
     <Carousel autoPlay emulateTouch className={classes.root}>
       {images &&

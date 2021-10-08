@@ -4,6 +4,7 @@ import Title from "../Title";
 import { projects } from "./ProjectsData";
 import { useState, useEffect } from "react";
 import Project from "./Project";
+import Player from "./Player";
 
 const styles = (theme) => ({
   root: {
@@ -11,30 +12,57 @@ const styles = (theme) => ({
     backgroundColor: "white",
     [theme.breakpoints.up("md")]: {},
   },
+  galleryContainer: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+  },
 });
 const PortfolioSection = ({ classes }) => {
   console.log("projects", projects);
   const [isOpen, setOpen] = useState(false);
-  const [projectId, setProjectId] = useState();
-  const [index, setIndex] = useState()
+  const [index, setIndex] = useState();
 
+  console.log("index", index)
+  
+  
+  let project = projects.find((project) => project.id === index);
+  console.log("project", project)
+  
+  useEffect(() => {
+  }, [ index, isOpen, project]);
 
-  const project = projects.find(project => project.title === projectId)
-
+  
   const handleOpen = () => (e) => {
-    setProjectId(e.target.id)
-    setIndex(projects.findIndex((project) => project.title === e.target.id))
-    isOpen ? setOpen(false) && setProjectId() : setOpen(true);
+    setIndex(projects.findIndex((project) => project.title === e.target.id));
+    isOpen ? setOpen(false) : setOpen(true);
   };
 
-  useEffect(() => {
-  }, [projectId, index, isOpen])
+  const goNext = () => (e) => {
+    if (index < projects.length -1){
+      setIndex(index + 1)
+    } else {
+      setOpen(false)
+    }
+  }
+
+  const goBack = () => (e) => {
+    if (index > 0){
+      setIndex(index - 1)
+    } else {
+      setOpen(false)
+    }
+  }
+
 
   return (
     <div className={classes.root}>
       <Title title={"Portfolio"} />
       {isOpen ? (
-        <Project handleClose={handleOpen()} project={project} />
+        <div className={classes.galleryContainer}>
+          <Player index={index} goNext={goNext()} goBack={goBack()}/>
+          <Project handleClose={handleOpen()} project={project} />
+        </div>
       ) : (
         <PortfolioPreview projects={projects} handleOpen={handleOpen()} />
       )}

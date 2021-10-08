@@ -1,6 +1,8 @@
 import { Button, Card, Typography, withStyles } from "@material-ui/core";
 import ProjectCarousel from "./ProjectCarousel";
 import Stack from "./Stack";
+import GITHUB from "../../assets/contact-icons/github.svg";
+
 
 const styles = (theme) => ({
   root: {
@@ -8,13 +10,13 @@ const styles = (theme) => ({
     flexDirection: "column",
     border: "2px solid #f4f4f4",
     [theme.breakpoints.up("sm")]: {
-      padding: "1rem"
+      padding: "1rem",
     },
 
     [theme.breakpoints.up("lg")]: {
       width: "80%",
       margin: "0 10%",
-      padding: "2rem"
+      padding: "2rem",
     },
   },
   container: {
@@ -24,11 +26,16 @@ const styles = (theme) => ({
       flexDirection: "row",
     },
   },
+  titleContainer: {
+    display: "flex",
+    alignItems: "center"
+  },
+  title: {
+    marginLeft: "1rem",
+  },
   carouselAndInfo: {
     padding: "1rem 0 0 1rem",
-    [theme.breakpoints.up("md")]: {
-
-    },
+    [theme.breakpoints.up("md")]: {},
   },
   descriptionAndButtons: {
     padding: "1rem",
@@ -49,14 +56,33 @@ const styles = (theme) => ({
       justifyContent: "flex-end",
     },
   },
+  visitButton: {
+    borderRadius: "30px",
+    padding: "0 1rem",
+    color: "white",
+    marginRight: "3rem",
+    background:
+      "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
+    "&:hover": {
+      background: "#29282e",
+    },
+  },
+  githubButton: {
+    "&:hover": {
+      backgroundColor: "#29282e",
+    },
+  },
 });
 const Project = ({ classes, handleClose, project }) => {
+
+  console.log("inner project", project)
   return (
     <Card className={classes.root}>
       <Button onClick={handleClose} className={classes.closeButton}>
         X
       </Button>
       <div className={classes.titleContainer}>
+        <img src={project.logo} alt={project.client} className={classes.logo} />
         <Typography variant="h5" className={classes.title}>
           {project.title}
         </Typography>
@@ -86,8 +112,21 @@ const Project = ({ classes, handleClose, project }) => {
             <Stack stackData={project.stack} />
           </div>
           <div className={classes.buttons}>
-            <Button>Visiter le site</Button>
-            <Button>Github</Button>
+            <Button
+              className={classes.visitButton}
+              href={project.visitLink}
+              target="_blank"
+            >
+              Visiter le site
+            </Button>
+            <Button
+              className={classes.githubButton}
+              href={project.githubLink}
+              target="_blank"
+            >
+              {" "}
+              <img src={GITHUB} alt="github repository" />
+            </Button>
           </div>
         </div>
       </div>

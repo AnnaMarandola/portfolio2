@@ -8,7 +8,7 @@ import NEOBSERVER from "../../assets/projects/neobserver/neobserver-preview.png"
 import BOUSSOLE from "../../assets/projects/bousole/boussole-preview.png";
 import GAME from "../../assets/projects/deathQuizz/deathQuizz-preview.png";
 import ALLERGEEK from "../../assets/projects/allergeek/allergeek-preview.png";
-
+import FRONTENDMENTOR from "../../assets/projects/shortly/frontendMentor.png";
 export const tags = [
   "site vitrine",
   "e-commerce",
@@ -27,7 +27,7 @@ export const projects = [
   {
     id: 0,
     url: SHORTLY,
-    logo: SHORTLY,
+    logo: FRONTENDMENTOR,
     width: "28%",
     title: "SHORTLY",
     prestation: "Developpement front-end et déploiement",
@@ -49,9 +49,12 @@ export const projects = [
       { label: "Leaflet" },
     ],
     date: "novembre 2020",
-    githubLink: "",
+    githubLink: "https://github.com/AnnaMarandola",
     visitLink: "https://le-san-feliu-bar-restaurant.netlify.app/",
-    gallery: [{ img: SHORTLY, subtitle: "Header" }, { img: NEOBSERVER, subtitle: "Header2" }],
+    gallery: [
+      { img: SHORTLY, subtitle: "Header" },
+      { img: NEOBSERVER, subtitle: "Header2" },
+    ],
     draft: false,
     tag: "API",
   },
@@ -222,10 +225,7 @@ export const projects = [
     url: BOUSSOLE,
     title: "Boussole pro",
     prestation: "Developpement full stack",
-    description: [
-      "Description",
-      "Site vitrine responsive...",
-    ],
+    description: ["Description", "Site vitrine responsive..."],
     client: "Wake up - stage de fin de formation",
     stack: [
       { label: "React" },
