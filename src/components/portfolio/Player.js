@@ -1,6 +1,5 @@
 import { withStyles } from "@material-ui/styles";
 import { Button, Tooltip } from "@material-ui/core";
-import { projects } from "./ProjectsData";
 import BACK from "../../assets/back-button.svg";
 import NEXT from "../../assets/next-button.svg";
 
@@ -17,9 +16,25 @@ const styles = (theme) => ({
   playerButton: {
     marginBottom: "1rem",
   },
+  progressBarContainer: {
+    width: "75%",
+    height: "0.25rem",
+    backgroundColor: "#e5e5e5",
+    marginTop: "1rem",
+  },
+  progress: {
+    minWidth: "5%",
+    backgroundColor: "black",
+    background:
+    "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
+
+    height: "0.25rem",
+  },
+// 
 });
 
-const Player = ({ classes, goBack, goNext }) => {
+const Player = ({ classes, goBack, goNext, progress }) => {
+    console.log("progress", progress)
   return (
     <div className={classes.player}>
       <div className={classes.buttonContainer}>
@@ -32,6 +47,9 @@ const Player = ({ classes, goBack, goNext }) => {
             <img src={BACK} alt="go-back-button" />
           </Button>
         </Tooltip>
+      </div>
+      <div className={classes.progressBarContainer}>
+        <div className={classes.progress} style={{ width: `${progress}%` }} />
       </div>
       <div className={classes.buttonContainer}>
         <Tooltip

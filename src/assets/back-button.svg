@@ -1,1 +1,12 @@
-<svg width="26" height="24" xmlns="http://www.w3.org/2000/svg"><g stroke="#000" fill="none" fill-rule="evenodd"><path d="M24.166 1.843L3.627 12.113l20.539 10.269V1.843z" stroke-width="2"/><path fill="#D8D8D8" d="M.986.5h-1v22.775h1z"/></g></svg>
+<svg width="26" height="24" xmlns="http://www.w3.org/2000/svg">
+    <linearGradient id="gradient1" x1="0%" x2="50%" y1="85.457%" y2="14.543%">
+        <stop offset="0%" stop-color="#7284ff" />
+        <stop offset="51.945%" stop-color="#854edb" />
+        <stop offset="100%" stop-color="#5A77FF" />
+    </linearGradient>
+
+    <g stroke="url(#gradient1)" fill="none" fill-rule="evenodd">
+        <path d="M24.166 1.843L3.627 12.113l20.539 10.269V1.843z" stroke-width="2" />
+        <path fill="url(#gradient1)" d="M.986.5h-1v22.775h1z" />
+    </g>
+</svg>

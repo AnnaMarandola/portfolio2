@@ -25,7 +25,10 @@ const PortfolioSection = ({ classes }) => {
 
   let project = projects.find((project) => project.id === index);
 
-  useEffect(() => {}, [index, isOpen]);
+  const length = projects.length;
+  const progress = (index) / ((length - 1) / 100);
+
+  useEffect(() => {}, [index, isOpen, project]);
 
   const handleOpen = () => (e) => {
     setIndex(projects.findIndex((project) => project.title === e.target.id));
@@ -55,7 +58,12 @@ const PortfolioSection = ({ classes }) => {
       <Title title={"Portfolio"} />
       {isOpen ? (
         <div className={classes.galleryContainer}>
-          <Player index={index} goNext={goNext()} goBack={goBack()} />
+          <Player
+            index={index}
+            goNext={goNext()}
+            goBack={goBack()}
+            progress={progress}
+          />
           <Project handleClose={handleOpen()} project={project} />
         </div>
       ) : (
