@@ -1,14 +1,22 @@
 import SHORTLY from "../../assets/projects/shortly/shortly-preview.png";
 import GALLERIA from "../../assets/projects/galleria/galleria-preview.png";
 import PHOTOSNAP from "../../assets/projects/photosnap/photosnap-preview.png";
-import SANFELIU from "../../assets/projects/sanfeliu/SanFeliu-preview.png";
+import PHOTOSNAPLOGO from "../../assets/projects/photosnap/logo.svg";
+import FRONTENDMENTOR from "../../assets/projects/shortly/fem-logo.png";
+import SANFELIU from "../../assets/projects/sanfeliu/sanfeliu-preview.png";
+import SANFELIULOGO from "../../assets/projects/sanfeliu/sanfeliu-logo.png";
 import YUMIPREZ from "../../assets/projects/yumiPro/yumi-preview.png";
+import YUMILOGO from "../../assets/projects/yumiPro/yumi-logo.png";
 import AWESOMEPREZ from "../../assets/projects/awesome/awesomeTable-preview.png";
 import NEOBSERVER from "../../assets/projects/neobserver/neobserver-preview.png";
+import NEOBSERVERLOGO from "../../assets/projects/neobserver/neobserver-logo.png";
 import BOUSSOLE from "../../assets/projects/bousole/boussole-preview.png";
+import BOUSSOLELOGO from "../../assets/projects/bousole/boussole-logo.png";
 import GAME from "../../assets/projects/deathQuizz/deathQuizz-preview.png";
+import GAMELOGO from "../../assets/projects/deathQuizz/deathQuizz-logo.png";
 import ALLERGEEK from "../../assets/projects/allergeek/allergeek-preview.png";
-import FRONTENDMENTOR from "../../assets/projects/shortly/frontendMentor.png";
+import ALLERGEEKLOGO from "../../assets/projects/allergeek/allergeek-logo.png";
+
 export const tags = [
   "site vitrine",
   "e-commerce",
@@ -53,7 +61,6 @@ export const projects = [
     visitLink: "https://le-san-feliu-bar-restaurant.netlify.app/",
     gallery: [
       { img: SHORTLY, subtitle: "Header" },
-      { img: NEOBSERVER, subtitle: "Header2" },
     ],
     draft: false,
     tag: "API",
@@ -61,9 +68,9 @@ export const projects = [
   {
     id: 1,
     url: GALLERIA,
-    logo: GALLERIA,
+    logo: FRONTENDMENTOR,
     width: "28%",
-    title: "Restaurant le San feliù",
+    title: "Galleria",
     prestation: "Developpement du site vitrine",
     description: [
       "Site vitrine responsive",
@@ -85,14 +92,16 @@ export const projects = [
     date: "novembre 2020",
     githubLink: "",
     visitLink: "https://le-san-feliu-bar-restaurant.netlify.app/",
-    gallery: [{ img: GALLERIA, subtitle: "Header" }],
+    gallery: [
+      { img: GALLERIA, subtitle: "Header" },
+    ],
     draft: false,
     tag: "site vitrine",
   },
   {
     id: 2,
     url: SANFELIU,
-    logo: SANFELIU,
+    logo: SANFELIULOGO,
     width: "28%",
     title: "Restaurant le San feliù",
     prestation: "Developpement du site vitrine",
@@ -124,7 +133,7 @@ export const projects = [
     id: 3,
     url: YUMIPREZ,
     title: "Application web/mobile Yumi Pro",
-    logo: YUMIPREZ,
+    logo: YUMILOGO,
     width: "28%",
     prestation: "Developpement full stack",
     description: [
@@ -163,9 +172,9 @@ export const projects = [
   {
     id: 4,
     url: PHOTOSNAP,
-    logo: PHOTOSNAP,
+    logo: PHOTOSNAPLOGO,
     width: "28%",
-    title: "Restaurant le San feliù",
+    title: "Photosnap",
     prestation: "Developpement du site vitrine",
     description: [
       "Site vitrine responsive",
@@ -194,6 +203,7 @@ export const projects = [
   {
     id: 5,
     url: NEOBSERVER,
+    logo: NEOBSERVERLOGO,
     title: "Neobserver",
     width: "28%",
     prestation: "Developpement front-end",
@@ -223,6 +233,7 @@ export const projects = [
     id: 6,
     width: "28%",
     url: BOUSSOLE,
+    logo: BOUSSOLELOGO,
     title: "Boussole pro",
     prestation: "Developpement full stack",
     description: ["Description", "Site vitrine responsive..."],
@@ -246,6 +257,7 @@ export const projects = [
     id: 7,
     width: "28%",
     url: ALLERGEEK,
+    logo: ALLERGEEKLOGO,
     title: "Allergeek",
     prestation: "Developpement full stack",
     client: "Wake up - stage de fin de formation",
@@ -288,6 +300,7 @@ export const projects = [
   {
     id: 9,
     url: GAME,
+    logo: GAMELOGO,
     title: "Death Quizz",
     width: "28%",
     prestation: "Developpement front-end",

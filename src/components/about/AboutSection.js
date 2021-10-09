@@ -3,6 +3,7 @@ import ILLUS from "../../assets/z4.png";
 import Title from "../Title";
 import SkillsCharts from "./SkillsCharts";
 import Certifications from "./Certifications";
+import CvButtons from "./CvButtons";
 
 const styles = (theme) => ({
   root: {
@@ -26,35 +27,32 @@ const styles = (theme) => ({
     [theme.breakpoints.up("sm")]: {
       width: "60%",
       flexDirection: "column",
-      marginTop: "-5rem"
+      marginTop: "-5rem",
     },
     [theme.breakpoints.up("lg")]: {
       width: "80%",
       flexDirection: "row",
       alignItems: "flex-start",
       marginTop: 0,
-    }
+    },
   },
   textContainer: {
     display: "flex",
     flexDirection: "column",
     padding: "2rem",
-    [theme.breakpoints.up("sm")]: {
-    },
+    [theme.breakpoints.up("sm")]: {},
     [theme.breakpoints.up("lg")]: {
       padding: "4rem",
       width: "65%",
-    }
-
+    },
   },
   presentationText: {
     color: "white",
     fontSize: "1rem",
-    [theme.breakpoints.up("sm")]: {
-    },
+    [theme.breakpoints.up("sm")]: {},
     [theme.breakpoints.up("lg")]: {
       fontSize: "1.5rem",
-    }
+    },
   },
   aboutButton: {
     marginTop: "3rem",
@@ -87,7 +85,7 @@ const styles = (theme) => ({
       width: "40%",
       height: "25rem",
       backgroundPosition: "center 35%",
-    }
+    },
   },
   skillsSection: {
     display: "flex",
@@ -98,12 +96,11 @@ const styles = (theme) => ({
     backgroundColor: "#f4f4f4",
     marginTop: "-12rem",
     zIndex: 1,
-    [theme.breakpoints.up("sm")]: {
-    },
+    [theme.breakpoints.up("sm")]: {},
     [theme.breakpoints.up("lg")]: {
       flexDirection: "row",
       justifyContent: "space-evenly",
-    }
+    },
   },
 });
 
@@ -121,11 +118,12 @@ const AboutSection = ({ classes }) => {
           </Typography>
           {/* <Button className={classes.aboutButton}>en savoir +</Button> */}
         </div>
-        <div className={classes.illustrationContainer} / >
+        <div className={classes.illustrationContainer} />
       </div>
       <div className={classes.skillsSection}>
-        <SkillsCharts />
-        <Certifications />
+        <CvButtons />
+          <SkillsCharts />
+          <Certifications />
       </div>
     </div>
   );

@@ -6,8 +6,9 @@ import NEXT from "../../assets/next-button.svg";
 const styles = (theme) => ({
   player: {
     display: "flex",
-    width: "80%",
+    width: "100%",
     justifyContent: "space-between",
+    marginBottom: "2rem",
   },
   buttonContainer: {
     display: "flex",
@@ -26,15 +27,15 @@ const styles = (theme) => ({
     minWidth: "5%",
     backgroundColor: "black",
     background:
-    "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
+      "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
 
     height: "0.25rem",
   },
-// 
+  //
 });
 
 const Player = ({ classes, goBack, goNext, progress }) => {
-    console.log("progress", progress)
+  console.log("progress", progress);
   return (
     <div className={classes.player}>
       <div className={classes.buttonContainer}>

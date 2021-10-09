@@ -6,10 +6,10 @@ const styles = (theme) => ({
   root: {
     width: "100%",
     [theme.breakpoints.up("sm")]: {
-
+      width: "70%"
     },
     [theme.breakpoints.up("lg")]: {
-      width: "70%"
+      width: "80%"
     },
   },
 });
