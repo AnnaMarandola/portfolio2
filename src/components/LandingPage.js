@@ -12,7 +12,7 @@ function LandingPage() {
     <div className="App">
       <Navbar />
       <Hero />
-      <SubHeader />
+      {/* <SubHeader /> */}
       <section id="services">
         <ServicesSection />
       </section>

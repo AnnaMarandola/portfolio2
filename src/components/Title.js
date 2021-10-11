@@ -6,11 +6,10 @@ const styles = (theme) => ({
     flexDirection: "column",
     padding: "25% 0",
     [theme.breakpoints.up("sm")]: {
-      padding: "15% 0",
+      padding: "10% 0",
     },
     [theme.breakpoints.up("lg")]: {
-      padding: "10% 0",
-
+      padding: "5% 0",
     }
   },
   title: {

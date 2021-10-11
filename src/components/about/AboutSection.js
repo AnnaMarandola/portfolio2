@@ -121,7 +121,7 @@ const AboutSection = ({ classes }) => {
         <div className={classes.illustrationContainer} />
       </div>
       <div className={classes.skillsSection}>
-        <CvButtons />
+        {/* <CvButtons /> */}
           <SkillsCharts />
           <Certifications />
       </div>

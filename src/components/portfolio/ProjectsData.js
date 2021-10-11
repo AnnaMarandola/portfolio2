@@ -330,9 +330,8 @@ export const projects = [
       "Jeux de quizz multi-thématique",
       "Open Trivia Database",
       "3 niveaux de difficultés",
-      "D'après le cours Typescript de Robin Lebhar (udemy).",   
+      "D'après le cours Typescript de Robin Lebhar - Uudemy.",   
     ],
-
     stack: [
       { label: "React" },
       { label: "HTML5" },

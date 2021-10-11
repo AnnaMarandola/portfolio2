@@ -26,12 +26,12 @@ const styles = (theme) => ({
     paddingBottom: "5rem",
   },
   annaM: {
-    fontSize: "2rem",
     color: "white",
+    margin: "2rem 0",
     [theme.breakpoints.up("sm")]: {
     },
     [theme.breakpoints.up("lg")]: {
-      fontSize: "2.5rem",
+      maxWidth: "50rem"
     }
   },
   developer: {
@@ -84,11 +84,12 @@ const Hero = ({ classes }) => {
   return (
     <header className={classes.root}>
       <div className={classes.textContainer}>
-        <Typography className={classes.annaM}>Anna Marandola</Typography>
+        <Typography variant="h4" className={classes.annaM}>Anna Marandola</Typography>
         <Typography className={classes.developer}>
           Développeur web
         </Typography>
-        <Typography className={classes.annaM}>spécialisée en dévelopement front-end - React.js</Typography>
+        <Typography className={classes.developer}>freelance</Typography>
+        <Typography variant="h4" className={classes.annaM} >Création de sites internet, applications web /mobiles à Toulouse</Typography>
 
         <div className={classes.buttonsContainer}>
           <img

@@ -12,21 +12,21 @@ export const servicesData= [
         img: CODE,
         description: "Sites vitrines, e-commerce, Single Page Applications, Progressive Web Apps...",
     },
-    {
-        feature: "Intégration",
-        img: INTEGRATION,
-        description: "Intégration HTML5/CSS3, pixel-perfect, SaSS, bootstrap, material design",
-    },
-    {
-        feature: "UX/UI design",
-        img: UX,
-        description: "mock up, maquettage, adaptation de templates...",
-    },
-    {
-        feature: "Responsive web design",
-        img: RESPONSIVE,
-        description: "des pages web adaptées à toutes les tailles d'écran : pc, tablette, i-pad, smartphone...",
-    },
+    // {
+    //     feature: "Intégration",
+    //     img: INTEGRATION,
+    //     description: "Intégration HTML5/CSS3, pixel-perfect, SaSS, bootstrap, material design",
+    // },
+    // {
+    //     feature: "UX/UI design",
+    //     img: UX,
+    //     description: "mock up, maquettage, adaptation de templates...",
+    // },
+    // {
+    //     feature: "Responsive web design",
+    //     img: RESPONSIVE,
+    //     description: "des pages web adaptées à toutes les tailles d'écran : pc, tablette, i-pad, smartphone...",
+    // },
     {
         feature: "SEO",
         img: SEO,
