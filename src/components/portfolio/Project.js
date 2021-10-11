@@ -3,7 +3,6 @@ import ProjectCarousel from "./ProjectCarousel";
 import Stack from "./Stack";
 import GITHUB from "../../assets/contact-icons/github.svg";
 
-
 const styles = (theme) => ({
   root: {
     display: "flex",
@@ -28,7 +27,7 @@ const styles = (theme) => ({
   },
   titleContainer: {
     display: "flex",
-    alignItems: "center"
+    alignItems: "center",
   },
   title: {
     marginLeft: "1rem",
@@ -74,14 +73,19 @@ const styles = (theme) => ({
   },
 });
 const Project = ({ classes, handleClose, project }) => {
-
   return (
     <Card className={classes.root}>
       <Button onClick={handleClose} className={classes.closeButton}>
         X
       </Button>
       <div className={classes.titleContainer}>
-        <img src={project.logo} alt={project.client} className={classes.logo} />
+        {project && project.logo && (
+          <img
+            src={project.logo}
+            alt={project.client}
+            className={classes.logo}
+          />
+        )}
         <Typography variant="h5" className={classes.title}>
           {project.title}
         </Typography>
