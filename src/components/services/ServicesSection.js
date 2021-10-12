@@ -13,7 +13,6 @@ const styles = (theme) => ({
     [theme.breakpoints.up("md")]: {},
   },
   subtitle: {
-    fontSize: "1.5rem",
     textAlign: "center",
     color: "#27282c",
     [theme.breakpoints.up("sm")]: {
@@ -28,7 +27,7 @@ const ServicesSection = ({ classes }) => {
   return (
     <div className={classes.root}>
     <Title title={"Services"} />
-      <Typography className={classes.subtitle}>Lorem ipsum felis eu interdum maximus, et conditmentum nisi turpis nec ligula.</Typography>
+      <Typography className={classes.subtitle} variant="h4">Des prestations adaptées à vos besoins !</Typography>
       <ScrollAnimation
         animateIn="animate__fadeIn"
         animateOut="animate__fadeIn"

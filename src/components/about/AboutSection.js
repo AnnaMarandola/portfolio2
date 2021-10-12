@@ -3,7 +3,6 @@ import ILLUS from "../../assets/z4.png";
 import Title from "../Title";
 import SkillsCharts from "./SkillsCharts";
 import Certifications from "./Certifications";
-import CvButtons from "./CvButtons";
 
 const styles = (theme) => ({
   root: {
@@ -18,8 +17,10 @@ const styles = (theme) => ({
   firstSection: {
     display: "flex",
     flexDirection: "column-reverse",
-    background:
-      "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
+    backgroundColor: "#f4f4f4",
+
+    // background:
+    //   "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
     boxShadow: "5px 5px 23px -8px",
     zIndex: 2,
     width: "80%",
@@ -32,8 +33,8 @@ const styles = (theme) => ({
     [theme.breakpoints.up("lg")]: {
       width: "80%",
       flexDirection: "row",
-      alignItems: "flex-start",
-      marginTop: 0,
+      justifyContent: "space-around",
+      marginTop: "2rem",
     },
   },
   textContainer: {
@@ -47,27 +48,12 @@ const styles = (theme) => ({
     },
   },
   presentationText: {
-    color: "white",
+    color: "#29282e",
     fontSize: "1rem",
+    padding :"0.5rem 0",
     [theme.breakpoints.up("sm")]: {},
     [theme.breakpoints.up("lg")]: {
-      fontSize: "1.5rem",
-    },
-  },
-  aboutButton: {
-    marginTop: "3rem",
-    padding: "1rem 2rem",
-    borderRadius: "30px",
-    color: "white",
-    width: "30%",
-    marginLeft: "70%",
-    background:
-      "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
-    border: "2px solid #855aee",
-    "&:hover": {
-      background:
-        "linear-gradient(to right top, #2d7dfe, #457ffe, #5780ff, #6582ff, #7284ff)",
-      border: "2px solid #7284ff",
+      fontSize: "1.3rem",
     },
   },
   illustrationContainer: {
@@ -82,9 +68,9 @@ const styles = (theme) => ({
       backgroundPosition: "center 65%",
     },
     [theme.breakpoints.up("lg")]: {
-      width: "40%",
-      height: "25rem",
-      backgroundPosition: "center 35%",
+      width: "36%",
+      height: "40rem",
+      backgroundPosition: "center 45%",
     },
   },
   skillsSection: {
@@ -111,10 +97,31 @@ const AboutSection = ({ classes }) => {
       <div className={classes.firstSection}>
         <div className={classes.textContainer}>
           <Typography className={classes.presentationText}>
-            Lorem ipsum felis eu interdum maximus, metus velit consectetur
-            magna. Nam tempor volutpat lacus non lobortis. Ut id velit ac arcu
-            semper viverra. Morbi ipsum lacus, pellentesque non dictum lacinia,
-            tristique gravida mauris.
+            Hello ! je suis Anna Marandola, développeur web indépendante basée à
+            Toulouse. Passionnée par les technologies du web, j'ai d'abord
+            appris le code en autodidacte puis j'ai entamé un virage
+            professionnel en intégrant une formation fullstack et en obtenant le
+            diplôme de développeur web et web mobile (bac +3).
+          </Typography>
+          <Typography className={classes.presentationText}>
+            Aprés 2 ans d'expériences, je me suis spécialisée en développement
+            frontend avec le framework React.js. Je réalise des sites web
+            modernes, adaptés à toutes les tailles d'écran et respectueux des
+            standards du web. J'accorde une importance particulière à
+            l'optimisation du réfèrencement et à l'expérience utilisateur
+            (UX/UI).
+          </Typography>
+          <Typography className={classes.presentationText}>
+            Mon expérience acquise au fil des projets me permet de mieux
+            comprendre les attentes d'un client et de répondre précisement à son
+            besoin, en fonction de son domaine d'activité. Du site vitrine au
+            projet plus complexe, je vous propose une expertise et un
+            développement web qui correspond à vos attentes et à vos besoins.{" "}
+          </Typography>
+          <Typography className={classes.presentationText}>
+            Travaillant régulièrement avec des PME, associations ou
+            particuliers, je vous propose des solutions à votre portée & adaptée
+            à votre budget.{" "}
           </Typography>
           {/* <Button className={classes.aboutButton}>en savoir +</Button> */}
         </div>
@@ -122,8 +129,8 @@ const AboutSection = ({ classes }) => {
       </div>
       <div className={classes.skillsSection}>
         {/* <CvButtons /> */}
-          <SkillsCharts />
-          <Certifications />
+        <SkillsCharts />
+        <Certifications />
       </div>
     </div>
   );

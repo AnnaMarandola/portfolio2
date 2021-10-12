@@ -84,12 +84,12 @@ const Hero = ({ classes }) => {
   return (
     <header className={classes.root}>
       <div className={classes.textContainer}>
-        <Typography variant="h4" className={classes.annaM}>Anna Marandola</Typography>
+        <Typography variant="h3" className={classes.annaM}>Anna Marandola</Typography>
         <Typography className={classes.developer}>
           Développeur web
         </Typography>
         <Typography className={classes.developer}>freelance</Typography>
-        <Typography variant="h4" className={classes.annaM} >Création de sites internet, applications web /mobiles à Toulouse</Typography>
+        <Typography variant="h4" className={classes.annaM} >Création de sites internet, applications web et mobiles</Typography>
 
         <div className={classes.buttonsContainer}>
           <img

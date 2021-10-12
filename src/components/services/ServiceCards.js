@@ -8,35 +8,34 @@ const styles = (theme) => ({
     justifyContent: "center",
     borderRadius: "10px",
     paddingBottom: "5rem",
-    [theme.breakpoints.up("sm")]: {
-    },
+    [theme.breakpoints.up("sm")]: {},
     [theme.breakpoints.up("lg")]: {
       width: "90%",
       marginLeft: "5%",
-      padding: "5rem 0",
-    }
+      padding: "5rem 0 0 0",
+    },
   },
   featureCard: {
     width: "80%",
     margin: "1rem",
     padding: "1rem",
+    textAlign: "center",
     [theme.breakpoints.up("sm")]: {
       width: "40%",
       margin: "1.5rem",
-      padding: "1rem",  
+      padding: "1rem",
     },
     [theme.breakpoints.up("lg")]: {
       width: "24%",
       margin: "2rem 3rem",
       padding: "2rem",
-  
-    }
-
+    },
   },
   titleSection: {
     display: "flex",
     flexDirection: "column",
-    minHeight: "6rem",  
+    minHeight: "6rem",
+    alignItems: "center",
   },
   separator: {
     height: ".3rem",
@@ -44,33 +43,37 @@ const styles = (theme) => ({
     marginLeft: ".2rem",
     marginTop: "0.5rem",
     background:
-    "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
-},
+      "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
+  },
   title: {
-    padding: "1rem 0",
-    marginTop: "1rem",
+    padding: "2rem 0",
     fontSize: "1.2rem",
     textTransform: "uppercase",
     fontWeight: 600,
     color: "#27282c",
     width: "100%",
   },
+  iconContainer: {
+    background:
+      "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
+    width: "fit-content",
+    borderRadius: "50%",
+  },
   featureIcon: {
-    padding: "1rem",
-    width: "11%",
-    height: "11%",
-    minWidth: "5rem",
-    minHeight: "5rem",
-    // backgroundColor: "#27282c",
-    borderRadius: "10px"
+    margin: "1.5rem",
+    width: "6%",
+    height: "6%",
+    minWidth: "3.2rem",
+    minHeight: "3.2rem",
+    borderRadius: "10px",
   },
   description: {
     color: "#838383",
   },
   moreLink: {
     paddingTop: "1rem",
-    color: "#167dff"
-  }
+    color: "#167dff",
+  },
 });
 
 const ServiceCards2 = ({ classes }) => {
@@ -79,12 +82,14 @@ const ServiceCards2 = ({ classes }) => {
       {servicesData.map((service, index) => (
         <div className={classes.featureCard} key={index}>
           <div className={classes.titleSection}>
-            <img
-              src={service.img}
-              alt={service.feature}
-              className={classes.featureIcon}
-            />
-          {/* <div className={classes.separator}/> */}
+            <div className={classes.iconContainer}>
+              <img
+                src={service.img}
+                alt={service.feature}
+                className={classes.featureIcon}
+              />
+            </div>
+            {/* <div className={classes.separator}/> */}
             <Typography className={classes.title}>{service.feature}</Typography>
           </div>
           <Typography className={classes.description}>

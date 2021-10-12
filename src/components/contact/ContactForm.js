@@ -24,8 +24,8 @@ const styles = (theme) => ({
     padding: "2rem 0.5rem",
     marginBottom: "6rem",
     boxShadow: "5px 5px 23px -5px",
-    background:
-      "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
+    // background:
+    //   "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
     [theme.breakpoints.up("sm")]: {
       width: "40%",
       padding: "2rem",
@@ -106,7 +106,7 @@ const styles = (theme) => ({
 
 const OrangeCheckbox = withStyles({
   root: {
-    color: "#29282e",
+    color: "white",
     "&$checked": {
       color: "#29282e",
     },

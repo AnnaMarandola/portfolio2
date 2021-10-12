@@ -8,9 +8,9 @@ import PROJECT from "../../assets/features/audit.svg";
 
 export const servicesData= [
     {
-        feature: "Dévelopement web",
+        feature: "Développement web",
         img: CODE,
-        description: "Sites vitrines, e-commerce, Single Page Applications, Progressive Web Apps...",
+        description: "Sites vitrines, e-commerce, landing page, portfolio, applications web et mobiles, refonte, intégration (X)HTML/CSS, solutions sur mesure adaptées à votre coeur de métier...",
     },
     // {
     //     feature: "Intégration",
