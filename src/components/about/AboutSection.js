@@ -69,8 +69,8 @@ const styles = (theme) => ({
     },
     [theme.breakpoints.up("lg")]: {
       width: "36%",
-      height: "40rem",
-      backgroundPosition: "center 45%",
+      height: "28rem",
+      backgroundPosition: "center 25%",
     },
   },
   skillsSection: {
@@ -97,31 +97,12 @@ const AboutSection = ({ classes }) => {
       <div className={classes.firstSection}>
         <div className={classes.textContainer}>
           <Typography className={classes.presentationText}>
-            Hello ! je suis Anna Marandola, développeur web indépendante basée à
-            Toulouse. Passionnée par les technologies du web, j'ai d'abord
-            appris le code en autodidacte puis j'ai entamé un virage
-            professionnel en intégrant une formation fullstack et en obtenant le
-            diplôme de développeur web et web mobile (bac +3).
-          </Typography>
-          <Typography className={classes.presentationText}>
-            Aprés 2 ans d'expériences, je me suis spécialisée en développement
-            frontend avec le framework React.js. Je réalise des sites web
-            modernes, adaptés à toutes les tailles d'écran et respectueux des
-            standards du web. J'accorde une importance particulière à
-            l'optimisation du réfèrencement et à l'expérience utilisateur
-            (UX/UI).
-          </Typography>
-          <Typography className={classes.presentationText}>
-            Mon expérience acquise au fil des projets me permet de mieux
-            comprendre les attentes d'un client et de répondre précisement à son
-            besoin, en fonction de son domaine d'activité. Du site vitrine au
-            projet plus complexe, je vous propose une expertise et un
-            développement web qui correspond à vos attentes et à vos besoins.{" "}
-          </Typography>
-          <Typography className={classes.presentationText}>
-            Travaillant régulièrement avec des PME, associations ou
-            particuliers, je vous propose des solutions à votre portée & adaptée
-            à votre budget.{" "}
+            Voici un petit apperçu de mes compétences techniques...
+            <Typography className={classes.presentationText}>
+
+            Autodidacte et passionnée, je tiens une veille technologiques afin de pouvoir vous proposer des solutions les plus complètes et adaptées à vos projets.
+            </Typography>
+            Mon intéret pour le web s'étend au delà du code et la satisfaction du besoin du client reste pour moi une priorité. C'est pourquoi afin de proposer des prestations les plus complètes, j'ai suivi des formations en web marketing, gestion de projet, web design...
           </Typography>
           {/* <Button className={classes.aboutButton}>en savoir +</Button> */}
         </div>
