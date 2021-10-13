@@ -7,17 +7,22 @@ import Title from "../Title";
 const styles = (theme) => ({
   root: {
     padding: "0 5% 5% 5%",
-    backgroundColor: "#f4f4f4",
+    backgroundColor: "#29282e",
     display: "flex",
     flexDirection: "column",
     [theme.breakpoints.up("md")]: {},
   },
   subtitle: {
     textAlign: "center",
-    color: "#27282c",
+    color: "#838383",
+    paddingBottom: "4rem",
     [theme.breakpoints.up("sm")]: {
+      paddingBottom: "4rem",
+
     },
     [theme.breakpoints.up("lg")]: {
+      paddingBottom: "0rem",
+
     }
 
   }
@@ -26,7 +31,7 @@ const styles = (theme) => ({
 const ServicesSection = ({ classes }) => {
   return (
     <div className={classes.root}>
-    <Title title={"Services"} />
+    <Title title={"Services"} color={"white"} />
       <Typography className={classes.subtitle} variant="h4">Des prestations adaptées à vos besoins !</Typography>
       <ScrollAnimation
         animateIn="animate__fadeIn"

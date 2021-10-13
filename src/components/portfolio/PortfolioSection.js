@@ -9,7 +9,9 @@ import Player from "./Player";
 const styles = (theme) => ({
   root: {
     padding: "0 5% 5% 5%",
-    backgroundColor: "white",
+    // backgroundColor: "white",
+    backgroundColor: "#29282e",
+
     [theme.breakpoints.up("md")]: {},
   },
   galleryContainer: {
@@ -55,7 +57,7 @@ const PortfolioSection = ({ classes }) => {
 
   return (
     <div className={classes.root}>
-      <Title title={"Portfolio"} />
+      <Title title="Portfolio" color="white"/>
       {isOpen ? (
         <div className={classes.galleryContainer}>
           <Player

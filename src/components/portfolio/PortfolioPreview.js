@@ -35,6 +35,10 @@ const styles = (theme) => ({
   },
   chip: {
     margin: "0.2rem",
+    backgroundColor: "#838383",
+    "&:hover": {
+      color: "white",
+    },
     [theme.breakpoints.up("sm")]: {
       margin: "0.5rem",
     },
@@ -111,12 +115,12 @@ const styles = (theme) => ({
   },
   fab: {
     margin: "0 0.5rem",
-    color:
-      "linear-gradient(to right top, #2d7dfe, #457ffe, #5780ff, #6582ff, #7284ff)",
+    background:
+    "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
     "&:hover": {
-      color: "white",
       background:
-        "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
+        "linear-gradient(to right top, #2d7dfe, #457ffe, #5780ff, #6582ff, #7284ff)",
+      color: "white",
     },
   },
   paginationContainer: {
@@ -132,14 +136,13 @@ const styles = (theme) => ({
   },
   allButton: {
     marginTop: "5rem",
-    padding: "1rem",
+    padding: "1rem 2rem",
     borderRadius: "30px",
-    color:
-      "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
-    border: "1px solid",
+    color: "white",
+    border: "1px solid white",
     "&:hover": {
       background:
-        "linear-gradient(to right top, #2d7dfe, #457ffe, #5780ff, #6582ff, #7284ff)",
+      "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
       border: "1px solid #7284ff",
     },
   },
@@ -253,13 +256,13 @@ const PortfolioPreview = ({ classes, projects, handleOpen }) => {
                     >
                       <AddIcon onClick={handleOpen} id={project.title} />
                     </Fab>
-                    <Fab
+                    {/* <Fab
                       size="small"
                       aria-label="visiter le site"
                       className={classes.fab}
                     >
                       <VisibilityOutlinedIcon />
-                    </Fab>
+                    </Fab> */}
                   </div>
                 </div>
               </Card>

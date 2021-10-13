@@ -13,7 +13,6 @@ const styles = (theme) => ({
     width: "100%",
     height: "fit-content",
     padding: "1rem",
-    // margin: "2rem",
     [theme.breakpoints.up("md")]: {
       width: "50%",
       minWidth: "20rem",
@@ -23,9 +22,8 @@ const styles = (theme) => ({
     },
   },
   cardTitle: {
-    marginBottom: "2rem",
-    marginTop: "2rem",
-    color: "#27282c",
+    margin: "3rem 1rem",
+    color: "white",
     fontWeight: 600,
     fontSize: "2rem",
     [theme.breakpoints.up("md")]: {
@@ -38,27 +36,30 @@ const styles = (theme) => ({
     width: "100%",
     padding: "0.5rem",
     borderRadius: "10px",
+    backgroundColor: "#29282e",
+    boxShadow: "5px 5px 23px -8px",
+
     [theme.breakpoints.up("md")]: {
-      width: "80%",
+      width: "100%",
     }
   },
   textCard: {
-    color: "#D3D3D3",
+    color: "white",
     padding: "0.5rem",
     width: "100%",
 
   },
   certifTitleCard: {
-    color: "#27282c",
+    color: "white",
     padding: "0.3rem",
 
   },
   certifDescriptionCard: {
     padding: "0 0.5rem",
-    color: "#27282c",
+    color: "white",
   },
   certifTitle: {
-    color: "#27282c",
+    color: "white",
     fontWeight: 600,
     width: "fit-content",
   },
@@ -73,6 +74,9 @@ const styles = (theme) => ({
     borderRadius: "5px"
   },
   downloadIcon: {
+    background:
+    "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
+
   }
 });
 
@@ -123,7 +127,7 @@ const Certifications = ({ classes }) => {
         <Card key={certif.title} className={classes.certifCard}>
           <div className={classes.avatarContainer}>
           <img className={classes.avatar} src={certif.icon} alt="logo-certif"/>
-          <Button aria-label="download"><GetAppIcon className={classes.downloadIcon} style={{color:     "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)"}}/></Button>
+          {/* <Button aria-label="download"><GetAppIcon className={classes.downloadIcon} style={{color:     "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)"}}/></Button> */}
           </div>
           <div className={classes.textCard}>
           <div className={classes.certifTitleCard}>

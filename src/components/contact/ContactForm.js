@@ -24,8 +24,6 @@ const styles = (theme) => ({
     padding: "2rem 0.5rem",
     marginBottom: "6rem",
     boxShadow: "5px 5px 23px -5px",
-    // background:
-    //   "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
     [theme.breakpoints.up("sm")]: {
       width: "40%",
       padding: "2rem",
@@ -38,35 +36,58 @@ const styles = (theme) => ({
     display: "flex",
     flexDirection: "column",
   },
+  formLabel: {
+    color: "grey",
+    "&.Mui-focused": {
+      color: "gray",
+    },
+  },
   contactInputs: {
     marginBottom: "1rem",
     borderRadius: "5px",
-    backgroundColor: "#f4f4f4",
+    border: "1px solid grey",
+  },
+  input: {
+    color: "white",
   },
   textArea: {
     marginBottom: "2rem",
     borderRadius: "5px",
-    backgroundColor: "#f4f4f4",
+    // backgroundColor: "#f4f4f4",
+    border: "1px solid grey",
+
   },
   needs: {
-    backgroundColor: "transparent",
+    backgroundColor: "#29282e",
+
   },
-  list: {},
+  list: {
+    backgroundColor: "#29282e",
+    color: "white",
+    display: "flex",
+    flexDirection: "column",
+  },
+  expandIcon: {
+    background:
+      "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
+    borderRadius: "50%"
+  },
   heading: {
     fontWeight: 700,
     color: "grey",
   },
   submitButton: {
+    background:
+      "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
     padding: "1rem 1rem",
     borderRadius: "30px",
-    color: "white",
+    color: "#29282e",
     width: "30%",
     minWidth: "9rem",
     marginLeft: "50%",
     boxShadow: "5px 5px 23px -10px",
     "&:hover": {
       backgroundColor: "#29282e",
-      color: "white",
       opacity: 0.8,
     },
     [theme.breakpoints.up("lg")]: {
@@ -78,9 +99,9 @@ const styles = (theme) => ({
     marginRight: "1rem",
     background:
       "-webkit-linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
-      webkitBackgroundClip: "text",
-      WebkitTextFillColor: "transparent"
-    },
+    webkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+  },
   cguSection: {
     display: "flex",
     alignItems: "center",
@@ -100,15 +121,18 @@ const styles = (theme) => ({
   title: {
     textAlign: "center",
     paddingBottom: "2rem",
-    color: "white"
+    color: "white",
   },
 });
 
 const OrangeCheckbox = withStyles({
   root: {
-    color: "white",
+    color: "gray",
     "&$checked": {
-      color: "#29282e",
+      background:
+      "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
+      color: "white",
+
     },
   },
   checked: {},
@@ -186,6 +210,9 @@ const ContactForm = ({ classes }) => {
           className={classes.contactInputs}
           type="text"
           variant="outlined"
+          InputLabelProps={{
+            className: classes.formLabel,
+          }}
         />
 
         <TextField
@@ -195,11 +222,14 @@ const ContactForm = ({ classes }) => {
           className={classes.contactInputs}
           type="email"
           variant="outlined"
+          InputLabelProps={{
+            className: classes.formLabel,
+          }}
         />
 
         <Accordion className={classes.contactInputs}>
           <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
+            expandIcon={<ExpandMoreIcon className={classes.expandIcon}/>}
             aria-controls="panel1a-content"
             id="panel1a-header"
             className={classes.needs}
@@ -248,6 +278,10 @@ const ContactForm = ({ classes }) => {
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           className={classes.textArea}
+          InputLabelProps={{
+            className: classes.formLabel,
+          }}
+
         />
 
         <div className={classes.cguSection}>

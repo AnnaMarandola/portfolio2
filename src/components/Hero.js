@@ -1,6 +1,5 @@
 import { Button, Typography, withStyles } from "@material-ui/core";
-import { Avatar } from "@material-ui/core";
-import HAND from "../assets/hand.jpg";
+import HAND from "../assets/hand3.jpg";
 import GITHUB from "../assets/contact-icons/github.svg";
 import LINKEDIN from "../assets/contact-icons/linkedin.svg";
 
@@ -22,20 +21,37 @@ const styles = (theme) => ({
     display: "flex",
     flexDirection: "column",
     marginLeft: "10%",
-    paddingTop: "10rem",
+    paddingTop: "5rem",
     paddingBottom: "5rem",
+    [theme.breakpoints.up("sm")]: {
+      paddingTop: "10rem",
+
+    },
+    [theme.breakpoints.up("lg")]: {
+    }
   },
   annaM: {
     color: "white",
     margin: "2rem 0",
+    fontSize: "1.8rem",
     [theme.breakpoints.up("sm")]: {
     },
     [theme.breakpoints.up("lg")]: {
-      maxWidth: "50rem"
+      maxWidth: "35rem"
+    }
+  },
+  subtitle: {
+    color: "white",
+    margin: "2rem 0",
+    fontSize: "1.5rem",
+    [theme.breakpoints.up("sm")]: {
+    },
+    [theme.breakpoints.up("lg")]: {
+      maxWidth: "35rem"
     }
   },
   developer: {
-    fontSize: "2.5rem",
+    fontSize: "2rem",
     color: "white",
     fontFamily: "Poppins",
     fontWeight: 600,
@@ -53,11 +69,10 @@ const styles = (theme) => ({
     width: "100%",
     [theme.breakpoints.up("sm")]: {
       flexDirection: "row",
-      width: "60%",
+      width: "50%",
       padding: "3rem 0",
     },
     [theme.breakpoints.up("lg")]: {
-      width: "40%",
     }
   },
   contactButton: {
@@ -84,13 +99,12 @@ const Hero = ({ classes }) => {
   return (
     <header className={classes.root}>
       <div className={classes.textContainer}>
-        <Typography variant="h3" className={classes.annaM}>Anna Marandola</Typography>
+        <Typography className={classes.annaM}>Anna Marandola</Typography>
         <Typography className={classes.developer}>
           Développeur web
         </Typography>
         <Typography className={classes.developer}>freelance</Typography>
-        <Typography variant="h4" className={classes.annaM} >Création de sites internet, applications web et mobiles</Typography>
-
+        <Typography className={classes.subtitle} >Création de sites internet, applications web et mobiles</Typography>
         <div className={classes.buttonsContainer}>
           <img
             className={classes.mediaIcon}

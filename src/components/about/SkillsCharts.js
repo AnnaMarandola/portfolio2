@@ -4,7 +4,7 @@ import { withStyles } from "@material-ui/core/styles";
 const styles = (theme) => ({
   root: {
     width: "100%",
-    padding: "1rem",
+    padding: "1rem 0 3rem 0",
     height: "fit-content",
     [theme.breakpoints.up("sm")]: {
     },
@@ -17,17 +17,14 @@ const styles = (theme) => ({
   },
   cardTitle: {
     marginBottom :"2rem",
-    color: "#27282c",
+    color: "white",
     fontWeight: 600,
     fontSize: "2rem",
     paddingLeft: "1rem",
     [theme.breakpoints.up("lg")]: {
       paddingLeft: "0rem",
       marginBottom :"4rem",
-
-
     }
-
   },
   jauge: {
     display: "flex",
@@ -46,12 +43,9 @@ const styles = (theme) => ({
     paddingRight: "0.5rem",
     borderRadius: "5px",
     boxShadow: "5px 5px 23px -5px",
-    // "&:nth-of-type(2n + 1)": {
-    //     background: "linear-gradient(to right top, #4ea78f, #48a390, #439f91, #3f9b91, #3b9791, #3a9591, #389490, #379290, #379290, #369391, #369391, #359391)",
-    //  },
   },
   techLabel: {
-    color: "#27282c",
+    color: "white",
     fontWeight: 600
   },
   percent: {

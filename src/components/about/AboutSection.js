@@ -10,6 +10,7 @@ const styles = (theme) => ({
     flexDirection: "column",
     backgroundColor: "#29282e",
     alignItems: "center",
+    paddingBottom: "5%",
     [theme.breakpoints.up("md")]: {
       width: "100%",
     },
@@ -17,10 +18,10 @@ const styles = (theme) => ({
   firstSection: {
     display: "flex",
     flexDirection: "column-reverse",
-    backgroundColor: "#f4f4f4",
+    backgroundColor: "#29282e",
 
-    // background:
-    //   "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
+    background:
+      "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
     boxShadow: "5px 5px 23px -8px",
     zIndex: 2,
     width: "80%",
@@ -48,9 +49,9 @@ const styles = (theme) => ({
     },
   },
   presentationText: {
-    color: "#29282e",
+    color: "white",
     fontSize: "1rem",
-    padding :"0.5rem 0",
+    padding: "0.5rem 0",
     [theme.breakpoints.up("sm")]: {},
     [theme.breakpoints.up("lg")]: {
       fontSize: "1.3rem",
@@ -69,7 +70,7 @@ const styles = (theme) => ({
     },
     [theme.breakpoints.up("lg")]: {
       width: "36%",
-      height: "28rem",
+      height: "30rem",
       backgroundPosition: "center 25%",
     },
   },
@@ -79,13 +80,16 @@ const styles = (theme) => ({
     justifyContent: "space-evenly",
     width: "100%",
     paddingTop: "20rem",
-    backgroundColor: "#f4f4f4",
     marginTop: "-12rem",
     zIndex: 1,
-    [theme.breakpoints.up("sm")]: {},
+    [theme.breakpoints.up("sm")]: {
+      width: "80%",
+ 
+    },
     [theme.breakpoints.up("lg")]: {
       flexDirection: "row",
-      justifyContent: "space-evenly",
+      justifyContent: "space-between",
+      width: "85%",
     },
   },
 });
@@ -93,16 +97,23 @@ const styles = (theme) => ({
 const AboutSection = ({ classes }) => {
   return (
     <div className={classes.root}>
-      <Title title={"A propos ..."} color={"white"} />
+      <Title title={"Compétences"} color={"white"} />
       <div className={classes.firstSection}>
         <div className={classes.textContainer}>
           <Typography className={classes.presentationText}>
             Voici un petit apperçu de mes compétences techniques...
             <Typography className={classes.presentationText}>
-
-            Autodidacte et passionnée, je tiens une veille technologiques afin de pouvoir vous proposer des solutions les plus complètes et adaptées à vos projets.
+              Passionnée par les technologies du web, j'ai d'abord appris le
+              code en autodidacte puis j'ai entamé un virage professionnel en
+              intégrant une formation fullstack et en obtenant le diplôme de
+              développeur web et web mobile (bac +3). Aprés 2 ans d'expériences,
+              je me suis spécialisée en développement frontend avec le framework
+              React.js.{" "}
             </Typography>
-            Mon intéret pour le web s'étend au delà du code et la satisfaction du besoin du client reste pour moi une priorité. C'est pourquoi afin de proposer des prestations les plus complètes, j'ai suivi des formations en web marketing, gestion de projet, web design...
+            Mon intéret pour le web s'étend au delà du code et la satisfaction
+            du besoin du client reste pour moi une priorité. C'est pourquoi afin
+            de proposer des prestations les plus complètes, j'ai suivi des
+            formations en web marketing, gestion de projet, web design...
           </Typography>
           {/* <Button className={classes.aboutButton}>en savoir +</Button> */}
         </div>
