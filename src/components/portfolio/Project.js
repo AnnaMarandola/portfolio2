@@ -8,6 +8,7 @@ const styles = (theme) => ({
     display: "flex",
     flexDirection: "column",
     border: "2px solid #f4f4f4",
+    padding: "1rem",
     [theme.breakpoints.up("sm")]: {
       padding: "1rem",
     },
@@ -57,7 +58,7 @@ const styles = (theme) => ({
   },
   visitButton: {
     borderRadius: "30px",
-    padding: "0 1rem",
+    padding: "0 2rem",
     color: "white",
     marginRight: "3rem",
     background:
@@ -115,21 +116,25 @@ const Project = ({ classes, handleClose, project }) => {
             <Stack stackData={project.stack} />
           </div>
           <div className={classes.buttons}>
-            <Button
-              className={classes.visitButton}
-              href={project.visitLink}
-              target="_blank"
-            >
-              Visiter le site
-            </Button>
-            <Button
-              className={classes.githubButton}
-              href={project.githubLink}
-              target="_blank"
-            >
-              {" "}
-              <img src={GITHUB} alt="github repository" />
-            </Button>
+            {project.visitLink && (
+              <Button
+                className={classes.visitButton}
+                href={project.visitLink}
+                target="_blank"
+              >
+                Visiter
+              </Button>
+            )}
+            {project.githubLink && (
+              <Button
+                className={classes.githubButton}
+                href={project.githubLink}
+                target="_blank"
+              >
+                {" "}
+                <img src={GITHUB} alt="github repository" />
+              </Button>
+            )}
           </div>
         </div>
       </div>
