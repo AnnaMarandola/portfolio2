@@ -101,7 +101,7 @@ function Footer({ classes }) {
             <img
               className={classes.mediaIcon}
               src={GITHUB}
-              alt="twitter link"
+              alt="github link"
             />
           </div>
 

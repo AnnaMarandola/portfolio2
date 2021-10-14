@@ -46,7 +46,7 @@ const SubHeader = ({ classes }) => {
       <div className={classes.container}>
         <div className={classes.textContainer}>
           <Typography className={classes.presentationText}>
-            Hello ! je suis Anna Marandola, développeur web indépendante basée à
+            Bonjour ! je suis Anna Marandola, développeur web indépendante basée à
             Toulouse.
           </Typography>
           <Typography className={classes.presentationText}>
@@ -56,11 +56,9 @@ const SubHeader = ({ classes }) => {
             utilisateur (UX/UI).
           </Typography>
           <Typography className={classes.presentationText}>
-            Mon expérience acquise au fil des projets me permet de mieux
-            comprendre les attentes d'un client et de répondre précisement à son
-            besoin, en fonction de son domaine d'activité. Du site vitrine au
-            projet plus complexe, je vous propose une expertise et un
-            développement web qui correspond à vos attentes et à vos besoins.{" "}
+            Du site vitrine au projet plus complexe, je vous propose une
+            expertise et un développement web qui correspond à vos attentes et à
+            vos besoins.{" "}
           </Typography>
           <Typography className={classes.presentationText}>
             Travaillant régulièrement avec des PME, associations ou

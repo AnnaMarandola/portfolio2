@@ -88,7 +88,7 @@ const styles = (theme) => ({
     },
     [theme.breakpoints.up("lg")]: {
       flexDirection: "row",
-      justifyContent: "space-between",
+      justifyContent: "space-evenly",
       width: "85%",
     },
   },

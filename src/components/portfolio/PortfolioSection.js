@@ -65,6 +65,7 @@ const PortfolioSection = ({ classes }) => {
             goNext={goNext()}
             goBack={goBack()}
             progress={progress}
+            handleClose={handleOpen()}
           />
           <Project handleClose={handleOpen()} project={project} />
         </div>

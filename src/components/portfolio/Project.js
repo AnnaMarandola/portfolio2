@@ -75,9 +75,9 @@ const styles = (theme) => ({
 const Project = ({ classes, handleClose, project }) => {
   return (
     <Card className={classes.root}>
-      <Button onClick={handleClose} className={classes.closeButton}>
+      {/* <Button onClick={handleClose} className={classes.closeButton}>
         X
-      </Button>
+      </Button> */}
       <div className={classes.titleContainer}>
         {project && project.logo && (
           <img

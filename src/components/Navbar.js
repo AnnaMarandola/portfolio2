@@ -67,9 +67,9 @@ const styles = (theme) => ({
 });
 
 const navLinks = [
-  { id: 2, title: `portfolio`, path: `#portfolio` },
-  { id: 1, title: `services`, path: `#services` },
   { id: 3, title: `à propos`, path: `#about` },
+  { id: 1, title: `services`, path: `#services` },
+  { id: 2, title: `portfolio`, path: `#portfolio` },
   { id: 4, title: `contact`, path: `#contact` },
 ];
 

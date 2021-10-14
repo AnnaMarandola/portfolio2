@@ -1,7 +1,8 @@
 import { withStyles } from "@material-ui/styles";
-import { Button, Tooltip } from "@material-ui/core";
+import { Button, Tooltip, Typography } from "@material-ui/core";
 import BACK from "../../assets/back-button.svg";
 import NEXT from "../../assets/next-button.svg";
+import CROSS from "../../assets/close.svg";
 
 const styles = (theme) => ({
   player: {
@@ -9,16 +10,42 @@ const styles = (theme) => ({
     width: "100%",
     justifyContent: "space-between",
     marginBottom: "2rem",
+    // border: "1px solid grey",
+    // borderRadius: "10px",
+    // padding: "0.5rem",
+    // [theme.breakpoints.up("sm")]: {
+    //   display: "flex",
+    //   width: "80%",
+    //   justifyContent: "space-between",
+    //   marginBottom: "2rem",
+    //   border: "1px solid grey",
+    //   borderRadius: "10px",
+    //   padding: "1rem",
+
+    // }
+    // [theme.breakpoints.up("sm")]: {},
+    // [theme.breakpoints.up("lg")]: {
+    //   display: "flex",
+    //   width: "80%",
+    //   justifyContent: "space-between",
+    //   marginBottom: "2rem",
+    //   border: "1px solid grey",
+    //   borderRadius: "10px",
+    //   padding: "1rem",
+
+    // },
   },
   buttonContainer: {
     display: "flex",
     flexDirection: "column",
   },
   playerButton: {
-    marginBottom: "1rem",
+    // marginBottom: "1rem",
+    padding: "0.5rem",
+    // boxShadow: "5px 5px 23px -10px black",
   },
   progressBarContainer: {
-    width: "75%",
+    width: "80%",
     height: "0.25rem",
     backgroundColor: "#e5e5e5",
     marginTop: "1rem",
@@ -31,10 +58,13 @@ const styles = (theme) => ({
 
     height: "0.25rem",
   },
-  //
+  closeButton: {
+    padding: "0.5rem",
+    boxShadow: "5px 5px 23px -10px black",
+  },
 });
 
-const Player = ({ classes, goBack, goNext, progress }) => {
+const Player = ({ classes, goBack, goNext, progress, handleClose }) => {
   console.log("progress", progress);
   return (
     <div className={classes.player}>
@@ -63,6 +93,9 @@ const Player = ({ classes, goBack, goNext, progress }) => {
           </Button>
         </Tooltip>
       </div>
+      <Button onClick={handleClose} className={classes.closeButton}>
+        <img src={CROSS} alt="close cross" />
+      </Button>
     </div>
   );
 };

@@ -51,7 +51,6 @@ const styles = (theme) => ({
     "&:nth-of-type(1)": {
       justifyContent: "space-evenly",
     },
-
   },
   title: {
     textTransform: "uppercase",
@@ -62,6 +61,15 @@ const styles = (theme) => ({
     padding: "1rem",
     textAlign: "right",
   },
+  linkText: {
+    textDecoration: "none",
+  },
+  mediaIcon: {
+    boxShadow: "5px 5px 15px -15px",
+    "&:hover": {
+      transform: "scale3d(1.05, 1.05, 1)"
+    }
+  },
 });
 
 const ContactDetails = ({ classes }) => {
@@ -69,8 +77,22 @@ const ContactDetails = ({ classes }) => {
     <div className={classes.root}>
       <div className={classes.detailsContainer}>
         <Card className={classes.contactCard}>
-          <img src={GITHUB} alt="github" />
-          <img src={LINKEDIN} alt="linkedin" />
+          <a
+            href="https://github.com/AnnaMarandola"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={classes.linkText}
+          >
+            <img src={GITHUB} alt="github" className={classes.mediaIcon} />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/anna-m-42ab3b18a/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={classes.linkText}
+          >
+            <img src={LINKEDIN} alt="linkedin" className={classes.mediaIcon} />
+          </a>
         </Card>
         <Card className={classes.contactCard}>
           <img src={MAIL} alt="email" />
