@@ -34,7 +34,7 @@ const ServicesSection = ({ classes }) => {
     <Title title={"Services"} color={"white"} />
       <Typography className={classes.subtitle} variant="h4">Des prestations adaptées à vos besoins !</Typography>
       <ScrollAnimation
-        animateIn="animate__fadeIn"
+        animateIn="animate__fadeInLeftBig"
         animateOut="animate__fadeIn"
         duration={1}
         delay={300}

@@ -14,7 +14,7 @@ const styles = (theme) => ({
     height: "fit-content",
     padding: "1rem",
     [theme.breakpoints.up("md")]: {
-      width: "50%",
+      width: "80%",
       minWidth: "20rem",
       maxWidth: "35rem",
       padding: "2rem",

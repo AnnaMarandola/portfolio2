@@ -4,10 +4,11 @@ import GITHUB from "../assets/contact-icons/github.svg";
 import LINKEDIN from "../assets/contact-icons/linkedin.svg";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
+
 const styles = (theme) => ({
   root: {
     backgroundColor: "#29282e",
-    height: "fit-content",
+    height: "100vh",
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",

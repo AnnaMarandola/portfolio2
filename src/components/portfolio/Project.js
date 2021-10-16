@@ -73,12 +73,9 @@ const styles = (theme) => ({
     },
   },
 });
-const Project = ({ classes, handleClose, project }) => {
+const Project = ({ classes, project }) => {
   return (
     <Card className={classes.root}>
-      {/* <Button onClick={handleClose} className={classes.closeButton}>
-        X
-      </Button> */}
       <div className={classes.titleContainer}>
         {project && project.logo && (
           <img

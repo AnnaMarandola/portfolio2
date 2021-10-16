@@ -3,6 +3,8 @@ import ILLUS from "../../assets/z4.png";
 import Title from "../Title";
 import SkillsCharts from "./SkillsCharts";
 import Certifications from "./Certifications";
+import ScrollAnimation from "react-animate-on-scroll";
+import "animate.css/animate.min.css";
 
 const styles = (theme) => ({
   root: {
@@ -115,14 +117,27 @@ const AboutSection = ({ classes }) => {
             de proposer des prestations les plus complètes, j'ai suivi des
             formations en web marketing, gestion de projet, web design...
           </Typography>
-          {/* <Button className={classes.aboutButton}>en savoir +</Button> */}
         </div>
         <div className={classes.illustrationContainer} />
       </div>
       <div className={classes.skillsSection}>
-        {/* <CvButtons /> */}
+      <ScrollAnimation
+        animateIn="animate__fadeInLeftBig"
+        animateOut="animate__fadeIn"
+        duration={1}
+        delay={300}
+      >
+
         <SkillsCharts />
+        </ScrollAnimation>
+        <ScrollAnimation
+        animateIn="animate__fadeInLeftBig"
+        animateOut="animate__fadeIn"
+        duration={1}
+        delay={200}
+      >
         <Certifications />
+        </ScrollAnimation>
       </div>
     </div>
   );

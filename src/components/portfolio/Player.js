@@ -1,5 +1,5 @@
-import { withStyles } from "@material-ui/styles";
-import { Button, Tooltip, Typography } from "@material-ui/core";
+import { withStyles } from "@material-ui/core/styles";
+import { Button, Tooltip } from "@material-ui/core";
 import BACK from "../../assets/back-button.svg";
 import NEXT from "../../assets/next-button.svg";
 import CROSS from "../../assets/close.svg";
@@ -10,39 +10,16 @@ const styles = (theme) => ({
     width: "100%",
     justifyContent: "space-between",
     marginBottom: "2rem",
-    // border: "1px solid grey",
-    // borderRadius: "10px",
-    // padding: "0.5rem",
-    // [theme.breakpoints.up("sm")]: {
-    //   display: "flex",
-    //   width: "80%",
-    //   justifyContent: "space-between",
-    //   marginBottom: "2rem",
-    //   border: "1px solid grey",
-    //   borderRadius: "10px",
-    //   padding: "1rem",
-
-    // }
-    // [theme.breakpoints.up("sm")]: {},
-    // [theme.breakpoints.up("lg")]: {
-    //   display: "flex",
-    //   width: "80%",
-    //   justifyContent: "space-between",
-    //   marginBottom: "2rem",
-    //   border: "1px solid grey",
-    //   borderRadius: "10px",
-    //   padding: "1rem",
-
-    // },
+    [theme.breakpoints.up("lg")]: {
+      width: "80%"
+    }
   },
   buttonContainer: {
     display: "flex",
     flexDirection: "column",
   },
   playerButton: {
-    // marginBottom: "1rem",
     padding: "0.5rem",
-    // boxShadow: "5px 5px 23px -10px black",
   },
   progressBarContainer: {
     width: "80%",

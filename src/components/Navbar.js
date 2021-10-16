@@ -23,6 +23,11 @@ const styles = (theme) => ({
     [theme.breakpoints.up("md")]: {
       display: "flex",
       justifyContent: "space-around",
+      width: "85%",
+    },
+    [theme.breakpoints.up("md")]: {
+      display: "flex",
+      justifyContent: "space-around",
       width: "55%",
     },
   },
@@ -70,6 +75,7 @@ const navLinks = [
   { id: 3, title: `à propos`, path: `#about` },
   { id: 1, title: `services`, path: `#services` },
   { id: 2, title: `portfolio`, path: `#portfolio` },
+  { id: 2, title: `compétences`, path: `#skills` },
   { id: 4, title: `contact`, path: `#contact` },
 ];
 
