@@ -25,10 +25,12 @@ const styles = (theme) => ({
     marginBottom: "6rem",
     boxShadow: "5px 5px 23px -5px",
     [theme.breakpoints.up("sm")]: {
-      width: "40%",
+      width: "85%",
       padding: "2rem",
     },
     [theme.breakpoints.up("lg")]: {
+      width: "30%",
+
       padding: "3rem",
     },
   },

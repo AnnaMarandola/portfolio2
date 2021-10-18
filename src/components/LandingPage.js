@@ -24,7 +24,7 @@ const LandingPage = ({ classes }) => {
 
       <Hero />
       <section id="about">
-        <ScrollAnimation animateIn="animate__fadeInUp" duration={1} delay={100}>
+        <ScrollAnimation animateIn="animate__fadeInUp"  duration={1} delay={100}>
           <SubHeader />
         </ScrollAnimation>
       </section>
@@ -39,7 +39,7 @@ const LandingPage = ({ classes }) => {
         </ScrollAnimation>
       </section>
       <section id="skills">
-        <ScrollAnimation animateIn="animate__fadeInUp" duration={1} delay={100}>
+        <ScrollAnimation animateIn="animate__fadeInUp" animateOnce={true} duration={1} delay={100}>
           <AboutSection />
         </ScrollAnimation>
       </section>

@@ -8,8 +8,11 @@ const styles = (theme) => ({
     flexDirection: "column",
     padding: "10%",
     backgroundColor: "#29282e",
-    marginTop: "-0.3rem",
+    paddingTop: "5rem",
     [theme.breakpoints.up("md")]: {
+      padding: "0 10%",
+    },
+    [theme.breakpoints.up("lg")]: {
       padding: "5% 10%",
     },
   },
@@ -42,7 +45,7 @@ const styles = (theme) => ({
 const SubHeader = ({ classes }) => {
   return (
     <div className={classes.root}>
-      <Title title="A propos ..." color="white" />
+      {/* <Title title="A propos ..." color="white" /> */}
       <div className={classes.container}>
         <div className={classes.textContainer}>
           <Typography className={classes.presentationText}>

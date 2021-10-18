@@ -28,15 +28,19 @@ const styles = (theme) => ({
     [theme.breakpoints.up("md")]: {
       display: "flex",
       justifyContent: "space-around",
+      width: "70%",
+    },
+    [theme.breakpoints.up("lg")]: {
       width: "55%",
     },
   },
   navText: {
     color: "white",
     minWidth: "8rem",
-    fontSize: "1.4rem",
-    fontWeight: 550,
+    fontSize: "1.3rem",
+    fontWeight: 600,
     mixBlendMode: "difference",
+    padding: "0 0.5rem",
     "&:hover": {
       mixBlendMode: "difference",
       color: "white",
@@ -72,7 +76,7 @@ const styles = (theme) => ({
 });
 
 const navLinks = [
-  { id: 3, title: `à propos`, path: `#about` },
+  // { id: 3, title: `à propos`, path: `#about` },
   { id: 1, title: `services`, path: `#services` },
   { id: 2, title: `portfolio`, path: `#portfolio` },
   { id: 2, title: `compétences`, path: `#skills` },

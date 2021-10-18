@@ -12,7 +12,7 @@ const styles = (theme) => ({
     display: "flex",
     flexDirection: "column-reverse",
     alignItems: "center",
-    [theme.breakpoints.up("sm")]: {
+    [theme.breakpoints.up("md")]: {
       flexDirection: "row",
       justifyContent: "space-evenly",
       alignItems: "flex-start",

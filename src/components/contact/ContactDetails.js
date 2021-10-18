@@ -17,7 +17,7 @@ const styles = (theme) => ({
     color: "#D3D3D3",
     [theme.breakpoints.up("sm")]: {
       padding: "1rem",
-      width: "35%",
+      width: "65%",
     },
     [theme.breakpoints.up("lg")]: {
       flexDirection: "row",

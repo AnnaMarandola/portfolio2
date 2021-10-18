@@ -1,18 +1,21 @@
 import { Button, Typography, withStyles } from "@material-ui/core";
-import HAND from "../assets/Wave.svg";
+import HAND from "../assets/bgRound.svg";
 import GITHUB from "../assets/contact-icons/github.svg";
 import LINKEDIN from "../assets/contact-icons/linkedin.svg";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-
+import DOWN from "../assets/down.svg";
+import DownButton from "./DownButton";
 
 const styles = (theme) => ({
   root: {
-    backgroundColor: "#29282e",
+    marginTop: "-5rem",
     height: "100vh",
+  },
+  header: {
+    backgroundColor: "#29282e",
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    marginTop: "-5rem",
     [theme.breakpoints.up("sm")]: {},
     [theme.breakpoints.up("lg")]: {},
   },
@@ -82,8 +85,8 @@ const styles = (theme) => ({
   },
   mediaIcon: {
     "&:hover": {
-      transform: "scale3d(1.05, 1.05, 1)"
-    }
+      transform: "scale3d(1.05, 1.05, 1)",
+    },
   },
   linkText: {
     textDecoration: "none",
@@ -98,55 +101,58 @@ const styles = (theme) => ({
 
 const Hero = ({ classes }) => {
   return (
-    <header className={classes.root}>
-      <div className={classes.textContainer}>
-        <Typography className={classes.annaM}>Anna Marandola</Typography>
-        <Typography className={classes.developer}>Développeur web</Typography>
-        <Typography className={classes.developer}>freelance</Typography>
-        <Typography className={classes.subtitle}>
-          Création de sites internet, applications web et mobiles
-        </Typography>
-        <div className={classes.buttonsContainer}>
-          <a
-            href="https://www.linkedin.com/in/anna-m-42ab3b18a/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={classes.linkText}
-          >
-            <img
-              className={classes.mediaIcon}
-              src={LINKEDIN}
-              alt="linkedin link"
-            />
-          </a>
-          <a
-            href="https://github.com/AnnaMarandola"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={classes.linkText}
-          >
-            <img
-              className={classes.mediaIcon}
-              src={GITHUB}
-              alt="twitter link"
-            />
-          </a>
+    <div className={classes.root}>
+      <header className={classes.header}>
+        <div className={classes.textContainer}>
+          <Typography className={classes.annaM}>Anna Marandola</Typography>
+          <Typography className={classes.developer}>Développeur web</Typography>
+          <Typography className={classes.developer}>freelance</Typography>
+          <Typography className={classes.subtitle}>
+            Création de sites internet, applications web et mobiles
+          </Typography>
+          <div className={classes.buttonsContainer}>
+            <a
+              href="https://www.linkedin.com/in/anna-m-42ab3b18a/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={classes.linkText}
+            >
+              <img
+                className={classes.mediaIcon}
+                src={LINKEDIN}
+                alt="linkedin link"
+              />
+            </a>
+            <a
+              href="https://github.com/AnnaMarandola"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={classes.linkText}
+            >
+              <img
+                className={classes.mediaIcon}
+                src={GITHUB}
+                alt="twitter link"
+              />
+            </a>
 
-          <AnchorLink href="#contact" className={classes.linkText}>
-            <Button className={classes.contactButton} aria-label="Contact">
-              Contact
-            </Button>
-          </AnchorLink>
+            <AnchorLink href="#contact" className={classes.linkText}>
+              <Button className={classes.contactButton} aria-label="Contact">
+                Contact
+              </Button>
+            </AnchorLink>
+          </div>
         </div>
-      </div>
-      <div className={classes.imgContainer}>
-        {/* <img
+        <div className={classes.imgContainer}>
+          {/* <img
           src={HAND}
           alt="hand typing on keyboard"
           className={classes.codeImg}
         /> */}
-      </div>
-    </header>
+        </div>
+      </header>
+      <DownButton />
+    </div>
   );
 };
 
