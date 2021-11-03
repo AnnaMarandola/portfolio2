@@ -10,7 +10,6 @@ const styles = (theme) => ({
   root: {
     display: "flex",
     flexDirection: "column",
-    backgroundColor: "#29282e",
     alignItems: "center",
     paddingBottom: "5%",
     [theme.breakpoints.up("md")]: {
@@ -21,10 +20,9 @@ const styles = (theme) => ({
     display: "flex",
     flexDirection: "column-reverse",
     backgroundColor: "#29282e",
-
     background:
       "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
-    boxShadow: "5px 5px 23px -8px",
+    boxShadow: "5px 5px 23px -8px black",
     zIndex: 2,
     width: "80%",
     justifyContent: "center",
@@ -86,7 +84,6 @@ const styles = (theme) => ({
     zIndex: 1,
     [theme.breakpoints.up("sm")]: {
       width: "80%",
- 
     },
     [theme.breakpoints.up("lg")]: {
       flexDirection: "row",
@@ -99,45 +96,43 @@ const styles = (theme) => ({
 const AboutSection = ({ classes }) => {
   return (
     <div className={classes.root}>
-      <Title title={"Compétences"} color={"white"} />
+      <Title title={"Compétences"} />
       <div className={classes.firstSection}>
         <div className={classes.textContainer}>
           <Typography className={classes.presentationText}>
-            Voici un petit apperçu de mes compétences techniques...
-            <Typography className={classes.presentationText}>
-              Passionnée par les technologies du web, j'ai d'abord appris le
-              code en autodidacte puis j'ai entamé un virage professionnel en
-              intégrant une formation fullstack et en obtenant le diplôme de
-              développeur web et web mobile (bac +3). Aprés 2 ans d'expériences,
-              je me suis spécialisée en développement frontend avec le framework
-              React.js.{" "}
-            </Typography>
-            Mon intéret pour le web s'étend au delà du code et la satisfaction
-            du besoin du client reste pour moi une priorité. C'est pourquoi afin
-            de proposer des prestations les plus complètes, j'ai suivi des
-            formations en web marketing, gestion de projet, web design...
+            Titulaire du diplôme de Développeur web et web mobile, je mène une
+            veille active sur les nouvelles technologies web et continue de
+            développer mes compétences afin de proposer des sites/applications
+            adaptés aux standards du web et optimisant l’expérience utilisateur
+            (UX, UI).
+          </Typography>
+          <Typography className={classes.presentationText}>
+            Après 2 ans d'expériences, je me suis spécialisée en développement
+            frontend avec le framework React.js, je maîtrise les technologies
+            HTML5/CSS3, javascript, typescript, node.js et les bases de données
+            SQL et noSQL.
+            Au fil des projets, j’ai progressivement élargi mon champ de compétences au web marketing et au web design.
           </Typography>
         </div>
         <div className={classes.illustrationContainer} />
       </div>
       <div className={classes.skillsSection}>
-      <ScrollAnimation
-        animateIn="animate__fadeInLeftBig"
-        animateOut="animate__fadeIn"
-        duration={1}
-        delay={300}
-      >
-
-        <SkillsCharts />
-        </ScrollAnimation>
+        {/* <ScrollAnimation
+          animateIn="animate__fadeInLeftBig"
+          animateOut="animate__fadeIn"
+          duration={1}
+          delay={300}
+        > */}
+          <SkillsCharts />
+        {/* </ScrollAnimation>
         <ScrollAnimation
-        animateIn="animate__fadeInLeftBig"
-        animateOut="animate__fadeIn"
-        duration={1}
-        delay={200}
-      >
-        <Certifications />
-        </ScrollAnimation>
+          animateIn="animate__fadeInLeftBig"
+          animateOut="animate__fadeIn"
+          duration={1}
+          delay={200}
+        > */}
+          <Certifications />
+        {/* </ScrollAnimation> */}
       </div>
     </div>
   );

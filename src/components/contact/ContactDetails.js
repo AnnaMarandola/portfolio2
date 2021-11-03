@@ -41,10 +41,10 @@ const styles = (theme) => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
-    backgroundColor: "#29282e",
+    backgroundColor: "#424242",
     marginBottom: "0.5rem",
     padding: "1rem",
-    boxShadow: "5px 5px 23px -5px",
+    boxShadow: "5px 5px 23px -5px black",
     [theme.breakpoints.up("sm")]: {
       minWidth: "15rem",
     },
@@ -54,10 +54,9 @@ const styles = (theme) => ({
   },
   title: {
     textTransform: "uppercase",
-    color: "#b2a9a6",
   },
   text: {
-    color: "#b2a9a6",
+    color: "white",
     padding: "1rem",
     textAlign: "right",
   },
@@ -96,11 +95,11 @@ const ContactDetails = ({ classes }) => {
         </Card>
         <Card className={classes.contactCard}>
           <img src={MAIL} alt="email" />
-          <Typography className={classes.text}>anna.yws@gmail.com</Typography>
+          <Typography className={classes.text}>annamarandola@gmail.com</Typography>
         </Card>
         <Card className={classes.contactCard}>
           <img src={PHONE} alt="phone" />
-          <Typography className={classes.text}>(+33)6.15.42.10.45</Typography>
+          <Typography className={classes.text}>(+33)6.47.66.23.14</Typography>
         </Card>
         <Card className={classes.contactCard}>
           <img src={ADRESS} alt="adress" />
@@ -110,7 +109,7 @@ const ContactDetails = ({ classes }) => {
         </Card>
         <Card className={classes.contactCard}>
           <img src={ID} alt="siren" />
-          <Typography className={classes.text}>424 242 424</Typography>
+          <Typography className={classes.text}>SIREN : 900349515</Typography>
         </Card>
       </div>
       <div className={classes.mapContainer}>

@@ -10,7 +10,7 @@ const styles = (theme) => ({
   root: {
     padding: "0 5% 5% 5%",
     // backgroundColor: "white",
-    backgroundColor: "#29282e",
+    // backgroundColor: "#29282e",
 
     [theme.breakpoints.up("md")]: {},
   },
@@ -57,7 +57,7 @@ const PortfolioSection = ({ classes }) => {
 
   return (
     <div className={classes.root}>
-      <Title title="Portfolio" color="white"/>
+      <Title title="Portfolio"/>
       {isOpen ? (
         <div className={classes.galleryContainer}>
           <Player

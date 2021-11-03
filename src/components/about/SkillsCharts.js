@@ -17,7 +17,7 @@ const styles = (theme) => ({
   },
   cardTitle: {
     marginBottom :"2rem",
-    color: "white",
+    // color: "white",
     fontWeight: 600,
     fontSize: "2rem",
     paddingLeft: "1rem",
@@ -42,7 +42,7 @@ const styles = (theme) => ({
     paddingBottom: "1.5rem",
     paddingRight: "0.5rem",
     borderRadius: "5px",
-    boxShadow: "5px 5px 23px -5px",
+    boxShadow: "5px 5px 23px -5px black",
   },
   techLabel: {
     color: "white",

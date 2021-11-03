@@ -1,18 +1,17 @@
 import { Button, Typography, withStyles } from "@material-ui/core";
-import HAND from "../assets/bgRound.svg";
+// import HAND from "../assets/bgRound.svg";
 import GITHUB from "../assets/contact-icons/github.svg";
 import LINKEDIN from "../assets/contact-icons/linkedin.svg";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import DOWN from "../assets/down.svg";
 import DownButton from "./DownButton";
 
 const styles = (theme) => ({
   root: {
     marginTop: "-5rem",
-    height: "100vh",
+    paddingBottom: "5rem",
+    // height: "100vh",
   },
   header: {
-    backgroundColor: "#29282e",
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
@@ -31,7 +30,6 @@ const styles = (theme) => ({
     [theme.breakpoints.up("lg")]: {},
   },
   annaM: {
-    color: "white",
     margin: "2rem 0",
     fontSize: "1.8rem",
     [theme.breakpoints.up("sm")]: {},
@@ -40,7 +38,6 @@ const styles = (theme) => ({
     },
   },
   subtitle: {
-    color: "white",
     margin: "2rem 0",
     fontSize: "1.5rem",
     [theme.breakpoints.up("sm")]: {},
@@ -50,7 +47,6 @@ const styles = (theme) => ({
   },
   developer: {
     fontSize: "2rem",
-    color: "white",
     fontFamily: "Poppins",
     fontWeight: 600,
     [theme.breakpoints.up("sm")]: {},

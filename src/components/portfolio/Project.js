@@ -7,7 +7,6 @@ const styles = (theme) => ({
   root: {
     display: "flex",
     flexDirection: "column",
-    border: "2px solid #f4f4f4",
     padding: "1rem",
     [theme.breakpoints.up("sm")]: {
       padding: "1rem",

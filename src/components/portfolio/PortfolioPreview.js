@@ -35,9 +35,7 @@ const styles = (theme) => ({
   },
   chip: {
     margin: "0.2rem",
-    backgroundColor: "#838383",
     "&:hover": {
-      color: "white",
     },
     [theme.breakpoints.up("sm")]: {
       margin: "0.5rem",
@@ -79,7 +77,6 @@ const styles = (theme) => ({
   },
   descriptionCard: {
     borderRadius: "12px",
-    color: "#ffffff",
     width: "100%",
     display: "flex",
     alignItems: "flex-end",
@@ -87,7 +84,6 @@ const styles = (theme) => ({
     height: "22rem",
     marginTop: "-12rem",
     zIndex: 1,
-    backgroundColor: "#cccccc",
     [theme.breakpoints.up("sm")]: {},
     [theme.breakpoints.up("lg")]: {
       height: "18rem",
@@ -99,7 +95,6 @@ const styles = (theme) => ({
     justifyContent: "space-between",
     width: "100%",
     padding: "1rem",
-    backgroundColor: "#27282c",
     flexDirection: "column",
     [theme.breakpoints.up("sm")]: {
       padding: "1rem 2rem",
@@ -109,8 +104,6 @@ const styles = (theme) => ({
     [theme.breakpoints.up("lg")]: {},
   },
   texts: {
-    backgroundColor: "#27282c",
-    color: "#ededee",
     paddingBottom: "1rem",
   },
   fab: {
@@ -138,8 +131,7 @@ const styles = (theme) => ({
     marginTop: "5rem",
     padding: "1rem 2rem",
     borderRadius: "30px",
-    color: "white",
-    border: "1px solid white",
+    border: "1px solid ",
     "&:hover": {
       background:
       "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
@@ -235,6 +227,7 @@ const PortfolioPreview = ({ classes, projects, handleOpen }) => {
             delay={300}
             key={index}
           >
+
             <div className={classes.project} key={project.id}>
               <img
                 src={project.url}
@@ -242,7 +235,6 @@ const PortfolioPreview = ({ classes, projects, handleOpen }) => {
                 className={classes.imageSrc}
               />
               <span className={classes.imageBackdrop} />
-
               <Card className={classes.descriptionCard}>
                 <div className={classes.container}>
                   <div className={classes.texts}>
@@ -267,6 +259,7 @@ const PortfolioPreview = ({ classes, projects, handleOpen }) => {
                 </div>
               </Card>
             </div>
+
           </ScrollAnimation>
         ))}
       </div>

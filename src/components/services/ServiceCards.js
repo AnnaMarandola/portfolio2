@@ -20,7 +20,7 @@ const styles = (theme) => ({
     margin: "1rem",
     padding: "1rem",
     textAlign: "center",
-    boxShadow: "5px 5px 23px -5px",
+    boxShadow: "5px 5px 23px -5px black",
     [theme.breakpoints.up("sm")]: {
       width: "40%",
       margin: "1.5rem",
@@ -52,7 +52,7 @@ const styles = (theme) => ({
     textTransform: "uppercase",
     fontWeight: 600,
     // color: "#27282c",
-    color: "white",
+    // color: "white",
 
     width: "100%",
   },

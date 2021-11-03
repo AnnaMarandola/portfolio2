@@ -44,10 +44,8 @@ export const projects = [
     title: "SHORTLY",
     prestation: "Developpement front-end",
     description: [
-      "Intégration de l'API shrtcode pour créer des URL raccourcies.",
-      "L'application permet de raccourcir toute URL valide.",
-      "Conserve l'historique des liens raccourcis même après avoir actualisé le navigateur.",
-      "Responsive design: mise en page optimale en fonction de la taille de l'écran.",
+      "Application web/mobile qui permet de raccourcir des adresses URL et de conserver les liens raccourcis dans le navigateur. ",
+      "Projet basé sur l’API shrtcode.",
     ],
     client: "Frontend Mentor ",
     stack: [
@@ -77,9 +75,11 @@ export const projects = [
     title: "Galleria",
     prestation: "Developpement front-end",
     description: [
-      "Diaporama de gallerie d'art",
+      "Galerie d’art virtuelle web/mobile.",
       "Le site permet de naviguer dans le diaporama et de visualiser chaque tableau dans une lighbox.",
       "Site optimisé pour toutes les tailles d'écran",
+      "Présentation image/texte des œuvres présentées.",
+      "Projet redéployable pour un photographe ou un artiste.",
     ],
     client: "Challenge frontend Mentor",
     stack: [
@@ -107,12 +107,9 @@ export const projects = [
     title: "Restaurant le San feliù",
     prestation: "Developpement du site vitrine",
     description: [
-      "Site vitrine responsive",
-      "Présentation du concept de restauration et de l'équipe",
-      "Intégration du menu",
-      "section info et accès avec localisation google map",
-      "section contact et reservation",
-      "section 'vin du mois'",
+      "Modèle de site vitrine pour un restaurant ou bar à vin. ",
+      "Génération de QRcode pour le menu.",
+      "Géolocalisation et espace réservation.",
     ],
     client: "restaurant fictif",
     stack: [
@@ -138,14 +135,11 @@ export const projects = [
     width: "28%",
     prestation: "Conception et développement full stack",
     description: [
-      "Application de création et de gestion de menu en ligne",
-      "Création d'une page web dédiée au restaurant",
-      "Design personnalisable selon la charte graphique de l'établissement",
-      "Mise en avant des plats avec photos, descriptions, allergènes, traductions multilingue",
-      "Interface de mise à jour intuitive",
-      "Authentification sécurisée",
-      "Génération d'un QR code permettant de consulter la page",
-      "formulaire de contact",
+      "Application web/mobile de gestion de menus de restaurant en ligne.",
+      "Design personnalisable selon la charte graphique de l’établissement.",
+      "Mise en avant des plats avec photos, descriptions, allergènes, traductions multilingues.",
+      "Authentification sécurisée, mise à jour via un espace pro ergonomique et intuitif.",
+      "Génération de QRCode pour le menu du restaurant ou la carte des vins.",
     ],
     client: "Yumi pro",
     stack: [
@@ -178,7 +172,7 @@ export const projects = [
     title: "",
     prestation: "Developpement du site vitrine",
     description: [
-      "Site marketing multi-page d'une application de partage de photos",
+      "Application web/mobile de partage de photos collaborative. ",
       "Mise en page optimale en fonction de la taille de l'écran",
       "Elements dynamiques au survol",
       "code optimisé pour le référencement naturel",
@@ -221,12 +215,9 @@ export const projects = [
       "https://github.com/WildCodeSchool/toulouse-0919-js-p2-neobserver",
     tag: "dévelopement back-end",
     description: [
-      "Site dédié à l'observation des astéroides",
-      "Utilisation des API de la NASA",
-      "Fil d'actualité sur le thème de l'espace (une nouvelle publication tous les jours)",
-      "Observation du passage des astéroides en fonction des leur tailles, distance de la Terre, date et dangerosité (filtres de recherche)",
-      "Projet d'école encadré par la Wild Code School",
-      "Conception et dévelopement en équipe de 4, en 3 semaines",
+      "Site internet dédié à l’observation des astéroïdes connecté à l’API de la NASA.",
+      "Fil d’actualité quotidien, moteur de recherche des astéroïdes en temps réel, avec recherche filtrée (taille, distance de la terre, dangerosité,...).",
+      "Projet mené de A à Z au sein d’une équipe de 4 personnes.",
     ],
   },
   {
@@ -237,13 +228,12 @@ export const projects = [
     title: "Boussole pro",
     prestation: "Developpement full stack",
     description: [
-      "Application web mobile destinée aux entreprises et aux managers.",
-      "L'application permet de passer un test de personalité en ligne et de collecter les résultats sous la forme de cartes thématiques.",
-      "Cartographie d'équipe en fonction des résultats des membres.",
+      "Application web/mobile d’optimisation de la gestion d’équipe.",
+      " Participation au prototypage du projet, implémentation de cartographies d’équipe, optimisation web/mobile, modélisation de la base de données.",
       "Contenu d'animation d'équipe personnalisé.",
       "Projet de fin d'études: réalisation d'un prototype en équipe de 4 développeurs pendant 8 semaines",
       "Méthodologie scrum",
-      "Stage en remote de 4 mois",
+      "Stage développeur full-stack en remote de 4 mois",
     ],
     client: "Wake up",
     stack: [
@@ -271,9 +261,8 @@ export const projects = [
     prestation: "Developpement front end",
     client: "project personnel",
     description: [
-      "Application de recherche de recettes de cuisine adaptées aux allergies alimentaires.",
-      "Utilisation des API Edamam : Nutrition Analysis API et Recipe Search API",
-      "Mise en page adaptée à toutes les tailles d'écran",
+      "Application web/mobile de recherche de recettes de cuisine pour personnes souffrant d’allergies alimentaires.",
+      "Intégration des API Edamam : Nutrition Analysis API et Recipe Search API",
     ],
     stack: [
       { label: "React" },
@@ -297,10 +286,11 @@ export const projects = [
     prestation: "Developpement full stack",
     client: "YWS",
     description: [
-      "Outil de visualisation d'un fichier clients.",
+      "Outil de visualisation cartographique du fichier client permettant d’optimiser une tournée commerciale.",
+      "Implémentation base de données avec filtres de recherche.",
       "Carte dynamique interactive.",
       "Nombreux filtres de recherche et options de tri.",
-      "Fonctionnalités de mailing.",
+      "Solution d’e-mailing et prospection terrain.",
     ],
 
     stack: [
@@ -327,10 +317,8 @@ export const projects = [
     prestation: "Developpement front-end",
     client: "projet personnel",
     description: [
-      "Jeux de quizz multi-thématique",
+      "Jeux de quizz multi-thématique avec 3 niveaux de difficultés",
       "Open Trivia Database",
-      "3 niveaux de difficultés",
-      "D'après le cours Typescript de Robin Lebhar - Uudemy.",   
     ],
     stack: [
       { label: "React" },
@@ -340,7 +328,8 @@ export const projects = [
       { label: "Typescript" },
       { label: "API" },
     ],
-    githubLink: "https://github.com/AnnaMarandola/quiz_React_Redux_TypeScript.git",
+    githubLink:
+      "https://github.com/AnnaMarandola/quiz_React_Redux_TypeScript.git",
     gallery: [{ img: GAME, subtitle: "Header" }],
     draft: true,
     tag: "e-commerce",

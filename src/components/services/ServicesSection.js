@@ -7,14 +7,14 @@ import Title from "../Title";
 const styles = (theme) => ({
   root: {
     padding: "0 5% 5% 5%",
-    backgroundColor: "#29282e",
+    // backgroundColor: "#29282e",
     display: "flex",
     flexDirection: "column",
     [theme.breakpoints.up("md")]: {},
   },
   subtitle: {
     textAlign: "center",
-    color: "#838383",
+    // color: "#838383",
     paddingBottom: "4rem",
     [theme.breakpoints.up("sm")]: {
       paddingBottom: "4rem",
@@ -31,16 +31,16 @@ const styles = (theme) => ({
 const ServicesSection = ({ classes }) => {
   return (
     <div className={classes.root}>
-    <Title title={"Services"} color={"white"} />
+    <Title title={"Services"}  />
       <Typography className={classes.subtitle} variant="h4">Des prestations adaptées à vos besoins !</Typography>
-      <ScrollAnimation
+      {/* <ScrollAnimation
         animateIn="animate__fadeInLeftBig"
         animateOut="animate__fadeIn"
         duration={1}
         delay={300}
-      >
+      > */}
         <ServiceCards />
-      </ScrollAnimation>
+      {/* </ScrollAnimation> */}
     </div>
   );
 };

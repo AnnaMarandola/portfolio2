@@ -23,14 +23,14 @@ const styles = (theme) => ({
     width: "100%",
     padding: "2rem 0.5rem",
     marginBottom: "6rem",
-    boxShadow: "5px 5px 23px -5px",
+    backgroundColor: "#424242",
+    boxShadow: "5px 5px 23px -5px black",
     [theme.breakpoints.up("sm")]: {
       width: "85%",
       padding: "2rem",
     },
     [theme.breakpoints.up("lg")]: {
       width: "30%",
-
       padding: "3rem",
     },
   },
@@ -39,7 +39,7 @@ const styles = (theme) => ({
     flexDirection: "column",
   },
   formLabel: {
-    color: "grey",
+    color: "white",
     "&.Mui-focused": {
       color: "gray",
     },
@@ -50,21 +50,21 @@ const styles = (theme) => ({
     border: "1px solid grey",
   },
   input: {
-    color: "white",
   },
   textArea: {
     marginBottom: "2rem",
     borderRadius: "5px",
-    // backgroundColor: "#f4f4f4",
     border: "1px solid grey",
-
   },
   needs: {
-    backgroundColor: "#29282e",
-
+    backgroundColor: "#424242",
+  },
+  heading: {
+    fontWeight: 700,
+    color: "white",
   },
   list: {
-    backgroundColor: "#29282e",
+    backgroundColor: "#424242",
     color: "white",
     display: "flex",
     flexDirection: "column",
@@ -74,22 +74,18 @@ const styles = (theme) => ({
       "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
     borderRadius: "50%"
   },
-  heading: {
-    fontWeight: 700,
-    color: "grey",
-  },
   submitButton: {
     background:
       "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
     padding: "1rem 1rem",
     borderRadius: "30px",
     color: "#29282e",
-    width: "30%",
-    minWidth: "9rem",
-    marginLeft: "50%",
+    width: "35%",
+    minWidth: "12rem",
+    marginLeft: "40%",
     boxShadow: "5px 5px 23px -10px",
     "&:hover": {
-      backgroundColor: "#29282e",
+      backgroundColor: "#424242",
       opacity: 0.8,
     },
     [theme.breakpoints.up("lg")]: {

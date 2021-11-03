@@ -6,7 +6,6 @@ import Title from "../Title";
 const styles = (theme) => ({
   root: {
     padding: "0 5% 5% 5%",
-    backgroundColor: "#29282e",
   },
   container: {
     display: "flex",
@@ -29,7 +28,7 @@ const styles = (theme) => ({
 const Contact = ({ classes }) => {
   return (
     <div className={classes.root}>
-    <Title title={"contact"} color={"white"}/>
+    <Title title={"contact"}/>
 
       <div className={classes.container}>
         <ContactDetails />

@@ -1,11 +1,11 @@
-import { Typography, Card, Button } from "@material-ui/core";
+import { Typography, Card } from "@material-ui/core";
 import { withStyles } from "@material-ui/core/styles";
 import OPQUAST from "../../assets/certifs/opquast.jpg";
 import GOOGLE from "../../assets/certifs/googlecertif.png";
 import RF from "../../assets/certifs/rf.png";
 import WCS from "../../assets/certifs/wcs.jpg";
 import OCR from "../../assets/certifs/ocr.png";
-import GetAppIcon from '@material-ui/icons/GetApp';
+// import GetAppIcon from '@material-ui/icons/GetApp';
 
 
 const styles = (theme) => ({
@@ -23,7 +23,6 @@ const styles = (theme) => ({
   },
   cardTitle: {
     margin: "3rem 1rem",
-    color: "white",
     fontWeight: 600,
     fontSize: "2rem",
     [theme.breakpoints.up("md")]: {
@@ -36,30 +35,22 @@ const styles = (theme) => ({
     width: "100%",
     padding: "0.5rem",
     borderRadius: "10px",
-    backgroundColor: "#29282e",
-    boxShadow: "5px 5px 23px -8px",
-
+    boxShadow: "5px 5px 23px -8px black",
     [theme.breakpoints.up("md")]: {
       width: "100%",
     }
   },
   textCard: {
-    color: "white",
     padding: "0.5rem",
     width: "100%",
-
   },
   certifTitleCard: {
-    color: "white",
     padding: "0.3rem",
-
   },
   certifDescriptionCard: {
     padding: "0 0.5rem",
-    color: "white",
   },
   certifTitle: {
-    color: "white",
     fontWeight: 600,
     width: "fit-content",
   },
