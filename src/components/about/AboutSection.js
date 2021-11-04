@@ -3,7 +3,7 @@ import ILLUS from "../../assets/z4.png";
 import Title from "../Title";
 import SkillsCharts from "./SkillsCharts";
 import Certifications from "./Certifications";
-import ScrollAnimation from "react-animate-on-scroll";
+// import ScrollAnimation from "react-animate-on-scroll";
 import "animate.css/animate.min.css";
 
 const styles = (theme) => ({

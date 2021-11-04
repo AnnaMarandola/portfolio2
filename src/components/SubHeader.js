@@ -7,14 +7,7 @@ const styles = (theme) => ({
     display: "flex",
     flexDirection: "column",
     padding: "0 10%",
-    [theme.breakpoints.up("sm")]: {
-    },
-    [theme.breakpoints.up("md")]: {
-    },
 
-    [theme.breakpoints.up("lg")]: {
-      // padding: "5% 10%",
-    },
   },
   container: {
     display: "flex",

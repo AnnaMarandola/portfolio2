@@ -9,7 +9,7 @@ export const servicesData = [
   {
     feature: "Développement web",
     img: CODE,
-    description: ["Sites vitrines", "Application web mobile", "e-commerce", "Solutions sur mesure"],
+    description: ["Sites vitrines", "Applications web mobile", "e-commerce", "Solutions sur mesure"],
   },
   {
     feature: "UX/UI",
