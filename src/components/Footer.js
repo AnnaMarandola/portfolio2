@@ -13,7 +13,7 @@ const styles = (theme) => ({
     flexDirection: "column",
   },
   footer: {
-    backgroundColor: "#29282e",
+    backgroundColor: "#303030",
     padding: "10rem 0 5rem 0",
     [theme.breakpoints.up("lg")]: {
       padding: "5rem 0",

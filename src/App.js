@@ -26,7 +26,7 @@ function App() {
     <MuiThemeProvider theme={muiTheme}>
 
     <div className="App">
-      <LandingPage onToggleDark={toggleDarkTheme} />
+      <LandingPage onToggleDark={toggleDarkTheme} status={theme.palette.type}/>
     </div>
     </MuiThemeProvider>
 

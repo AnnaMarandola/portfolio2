@@ -7,7 +7,7 @@ import PortfolioSection from "./portfolio/PortfolioSection";
 import ServicesSection from "./services/ServicesSection";
 import SubHeader from "./SubHeader";
 // import ScrollAnimation from "react-animate-on-scroll";
-import {withStyles,Fab} from "@material-ui/core";
+import { withStyles, Fab } from "@material-ui/core";
 import "animate.css/animate.min.css";
 const styles = (theme) => ({
   root: {
@@ -18,16 +18,26 @@ const styles = (theme) => ({
     [theme.breakpoints.up("md")]: {
       marginLeft: "10%",
     },
-
-  }
+  },
 });
 
-const LandingPage = ({ classes, onToggleDark }) => {
+const LandingPage = ({ classes, onToggleDark, status }) => {
+  console.log("status", status);
   return (
     <div className={classes.root}>
       <Navbar />
-      <Fab onClick={onToggleDark} size="small" aria-label="toggle theme" className={classes.fab}>
-      {/* dark mode */}
+      <Fab
+        onClick={onToggleDark}
+        size="small"
+        aria-label="toggle theme"
+        className={classes.fab}
+        style={
+          status === "dark"
+            ? { backgroundColor: "white" }
+            : { backgroundColor: "#303030" }
+        }
+      >
+        {/* dark mode */}
       </Fab>
       <Hero />
       <section id="about">

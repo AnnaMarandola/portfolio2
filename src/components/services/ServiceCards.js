@@ -1,4 +1,4 @@
-import { Typography, withStyles } from "@material-ui/core";
+import { ListItem, Typography, withStyles, Card } from "@material-ui/core";
 import { servicesData } from "./ServicesData";
 
 const styles = (theme) => ({
@@ -10,25 +10,25 @@ const styles = (theme) => ({
     paddingBottom: "5rem",
     [theme.breakpoints.up("sm")]: {},
     [theme.breakpoints.up("lg")]: {
-      width: "90%",
-      marginLeft: "5%",
+      width: "95%",
+      marginLeft: "2.5%",
       padding: "5rem 0 0 0",
     },
   },
   featureCard: {
-    width: "80%",
+    width: "95%",
     margin: "1rem",
-    padding: "1rem",
+    padding: "2rem",
     textAlign: "center",
-    boxShadow: "5px 5px 23px -5px black",
+    // boxShadow: "5px 5px 23px -5px black",
     [theme.breakpoints.up("sm")]: {
       width: "40%",
       margin: "1.5rem",
       padding: "1rem",
     },
     [theme.breakpoints.up("lg")]: {
-      width: "24%",
-      margin: "2rem 3rem",
+      width: "20%",
+      // margin: "3rem 3rem",
       padding: "2rem",
     },
   },
@@ -51,10 +51,11 @@ const styles = (theme) => ({
     fontSize: "1.2rem",
     textTransform: "uppercase",
     fontWeight: 600,
-    // color: "#27282c",
-    // color: "white",
-
     width: "100%",
+    [theme.breakpoints.up("md")]: {
+      textAlign: "left",
+      paddingLeft: "1rem",
+    },
   },
   iconContainer: {
     background:
@@ -71,11 +72,9 @@ const styles = (theme) => ({
     borderRadius: "10px",
   },
   description: {
-    color: "#838383",
-  },
-  moreLink: {
-    paddingTop: "1rem",
-    color: "#167dff",
+    // color: "#838383",
+    textAlign: "left",
+    fontSize: "1rem",
   },
 });
 
@@ -83,7 +82,7 @@ const ServiceCards2 = ({ classes }) => {
   return (
     <div className={classes.root}>
       {servicesData.map((service, index) => (
-        <div className={classes.featureCard} key={index}>
+        <Card className={classes.featureCard} key={index}>
           <div className={classes.titleSection}>
             <div className={classes.iconContainer}>
               <img
@@ -95,11 +94,12 @@ const ServiceCards2 = ({ classes }) => {
             {/* <div className={classes.separator}/> */}
             <Typography className={classes.title}>{service.feature}</Typography>
           </div>
-          <Typography className={classes.description}>
-            {service.description}
-          </Typography>
-          <Typography className={classes.moreLink}>En savoir +</Typography>
-        </div>
+          {service.description.map((feature, id) => (
+            <ListItem className={classes.description} key={id}>
+              {feature}
+            </ListItem>
+          ))}
+        </Card>
       ))}
     </div>
   );

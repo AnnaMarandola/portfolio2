@@ -1,40 +1,44 @@
 import CODE from "../../assets/features/code.svg";
 // import INTEGRATION from "../../assets/features/integration.svg";
-// import UX from "../../assets/features/ux.svg";
+import UX from "../../assets/features/ux.svg";
 // import RESPONSIVE  from "../../assets/features/responsive.svg";
 import SEO from "../../assets/features/seo.svg";
 import PROJECT from "../../assets/features/audit.svg";
 
-
-export const servicesData= [
-    {
-        feature: "Développement web",
-        img: CODE,
-        description: "Sites vitrines, e-commerce, landing page, portfolio, applications web et mobiles, refonte, intégration (X)HTML/CSS, solutions sur mesure adaptées à votre coeur de métier...",
-    },
-    // {
-    //     feature: "Intégration",
-    //     img: INTEGRATION,
-    //     description: "Intégration HTML5/CSS3, pixel-perfect, SaSS, bootstrap, material design",
-    // },
-    // {
-    //     feature: "UX/UI design",
-    //     img: UX,
-    //     description: "mock up, maquettage, adaptation de templates...",
-    // },
-    // {
-    //     feature: "Responsive web design",
-    //     img: RESPONSIVE,
-    //     description: "des pages web adaptées à toutes les tailles d'écran : pc, tablette, i-pad, smartphone...",
-    // },
-    {
-        feature: "SEO",
-        img: SEO,
-        description: "code optimisé pour le référencement naturel, analyses sématiques",
-    },
-    {
-        feature: "Gestion de projet",
-        img: PROJECT,
-        description: "rédaction de backlog, rédaction des mentions légales, nom de domaine, conformité RGPD..",
-    },
-]
+export const servicesData = [
+  {
+    feature: "Développement web",
+    img: CODE,
+    description: ["Sites vitrines", "Application web mobile", "e-commerce", "Solutions sur mesure"],
+  },
+  {
+    feature: "UX/UI",
+    img: UX,
+    description: [
+        "Intégration (X)HTML/CSS", 
+        "Responsive web design",
+        "Refonte",
+        "Optimisation expérience utilisateur", 
+    ],
+  },
+  {
+    feature: "SEO",
+    img: SEO,
+    description: [
+      "Mise à jour des contenus",
+      "Optimisation SEO",
+      "Achat de mots clés",
+      "Suivi des visites",
+    ],
+  },
+  {
+    feature: "Gestion de projet",
+    img: PROJECT,
+    description: [
+      "Achat de nom de domaine",
+      "Rédaction de mentions légales",
+      "e-commerce",
+      "Mise en conformité RGPD",
+    ],
+  },
+];
