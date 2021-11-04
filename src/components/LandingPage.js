@@ -14,9 +14,9 @@ const styles = (theme) => ({
     [theme.breakpoints.up("md")]: {},
   },
   fab: {
-    marginLeft: "90%",
+    marginLeft: "10%",
+    marginTop: "-6rem",
     [theme.breakpoints.up("md")]: {
-      marginLeft: "10%",
     },
   },
 });

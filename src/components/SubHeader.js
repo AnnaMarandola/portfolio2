@@ -40,6 +40,7 @@ const styles = (theme) => ({
     },
   },
   contactButton: {
+    marginTop: "4rem",
     padding: "1rem 2rem",
     borderRadius: "30px",
     color: "white",
