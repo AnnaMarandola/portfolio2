@@ -17,7 +17,7 @@ const styles = (theme) => ({
   },
   logo: {
     marginTop: "-8rem",
-    marginLeft: "-1rem",
+    // marginLeft: "-1rem",
     [theme.breakpoints.up("md")]: {
       marginLeft: "2rem",
     },
