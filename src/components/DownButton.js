@@ -4,8 +4,12 @@ import DOWN from "../assets/down.svg";
 
 const styles = (theme) => ({
   root: {
+    display: "none",
+    [theme.breakpoints.up("md")]: {
+      display: "flex",
     textAlign: "center",
     marginBottom: "2rem",
+    },
     [theme.breakpoints.up("lg")]: {
       marginTop: "-8rem",
     },

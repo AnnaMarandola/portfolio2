@@ -44,7 +44,7 @@ const styles = (theme) => ({
     [theme.breakpoints.up("lg")]: {},
   },
   annaM: {
-    margin: "1rem 0",
+    margin: "2rem 0",
     fontSize: "2rem",
     [theme.breakpoints.up("sm")]: {
       margin: "2rem 0",
