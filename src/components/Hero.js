@@ -33,11 +33,13 @@ const styles = (theme) => ({
     flexDirection: "column",
     alignItems: "center",
     paddingTop: "5rem",
-    paddingBottom: "5rem",
+    paddingBottom: "2rem",
     [theme.breakpoints.up("sm")]: {
       paddingTop: "10rem",
       marginLeft: "10%",
       alignItems: "flex-start",
+      paddingBottom: "5rem",
+
     },
     [theme.breakpoints.up("lg")]: {},
   },
@@ -55,7 +57,7 @@ const styles = (theme) => ({
   maj: {
   },
   subtitleContainer: {
-    padding: "1.5rem 0 3rem 1rem",
+    padding: "3rem 0 4rem 1rem",
     [theme.breakpoints.up("sm")]: {
       padding: "3rem 0",
 
