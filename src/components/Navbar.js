@@ -3,20 +3,24 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 import { withStyles } from "@material-ui/core/styles";
 import BackToTop from "./BackToTop";
 import { KeyboardArrowUp } from "@material-ui/icons";
-
-import AM from "../assets/logoAm.png";
+import AMBLACK from "../assets/AMBLACK.svg";
 import MobileMenu from "./MobileMenu";
 
 const styles = (theme) => ({
   root: {
     display: "flex",
     width: "100%",
-    height: "5rem",
+    height: "7rem",
     alignItems: "center",
     justifyContent: "space-between",
+    [theme.breakpoints.up("md")]: {},
   },
   logo: {
-    width: "0%",
+    marginTop: "-8rem",
+    marginLeft: "-1rem",
+    [theme.breakpoints.up("md")]: {
+      marginLeft: "2rem",
+    },
   },
   navContainer: {
     display: "none",
@@ -76,19 +80,19 @@ const styles = (theme) => ({
 });
 
 const navLinks = [
-  // { id: 3, title: `à propos`, path: `#about` },
   { id: 1, title: `services`, path: `#services` },
   { id: 2, title: `portfolio`, path: `#portfolio` },
   { id: 2, title: `compétences`, path: `#skills` },
   { id: 4, title: `contact`, path: `#contact` },
 ];
 
-const Header = ({ classes }) => {
+const Header = ({ classes, status }) => {
+  console.log("status in navbar", status);
   return (
     <>
       <div className={classes.root} id="back-to-top-anchor">
         <a href="/">
-          <img src={AM} alt="initials AM" className={classes.logo} />
+          <img src={AMBLACK} alt="initials AM" className={classes.logo} />
         </a>
         <div className={classes.navContainer}>
           {navLinks.map(({ id, title, path }) => (

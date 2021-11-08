@@ -5,10 +5,9 @@ import DOWN from "../assets/down.svg";
 const styles = (theme) => ({
   root: {
     textAlign: "center",
-    marginTop: "-3rem",
     marginBottom: "2rem",
     [theme.breakpoints.up("lg")]: {
-      marginTop: "-2rem",
+      marginTop: "-8rem",
     },
   },
   goDown: {

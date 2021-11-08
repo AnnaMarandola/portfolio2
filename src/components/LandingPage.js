@@ -9,15 +9,16 @@ import SubHeader from "./SubHeader";
 // import ScrollAnimation from "react-animate-on-scroll";
 import { withStyles, Fab } from "@material-ui/core";
 import "animate.css/animate.min.css";
+import MOON from "../assets/MOON.svg"
+
 const styles = (theme) => ({
   root: {
     [theme.breakpoints.up("md")]: {},
   },
   fab: {
-    marginLeft: "10%",
-    marginTop: "-6.1rem",
-    [theme.breakpoints.up("md")]: {
-    },
+    marginLeft: "3%",
+    marginTop: "-8rem",
+    [theme.breakpoints.up("md")]: {},
   },
 });
 
@@ -25,7 +26,7 @@ const LandingPage = ({ classes, onToggleDark, status }) => {
   console.log("status", status);
   return (
     <div className={classes.root}>
-      <Navbar />
+      <Navbar status={status} />
       <Fab
         onClick={onToggleDark}
         size="small"
@@ -33,11 +34,11 @@ const LandingPage = ({ classes, onToggleDark, status }) => {
         className={classes.fab}
         style={
           status === "dark"
-            ? { backgroundColor: "white" }
-            : { backgroundColor: "#303030" }
+            ? { backgroundColor: "#303030" }
+            : { backgroundColor: "white" }
         }
       >
-        {/* dark mode */}
+      <img src={MOON} alt="dark mode icon"/>
       </Fab>
       <Hero />
       <section id="about">
