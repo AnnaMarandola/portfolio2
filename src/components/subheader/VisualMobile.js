@@ -35,7 +35,6 @@ const styles = (theme) => ({
     fontWeight: 600,
     color: "white",
     boxShadow: "5px 5px 23px -12px gray",
-
     "&:nth-child(1), &:nth-child(4)": {
         color: "black"
     },
@@ -54,6 +53,7 @@ const styles = (theme) => ({
     }
   },
   caption: {
+      textTransform: "uppercase"
 
   }
 });

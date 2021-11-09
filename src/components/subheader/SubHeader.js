@@ -1,6 +1,7 @@
 import { Typography, withStyles, Button } from "@material-ui/core";
 // import Title from "./Title";
 import INFO from "../../assets/about/info.svg";
+import CTAComponent from "../CTAComponent";
 import VisualMobile from "./VisualMobile";
 
 const styles = (theme) => ({
@@ -37,19 +38,7 @@ const styles = (theme) => ({
       fontSize: "1.3rem",
     },
   },
-  contactButton: {
-    marginTop: "4rem",
-    padding: "1rem 2rem",
-    borderRadius: "30px",
-    color: "white",
-    boxShadow: "5px 5px 23px -12px gray",
-    background:
-      "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
-    "&:hover": {
-      background:
-        "linear-gradient(to right top, #2d7dfe, #457ffe, #5780ff, #6582ff, #7284ff)",
-    },
-  },
+
 });
 
 const SubHeader = ({ classes }) => {
@@ -83,15 +72,13 @@ const SubHeader = ({ classes }) => {
           <Typography className={classes.presentationText}>
             Prenons contact pour échanger sur votre projet !
           </Typography>
-          <Button className={classes.contactButton} aria-label="Contact">
-            Contact
-          </Button>
         </div>
         <VisualMobile/>
         {/* <div className={classes.illusContainer}>
           <img src={INFO} alt="info icon" className={classes.image} />
         </div> */}
       </div>
+      <CTAComponent/>
     </div>
   );
 };
