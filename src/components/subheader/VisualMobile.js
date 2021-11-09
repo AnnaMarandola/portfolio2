@@ -7,12 +7,26 @@ const styles = (theme) => ({
   root: {
     width: "100%",
     paddingBottom: "5rem",
+    display: "flex",
+    flexDirection: "column",
+    [theme.breakpoints.up("sm")]: {
+        flexDirection: "row",
+        flexWrap: "wrap"
+    },
+    [theme.breakpoints.up("md")]: {
+        paddingRight: "5%",
+        width: "50%",
+
+
+    },
+
   },
   imgContainer: {
     width: "100%",
-    height: "18rem",
+    height: "15rem",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
+    backgroundPosition: "center",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
@@ -20,12 +34,27 @@ const styles = (theme) => ({
     fontSize: "1.5rem",
     fontWeight: 600,
     color: "white",
+    boxShadow: "5px 5px 23px -12px gray",
+
     "&:nth-child(1), &:nth-child(4)": {
         color: "black"
-    }
+    },
+    "&:hover": {
+        opacity: 1,
+    },
+    [theme.breakpoints.up("sm")]: {
+        width: "50%",
+        height: "20rem"
+    },
+    [theme.breakpoints.up("md")]: {
+        width: "42%",
+        height: "20rem",
+        margin: "1rem",
 
+    }
   },
   caption: {
+
   }
 });
 const slideImages = [

@@ -7,6 +7,9 @@ const styles = (theme) => ({
   root: {
     display: "flex",
     flexDirection: "column",
+    [theme.breakpoints.up("md")]: {
+      paddingTop: "5rem"
+    }
   },
   container: {
     display: "flex",
