@@ -1,5 +1,6 @@
 import { ListItem, Typography, withStyles, Card } from "@material-ui/core";
 import { servicesData } from "./ServicesData";
+import BG from "../../assets/round.svg";
 
 const styles = (theme) => ({
   root: {
@@ -16,20 +17,26 @@ const styles = (theme) => ({
     },
   },
   featureCard: {
-    width: "95%",
-    margin: "1rem",
+    backgroundImage: `url(${BG})`,
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "top right ",
+    backgroundSize: "80%",
+    width: "100%",
+    margin: "1rem 0",
     padding: "2rem",
     textAlign: "center",
-    // boxShadow: "5px 5px 23px -5px black",
+    boxShadow: "5px 5px 23px -5px #909090",
     [theme.breakpoints.up("sm")]: {
       width: "40%",
-      margin: "1.5rem",
       padding: "1rem",
+      margin: "1.5rem .5rem"
+
     },
     [theme.breakpoints.up("lg")]: {
-      width: "20%",
+      width: "22%",
       // margin: "3rem 3rem",
       padding: "2rem",
+      margin: "1.5rem 1rem"
     },
   },
   titleSection: {
@@ -55,11 +62,11 @@ const styles = (theme) => ({
     [theme.breakpoints.up("md")]: {
       textAlign: "left",
       paddingLeft: "1rem",
+      fontSize: "1.5rem"
     },
   },
   iconContainer: {
-    background:
-      "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
+    backgroundColor: "#303030",
     width: "fit-content",
     borderRadius: "50%",
   },
@@ -74,7 +81,8 @@ const styles = (theme) => ({
   description: {
     // color: "#838383",
     textAlign: "left",
-    fontSize: "1rem",
+    fontSize: "1.2rem",
+    fontWeight: 600,
   },
 });
 
@@ -91,8 +99,8 @@ const ServiceCards2 = ({ classes }) => {
                 className={classes.featureIcon}
               />
             </div>
-            {/* <div className={classes.separator}/> */}
             <Typography className={classes.title}>{service.feature}</Typography>
+            {/* <div className={classes.separator}/> */}
           </div>
           {service.description.map((feature, id) => (
             <ListItem className={classes.description} key={id}>

@@ -46,8 +46,8 @@ const styles = (theme) => ({
     textTransform: "uppercase",
     fontSize: "1.2rem",
     fontWeight: 600,
-    border: "solid 2px #303030",
-    boxShadow: "5px 5px 23px -12px #505050",
+    border: "solid 1px #303030",
+    boxShadow: "5px 5px 23px -12px",
     background:
       "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
     "&:hover": {

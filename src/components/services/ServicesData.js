@@ -12,7 +12,7 @@ export const servicesData = [
     description: ["Sites vitrines", "Applications web mobile", "e-commerce", "Solutions sur mesure"],
   },
   {
-    feature: "UX/UI",
+    feature: "UX/UI design",
     img: UX,
     description: [
         "Intégration (X)HTML/CSS", 
@@ -37,7 +37,6 @@ export const servicesData = [
     description: [
       "Achat de nom de domaine",
       "Rédaction de mentions légales",
-      "e-commerce",
       "Mise en conformité RGPD",
     ],
   },
