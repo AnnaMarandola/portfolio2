@@ -11,6 +11,7 @@
     "@testing-library/user-event": "^12.1.10",
     "animate.css": "^4.1.1",
     "firebase": "^9.1.0",
+    "framer-motion": "^4.1.17",
     "nodemailer": "^6.6.5",
     "react": "^17.0.2",
     "react-anchor-link-smooth-scroll": "^1.0.12",

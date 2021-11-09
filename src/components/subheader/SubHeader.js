@@ -1,17 +1,16 @@
 import { Typography, withStyles, Button } from "@material-ui/core";
 // import Title from "./Title";
-import INFO from "../assets/about/info.svg";
+import INFO from "../../assets/about/info.svg";
+import VisualMobile from "./VisualMobile";
 
 const styles = (theme) => ({
   root: {
     display: "flex",
     flexDirection: "column",
-    padding: "0 10%",
-
   },
   container: {
     display: "flex",
-    flexDirection: "column",
+    flexDirection: "column-reverse",
     [theme.breakpoints.up("md")]: {
       flexDirection: "row",
     },
@@ -20,8 +19,11 @@ const styles = (theme) => ({
   },
   textContainer: {
     paddingBottom: "4rem",
+    padding: "0 10%",
+
     [theme.breakpoints.up("md")]: {
       paddingRight: "6rem",
+      width: "50%"
     },
   },
   presentationText: {
@@ -82,9 +84,10 @@ const SubHeader = ({ classes }) => {
             Contact
           </Button>
         </div>
-        <div className={classes.illusContainer}>
+        <VisualMobile/>
+        {/* <div className={classes.illusContainer}>
           <img src={INFO} alt="info icon" className={classes.image} />
-        </div>
+        </div> */}
       </div>
     </div>
   );

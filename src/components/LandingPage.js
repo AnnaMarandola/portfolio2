@@ -5,11 +5,11 @@ import Hero from "./Hero";
 import Navbar from "./Navbar";
 import PortfolioSection from "./portfolio/PortfolioSection";
 import ServicesSection from "./services/ServicesSection";
-import SubHeader from "./SubHeader";
+import SubHeader from "./subheader/SubHeader";
 // import ScrollAnimation from "react-animate-on-scroll";
 import { withStyles, Fab } from "@material-ui/core";
 import "animate.css/animate.min.css";
-import MOON from "../assets/MOON.svg"
+import MOON from "../assets/MOON.svg";
 
 const styles = (theme) => ({
   root: {
@@ -38,7 +38,7 @@ const LandingPage = ({ classes, onToggleDark, status }) => {
             : { backgroundColor: "white" }
         }
       >
-      <img src={MOON} alt="dark mode icon"/>
+        <img src={MOON} alt="dark mode icon" />
       </Fab>
       <Hero />
       <section id="about">

@@ -7,8 +7,8 @@ const styles = (theme) => ({
     display: "none",
     [theme.breakpoints.up("md")]: {
       display: "flex",
-    textAlign: "center",
-    marginBottom: "2rem",
+      justifyContent: "center",
+      marginBottom: "2rem",
     },
     [theme.breakpoints.up("lg")]: {
       marginTop: "-8rem",
