@@ -28,7 +28,7 @@ const styles = (theme) => ({
   mapContainer: {
     paddingTop: "5rem",
     [theme.breakpoints.up("xs")]: {
-      padding: "5rem 0",
+      padding: "5rem 0 0 0",
     },
     [theme.breakpoints.up("md")]: {
     },

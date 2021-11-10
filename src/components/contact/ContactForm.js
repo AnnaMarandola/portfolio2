@@ -24,7 +24,7 @@ const styles = (theme) => ({
     backgroundImage: `url(${BG})`,
     backgroundRepeat: "no-repeat",
     backgroundPosition: "top right ",
-    backgroundSize: "275%",
+    backgroundSize: "255%",
     width: "100%",
     padding: "2rem 0.5rem",
     marginBottom: "6rem",
