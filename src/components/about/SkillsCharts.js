@@ -45,7 +45,7 @@ const styles = (theme) => ({
     boxShadow: "5px 5px 23px -5px black",
   },
   techLabel: {
-    color: "white",
+    // color: "white",
     fontWeight: 600
   },
   percent: {

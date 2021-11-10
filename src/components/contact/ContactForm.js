@@ -17,29 +17,42 @@ import {
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import { db } from "../../firebase";
 import SendOutlinedIcon from "@material-ui/icons/SendOutlined";
+import BG from "../../assets/bg-shorten-mobile.svg";
 
 const styles = (theme) => ({
   root: {
+    backgroundImage: `url(${BG})`,
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "top right ",
+    backgroundSize: "275%",
     width: "100%",
     padding: "2rem 0.5rem",
     marginBottom: "6rem",
-    backgroundColor: "#424242",
-    boxShadow: "5px 5px 23px -5px black",
+    boxShadow: "0 2px 7px 1px rgba(31, 31, 31, 0.2)",
     [theme.breakpoints.up("sm")]: {
       width: "85%",
       padding: "2rem",
+      backgroundSize: "160%",
+    },
+    [theme.breakpoints.up("md")]: {
+      backgroundSize: "148%",
+      padding: "5rem",
     },
     [theme.breakpoints.up("lg")]: {
-      width: "30%",
+      width: "27%",
       padding: "3rem",
+      backgroundSize: "185%",
     },
   },
   form: {
+    padding: "1rem",
     display: "flex",
     flexDirection: "column",
+    [theme.breakpoints.up("sm")]: {
+      padding: 0,
+    },
   },
   formLabel: {
-    color: "white",
     "&.Mui-focused": {
       color: "gray",
     },
@@ -49,48 +62,46 @@ const styles = (theme) => ({
     borderRadius: "5px",
     border: "1px solid grey",
   },
-  input: {
-  },
+  input: {},
   textArea: {
     marginBottom: "2rem",
     borderRadius: "5px",
     border: "1px solid grey",
   },
-  needs: {
-    backgroundColor: "#424242",
-  },
+  needs: {},
   heading: {
     fontWeight: 700,
-    color: "white",
   },
   list: {
-    backgroundColor: "#424242",
-    color: "white",
     display: "flex",
     flexDirection: "column",
   },
   expandIcon: {
     background:
       "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
-    borderRadius: "50%"
+    borderRadius: "50%",
   },
   submitButton: {
     background:
       "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
-    padding: "1rem 1rem",
+    padding: "1rem",
     borderRadius: "30px",
     color: "#29282e",
     width: "35%",
     minWidth: "12rem",
-    marginLeft: "40%",
     boxShadow: "5px 5px 23px -10px",
+    marginTop: "2rem",
     "&:hover": {
       backgroundColor: "#424242",
       opacity: 0.8,
     },
+    [theme.breakpoints.up("sm")]: {
+      marginTop: "4rem",
+    },  
     [theme.breakpoints.up("lg")]: {
       marginLeft: "70%",
       minWidth: "7rem",
+      marginTop: 0,
     },
   },
   sendIcon: {
@@ -106,20 +117,20 @@ const styles = (theme) => ({
   },
   cgutext: {
     fontSize: "1rem",
-    color: "white",
   },
   cgulink: {
     fontWeight: 600,
-    color: "white",
     textUnderlineOffset: "0.3rem",
     "&:hover": {
       color: theme.palette.primary.yellow,
     },
   },
   title: {
+    color: "white",
+    padding: "1rem",
     textAlign: "center",
     paddingBottom: "2rem",
-    color: "white",
+    [theme.breakpoints.up("sm")]: {},
   },
 });
 
@@ -128,9 +139,8 @@ const OrangeCheckbox = withStyles({
     color: "gray",
     "&$checked": {
       background:
-      "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
+        "linear-gradient(to right top, #7284ff, #747dfd, #7876fa, #7b6ef7, #7f66f3, #815eeb, #8356e3, #854edb, #8445cd, #823cbe, #7f34b1, #7b2ba3)",
       color: "white",
-
     },
   },
   checked: {},
@@ -227,7 +237,7 @@ const ContactForm = ({ classes }) => {
 
         <Accordion className={classes.contactInputs}>
           <AccordionSummary
-            expandIcon={<ExpandMoreIcon className={classes.expandIcon}/>}
+            expandIcon={<ExpandMoreIcon className={classes.expandIcon} />}
             aria-controls="panel1a-content"
             id="panel1a-header"
             className={classes.needs}
@@ -279,7 +289,6 @@ const ContactForm = ({ classes }) => {
           InputLabelProps={{
             className: classes.formLabel,
           }}
-
         />
 
         <div className={classes.cguSection}>

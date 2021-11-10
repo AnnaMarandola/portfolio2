@@ -5,13 +5,16 @@ import Title from "../Title";
 
 const styles = (theme) => ({
   root: {
-    padding: "0 5% 5% 5%",
+    [theme.breakpoints.up("sm")]: {
+      padding: 0
+    },
+
   },
   container: {
     display: "flex",
-    flexDirection: "column-reverse",
+    flexDirection: "column",
     alignItems: "center",
-    [theme.breakpoints.up("md")]: {
+    [theme.breakpoints.up("lg")]: {
       flexDirection: "row",
       justifyContent: "space-evenly",
       alignItems: "flex-start",
@@ -31,8 +34,8 @@ const Contact = ({ classes }) => {
     <Title title={"contact"}/>
 
       <div className={classes.container}>
-        <ContactDetails />
         <ContactForm />
+        <ContactDetails />
       </div>
     </div>
   );

@@ -17,6 +17,9 @@ const styles = (theme) => ({
     },
   },
   featureCard: {
+    perspective: 2000,
+    position: "relative",
+    cursor: "grab",
     backgroundImage: `url(${BG})`,
     backgroundRepeat: "no-repeat",
     backgroundPosition: "top right ",
@@ -25,18 +28,16 @@ const styles = (theme) => ({
     margin: "1rem 0",
     padding: "2rem",
     textAlign: "center",
-    boxShadow: "5px 5px 23px -5px #909090",
+    boxShadow: "0 2px 7px 1px rgba(31, 31, 31, 0.2)",
     [theme.breakpoints.up("sm")]: {
       width: "40%",
       padding: "1rem",
-      margin: "1.5rem .5rem"
-
+      margin: "1.5rem .5rem",
     },
     [theme.breakpoints.up("lg")]: {
       width: "22%",
-      // margin: "3rem 3rem",
       padding: "2rem",
-      margin: "1.5rem 1rem"
+      margin: "1.5rem 1rem",
     },
   },
   titleSection: {
@@ -55,20 +56,22 @@ const styles = (theme) => ({
   },
   title: {
     padding: "2rem 0",
-    fontSize: "1.2rem",
+    fontSize: "1.8rem",
     textTransform: "uppercase",
     fontWeight: 600,
     width: "100%",
+    textAlign: "left",
+    paddingLeft: "1rem",
     [theme.breakpoints.up("md")]: {
-      textAlign: "left",
-      paddingLeft: "1rem",
-      fontSize: "1.5rem"
+      fontSize: "1.5rem",
     },
   },
   iconContainer: {
     backgroundColor: "#303030",
     width: "fit-content",
     borderRadius: "50%",
+    boxShadow: "5px 5px 23px -12px #101010",
+    userSelect: "none",
   },
   featureIcon: {
     margin: "1.5rem",
@@ -77,12 +80,16 @@ const styles = (theme) => ({
     minWidth: "3.2rem",
     minHeight: "3.2rem",
     borderRadius: "10px",
+
   },
   description: {
-    // color: "#838383",
     textAlign: "left",
-    fontSize: "1.2rem",
+    fontSize: "1rem",
     fontWeight: 600,
+    [theme.breakpoints.up("md")]: {
+      fontSize: "1.2rem",
+      fontWeight: 400,
+    },
   },
 });
 
@@ -90,7 +97,10 @@ const ServiceCards2 = ({ classes }) => {
   return (
     <div className={classes.root}>
       {servicesData.map((service, index) => (
-        <Card className={classes.featureCard} key={index}>
+        <Card 
+        className={classes.featureCard} 
+        key={index}
+        >
           <div className={classes.titleSection}>
             <div className={classes.iconContainer}>
               <img

@@ -1,4 +1,4 @@
-import { Card, Typography, withStyles } from "@material-ui/core";
+import { Typography, withStyles } from "@material-ui/core";
 import MAP from "../../assets/map.png";
 import GITHUB from "../../assets/contact-icons/github.svg";
 import LINKEDIN from "../../assets/contact-icons/linkedin.svg";
@@ -13,27 +13,33 @@ const styles = (theme) => ({
     height: "fit-content",
     display: "flex",
     flexDirection: "column",
-    width: "100%",
-    color: "#D3D3D3",
+    alignItems: "center",
     [theme.breakpoints.up("sm")]: {
-      padding: "1rem",
-      width: "65%",
     },
     [theme.breakpoints.up("lg")]: {
       flexDirection: "row",
-      padding: "3rem",
       width: "50%",
+      justifyContent: "space-around",
+      alignItems: "flex-start"
     },
   },
+  detailsContainer: {
+  },
   mapContainer: {
+    paddingTop: "5rem",
+    [theme.breakpoints.up("xs")]: {
+      padding: "5rem 0",
+    },
+    [theme.breakpoints.up("md")]: {
+    },
     [theme.breakpoints.up("lg")]: {
-      paddingLeft: "3rem",
+      padding: 0,
     },
   },
   map: {
-    width: "100%",
     boxShadow: "5px 5px 23px -14px",
     [theme.breakpoints.up("sm")]: {
+      width: "110%",
       marginBottom: "2rem",
     },
   },
@@ -41,10 +47,8 @@ const styles = (theme) => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
-    backgroundColor: "#424242",
     marginBottom: "0.5rem",
-    padding: "1rem",
-    boxShadow: "5px 5px 23px -5px black",
+    padding: "1.5rem",
     [theme.breakpoints.up("sm")]: {
       minWidth: "15rem",
     },
@@ -52,12 +56,13 @@ const styles = (theme) => ({
       justifyContent: "space-evenly",
     },
   },
+  hoursText: {
+  },
   title: {
     textTransform: "uppercase",
   },
   text: {
-    color: "white",
-    padding: "1rem",
+    padding: "0 1rem",
     textAlign: "right",
   },
   linkText: {
@@ -66,16 +71,19 @@ const styles = (theme) => ({
   mediaIcon: {
     boxShadow: "5px 5px 15px -15px",
     "&:hover": {
-      transform: "scale3d(1.05, 1.05, 1)"
-    }
+      transform: "scale3d(1.05, 1.05, 1)",
+    },
   },
+  image: {
+
+  }
 });
 
 const ContactDetails = ({ classes }) => {
   return (
     <div className={classes.root}>
       <div className={classes.detailsContainer}>
-        <Card className={classes.contactCard}>
+        <div className={classes.contactCard}>
           <a
             href="https://github.com/AnnaMarandola"
             target="_blank"
@@ -92,33 +100,37 @@ const ContactDetails = ({ classes }) => {
           >
             <img src={LINKEDIN} alt="linkedin" className={classes.mediaIcon} />
           </a>
-        </Card>
-        <Card className={classes.contactCard}>
-          <img src={MAIL} alt="email" />
-          <Typography className={classes.text}>annamarandola@gmail.com</Typography>
-        </Card>
-        <Card className={classes.contactCard}>
-          <img src={PHONE} alt="phone" />
+        </div>
+        <div className={classes.contactCard}>
+          <img src={MAIL} alt="email" className={classes.image} />
+          <Typography className={classes.text}>
+            annamarandola@gmail.com
+          </Typography>
+        </div>
+        <div className={classes.contactCard}>
+          <img src={PHONE} alt="phone" className={classes.image}/>
           <Typography className={classes.text}>(+33)6.47.66.23.14</Typography>
-        </Card>
-        <Card className={classes.contactCard}>
-          <img src={ADRESS} alt="adress" />
+        </div>
+        <div className={classes.contactCard}>
+          <img src={ADRESS} alt="adress" className={classes.image}/>
           <Typography className={classes.text}>
             85 bvd Gabriel Koenigs <br /> 31300 Toulouse
           </Typography>
-        </Card>
-        <Card className={classes.contactCard}>
-          <img src={ID} alt="siren" />
+        </div>
+        <div className={classes.contactCard}>
+          <img src={ID} alt="siren" className={classes.image}/>
           <Typography className={classes.text}>SIREN : 900349515</Typography>
-        </Card>
+        </div>
+        <div className={classes.contactCard}>
+          <img src={HOURS} alt="hours" className={classes.image} />
+          <div className={classes.hoursTexts}>
+          <Typography className={classes.text}>Lundi - Vendredi</Typography>
+          <Typography className={classes.text}>9h00 - 19h30</Typography>
+          </div>
+        </div>
       </div>
       <div className={classes.mapContainer}>
         <img src={MAP} alt="adresse plan" className={classes.map} />
-        <Card className={classes.contactCard}>
-          <img src={HOURS} alt="hours" />
-          <Typography className={classes.text}>Lundi - Vendredi</Typography>
-          <Typography className={classes.text}>9h00 - 19h30</Typography>
-        </Card>
       </div>
     </div>
   );
