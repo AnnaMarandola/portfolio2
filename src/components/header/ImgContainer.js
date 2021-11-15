@@ -7,12 +7,12 @@ const styles = (theme) => ({
   },
 });
 
-function Footer({ classes }) {
+const ImgContainer = ({ classes }) => {
   return (
     <div className={classes.root}>
-      <Typography variant="h2">Footer</Typography>
+      <Typography variant="h2">ImgContainer</Typography>
     </div>
   );
-}
+};
 
-export default withStyles(styles)(Footer);
+export default withStyles(styles)(ImgContainer);

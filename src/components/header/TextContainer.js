@@ -4,16 +4,15 @@ import { withStyles } from "@mui/styles";
 const styles = (theme) => ({
   root: {
     backgroundColor: theme.palette.background.paper,
-    height: "100vh",
   },
 });
 
-const PortfolioSection = ({ classes }) => {
+const TextContainer = ({ classes }) => {
   return (
     <div className={classes.root}>
-      <Typography variant="h2">PortfolioSection</Typography>
+      <Typography variant="h2">TextContainer</Typography>
     </div>
   );
 };
 
-export default withStyles(styles)(PortfolioSection);
+export default withStyles(styles)(TextContainer);

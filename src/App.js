@@ -1,36 +1,19 @@
-import { useState } from "react";
-import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
-import LandingPage from "./components/LandingPage";
-import "./App.css";
+import Home from "./Home";
+import { withStyles } from "@mui/styles";
 
-function App() {
+const styles = (theme) => ({
+  root: {
+    backgroundColor: theme.palette.background.default,
+    
+  },
+});
 
-  const [theme, setTheme] = useState({
-    palette: {
-      type: "light"
-    }
-  });
-
-  const toggleDarkTheme = () => {
-    let newPaletteType = theme.palette.type === "light" ? "dark" : "light";
-    setTheme({
-      palette: {
-        type: newPaletteType
-      }
-    })
-  };
-
-  const muiTheme = createMuiTheme(theme);
-
+function App({classes}) {
   return (
-    <MuiThemeProvider theme={muiTheme}>
-
-    <div className="App">
-      <LandingPage onToggleDark={toggleDarkTheme} status={theme.palette.type}/>
+    <div classname={classes.root}>
+      <Home />
     </div>
-    </MuiThemeProvider>
-
   );
 }
 
-export default App;
+export default withStyles(styles)(App);
