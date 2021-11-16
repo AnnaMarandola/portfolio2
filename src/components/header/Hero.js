@@ -9,11 +9,8 @@ const styles = (theme) => ({
     minHeight: "100vh",
     padding: "0 0 4rem 0",
     [theme.breakpoints.up("sm")]: {
-      // justifyContent: "space-between",
-      // alignItems: "center",
-      // maxHeight: "100vh",
       padding: 0,
-      minHeight: "auto"
+      minHeight: "auto",
     },
     [theme.breakpoints.up("md")]: {
       padding: "0 5%",
@@ -24,7 +21,8 @@ const styles = (theme) => ({
       paddingTop: "4rem",
     },
     [theme.breakpoints.up("lg")]: {
-      paddingTop: 0,
+      padding: "0 8% 4rem 8%",
+      height: "100vh"
     },
   },
 });
@@ -32,8 +30,8 @@ const styles = (theme) => ({
 const Hero = ({ classes }) => {
   return (
     <div className={classes.root}>
-     <TextContainer />
-     <ImgContainer />
+      <TextContainer />
+      <ImgContainer />
     </div>
   );
 };

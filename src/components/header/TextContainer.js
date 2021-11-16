@@ -24,7 +24,6 @@ const styles = (theme) => ({
       marginTop: "2rem",
       padding: "1rem",
     },
-
   },
   firstLine: {
     display: "flex",
@@ -39,30 +38,28 @@ const styles = (theme) => ({
   introtext: {
     padding: "0.2rem",
   },
-  iconSection:{
+  iconSection: {
     width: "100%",
     display: "flex",
     justifyContent: "space-evenly",
     padding: "1rem",
     [theme.breakpoints.up("md")]: {
       justifyContent: "space-between",
-      width: "50%"
-    }
+      width: "50%",
+    },
   },
   fab: {
     backgroundColor: "transparent",
     border: "1px solid #grey",
     borderRadius: "50%",
     padding: "1rem",
-    '&:hover': {
+    "&:hover": {
       backgroundColor: theme.palette.background.paper,
+    },
+    "&:active": {
+      backgroundColor: theme.palette.primary.dark,
+    },
   },
-  '&:active': {
-    backgroundColor: theme.palette.primary.dark,
-},
-
-  },
-
 });
 
 const TextContainer = ({ classes }) => {
@@ -75,7 +72,9 @@ const TextContainer = ({ classes }) => {
         </Typography>
       </div>
 
-      <Typography variant="h1" className={classes.title}>Développeur Web Freelance</Typography>
+      <Typography variant="h1" className={classes.title}>
+        Développeur Web Freelance
+      </Typography>
 
       <Typography variant="body1" className={classes.introtext}>
         Vous cherchez un développeur pour créer le site Web de votre entreprise,
@@ -83,15 +82,18 @@ const TextContainer = ({ classes }) => {
         votre référencement ?
       </Typography>
 
-      <Typography variant="body1" className={classes.introtext}>Vous êtes au bon endroit.</Typography>
+      <Typography variant="body1" className={classes.introtext}>
+        Vous êtes au bon endroit.
+      </Typography>
 
       <Typography variant="body1" className={classes.introtext}>
         Je réalise des sites et des applications web/mobiles adaptées à toutes
-        les tailles d’écran et respectueux des standards du Web. 
+        les tailles d’écran et respectueux des standards du Web.
       </Typography>
 
-      <Typography variant="body1" className={classes.introtext}>Offrez à vos clients une
-        expérience de navigation optimale !</Typography>
+      <Typography variant="body1" className={classes.introtext}>
+        Offrez à vos clients une expérience de navigation optimale !
+      </Typography>
 
       <CTAButton>En savoir +</CTAButton>
 
