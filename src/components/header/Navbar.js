@@ -81,7 +81,7 @@ const Header = ({ classes }) => {
           <div className={classes.navContainer}>
             {navLinks.map(({ id, title, path }) => (
               <div key={id}>
-                <Typography variant="h3" className={classes.menuItem}>
+                <Typography variant="h6" className={classes.menuItem}>
                   {title}
                 </Typography>
               </div>

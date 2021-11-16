@@ -1,16 +1,20 @@
-import { Typography } from "@mui/material";
 import { withStyles } from "@mui/styles";
+import BG from "../../assets/images/header/illustration.svg";
 
 const styles = (theme) => ({
   root: {
-    backgroundColor: theme.palette.background.default,
-  },
+    display: "none",
+    [theme.breakpoints.up("md")]: {
+      display: "flex",
+      justifyContent: "center",
+    },
+  }
 });
 
 const ImgContainer = ({ classes }) => {
   return (
     <div className={classes.root}>
-      <Typography variant="h2">ImgContainer</Typography>
+      <img src={BG} alt="circles and tech items"/>
     </div>
   );
 };

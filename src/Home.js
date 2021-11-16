@@ -8,7 +8,9 @@ import PortfolioSection from "./components/portfolio/PortfolioSection";
 import ServicesSection from "./components/services/ServicesSection";
 
 const styles = (theme) => ({
-  root: {},
+  root: {
+    backgroundColor: theme.palette.background.default,
+  },
 });
 
 const Home = ({ classes }) => {

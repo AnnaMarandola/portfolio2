@@ -4,51 +4,133 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
+import './index.css';
 
-const theme =  createTheme({
+const noto = "'Noto Sans', sans-serif";
+const montserrat = "'Montserrat', sans-serif";
+
+const theme = createTheme({
   palette: {
     primary: {
-      main: '#b721ff',
+      main: "#b721ff",
+      purpleLight: "#ee98fb",
+      purpleDark: "#883997",
     },
     secondary: {
-      main: '#32edc1',
+      main: "#32edc1",
     },
     background: {
-      default: '#161616',
-      paper: '#3c3c3c',
+      default: "#161616",
+      paper: "#3c3c3c",
+      light: "#666666",
     },
   },
   typography: {
-    fontFamily: 'Noto Sans',
-    fontWeightRegular: 400,
-    fontWeightLight: 300,
     h1: {
-      fontFamily: 'Montserrat',
+      fontFamily: montserrat,
       lineHeight: 1.38,
-      fontSize: '4rem',
-      fontWeight: 600,
-      color: "#fff"
+      fontSize: "2rem",
+      fontWeight: 500,
+      color: "#fff",
+      '@media (min-width:600px)': {
+        fontSize: '2.25rem',
+      },
+      '@media (min-width:900px)': {
+        fontSize: '2.5rem',
+      },
+      '@media (min-width:1200px)': {
+        fontSize: '2.75rem',
+      },
+      '@media (min-width:1500px)': {
+        fontSize: '3rem',
+      },
     },
     h2: {
-      fontSize: '2rem',
-      fontFamily: 'Montserrat',
+      fontSize: "1.8rem",
+      fontFamily: "Montserrat",
+      '@media (min-width:600px)': {
+        fontSize: '2.05rem',
+      },
+      '@media (min-width:900px)': {
+        fontSize: '2.30rem',
+      },
+      '@media (min-width:1200px)': {
+        fontSize: '2.55rem',
+      },
+      '@media (min-width:1500px)': {
+        fontSize: '2.8rem',
+      },
     },
     h3: {
-      fontSize: '1.5rem',
-      fontFamily: 'Montserrat',
+      fontSize: "1.5rem",
+      fontFamily: "Montserrat",
+      '@media (min-width:600px)': {
+        fontSize: '1.75rem',
+      },
+      '@media (min-width:900px)': {
+        fontSize: '2.rem',
+      },
+      '@media (min-width:1200px)': {
+        fontSize: '2.25rem',
+      },
+      '@media (min-width:1500px)': {
+        fontSize: '2.5rem',
+      },
     },
     h4: {
-      fontFamily: 'Noto Sans',
-      fontSize: '1.2rem',
+      fontFamily: "Arial",
+      fontSize: "1.2rem",
       fontWeight: 600,
+      '@media (min-width:600px)': {
+        fontSize: '1.45rem',
+      },
+      '@media (min-width:900px)': {
+        fontSize: '1.70rem',
+      },
+      '@media (min-width:1200px)': {
+        fontSize: '1.95rem',
+      },
+      '@media (min-width:1500px)': {
+        fontSize: '2.2rem',
+      },
     },
     h5: {
-      fontSize: '1.2rem',
+      fontSize: "1.2rem",
       fontWeight: 200,
+      color: "white",
+      '@media (min-width:600px)': {
+        fontSize: '1.45rem',
+      },
+      '@media (min-width:900px)': {
+        fontSize: '1.70rem',
+      },
+      '@media (min-width:1200px)': {
+        fontSize: '1.95rem',
+      },
+      '@media (min-width:1500px)': {
+        fontSize: '2.20rem',
+      },
+    },
+    body1: {
+      fontFamily: noto,
+      fontSize: "0.9rem",
+      fontWeight: 500,
+      color: "#99999f",
+      '@media (min-width:600px)': {
+        fontSize: '1rem',
+      },
+      '@media (min-width:900px)': {
+        fontSize: '1.rem',
+      },
+      '@media (min-width:1200px)': {
+        fontSize: '1.2rem',
+      },
+      '@media (min-width:1500px)': {
+        fontSize: '1.3rem',
+      },
     },
   },
 });
-
 
 ReactDOM.render(
   <ThemeProvider theme={theme}>
