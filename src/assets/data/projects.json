@@ -1,0 +1,80 @@
+[
+  {
+    "id": 0,
+    "img": "../../assets/images/projects/galleria-preview.png",
+    "title": "Galleria",
+    "description": [
+      "Galerie d’art virtuelle web/mobile.",
+      "Le site permet de naviguer dans le diaporama et de visualiser chaque tableau dans une lighbox.",
+      "Site optimisé pour toutes les tailles d'écran",
+      "Présentation image/texte des œuvres présentées.",
+      "Projet redéployable pour un photographe ou un artiste."
+    ],
+    "client": "Frontend Mentor ",
+    "stack": ["React", "HTML5", "CSS3", "Javascript"],
+    "date": "novembre 2020",
+    "githubLink": "https://github.com/AnnaMarandola/Galleria",
+    "visitLink": "https://galleria-by-anna-m.netlify.app/",
+    "gallery": [
+      { "img": "SHORTLY", "subtitle": "Header" },
+      { "img": "SHORTLYD", "subtitle": "version laptop" },
+      { "img": "SHORTLYM", "subtitle": "version mobile" }
+    ],
+    "tag": ["application", "landing page"]
+  },
+  {
+    "id": 1,
+    "img": "../../assets/images/projects/photosnap-preview.png",
+    "title": "Photosnap",
+    "description": [
+      "Application web/mobile de partage de photos collaborative. ",
+      "Mise en page optimale en fonction de la taille de l'écran",
+      "Elements dynamiques au survol",
+      "code optimisé pour le référencement naturel"
+    ],
+    "stack": ["React", "HTML5", "CSS3", "Javascript"],
+    "date": "juin 2021",
+    "githubLink": "https://github.com/AnnaMarandola/photosnap_website",
+    "visitLink": "https://photosnap-by-anna-marandola.netlify.app/",
+    "gallery": [{ "img": "PHOTOSNAP", "subtitle": "Header" }],
+    "tag": ["dévelopement front-end", "landing page"]
+  },
+  {
+    "id": 2,
+    "img": "../../assets/images/projects/SanFeliu-preview.png",
+    "title": "Dine",
+    "description": [
+      "Site vitrine de restaurant",
+      "Espace de réservation en ligne",
+      "Elements dynamiques au survol",
+      "code optimisé pour le référencement naturel"
+    ],
+    "stack": ["React", "HTML5", "CSS3", "Javascript"],
+    "date": "juin 2021",
+    "githubLink": "https://github.com/AnnaMarandola/photosnap_website",
+    "visitLink": "https://photosnap-by-anna-marandola.netlify.app/",
+    "gallery": [{ "img": "PHOTOSNAP", "subtitle": "Header" }],
+    "tag": ["dévelopement front-end", "landing page"]
+  },
+
+  {
+    "id": 3,
+    "img": "../../assets/images/projects/shortly-preview.png",
+    "title": "SHORTLY",
+    "description": [
+      "Application web/mobile qui permet de raccourcir des adresses URL et de conserver les liens raccourcis dans le navigateur. ",
+      "Projet basé sur l’API shrtcode."
+    ],
+    "client": "Frontend Mentor ",
+    "stack": ["React", "HTML5", "CSS3", "APIrest", "Javascript", "Leaflet"],
+    "date": "novembre 2020",
+    "githubLink": "https://github.com/AnnaMarandola/shorten_links",
+    "visitLink": "",
+    "gallery": [
+      { "img": "SHORTLY", "subtitle": "Header" },
+      { "img": "SHORTLYD", "subtitle": "version laptop" },
+      { "img": "SHORTLYM", "subtitle": "version mobile" }
+    ],
+    "tag": ["application", "landing page"]
+  }
+]

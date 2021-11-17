@@ -24,12 +24,13 @@ const styles = (theme) => ({
   },
   iconContainer: {
     backgroundColor: theme.palette.background.default,
-    width: "6.5rem",
-    height: "6.5rem",
+    width: "4rem",
+    height: "4rem",
     borderRadius: "50%",
     display: "flex",
     justifyContent: "center",
     border: "1px solid #b721ff",
+    padding: "1.5rem",
   },
   title: {
     padding: "1.25rem 0",
@@ -45,7 +46,7 @@ const ServiceCard = ({ classes, service }) => {
       <div className={classes.iconContainer}>
         <img src={service.icon} alt={service.name} />
       </div>
-      <Typography variant="h3" className={classes.title}>
+      <Typography variant="h4" className={classes.title}>
         {service.name}
       </Typography>
       {service.list.map((item, id) => (

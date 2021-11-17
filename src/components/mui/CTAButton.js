@@ -8,7 +8,7 @@ export default withStyles(theme => ({
     borderRadius: '50px',
     border: "none",
     fontSize: '1.5rem',
-    margin: "3.5rem 3.5rem 3.5rem 0",
+    margin: "4rem 0",
     '&:hover': {
         backgroundColor: theme.palette.primary.light,
     },
