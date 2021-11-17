@@ -15,7 +15,7 @@ const styles = (theme) => ({
     backgroundColor: theme.palette.background.paper,
     [theme.breakpoints.up("sm")]: {
       width: "20%",
-      height: "22rem"
+      height: "22rem",
     },
     [theme.breakpoints.up("md")]: {},
     [theme.breakpoints.up("lg")]: {
@@ -40,8 +40,6 @@ const styles = (theme) => ({
 });
 
 const ServiceCard = ({ classes, service }) => {
-  console.log("services", service);
-
   return (
     <Box sx={{ boxShadow: 8 }} className={classes.root}>
       <div className={classes.iconContainer}>

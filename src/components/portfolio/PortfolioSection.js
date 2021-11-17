@@ -1,21 +1,24 @@
 import { Typography } from "@mui/material";
 import { withStyles } from "@mui/styles";
+import Projects from "./Projects";
 
 const styles = (theme) => ({
   root: {
-    backgroundColor: theme.palette.background.paper,
-    height: "100vh",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center"
   },
   title: {
-    textAlign: "center",
-  }
+  },
 });
 
 const PortfolioSection = ({ classes }) => {
   return (
     <div className={classes.root}>
-      <Typography variant="h2" className={classes.title}>Portfolio</Typography>
-      <Typography variant="h6" className={classes.title}>Quelques réalisations...</Typography>
+      <Typography variant="h2" className={classes.title}>
+        Portfolio
+      </Typography>
+      <Projects />
     </div>
   );
 };
