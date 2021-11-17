@@ -80,7 +80,9 @@ const theme = createTheme({
         fontSize: "2.25rem",
       },
       "@media (min-width:1500px)": {
-        fontSize: "2.5rem",
+        fontSize: "1.5rem",
+        fontWeight: 500,
+
       },
     },
     h4: {

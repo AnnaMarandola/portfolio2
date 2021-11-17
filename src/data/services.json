@@ -1,0 +1,26 @@
+[
+    {
+    "id": 0,
+    "name": "Développement",
+    "icon": "../../assets/images/services/dashicons_media-code.svg",
+    "list": ["Sites vitrines", "Applications web/mobile", "e-commerce", "solutions sur mesure"]
+},
+{
+    "id": 1,
+    "name": "UX/UI design",
+    "icon": "../../assets/images/services/ic_baseline-design-services.svg",
+    "list": ["intégration (X)HTML/CSS", "responsive web design", "Refonte", "Optimisation expérience utilisateur"]
+},
+{
+    "id": 2,
+    "name": "SEO",
+    "icon": "../../assets/images/services/dashicons_media-code (1).svg",
+    "list": ["Optimisation SEO", "Achat de mots clés", "Suivi des visites", "Mise à jour des contenu"]
+},
+{
+    "id": 3,
+    "name": "Gestion de projet",
+    "icon": "../../assets/images/services/fluent_book-search-20-filled.svg",
+    "list": ["Achat de nom de domaine", "Rédaction des mentions légales", "Mise en conformité RGPD"]
+}
+]

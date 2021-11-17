@@ -1,7 +1,6 @@
 import { Typography } from "@mui/material";
 import { withStyles } from "@mui/styles";
 import { Box } from "@mui/system";
-import DEV from "../../assets/images/services/dashicons_media-code.svg";
 
 const styles = (theme) => ({
   root: {
@@ -12,9 +11,11 @@ const styles = (theme) => ({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+    textAlign: "center",
     backgroundColor: theme.palette.background.paper,
     [theme.breakpoints.up("sm")]: {
       width: "20%",
+      height: "22rem"
     },
     [theme.breakpoints.up("md")]: {},
     [theme.breakpoints.up("lg")]: {
@@ -31,25 +32,29 @@ const styles = (theme) => ({
     border: "1px solid #b721ff",
   },
   title: {
-      padding: "1.25rem 0"
+    padding: "1.25rem 0",
   },
   listItem: {
-      paddingBottom: ".5rem"
-  }
+    paddingBottom: ".5rem",
+  },
 });
 
-const ServiceCard = ({ classes }) => {
+const ServiceCard = ({ classes, service }) => {
+  console.log("services", service);
+
   return (
-    <Box sx={{ boxShadow: 3 }} className={classes.root}>
+    <Box sx={{ boxShadow: 8 }} className={classes.root}>
       <div className={classes.iconContainer}>
-        <img src={DEV} alt="brackets" />
+        <img src={service.icon} alt={service.name} />
       </div>
-      <Typography variant="h4"className={classes.title}>Dev</Typography>
-      <Typography variant="body2" className={classes.listItem}>jfdslfjd gjlgj</Typography>
-      <Typography variant="body2" className={classes.listItem}>jfdslfjd hjgh ghjghj</Typography>
-      <Typography variant="body2" className={classes.listItem}>jfd hujkhk hh</Typography>
-      <Typography variant="body2" className={classes.listItem}>jfdslfjdjklj</Typography>
-      <Typography variant="body2" className={classes.listItem}>jfdslfjd hu huhhhu</Typography>
+      <Typography variant="h3" className={classes.title}>
+        {service.name}
+      </Typography>
+      {service.list.map((item, id) => (
+        <Typography variant="body2" className={classes.listItem} key={id}>
+          {item}
+        </Typography>
+      ))}
     </Box>
   );
 };
