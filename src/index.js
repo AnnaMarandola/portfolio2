@@ -66,21 +66,21 @@ const theme = createTheme({
     },
 
     h4: {
-      fontSize: "1.5rem",
+      fontSize: "1.2rem",
       fontFamily: montserrat,
       color: "#fff",
 
       "@media (min-width:600px)": {
-        fontSize: "1.5rem",
+        fontSize: "1.2rem",
       },
       "@media (min-width:900px)": {
-        fontSize: "1.5rem",
+        fontSize: "1.2rem",
       },
       "@media (min-width:1200px)": {
-        fontSize: "1.5rem",
+        fontSize: "1.2rem",
       },
       "@media (min-width:1500px)": {
-        fontSize: "1.5rem",
+        fontSize: "1.2rem",
         fontWeight: 500,
 
       },

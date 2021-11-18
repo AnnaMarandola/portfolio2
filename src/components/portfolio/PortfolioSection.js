@@ -5,17 +5,18 @@ import CTAButton from "../mui/CTAButton";
 
 const styles = (theme) => ({
   root: {
+    border: "1px solid red",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+    padding: "3rem 0",
   },
-  title: {},
 });
 
 const PortfolioSection = ({ classes }) => {
   return (
     <div className={classes.root}>
-      <Typography variant="h2" className={classes.title}>
+      <Typography variant="h2">
         Portfolio
       </Typography>
       <Projects />

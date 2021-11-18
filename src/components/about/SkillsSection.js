@@ -3,11 +3,9 @@ import { withStyles } from "@mui/styles";
 
 const styles = (theme) => ({
   root: {
-    border: "3px solid yellow",
     display: "flex",
     flexDirection: "column",
-    [theme.breakpoints.up("md")]: {
-    },
+    [theme.breakpoints.up("md")]: {},
     [theme.breakpoints.up("lg")]: {
       width: "90%",
     },
@@ -16,14 +14,14 @@ const styles = (theme) => ({
     },
   },
   title: {
-    padding: "1rem 2rem",
+    padding: "3rem 2rem 1rem 2rem",
     [theme.breakpoints.up("md")]: {},
     [theme.breakpoints.up("lg")]: {},
-    [theme.breakpoints.up("xl")]: {},
-
+    [theme.breakpoints.up("xl")]: {
+      padding: "3rem 2rem 1rem 0rem",
+    },
   },
   circlesContainer: {
-    border: "3px solid pink",
     display: "flex",
     justifyContent: "space-evenly",
     flexWrap: "wrap",
@@ -35,10 +33,11 @@ const styles = (theme) => ({
     [theme.breakpoints.up("lg")]: {
       width: "65%",
       padding: "0 12.5%",
-
     },
     [theme.breakpoints.up("xl")]: {
-      justifyContent: "space-around",
+      justifyContent: "space-evenly",
+      width: "75%",
+      padding: "2rem 12.5% 5rem 12.5%",
     },
   },
   innerCircle: {
@@ -51,7 +50,7 @@ const styles = (theme) => ({
     [theme.breakpoints.up("md")]: {},
     [theme.breakpoints.up("lg")]: {},
     [theme.breakpoints.up("xl")]: {
-      margin: "2rem 5rem",
+      margin: "2rem 3rem",
     },
   },
   circleLevel: {
@@ -68,7 +67,10 @@ const styles = (theme) => ({
     alignItems: "center",
     height: "50px",
     marginTop: "-6rem",
-    marginBottom :"3rem"
+    marginBottom: "3rem",
+    [theme.breakpoints.up("xl")]: {
+      marginTop: "-7rem",
+    },
   },
 });
 
@@ -114,10 +116,13 @@ const skills = [
     level: 80,
   },
 ];
+
 const SkillsSection = ({ classes }) => {
   return (
     <div className={classes.root}>
-      <Typography variant="h3" className={classes.title}>Compétences</Typography>
+      <Typography variant="h3" className={classes.title}>
+        Compétences
+      </Typography>
       <div className={classes.circlesContainer}>
         {skills.map((skill, id) => (
           <div className={classes.circleContainer} key={id}>
