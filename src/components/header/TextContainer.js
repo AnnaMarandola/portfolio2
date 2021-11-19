@@ -37,7 +37,6 @@ const styles = (theme) => ({
     padding: "0.2rem",
   },
   buttonsContainer: {
-    border: "1px solid red",
     width: "100%",
     display: "flex",
     flexDirection: "column",
@@ -46,9 +45,9 @@ const styles = (theme) => ({
     [theme.breakpoints.up("md")]: {
       width: "70%",
       alignItems: "flex-start",
-      padding: "2rem 0",
-    }
-  }
+      padding: "3rem 0",
+    },
+  },
 });
 
 const TextContainer = ({ classes }) => {
@@ -57,7 +56,8 @@ const TextContainer = ({ classes }) => {
       <div className={classes.firstLine}>
         <img src={HEART} alt="heart" />
         <Typography variant="body1">
-          <span className={classes.purpleSpan}>Hello, I'm</span>Anna Marandola
+          <span className={classes.purpleSpan}>Hello, je suis</span>Anna
+          Marandola
         </Typography>
       </div>
 
