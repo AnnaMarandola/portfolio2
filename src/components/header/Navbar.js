@@ -12,6 +12,7 @@ const styles = (theme) => ({
     width: "100%",
     position: "fixed",
     top: 0,
+    zIndex: 99,
     justifyContent: "space-between",
     backgroundColor: theme.palette.background.default,
     [theme.breakpoints.up("md")]: {},

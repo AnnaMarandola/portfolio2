@@ -6,14 +6,13 @@ import SkillsSection from "./SkillsSection";
 
 const styles = (theme) => ({
   root: {
-    border: "1px solid red",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    padding: "3rem 0"
+    padding: "5rem 0"
   },
   title: {
-    padding: "0 2rem 2rem 2rem",
+    padding: "0 2rem 4rem 2rem",
     textAlign: "center",
   },
 });

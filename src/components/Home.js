@@ -1,11 +1,12 @@
 import { Typography } from "@mui/material";
 import { withStyles } from "@mui/styles";
-import AboutSection from "./components/about/AboutSection";
-import Footer from "./components/Footer";
-import Hero from "./components/header/Hero";
-import Navbar from "./components/header/Navbar";
-import PortfolioSection from "./components/portfolio/PortfolioSection";
-import ServicesSection from "./components/services/ServicesSection";
+import AboutSection from "./about/AboutSection";
+import ContactSection from "./contact/ContactSection";
+import Footer from "./Footer";
+import Hero from "./header/Hero";
+import Navbar from "./header/Navbar";
+import PortfolioSection from "./portfolio/PortfolioSection";
+import ServicesSection from "./services/ServicesSection";
 
 const styles = (theme) => ({
   root: {
@@ -22,6 +23,7 @@ const Home = ({ classes }) => {
       <ServicesSection />
       <PortfolioSection />
       <AboutSection />
+      <ContactSection />
       <Footer />
     </div>
   );

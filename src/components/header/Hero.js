@@ -6,7 +6,6 @@ const styles = (theme) => ({
   root: {
     display: "flex",
     flexDirection: "column",
-    minHeight: "100vh",
     padding: "0 0 4rem 0",
     [theme.breakpoints.up("sm")]: {
       padding: 0,
@@ -22,7 +21,7 @@ const styles = (theme) => ({
     },
     [theme.breakpoints.up("lg")]: {
       padding: "0 8% 4rem 8%",
-      height: "100vh"
+      height: "100vh",
     },
   },
 });
@@ -31,7 +30,7 @@ const Hero = ({ classes }) => {
   return (
     <div className={classes.root}>
       <TextContainer />
-      <ImgContainer />
+        <ImgContainer />
     </div>
   );
 };

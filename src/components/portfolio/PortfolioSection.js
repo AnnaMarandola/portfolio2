@@ -5,11 +5,10 @@ import CTAButton from "../mui/CTAButton";
 
 const styles = (theme) => ({
   root: {
-    border: "1px solid red",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    padding: "3rem 0",
+    padding: "5rem 0",
   },
 });
 

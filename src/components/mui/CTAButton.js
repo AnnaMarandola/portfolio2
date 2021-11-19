@@ -22,7 +22,7 @@ export default withStyles(theme => ({
     
     [theme.breakpoints.down('md')]: {
       fontSize: '1rem',
-      margin: '2rem',
+      margin: '2rem 0',
     },
 
   },
