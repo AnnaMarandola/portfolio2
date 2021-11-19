@@ -1,10 +1,8 @@
 import { Typography } from "@mui/material";
 import { withStyles } from "@mui/styles";
-import LINKEDIN from "../../assets/images/contact/linkedin.svg";
-import GITHUB from "../../assets/images/contact/github.svg";
-import INSTA from "../../assets/images/contact/insta.svg";
 import HEART from "../../assets/images/header/heart.svg";
 import CTAButton from "../mui/CTAButton";
+import SocialMediaButtons from "../contact/SocialMediaButtons";
 const styles = (theme) => ({
   root: {
     display: "flex",
@@ -38,28 +36,19 @@ const styles = (theme) => ({
   introtext: {
     padding: "0.2rem",
   },
-  iconSection: {
+  buttonsContainer: {
+    border: "1px solid red",
     width: "100%",
     display: "flex",
-    justifyContent: "space-evenly",
+    flexDirection: "column",
+    alignItems: "center",
     padding: "1rem",
     [theme.breakpoints.up("md")]: {
-      justifyContent: "space-between",
-      width: "50%",
-    },
-  },
-  fab: {
-    backgroundColor: "transparent",
-    border: "1px solid #grey",
-    borderRadius: "50%",
-    padding: "1rem",
-    "&:hover": {
-      backgroundColor: theme.palette.background.paper,
-    },
-    "&:active": {
-      backgroundColor: theme.palette.primary.dark,
-    },
-  },
+      width: "70%",
+      alignItems: "flex-start",
+      padding: "2rem 0",
+    }
+  }
 });
 
 const TextContainer = ({ classes }) => {
@@ -94,19 +83,9 @@ const TextContainer = ({ classes }) => {
       <Typography variant="body1" className={classes.introtext}>
         Offrez à vos clients une expérience de navigation optimale !
       </Typography>
-
-      <CTAButton>En savoir +</CTAButton>
-
-      <div className={classes.iconSection}>
-        <button className={classes.fab}>
-          <img src={LINKEDIN} alt="linkedin" />
-        </button>
-        <button className={classes.fab}>
-          <img src={GITHUB} alt="github" />
-        </button>
-        <button className={classes.fab}>
-          <img src={INSTA} alt="insta" />
-        </button>
+      <div className={classes.buttonsContainer}>
+        <CTAButton>En savoir +</CTAButton>
+        <SocialMediaButtons />
       </div>
     </div>
   );

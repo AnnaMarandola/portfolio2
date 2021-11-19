@@ -8,7 +8,7 @@ export default withStyles(theme => ({
     borderRadius: '50px',
     border: "none",
     fontSize: '1.5rem',
-    margin: "4rem 0",
+    // margin: "4rem 0",
     '&:hover': {
         backgroundColor: theme.palette.primary.light,
     },
@@ -22,7 +22,7 @@ export default withStyles(theme => ({
     
     [theme.breakpoints.down('md')]: {
       fontSize: '1rem',
-      margin: '2rem 0',
+      margin: '1rem 0',
     },
 
   },

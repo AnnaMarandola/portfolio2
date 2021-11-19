@@ -30,7 +30,7 @@ const Hero = ({ classes }) => {
   return (
     <div className={classes.root}>
       <TextContainer />
-        <ImgContainer />
+      <ImgContainer />
     </div>
   );
 };

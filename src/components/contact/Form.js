@@ -40,19 +40,19 @@ const styles = (theme) => ({
     },
   },
   input: {
-    backgroundColor: theme.palette.background.light,
+    backgroundColor: theme.palette.background.dark,
     margin: "0.5rem 0rem",
   },
   selectInput: {
     margin: "0.5rem 0",
-    backgroundColor: theme.palette.background.dark,
+    backgroundColor: theme.palette.background.light,
   },
   menuItem: {
     color: theme.palette.background.default,
   },
   textArea: {
     margin: "0.5rem 0",
-    backgroundColor: theme.palette.background.light,
+    backgroundColor: theme.palette.background.dark,
     borderRadius: "3px",
   },
   label: {
