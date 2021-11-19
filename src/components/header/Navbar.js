@@ -9,12 +9,12 @@ import ArrowDropUpSharpIcon from "@mui/icons-material/ArrowDropUpSharp";
 const styles = (theme) => ({
   root: {
     display: "flex",
-    width: "100%",
     position: "fixed",
     top: 0,
     zIndex: 99,
     justifyContent: "space-between",
-    backgroundColor: theme.palette.background.default,
+    width: "85%",
+    // backgroundColor: theme.palette.secondary.main,
     [theme.breakpoints.up("md")]: {},
   },
   logo: {
@@ -30,6 +30,7 @@ const styles = (theme) => ({
   navContainer: {
     display: "none",
     [theme.breakpoints.up("md")]: {
+      // border: "1px solid red",
       width: "80%",
       display: "flex",
       alignItems: "center",

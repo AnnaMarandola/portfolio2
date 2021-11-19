@@ -35,6 +35,7 @@ const styles = (theme) => ({
   },
   photoContainer: {
     height: "15rem",
+    width: "80%",
     margin: "0 .5rem",
     backgroundImage: `url(${HACKERM})`,
     backgroundRepeat: "no-repeat",

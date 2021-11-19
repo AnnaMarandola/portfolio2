@@ -37,7 +37,7 @@ const styles = (theme) => ({
     padding: "0.2rem",
   },
   buttonsContainer: {
-    width: "100%",
+    width: "90%",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
