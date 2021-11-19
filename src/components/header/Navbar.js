@@ -14,7 +14,7 @@ const styles = (theme) => ({
     zIndex: 99,
     justifyContent: "space-between",
     width: "85%",
-    // backgroundColor: theme.palette.secondary.main,
+    backgroundColor: theme.palette.background.default,
     [theme.breakpoints.up("md")]: {},
   },
   logo: {
