@@ -9,6 +9,7 @@ import "./index.css";
 const noto = "'Noto Sans', sans-serif";
 const montserrat = "'Montserrat', sans-serif";
 
+
 const theme = createTheme({
   palette: {
     primary: {
