@@ -3,6 +3,7 @@ import { withStyles } from "@mui/styles";
 import SocialMediaButtons from "./contact/SocialMediaButtons";
 import LOGO from "../assets/images/header/logo.svg";
 import HEART from "../assets/images/header/heart.svg";
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 const styles = (theme) => ({
   root: {
@@ -41,6 +42,14 @@ const styles = (theme) => ({
   heart: {
     margin: "-0.5rem 0.2rem",
   },
+  anchorLink: {
+    textDecoration: "none",
+    "&:hover": {
+      textDecoration: "underline",
+      textUnderlineOffset: "0.5rem",
+      color: "grey",
+    },
+  },
 });
 
 function Footer({ classes }) {
@@ -63,10 +72,18 @@ function Footer({ classes }) {
           <Typography>Copyright &copy; 2021</Typography>
         </div>
         <div className={classes.container}>
+        <AnchorLink href="#services" className={classes.anchorLink}>
           <Typography>Services</Typography>
+          </AnchorLink>
+          <AnchorLink href="#portfolio" className={classes.anchorLink}>
           <Typography>Portfolio</Typography>
+          </AnchorLink>
+          <AnchorLink href="#about" className={classes.anchorLink}>
           <Typography>A propos</Typography>
+          </AnchorLink>
+          <AnchorLink href="#contact" className={classes.anchorLink}>
           <Typography>Contact</Typography>
+          </AnchorLink>
           <Typography>Mentions légales</Typography>
         </div>
       </div>

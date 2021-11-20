@@ -31,15 +31,33 @@ const styles = (theme) => ({
 const SocialMediaButtons = ({ classes }) => {
   return (
     <div className={classes.root}>
-      <button className={classes.fab}>
-        <img src={LINKEDIN} alt="linkedin" />
-      </button>
-      <button className={classes.fab}>
-        <img src={GITHUB} alt="github" />
-      </button>
-      <button className={classes.fab}>
-        <img src={INSTA} alt="insta" />
-      </button>
+      <a
+        href="https://www.linkedin.com/in/anna-m-42ab3b18a/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <button className={classes.fab}>
+          <img src={LINKEDIN} alt="linkedin" />
+        </button>
+      </a>
+      <a
+        href="https://github.com/AnnaMarandola"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <button className={classes.fab}>
+          <img src={GITHUB} alt="github" />
+        </button>
+      </a>
+      <a
+        href="https://www.instagram.com/annam5125/saved/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <button className={classes.fab}>
+          <img src={INSTA} alt="insta" />
+        </button>
+      </a>
     </div>
   );
 };

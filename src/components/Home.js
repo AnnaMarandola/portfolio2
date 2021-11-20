@@ -21,10 +21,18 @@ const Home = ({ classes }) => {
     <div className={classes.root}>
       <Navbar />
       <Hero />
+      <section id="services">
       <ServicesSection />
+      </section>
+      <section id="portfolio">
       <PortfolioSection />
+      </section>
+      <section id="about">
       <AboutSection />
+      </section>
+      <section id="contact">
       <ContactSection />
+      </section>
       <Footer />
     </div>
   );

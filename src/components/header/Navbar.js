@@ -5,6 +5,7 @@ import MobileMenu from "./MobileMenu";
 import BackToTop from "../mui/BackToTop";
 import LOGO from "../../assets/images/header/logo.svg";
 import ArrowDropUpSharpIcon from "@mui/icons-material/ArrowDropUpSharp";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 const styles = (theme) => ({
   root: {
@@ -36,18 +37,24 @@ const styles = (theme) => ({
       alignItems: "center",
       justifyContent: "space-between",
       textTransform: "uppercase",
-      paddingRight: "2rem"
-
+      paddingRight: "2rem",
     },
     [theme.breakpoints.up("lg")]: {
       width: "40%",
-      paddingRight: "8rem"
+      paddingRight: "8rem",
     },
   },
   menuItem: {
     color: "white",
   },
-
+  anchorLink: {
+    textDecoration: "none",
+    "&:hover": {
+      textDecoration: "underline",
+      textUnderlineOffset: "1rem",
+      color: "white",
+    },
+  },
   burgerMenu: {
     display: "flex",
     justifyContent: "center",
@@ -64,14 +71,13 @@ const styles = (theme) => ({
     [theme.breakpoints.up("lg")]: {
       marginTop: "-3.3rem",
     },
-
-  }
+  },
 });
 
 const navLinks = [
   { id: 1, title: `services`, path: `#services` },
-  { id: 2, title: `projets`, path: `#portfolio` },
-  { id: 2, title: `à propos`, path: `#skills` },
+  { id: 2, title: `porfolio`, path: `#portfolio` },
+  { id: 2, title: `à propos`, path: `#about` },
   { id: 4, title: `contact`, path: `#contact` },
 ];
 
@@ -86,9 +92,11 @@ const Header = ({ classes }) => {
           <div className={classes.navContainer}>
             {navLinks.map(({ id, title, path }) => (
               <div key={id}>
-                <Typography variant="h6" className={classes.menuItem}>
-                  {title}
-                </Typography>
+                <AnchorLink href={path} className={classes.anchorLink}>
+                  <Typography variant="h5" className={classes.menuItem}>
+                    {title}
+                  </Typography>
+                </AnchorLink>
               </div>
             ))}
           </div>
@@ -97,7 +105,7 @@ const Header = ({ classes }) => {
           </div>
         </div>
       </HideOnScroll>
-      <Toolbar id="back-to-top-anchor" className={classes.anchor}/>
+      <Toolbar id="back-to-top-anchor" className={classes.anchor} />
 
       <BackToTop>
         <Fab

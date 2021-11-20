@@ -3,6 +3,7 @@ import { withStyles } from "@mui/styles";
 import HEART from "../../assets/images/header/heart.svg";
 import CTAButton from "../mui/CTAButton";
 import SocialMediaButtons from "../contact/SocialMediaButtons";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 const styles = (theme) => ({
   root: {
     // border: "1px solid blue",
@@ -40,8 +41,7 @@ const styles = (theme) => ({
     padding: "0 1.5rem",
     [theme.breakpoints.up("md")]: {
       padding: 0,
-    }
-
+    },
   },
   introtext: {
     paddingBottom: "1rem",
@@ -60,6 +60,9 @@ const styles = (theme) => ({
       padding: "3rem 0",
     },
   },
+  anchorLink: {
+    textDecoration: "none",
+  }
 });
 
 const TextContainer = ({ classes }) => {
@@ -88,17 +91,19 @@ const TextContainer = ({ classes }) => {
           Vous êtes au bon endroit.
         </Typography>
 
-        <Typography variant="body1" className={classes.introtext}>
+        {/* <Typography variant="body1" className={classes.introtext}>
           Je réalise des sites et des applications web/mobiles adaptés à toutes
           les tailles d’écran et respectueux des standards du Web.
-        </Typography>
+        </Typography> */}
 
         <Typography variant="body1" className={classes.introtext}>
           Offrez à vos clients une expérience de navigation optimale !
         </Typography>
       </div>
       <div className={classes.buttonsContainer}>
-        <CTAButton>En savoir +</CTAButton>
+        <AnchorLink href="#services" className={classes.anchorLink}>
+          <CTAButton>En savoir +</CTAButton>
+        </AnchorLink>
         <SocialMediaButtons />
       </div>
     </div>
