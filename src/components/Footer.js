@@ -10,6 +10,7 @@ const styles = (theme) => ({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+    width: "100%",
     [theme.breakpoints.up("md")]: {
       flexDirection: "row",
       justifyContent: "space-between",

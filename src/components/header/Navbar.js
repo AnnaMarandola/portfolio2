@@ -13,7 +13,7 @@ const styles = (theme) => ({
     top: 0,
     zIndex: 99,
     justifyContent: "space-between",
-    width: "85%",
+    width: "100%",
     backgroundColor: theme.palette.background.default,
     [theme.breakpoints.up("md")]: {},
   },
@@ -24,21 +24,24 @@ const styles = (theme) => ({
       width: "50%",
     },
     [theme.breakpoints.up("lg")]: {
-      paddingLeft: "5rem",
+      paddingLeft: "8rem",
     },
   },
   navContainer: {
     display: "none",
     [theme.breakpoints.up("md")]: {
       // border: "1px solid red",
-      width: "80%",
+      width: "60%",
       display: "flex",
       alignItems: "center",
-      justifyContent: "space-evenly",
+      justifyContent: "space-between",
       textTransform: "uppercase",
+      paddingRight: "2rem"
+
     },
     [theme.breakpoints.up("lg")]: {
-      width: "60%",
+      width: "40%",
+      paddingRight: "8rem"
     },
   },
   menuItem: {

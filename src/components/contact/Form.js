@@ -17,6 +17,7 @@ const styles = (theme) => ({
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
+    paddingBottom: "2rem",
     backgroundColor: theme.palette.background.paper,
     borderRadius: "20px 20px 0 0",
     [theme.breakpoints.up("lg")]: {
@@ -61,7 +62,8 @@ const styles = (theme) => ({
   buttonSection: {
     width: "50%",
     display: "flex",
-    justifyContent: "flex-start"
+    justifyContent: "flex-start",
+    paddingTop: "1rem",
 
   },
   submitButton: {},

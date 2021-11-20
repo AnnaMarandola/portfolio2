@@ -146,7 +146,7 @@ const theme = createTheme({
     },
     body1: {
       fontFamily: noto,
-      fontSize: "0.9rem",
+      fontSize: "1rem",
       fontWeight: 500,
       color: "#99999f",
       "@media (min-width:600px)": {
@@ -164,7 +164,7 @@ const theme = createTheme({
     },
     body2: {
       fontFamily: noto,
-      fontSize: "0.9rem",
+      fontSize: "1rem",
       fontWeight: 600,
       color: "#99999f",
       "@media (min-width:600px)": {

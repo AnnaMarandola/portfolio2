@@ -8,7 +8,7 @@
   {
     "id": 1,
     "title": "Certification Google",
-    "infos": ["les fondamentaux du marketing numérique", "12/2020"],
+    "infos": ["Web marketing fundamentals", "12/2020"],
     "logo": "../../assets/images/certif/image 3.png"
   },
   {
@@ -21,7 +21,7 @@
     "id": 3,
     "title": "Wild Code School",
     "infos": [
-      "Formation concepteur developpeur d'application web/mobile",
+      "Formation concepteur developpeur fullstack",
       "2019/2020"
     ],
     "logo": "../../assets/images/certif/image 5.png"

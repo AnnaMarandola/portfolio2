@@ -17,7 +17,7 @@ const styles = (theme) => ({
     },
   },
   title: {
-    padding: "3rem 2rem 1rem 4.5rem ",
+    padding: "3rem 0rem 1rem 2rem ",
     [theme.breakpoints.up("sm")]: {},
     [theme.breakpoints.up("md")]: {},
     [theme.breakpoints.up("lg")]: {},
@@ -26,7 +26,6 @@ const styles = (theme) => ({
     },
   },
   cardsContainer: {
-    padding: "1rem 5rem",
     display: "flex",
     flexDirection: "column",
     [theme.breakpoints.up("sm")]: {},
@@ -41,8 +40,8 @@ const styles = (theme) => ({
     },
   },
   card: {
-    padding: "1.5rem 1rem",
-    margin: "1rem 2rem",
+    padding: "1.5rem 0rem",
+    margin: "1rem 4rem",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
@@ -63,7 +62,7 @@ const styles = (theme) => ({
   },
   textContainer: {
     textAlign: "center",
-    padding: "1rem",
+    padding: "1rem 0",
     [theme.breakpoints.up("sm")]: {
       textAlign: "right",
     },

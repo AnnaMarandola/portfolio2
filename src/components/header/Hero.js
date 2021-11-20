@@ -4,6 +4,7 @@ import TextContainer from "./TextContainer";
 
 const styles = (theme) => ({
   root: {
+    // border: "1px solid red",
     display: "flex",
     flexDirection: "column",
     padding: "0 0 4rem 0",

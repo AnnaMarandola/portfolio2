@@ -8,16 +8,16 @@ const styles = (theme) => ({
     display: "flex",
     justifyContent: "space-between",
     padding: "1rem",
-    marginTop: "1rem",
     [theme.breakpoints.up("md")]: {
       padding: "2rem 0",
+      marginTop: "1rem",
     },
   },
   fab: {
     backgroundColor: "transparent",
     border: "1px solid #grey",
     borderRadius: "50%",
-    padding: "1rem",
+    padding: "0.7rem",
     margin: "0.5rem",
     "&:hover": {
       backgroundColor: theme.palette.background.paper,

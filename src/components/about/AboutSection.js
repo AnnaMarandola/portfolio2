@@ -7,9 +7,10 @@ import SkillsSection from "./SkillsSection";
 const styles = (theme) => ({
   root: {
     display: "flex",
+    width: "100%",
     flexDirection: "column",
     alignItems: "center",
-    padding: "5rem 0"
+    padding: "5rem 0",
   },
   title: {
     padding: "0 2rem 4rem 2rem",

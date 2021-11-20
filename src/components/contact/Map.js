@@ -39,6 +39,7 @@ const Map = ({ classes }) => {
     bootstrapURLKeys={{ key: process.env.GOOGLE_MAP_API_KEY}}
     defaultCenter={adress.center}
     defaultZoom={adress.zoom}
+    yesIWantToUseGoogleMapApiInternals
     className={classes.map}
     >
     <RoomRounded 
