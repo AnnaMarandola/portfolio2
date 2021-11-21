@@ -50,7 +50,7 @@ const SocialMediaButtons = ({ classes }) => {
         </button>
       </a>
       <a
-        href="https://www.instagram.com/annam5125/saved/"
+        href="https://www.instagram.com/annam5125/"
         target="_blank"
         rel="noopener noreferrer"
       >

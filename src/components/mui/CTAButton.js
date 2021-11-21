@@ -6,7 +6,7 @@ export default withStyles(theme => ({
     backgroundColor: theme.palette.primary.dark,
     padding: '1.2rem 2.5rem',
     borderRadius: '50px',
-    border: "none",
+    border: "1px solid #b721ff",
     fontSize: '1.5rem',
     // margin: "4rem 0",
     '&:hover': {

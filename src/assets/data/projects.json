@@ -3,13 +3,7 @@
     "id": 0,
     "img": "../../assets/images/projects/galleria-preview.png",
     "title": "Galleria",
-    "description": [
-      "Galerie d’art virtuelle web/mobile.",
-      "Le site permet de naviguer dans le diaporama et de visualiser chaque tableau dans une lighbox.",
-      "Site optimisé pour toutes les tailles d'écran",
-      "Présentation image/texte des œuvres présentées.",
-      "Projet redéployable pour un photographe ou un artiste."
-    ],
+    "description": "Galerie d’art virtuelle web/mobile avec visualisation chaque oeuvres dans une lighbox.",
     "client": "Frontend Mentor ",
     "stack": ["React", "HTML5", "CSS3", "Javascript"],
     "date": "novembre 2020",
@@ -26,12 +20,7 @@
     "id": 1,
     "img": "../../assets/images/projects/photosnap-preview.png",
     "title": "Photosnap",
-    "description": [
-      "Application web/mobile de partage de photos collaborative. ",
-      "Mise en page optimale en fonction de la taille de l'écran",
-      "Elements dynamiques au survol",
-      "code optimisé pour le référencement naturel"
-    ],
+    "description": "Landing page d'une application web/mobile de partage de photos collaborative. ",
     "stack": ["React", "HTML5", "CSS3", "Javascript"],
     "date": "juin 2021",
     "githubLink": "https://github.com/AnnaMarandola/photosnap_website",
@@ -43,12 +32,7 @@
     "id": 2,
     "img": "../../assets/images/projects/SanFeliu-preview.png",
     "title": "Dine",
-    "description": [
-      "Site vitrine de restaurant",
-      "Espace de réservation en ligne",
-      "Elements dynamiques au survol",
-      "code optimisé pour le référencement naturel"
-    ],
+    "description": "Site vitrine de restaurant avec espace de réservation en ligne",
     "stack": ["React", "HTML5", "CSS3", "Javascript"],
     "date": "juin 2021",
     "githubLink": "https://github.com/AnnaMarandola/photosnap_website",
@@ -61,10 +45,7 @@
     "id": 3,
     "img": "../../assets/images/projects/shortly-preview.png",
     "title": "SHORTLY",
-    "description": [
-      "Application web/mobile qui permet de raccourcir des adresses URL et de conserver les liens raccourcis dans le navigateur. ",
-      "Projet basé sur l’API shrtcode."
-    ],
+    "description": "Application permettant de raccourcir des adresses URL et de conserver les liens raccourcis dans le navigateur. ",
     "client": "Frontend Mentor ",
     "stack": ["React", "HTML5", "CSS3", "APIrest", "Javascript", "Leaflet"],
     "date": "novembre 2020",

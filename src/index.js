@@ -9,7 +9,6 @@ import "./index.css";
 const noto = "'Noto Sans', sans-serif";
 const montserrat = "'Montserrat', sans-serif";
 
-
 const theme = createTheme({
   palette: {
     primary: {
@@ -84,7 +83,6 @@ const theme = createTheme({
       "@media (min-width:1500px)": {
         fontSize: "1.2rem",
         fontWeight: 500,
-
       },
     },
     h3: {
@@ -180,7 +178,6 @@ const theme = createTheme({
         fontSize: "1.rem",
       },
     },
-
   },
 });
 
