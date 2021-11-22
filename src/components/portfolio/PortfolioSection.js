@@ -1,7 +1,6 @@
 import { Typography } from "@mui/material";
 import { withStyles } from "@mui/styles";
 import Projects from "./Projects";
-import CTAButton from "../mui/CTAButton";
 
 const styles = (theme) => ({
   root: {
@@ -19,7 +18,6 @@ const PortfolioSection = ({ classes }) => {
         Portfolio
       </Typography>
       <Projects />
-      <CTAButton>Voir tous les projets</CTAButton>
     </div>
   );
 };

@@ -9,11 +9,6 @@
     "date": "novembre 2020",
     "githubLink": "https://github.com/AnnaMarandola/Galleria",
     "visitLink": "https://galleria-by-anna-m.netlify.app/",
-    "gallery": [
-      { "img": "SHORTLY", "subtitle": "Header" },
-      { "img": "SHORTLYD", "subtitle": "version laptop" },
-      { "img": "SHORTLYM", "subtitle": "version mobile" }
-    ],
     "tag": ["application", "landing page"]
   },
   {
@@ -25,37 +20,113 @@
     "date": "juin 2021",
     "githubLink": "https://github.com/AnnaMarandola/photosnap_website",
     "visitLink": "https://photosnap-by-anna-marandola.netlify.app/",
-    "gallery": [{ "img": "PHOTOSNAP", "subtitle": "Header" }],
     "tag": ["dévelopement front-end", "landing page"]
   },
   {
     "id": 2,
-    "img": "../../assets/images/projects/SanFeliu-preview.png",
+    "img": "../../assets/images/projects/dine-preview.png",
     "title": "Dine",
     "description": "Site vitrine de restaurant avec espace de réservation en ligne",
     "stack": ["React", "HTML5", "CSS3", "Javascript"],
     "date": "juin 2021",
     "githubLink": "https://github.com/AnnaMarandola/photosnap_website",
-    "visitLink": "https://photosnap-by-anna-marandola.netlify.app/",
-    "gallery": [{ "img": "PHOTOSNAP", "subtitle": "Header" }],
     "tag": ["dévelopement front-end", "landing page"]
   },
 
   {
     "id": 3,
     "img": "../../assets/images/projects/shortly-preview.png",
-    "title": "SHORTLY",
+    "title": "Shortly",
     "description": "Application permettant de raccourcir des adresses URL et de conserver les liens raccourcis dans le navigateur. ",
     "client": "Frontend Mentor ",
     "stack": ["React", "HTML5", "CSS3", "APIrest", "Javascript", "Leaflet"],
     "date": "novembre 2020",
     "githubLink": "https://github.com/AnnaMarandola/shorten_links",
     "visitLink": "",
-    "gallery": [
-      { "img": "SHORTLY", "subtitle": "Header" },
-      { "img": "SHORTLYD", "subtitle": "version laptop" },
-      { "img": "SHORTLYM", "subtitle": "version mobile" }
-    ],
+    "tag": ["application", "landing page"]
+  },
+  {
+    "id": 4,
+    "img": "../../assets/images/projects/yumi-preview.png",
+    "title": "Yumi menu",
+    "description": "Application de digitalisation des menus destinée aux professionnels de la restauration. Interface de mise à jour intuitive et authentification sécurisée",
+    "client": "Frontend Mentor ",
+    "stack": ["React", "HTML5", "CSS3", "APIrest", "Javascript", "Leaflet"],
+    "date": "novembre 2020",
+    "githubLink": "https://github.com/AnnaMarandola/shorten_links",
+    "visitLink": "",
+    "tag": ["application", "landing page"]
+  },
+  {
+    "id": 5,
+    "img": "../../assets/images/projects/awesomeTable-preview.png",
+    "title": "Application de gestion de fichier clients",
+    "description": "Géolocalisation, recherche filtrée, e-mailing, ",
+    "client": "Frontend Mentor ",
+    "stack": ["React", "HTML5", "CSS3", "APIrest", "Javascript", "Leaflet"],
+    "date": "novembre 2020",
+    "githubLink": "https://github.com/AnnaMarandola/shorten_links",
+    "visitLink": "",
+    "tag": ["application", "landing page"]
+  },
+  {
+    "id": 6,
+    "img": "../../assets/images/projects/boussole-preview.png",
+    "title": "boussole.pro",
+    "description": "Application permettant de raccourcir des adresses URL et de conserver les liens raccourcis dans le navigateur. ",
+    "client": "Frontend Mentor ",
+    "stack": ["React", "HTML5", "CSS3", "APIrest", "Javascript", "Leaflet"],
+    "date": "novembre 2020",
+    "githubLink": "https://github.com/AnnaMarandola/shorten_links",
+    "visitLink": "",
+    "tag": ["application", "landing page"]
+  },
+  {
+    "id": 7,
+    "img": "../../assets/images/projects/neobserver-preview.png",
+    "title": "Shortly",
+    "description": "Application permettant de raccourcir des adresses URL et de conserver les liens raccourcis dans le navigateur. ",
+    "client": "Frontend Mentor ",
+    "stack": ["React", "HTML5", "CSS3", "APIrest", "Javascript", "Leaflet"],
+    "date": "novembre 2020",
+    "githubLink": "https://github.com/AnnaMarandola/shorten_links",
+    "visitLink": "",
+    "tag": ["application", "landing page"]
+  },
+  {
+    "id": 8,
+    "img": "../../assets/images/projects/SanFeliu-preview.png",
+    "title": "Shortly",
+    "description": "Application permettant de raccourcir des adresses URL et de conserver les liens raccourcis dans le navigateur. ",
+    "client": "Frontend Mentor ",
+    "stack": ["React", "HTML5", "CSS3", "APIrest", "Javascript", "Leaflet"],
+    "date": "novembre 2020",
+    "githubLink": "https://github.com/AnnaMarandola/shorten_links",
+    "visitLink": "",
+    "tag": ["application", "landing page"]
+  },
+  {
+    "id": 9,
+    "img": "../../assets/images/projects/deathQuizz-preview.png",
+    "title": "Shortly",
+    "description": "Application permettant de raccourcir des adresses URL et de conserver les liens raccourcis dans le navigateur. ",
+    "client": "Frontend Mentor ",
+    "stack": ["React", "HTML5", "CSS3", "APIrest", "Javascript", "Leaflet"],
+    "date": "novembre 2020",
+    "githubLink": "https://github.com/AnnaMarandola/shorten_links",
+    "visitLink": "",
+    "tag": ["application", "landing page"]
+  },
+  {
+    "id": 10,
+    "img": "../../assets/images/projects/allergeek-preview.png",
+    "title": "Shortly",
+    "description": "Application permettant de raccourcir des adresses URL et de conserver les liens raccourcis dans le navigateur. ",
+    "client": "Frontend Mentor ",
+    "stack": ["React", "HTML5", "CSS3", "APIrest", "Javascript", "Leaflet"],
+    "date": "novembre 2020",
+    "githubLink": "https://github.com/AnnaMarandola/shorten_links",
+    "visitLink": "",
     "tag": ["application", "landing page"]
   }
 ]
