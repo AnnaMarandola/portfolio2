@@ -2,6 +2,7 @@ import { Typography } from "@mui/material";
 import { withStyles } from "@mui/styles";
 import ServiceCard from "./ServiceCard";
 import services from "../../data/services.json";
+import ServiceCard2 from "./ServiceCard2";
 
 const styles = (theme) => ({
   root: {
@@ -20,7 +21,7 @@ const styles = (theme) => ({
       paddingTop: "4rem",
     },
     [theme.breakpoints.up("lg")]: {
-      padding: "4rem 9%",
+      padding: "4rem 0",
       justifyContent: "flex-start",
     },
   },
@@ -37,16 +38,17 @@ const styles = (theme) => ({
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
+    padding: 0,
     [theme.breakpoints.up("sm")]: {
       flexDirection: "row",
       flexWrap: "wrap",
-      justifyContent: "space-evenly",
     },
     [theme.breakpoints.up("md")]: {
-      justifyContent: "center",
-      padding: "5rem 0",
     },
-    [theme.breakpoints.up("lg")]: {},
+    [theme.breakpoints.up("lg")]: {
+      paddingTop: "10rem"
+      
+    },
   },
 });
 
@@ -56,9 +58,14 @@ const ServicesSection = ({ classes }) => {
       <Typography variant="h2" className={classes.title}>
         Services
       </Typography>
-      <div className={classes.cardsContainer}>
+      {/* <div className={classes.cardsContainer}>
         {services.map((service, id) => (
           <ServiceCard key={id} service={service} />
+        ))}
+      </div> */}
+      <div className={classes.cardsContainer}>
+        {services.map((service, id) => (
+          <ServiceCard2 key={id} service={service} />
         ))}
       </div>
     </div>
