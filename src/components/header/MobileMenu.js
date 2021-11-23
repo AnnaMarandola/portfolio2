@@ -15,8 +15,8 @@ const styles = (theme) => ({
   separator: {
     width: "100%",
     margin: "0.5rem 10%",
-    background: theme.palette.secondary.main,
-    border: "2px solid",
+    color: theme.palette.primary.light,
+    border: "1px solid",
 
   },
   navLink: {
@@ -30,6 +30,11 @@ const styles = (theme) => ({
 });
 
 const StyledMenu = withStyles({
+  root: {
+    "& .MuiPaper-root": {
+      backgroundColor: "#161616",
+    }
+  },
   paper: {
     paddingBottom: "1rem",
     marginTop: "2rem",
