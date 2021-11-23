@@ -1,6 +1,5 @@
 import { Typography } from "@mui/material";
 import { withStyles } from "@mui/styles";
-import ServiceCard from "./ServiceCard";
 import services from "../../data/services.json";
 import ServiceCard2 from "./ServiceCard2";
 
@@ -58,11 +57,6 @@ const ServicesSection = ({ classes }) => {
       <Typography variant="h2" className={classes.title}>
         Services
       </Typography>
-      {/* <div className={classes.cardsContainer}>
-        {services.map((service, id) => (
-          <ServiceCard key={id} service={service} />
-        ))}
-      </div> */}
       <div className={classes.cardsContainer}>
         {services.map((service, id) => (
           <ServiceCard2 key={id} service={service} />

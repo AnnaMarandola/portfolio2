@@ -154,10 +154,10 @@ const theme = createTheme({
         fontSize: "1.rem",
       },
       "@media (min-width:1200px)": {
-        fontSize: "1.2rem",
+        fontSize: "1rem",
       },
       "@media (min-width:1500px)": {
-        fontSize: "1.3rem",
+        fontSize: "1rem",
       },
     },
     body2: {
@@ -169,13 +169,13 @@ const theme = createTheme({
         fontSize: "1rem",
       },
       "@media (min-width:900px)": {
-        fontSize: "1.rem",
+        fontSize: "1rem",
       },
       "@media (min-width:1200px)": {
-        fontSize: "1.1rem",
+        fontSize: "1rem",
       },
       "@media (min-width:1500px)": {
-        fontSize: "1.rem",
+        fontSize: "1rem",
       },
     },
   },

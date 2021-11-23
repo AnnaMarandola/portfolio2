@@ -14,8 +14,9 @@ const styles = (theme) => ({
     borderRadius: "40px",
     width: "18rem",
     height: "18rem",
-    overlay: {
-      "&:hover": {
+    "&:hover": {
+      backgroundColor: theme.palette.background.light,
+      "& $overlay": {
         transform: "translateY(0)",
       },
     },
@@ -29,12 +30,11 @@ const styles = (theme) => ({
     height: "9rem",
     transform: "translateY(100%)",
     transition: ".7s ease-in-out",
-    "&:hover": {
+    "&:hover $card": {
       transform: "translateY(0)",
     },
   },
   header: {
-    // position: "relative",
     padding: "2rem",
     borderRadius: "40px 0 0 0",
     backgroundColor: theme.palette.background.default,
@@ -42,9 +42,13 @@ const styles = (theme) => ({
     transition: "0.7s ease-in-out",
   },
   image: {
-    width: "35%",
-    padding: "4rem",
+    width: "20%",
+    padding: "2rem",
     height: "auto",
+    backgroundColor: theme.palette.background.default,
+    borderRadius: "50%",
+    marginTop: "2.5rem",
+    border: "1px solid #b721ff",
   },
   svgArc: {
     width: "80px",
@@ -54,7 +58,6 @@ const styles = (theme) => ({
     right: 0,
     zIndex: 1,
     borderColor: theme.palette.background.default,
-
   },
   svgPath: {
     fill: theme.palette.background.default,
@@ -62,7 +65,7 @@ const styles = (theme) => ({
   },
   description: {
     padding: "0 2rem 2rem",
-    marginTop: "-5rem",
+    marginTop: "-5.5rem",
     overflow: "hidden",
   },
 });
@@ -71,7 +74,6 @@ const ServiceCard2 = ({ classes, service }) => {
   return (
     <Box sx={{ boxShadow: 8 }} className={classes.card}>
       <img src={service.icon} alt={service.name} className={classes.image} />
-
       <div className={classes.overlay}>
         <div className={classes.header}>
           <svg className={classes.svgArc} xmlns="http://www.w3.org/2000/svg">
@@ -84,7 +86,7 @@ const ServiceCard2 = ({ classes, service }) => {
 
         <div className={classes.description}>
           {service.list.map((item, id) => (
-            <Typography variant="body2" className={classes.listItem} key={id}>
+            <Typography variant="body1" className={classes.listItem} key={id}>
               {item}
             </Typography>
           ))}
