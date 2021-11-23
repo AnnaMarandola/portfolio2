@@ -3,7 +3,7 @@ import { withStyles } from "@mui/styles";
 import HideOnScroll from "../mui/HideOnScroll";
 import MobileMenu from "./MobileMenu";
 import BackToTop from "../mui/BackToTop";
-import LOGO from "../../assets/images/header/logo.svg";
+import LOGO from "../../assets/images/header/logo.png";
 import ArrowDropUpSharpIcon from "@mui/icons-material/ArrowDropUpSharp";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
@@ -19,13 +19,14 @@ const styles = (theme) => ({
     [theme.breakpoints.up("md")]: {},
   },
   logo: {
-    width: "50%",
-    padding: "1rem",
+    width: "70%",
+    padding: "1rem 1rem 1rem 1.5rem",
     [theme.breakpoints.up("md")]: {
       width: "50%",
+
     },
     [theme.breakpoints.up("lg")]: {
-      paddingLeft: "8rem",
+      paddingLeft: "11rem",
     },
   },
   navContainer: {

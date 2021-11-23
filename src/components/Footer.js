@@ -1,7 +1,7 @@
 import { Typography } from "@mui/material";
 import { withStyles } from "@mui/styles";
 import SocialMediaButtons from "./contact/SocialMediaButtons";
-import LOGO from "../assets/images/header/logo.svg";
+import LOGO from "../assets/images/header/logo.png";
 import HEART from "../assets/images/header/heart.svg";
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
@@ -37,7 +37,8 @@ const styles = (theme) => ({
     },
   },
   logo: {
-    width: "50%",
+    width: "70%",
+    padding: "1rem"
   },
   heart: {
     margin: "-0.5rem 0.2rem",
