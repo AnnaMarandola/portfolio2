@@ -62,15 +62,16 @@ const Introduction = ({ classes }) => {
           Après 2 ans d'expériences, je me suis spécialisée en développement
           frontend avec le framework React.js, je maîtrise les technologies
           HTML5/CSS3, javascript, typescript, node.js et les bases de données
-          SQL et noSQL. Au fil des projets, j’ai progressivement élargi mon
-          champ de compétences au web marketing et au web design.
+          SQL et noSQL.
         </Typography>
         <Typography variant="body1" className={classes.paragraph}>
-          Titulaire du diplôme de Développeur web et web mobile, je mène une
-          veille active sur les nouvelles technologies web et continue de
-          développer mes compétences afin de proposer des sites/applications
-          adaptés aux standards du web et optimisant l’expérience utilisateur
-          (UX, UI).
+          Au fil des projets, j’ai progressivement élargi mon champ de
+          compétences au web marketing et au web design. Je et je mène une
+          veille active sur les nouvelles technologies et tendances du web.
+        </Typography>
+        <Typography variant="body1" className={classes.paragraph}>
+          L'objectif: vous fournir les solutions les plus performantes, adaptées
+          à vos besoins et à votre budget !
         </Typography>
       </div>
       <div className={classes.photoContainer} />

@@ -42,6 +42,7 @@ const styles = (theme) => ({
     },
     [theme.breakpoints.up("lg")]: {
       paddingTop: "4rem",
+      width: "70%"
     },
   },
   introText: {
@@ -69,7 +70,7 @@ const ServicesSection = ({ classes }) => {
         Services
       </Typography>
       <div className={classes.introSection}>
-        <Typography variant="body1" className={classes.introText}>
+        <Typography variant="body2" className={classes.introText}>
           De la conception à la mise en ligne, je vous propose un accompagnement
           et des solutions sur mesure dans les differentes étapes de vos
           projects web

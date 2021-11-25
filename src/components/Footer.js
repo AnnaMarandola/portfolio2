@@ -3,7 +3,7 @@ import { withStyles } from "@mui/styles";
 import SocialMediaButtons from "./contact/SocialMediaButtons";
 import LOGO from "../assets/images/header/logo.png";
 import HEART from "../assets/images/header/heart.svg";
-import AnchorLink from 'react-anchor-link-smooth-scroll';
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 const styles = (theme) => ({
   root: {
@@ -12,37 +12,38 @@ const styles = (theme) => ({
     flexDirection: "column",
     alignItems: "center",
     width: "100%",
+    padding: "2rem",
     [theme.breakpoints.up("md")]: {
       flexDirection: "row",
-      justifyContent: "space-between",
-      padding: "1rem 5%",
+      justifyContent: "space-evenly",
+      padding: "1rem",
+    },
+    [theme.breakpoints.up("lg")]: {
+      justifyContent: "space-evenly",
+      padding: "1rem",
     },
   },
-  bigContainer: {
-    display: "flex",
-    flexDirection: "column-reverse",
-    [theme.breakpoints.up("md")]: {
-      flexDirection: "row",
-      width: "58%",
-      justifyContent: "space-between",
-    },
-  },
-  container: {
+
+  logoContainer: {
     textAlign: "center",
     padding: "3rem 1rem",
-    [theme.breakpoints.up("md")]: {
-      "&:nth-of-type(2)": {
-        textAlign: "right",
-      },
-    },
   },
+  navContainer: {
+    textAlign: "center",
+    [theme.breakpoints.up("md")]: {
+      textAlign: "right",
+    }
+  },
+
   logo: {
     width: "70%",
-    padding: "1rem"
+    padding: "1rem",
   },
+
   heart: {
     margin: "-0.5rem 0.2rem",
   },
+
   anchorLink: {
     textDecoration: "none",
     "&:hover": {
@@ -51,42 +52,42 @@ const styles = (theme) => ({
       color: "grey",
     },
   },
+
 });
 
 function Footer({ classes }) {
   return (
     <div className={classes.root}>
-      <div className={classes.leftContainer}>
+      <div className={classes.buttonContainer}>
         <SocialMediaButtons />
       </div>
-      <div className={classes.bigContainer}>
-        <div className={classes.container}>
-          <Typography>
-            made with{" "}
-            <span>
-              <img src={HEART} alt="love" className={classes.heart} />
-            </span>{" "}
-            by
-          </Typography>
 
-          <img src={LOGO} className={classes.logo} alt="logo" />
-          <Typography>Copyright &copy; 2021</Typography>
-        </div>
-        <div className={classes.container}>
+      <div className={classes.logoContainer}>
+        <Typography>
+          made with{" "}
+          <span>
+            <img src={HEART} alt="love" className={classes.heart} />
+          </span>{" "}
+          by
+        </Typography>
+        <img src={LOGO} className={classes.logo} alt="logo" />
+        <Typography>Copyright &copy; 2021</Typography>
+      </div>
+
+      <div className={classes.navContainer}>
         <AnchorLink href="#services" className={classes.anchorLink}>
           <Typography>Services</Typography>
-          </AnchorLink>
-          <AnchorLink href="#portfolio" className={classes.anchorLink}>
+        </AnchorLink>
+        <AnchorLink href="#portfolio" className={classes.anchorLink}>
           <Typography>Portfolio</Typography>
-          </AnchorLink>
-          <AnchorLink href="#about" className={classes.anchorLink}>
+        </AnchorLink>
+        <AnchorLink href="#about" className={classes.anchorLink}>
           <Typography>A propos</Typography>
-          </AnchorLink>
-          <AnchorLink href="#contact" className={classes.anchorLink}>
+        </AnchorLink>
+        <AnchorLink href="#contact" className={classes.anchorLink}>
           <Typography>Contact</Typography>
-          </AnchorLink>
-          <Typography>Mentions légales</Typography>
-        </div>
+        </AnchorLink>
+        <Typography>Mentions légales</Typography>
       </div>
     </div>
   );

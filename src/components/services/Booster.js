@@ -17,13 +17,18 @@ const styles = (theme) => ({
     [theme.breakpoints.up("sm")]: {
       margin: "5rem 0rem",
     },
+    [theme.breakpoints.up("lg")]: {
+      width: "50%",
+      margin: "8rem 0rem",
+
+    },
   },
 });
 
 const Booster = ({ classes }) => {
   return (
     <div className={classes.root}>
-      <Typography variant="h5">Une idée ? un projet ? des questions ?</Typography>
+      <Typography variant="h5">Une idée ? un projet ?</Typography>
       <Typography variant="h5">N'hesitez pas, demandez votre devis !</Typography>
       <Typography variant="h5">[ gratuit ]</Typography>
       <AnchorLink href="#contact" className={classes.anchorLink}>

@@ -11,6 +11,11 @@ const styles = (theme) => ({
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
+    paddingTop: "1rem",
+
+    [theme.breakpoints.up("md")]: {
+    paddingTop: "4rem",
+    }
   },
   projectsContainer: {
     display: "flex",
