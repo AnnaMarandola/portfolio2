@@ -22,7 +22,7 @@ const styles = (theme) => ({
       justifyContent: "center",
       width: "100%",
       flexWrap: "wrap",
-      padding: "6rem",
+      // padding: "6rem",
     },
   },
   pagination: {

@@ -16,33 +16,38 @@ const styles = (theme) => ({
     justifyContent: "space-between",
     width: "100%",
     backgroundColor: theme.palette.background.default,
-    [theme.breakpoints.up("md")]: {},
   },
   logo: {
     width: "70%",
-    padding: "1rem 1rem 1rem 1.5rem",
-    [theme.breakpoints.up("md")]: {
+    padding: "1rem",
+    [theme.breakpoints.up("sm")]: {
       width: "50%",
-
+      paddingLeft: "4rem"
     },
     [theme.breakpoints.up("lg")]: {
+      paddingLeft: "9.5rem",
+    },
+    [theme.breakpoints.up("xl")]: {
       paddingLeft: "11rem",
     },
   },
   navContainer: {
     display: "none",
     [theme.breakpoints.up("md")]: {
-      // border: "1px solid red",
-      width: "60%",
+      width: "50%",
       display: "flex",
       alignItems: "center",
       justifyContent: "space-between",
       textTransform: "uppercase",
-      paddingRight: "2rem",
+      paddingRight: "4rem",
     },
     [theme.breakpoints.up("lg")]: {
       width: "40%",
-      paddingRight: "8rem",
+      paddingRight: "11rem",
+    },
+    [theme.breakpoints.up("xl")]: {
+      width: "50%",
+      paddingRight: "10rem",
     },
   },
   menuItem: {

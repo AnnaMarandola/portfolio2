@@ -7,14 +7,24 @@ const styles = (theme) => ({
     [theme.breakpoints.up("md")]: {
       display: "flex",
       justifyContent: "center",
+      width: "100%"
     },
+    [theme.breakpoints.up("lg")]: {
+      width: "50%"
+    },
+    [theme.breakpoints.up("xl")]: {
+      width: "40%"
+    },
+  },
+  image: {
+    width: "100%"
   }
 });
 
 const ImgContainer = ({ classes }) => {
   return (
     <div className={classes.root}>
-      <img src={BG} alt="circles and tech items"/>
+      <img src={BG} alt="circles and tech items" className={classes.image}/>
     </div>
   );
 };

@@ -6,7 +6,6 @@ import SocialMediaButtons from "../contact/SocialMediaButtons";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 const styles = (theme) => ({
   root: {
-    // border: "1px solid blue",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
@@ -17,27 +16,42 @@ const styles = (theme) => ({
       marginTop: "2rem",
       padding: "3rem",
     },
-    [theme.breakpoints.up("lg")]: {
-      width: "40%",
-      textAlign: "left",
+    [theme.breakpoints.up("md")]: {
       alignItems: "flex-start",
+      textAlign: "left",
+      width: "100%"
+    },
+    [theme.breakpoints.up("lg")]: {
+      width: "35%",
       marginTop: "2rem",
       padding: "1rem",
     },
   },
   firstLine: {
     display: "flex",
-    marginTop: "4rem",
+    padding: "4rem 0 1rem 0",
+    fontSize: "1.2rem",
+    [theme.breakpoints.up("md")]: {
+      textAlign: "left ",
+      padding: "2rem 0",
+    },
+    [theme.breakpoints.up("lg")]: {
+      padding: "2rem 0",
+    },
   },
   purpleSpan: {
     color: theme.palette.primary.main,
     padding: "0 0.5rem",
+    fontSize: "1.2rem",
+    [theme.breakpoints.up("md")]: {
+      fontSize: "1.5rem",
+
+    }
   },
   title: {
     paddingBottom: "1rem",
   },
   textContainer: {
-    // border: "1px solid purple",
     padding: "0 1.5rem",
     [theme.breakpoints.up("md")]: {
       padding: 0,
@@ -45,24 +59,22 @@ const styles = (theme) => ({
   },
   introtext: {
     paddingBottom: "1rem",
-    // border: "1px solid yellow",
   },
   buttonsContainer: {
-    // border: "1px solid purple",
     width: "90%",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
     padding: "1rem",
     [theme.breakpoints.up("md")]: {
-      width: "70%",
+      width: "60%",
       alignItems: "flex-start",
       padding: "3rem 0",
     },
   },
   anchorLink: {
     textDecoration: "none",
-  }
+  },
 });
 
 const TextContainer = ({ classes }) => {
@@ -70,12 +82,11 @@ const TextContainer = ({ classes }) => {
     <div className={classes.root}>
       <div className={classes.firstLine}>
         <img src={HEART} alt="heart" />
-        <Typography variant="body2">
+        <Typography variant="h5">
           <span className={classes.purpleSpan}>Hello! je suis</span>Anna
           Marandola
         </Typography>
       </div>
-
       <Typography variant="h1" className={classes.title}>
         Développeur Web Freelance
       </Typography>
@@ -91,12 +102,7 @@ const TextContainer = ({ classes }) => {
           Vous êtes au bon endroit.
         </Typography>
 
-        {/* <Typography variant="body1" className={classes.introtext}>
-          Je réalise des sites et des applications web/mobiles adaptés à toutes
-          les tailles d’écran et respectueux des standards du Web.
-        </Typography> */}
-
-        <Typography variant="body1" className={classes.introtext}>
+        <Typography variant="body2" className={classes.introtext}>
           Offrez à vos clients une expérience de navigation optimale !
         </Typography>
       </div>

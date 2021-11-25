@@ -17,6 +17,7 @@ const styles = (theme) => ({
     }
   },
   map: {
+    overflow: "hidden",
     [theme.breakpoints.up("lg")]: {
       borderRadius: "30px"
     }

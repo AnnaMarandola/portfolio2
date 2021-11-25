@@ -48,7 +48,7 @@ const styles = (theme) => ({
     backgroundColor: theme.palette.background.default,
     borderRadius: "50%",
     marginTop: "2.5rem",
-    border: "1px solid #b721ff",
+    border: "2px solid white",
   },
   svgArc: {
     width: "80px",
@@ -57,7 +57,6 @@ const styles = (theme) => ({
     bottom: "100%",
     right: 0,
     zIndex: 1,
-    borderColor: theme.palette.background.default,
   },
   svgPath: {
     fill: theme.palette.background.default,

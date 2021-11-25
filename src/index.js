@@ -87,21 +87,21 @@ const theme = createTheme({
     },
     h3: {
       fontSize: "1.2rem",
-      fontWeight: 600,
+      fontWeight: 200,
       fontFamily: montserrat,
       color: "#fff",
 
       "@media (min-width:600px)": {
-        fontSize: "1.45rem",
+        fontSize: "1.2rem",
       },
       "@media (min-width:900px)": {
-        fontSize: "1.70rem",
+        fontSize: "1.2rem",
       },
       "@media (min-width:1200px)": {
-        fontSize: "1.95rem",
+        fontSize: "1.2rem",
       },
       "@media (min-width:1500px)": {
-        fontSize: "2.2rem",
+        fontSize: "1.5rem",
       },
     },
     h5: {
@@ -111,13 +111,13 @@ const theme = createTheme({
       fontFamily: montserrat,
 
       "@media (min-width:600px)": {
-        fontSize: "1.2rem",
+        fontSize: "1.3rem",
       },
       "@media (min-width:900px)": {
-        fontSize: "1.2rem",
+        fontSize: "1.3rem",
       },
       "@media (min-width:1200px)": {
-        fontSize: "1.3rem",
+        fontSize: "1.5rem",
       },
       "@media (min-width:1500px)": {
         fontSize: "1.5rem",
@@ -157,7 +157,7 @@ const theme = createTheme({
         fontSize: "1rem",
       },
       "@media (min-width:1500px)": {
-        fontSize: "1rem",
+        fontSize: "1.2rem",
       },
     },
     body2: {
@@ -175,7 +175,7 @@ const theme = createTheme({
         fontSize: "1rem",
       },
       "@media (min-width:1500px)": {
-        fontSize: "1rem",
+        fontSize: "1.2rem",
       },
     },
   },
