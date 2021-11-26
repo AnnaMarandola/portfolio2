@@ -10,10 +10,20 @@ const styles = (theme) => ({
     flexDirection: "column",
     alignItems: "center",
     padding: "5rem 0",
+    [theme.breakpoints.up("sm")]: {
+      width: "100%",
+    },
+
+    [theme.breakpoints.up("lg")]: {
+    },
+
   },
   title: {
     padding: "0 2rem 4rem 2rem",
     textAlign: "center",
+    [theme.breakpoints.up("lg")]: {
+      paddingBottom: "7rem"
+    } 
   },
   mainContainer: {
     display: "flex",
@@ -21,17 +31,17 @@ const styles = (theme) => ({
     width: "90%",
     paddingBottom: "2rem",
     [theme.breakpoints.up("sm")]: {
-      width: "70%",
+      width: "100%",
     },
     [theme.breakpoints.up("md")]: {
+      width: "70%"
     },
     [theme.breakpoints.up("lg")]: {
         flexDirection: "row",
-        width: "70%",
-
-
+        width: "95%",
     },
-    [theme.breakpoints.up("xl")]: {},
+    [theme.breakpoints.up("xl")]: {
+    },
   },
 });
 

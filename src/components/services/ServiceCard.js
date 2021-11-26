@@ -20,6 +20,10 @@ const styles = (theme) => ({
         transform: "translateY(0)",
       },
     },
+    [theme.breakpoints.up("lg")]: {
+      height: "20rem",
+    },
+
   },
   overlay: {
     backgroundColor: theme.palette.background.default,
@@ -33,6 +37,10 @@ const styles = (theme) => ({
     "&:hover $card": {
       transform: "translateY(0)",
     },
+    [theme.breakpoints.up("lg")]: {
+      height: "12.5rem",
+    },
+
   },
   header: {
     padding: "2rem",

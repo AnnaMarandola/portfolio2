@@ -69,8 +69,8 @@ const Introduction = ({ classes }) => {
           compétences au web marketing et au web design. Je et je mène une
           veille active sur les nouvelles technologies et tendances du web.
         </Typography>
-        <Typography variant="body1" className={classes.paragraph}>
-          L'objectif: vous fournir les solutions les plus performantes, adaptées
+        <Typography variant="body2" className={classes.paragraph}>
+          L'objectif : vous fournir les solutions les plus performantes, adaptées
           à vos besoins et à votre budget !
         </Typography>
       </div>

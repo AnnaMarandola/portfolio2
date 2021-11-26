@@ -11,16 +11,13 @@ const styles = (theme) => ({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    width: "100%",
-    padding: "2rem",
+    width: "100vw",
     [theme.breakpoints.up("md")]: {
       flexDirection: "row",
       justifyContent: "space-evenly",
-      padding: "1rem",
     },
     [theme.breakpoints.up("lg")]: {
       justifyContent: "space-evenly",
-      padding: "1rem",
     },
   },
 

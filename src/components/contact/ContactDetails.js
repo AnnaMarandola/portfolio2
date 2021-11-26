@@ -12,19 +12,24 @@ const styles = (theme) => ({
     flexDirection: "column",
     width: "90%",
     [theme.breakpoints.up("sm")]: {
-      width: "70%"
+      width: "100%"
     },
     [theme.breakpoints.up("md")]: {
       flexDirection: "row",
       flexWrap: "wrap",
       width: "80%",
-      justifyContent: "space-between"
+      justifyContent: "space-evenly",
+      margin: "1rem"
     },
     [theme.breakpoints.up("lg")]: {
       width: "90%",
       padding: "5rem 0",
+      justifyContent: "space-between"
+
     },
-    [theme.breakpoints.up("xl")]: {},
+    [theme.breakpoints.up("xl")]: {
+      width: "100%"
+    },
   },
   infoCard: {
     display: "flex",
@@ -35,18 +40,28 @@ const styles = (theme) => ({
     backgroundColor: theme.palette.background.paper,
     borderRadius: "10px",
     [theme.breakpoints.up("md")]: {
-      width: "45%"
+      width: "fit-content",
     },
     [theme.breakpoints.up("lg")]: {
-      width: "20%",
-      padding: "1.5rem"
+      flexDirection: "column",
+
+      width: "fit-content",
+      padding: "1.5rem",
 
     },
-    [theme.breakpoints.up("xl")]: {},
+    [theme.breakpoints.up("xl")]: {
+      flexDirection: "column",
+      width: "20%"
+    },
 
   },
   text: {
     textAlign: "right",
+    [theme.breakpoints.up("xl")]: {
+      textAlign: "center",
+      padding: "1.5rem"
+    },
+
   },
 });
 

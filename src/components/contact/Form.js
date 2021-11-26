@@ -20,6 +20,9 @@ const styles = (theme) => ({
     paddingBottom: "2rem",
     backgroundColor: theme.palette.background.paper,
     borderRadius: "20px 20px 0 0",
+    [theme.breakpoints.up("sm")]: {
+      width: "100%",
+    },
     [theme.breakpoints.up("lg")]: {
       borderRadius: "20px 0 0 20px",  
       width: "60%"    
@@ -64,7 +67,9 @@ const styles = (theme) => ({
     display: "flex",
     justifyContent: "flex-start",
     paddingTop: "1rem",
-
+    [theme.breakpoints.up("lg")]: {
+      padding: "2rem 0 4rem"
+    }
   },
   submitButton: {},
 });

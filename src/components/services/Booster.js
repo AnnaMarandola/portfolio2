@@ -19,7 +19,7 @@ const styles = (theme) => ({
     },
     [theme.breakpoints.up("lg")]: {
       width: "50%",
-      margin: "8rem 0rem",
+      margin: "12rem 0rem",
 
     },
   },

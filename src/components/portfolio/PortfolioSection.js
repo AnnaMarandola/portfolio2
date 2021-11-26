@@ -8,6 +8,9 @@ const styles = (theme) => ({
     flexDirection: "column",
     alignItems: "center",
     padding: "5rem 0",
+    [theme.breakpoints.up("lg")]: {
+      paddingBottom: "15rem"
+    },
   },
 });
 

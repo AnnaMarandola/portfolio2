@@ -11,6 +11,9 @@ const styles = (theme) => ({
     flexDirection: "column",
     alignItems: "center",
     padding: "5rem 0",
+    [theme.breakpoints.up("lg")]: {
+      paddingBottom: "15rem",
+    },
   },
   title: {
     padding: "0 2rem 4rem 2rem",

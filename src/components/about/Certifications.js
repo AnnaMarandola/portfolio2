@@ -11,7 +11,9 @@ const styles = (theme) => ({
     [theme.breakpoints.up("md")]: {
       width: "90%",
     },
-    [theme.breakpoints.up("lg")]: {},
+    [theme.breakpoints.up("lg")]: {
+      width: "80%",
+    },
     [theme.breakpoints.up("xl")]: {
       width: "70%",
     },
@@ -28,6 +30,7 @@ const styles = (theme) => ({
   cardsContainer: {
     display: "flex",
     flexDirection: "column",
+
     [theme.breakpoints.up("sm")]: {},
     [theme.breakpoints.up("md")]: {
       flexDirection: "row",
@@ -36,7 +39,10 @@ const styles = (theme) => ({
       padding: "1rem",
     },
     [theme.breakpoints.up("lg")]: {
-      justifyContent: "space-between",
+      justifyContent: "center",
+    },
+    [theme.breakpoints.up("xl")]: {
+      justifyContent: "flex-evenly",
     },
   },
   card: {
@@ -57,8 +63,11 @@ const styles = (theme) => ({
     },
     [theme.breakpoints.up("lg")]: {
       width: "40%",
+      margin: "1rem",
     },
-    [theme.breakpoints.up("xl")]: {},
+    [theme.breakpoints.up("xl")]: {
+      width: "42%",
+    },
   },
   textContainer: {
     textAlign: "center",
