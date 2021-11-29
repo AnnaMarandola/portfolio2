@@ -128,5 +128,18 @@
     "githubLink": "https://github.com/AnnaMarandola/shorten_links",
     "visitLink": "",
     "tag": ["application", "landing page"]
+  },
+  {
+    "id": 11,
+    "img": "../../assets/images/projects/videoChat-preview.png",
+    "title": "VUo - vidéo chat",
+    "description": "Application de chat vidéo sécurisée.",
+    "client": "Frontend Mentor ",
+    "stack": ["React", "HTML5", "CSS3", "APIrest", "Javascript", "websocket.io"],
+    "date": "novembre 2020",
+    "githubLink": "https://github.com/AnnaMarandola/video-chat",
+    "visitLink": "https://chat-video-am.netlify.app/",
+    "tag": ["application", "landing page"]
   }
+
 ]

@@ -1,7 +1,7 @@
 import { Typography } from "@mui/material";
 import { withStyles } from "@mui/styles";
 import Map from "./Map";
-import Form from "./Form";
+import Form2 from "./Form2";
 import ContactDetails from "./ContactDetails";
 
 const styles = (theme) => ({
@@ -52,7 +52,7 @@ const ContactSection = ({ classes }) => {
         Contact
       </Typography>
       <div className={classes.mainContainer}>
-        <Form />
+        <Form2 />
         <Map />
       </div>
       <ContactDetails />
