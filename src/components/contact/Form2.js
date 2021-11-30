@@ -10,6 +10,8 @@ import {
 import { withStyles } from "@mui/styles";
 import CTAButton from "../mui/CTAButton";
 import { useState } from "react";
+import emailjs from "emailjs-com";
+import emailKeys from "../../emailConfig";
 
 const styles = (theme) => ({
   root: {
@@ -85,22 +87,30 @@ const options = [
   "conseils et accompagnement",
 ];
 
-const Form = ({ classes, props }) => {
+const Form = ({ classes }) => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [needs, setNeeds] = useState([]);
   const [message, setMessage] = useState("");
 
-  const handleSubmit = (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
-    setFirstName("");
-    setLastName("");
-    setEmail("");
-    setNeeds([]);
-    setMessage("");
-    console.log("MAIL SENT", firstName, lastName, email, needs, message);
+    emailjs.sendForm(
+      emailKeys.service,
+      emailKeys.template,
+      e.target,
+      emailKeys.integration
+    ).then(res => {
+      console.log(res)
+    }).catch(err => console.log(err))
+    setFirstName("")
+    setLastName("")
+    setEmail("")
+    setNeeds([])
+    setMessage("")
   };
+
 
   return (
     <div className={classes.root}>
@@ -108,12 +118,12 @@ const Form = ({ classes, props }) => {
         <Typography variant="h5">Demandez votre devis !</Typography>
         <Typography variant="h5">[ gratuit ]</Typography>
       </div>
-      <form className={classes.form} onSubmit={handleSubmit}>
+      <form className={classes.form} onSubmit={sendEmail}>
         <FormControl required>
           <InputLabel className={classes.label}>nom</InputLabel>
           <OutlinedInput
             className={classes.input}
-            id="lastName"
+            name="lastName"
             onChange={(e) => setLastName(e.target.value)}
             type="text"
             value={lastName}
@@ -123,7 +133,7 @@ const Form = ({ classes, props }) => {
           <InputLabel className={classes.label}>prénom</InputLabel>
           <OutlinedInput
             className={classes.input}
-            id="firstName"
+            name="firstName"
             onChange={(e) => setFirstName(e.target.value)}
             type="text"
             value={firstName}
@@ -133,7 +143,7 @@ const Form = ({ classes, props }) => {
           <InputLabel className={classes.label}>e-mail</InputLabel>
           <OutlinedInput
             className={classes.input}
-            id="email"
+            name="email"
             onChange={(e) => setEmail(e.target.value)}
             type="email"
             value={email}
@@ -146,19 +156,13 @@ const Form = ({ classes, props }) => {
           </InputLabel>
           <Select
             className={classes.selectInput}
-            label={needs.length ? `${needs}`:"quels sont vos besoins ?"}
-            id="needs"
+            label={needs.length ? `${needs}` : "quels sont vos besoins ?"}
+            name="needs"
             multiple
-            input={
-              <OutlinedInput 
-              name="needs option" 
-              id="need" 
-              />
-            }
+            input={<OutlinedInput name="needs option" id="need" />}
             placeholder="Select multiple"
             value={needs}
             onChange={(e) => setNeeds(e.target.value)}
-
           >
             {options.map((option, id) => (
               <MenuItem key={id} value={option} className={classes.menuItem}>
@@ -176,7 +180,7 @@ const Form = ({ classes, props }) => {
             aria-label="minimum height"
             minRows={8}
             className={classes.textArea}
-            id="message"
+            name="message"
             onChange={(e) => setMessage(e.target.value)}
             type="text"
             value={message}
