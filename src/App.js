@@ -1,18 +1,17 @@
-import { withStyles } from "@mui/styles";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Home from "./components/Home";
+import LegalPage from "./components/LegalPage";
 
-const styles = (theme) => ({
-  root: {
-    backgroundColor: theme.palette.background.default,
-  },
-});
 
-function App({ classes }) {
+function App() {
   return (
-    <div classname={classes.root}>
-      <Home />
-    </div>
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/mentionslegales" component={LegalPage} />
+        </Switch>
+      </BrowserRouter>
   );
 }
 
-export default withStyles(styles)(App);
+export default App;

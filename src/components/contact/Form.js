@@ -1,4 +1,3 @@
-import { Fragment } from "react";
 import {
   FormControl,
   InputLabel,
@@ -8,8 +7,6 @@ import {
   Typography,
   TextareaAutosize,
   Snackbar,
-  Button,
-  IconButton,
   Alert,
 } from "@mui/material";
 import { withStyles } from "@mui/styles";
@@ -17,7 +14,6 @@ import CTAButton from "../mui/CTAButton";
 import { useState } from "react";
 import emailjs from "emailjs-com";
 import emailKeys from "../../emailConfig";
-import { CloseIcon } from "@mui/icons-material/Close";
 
 const styles = (theme) => ({
   root: {

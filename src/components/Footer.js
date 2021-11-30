@@ -1,5 +1,6 @@
 import { Typography } from "@mui/material";
 import { withStyles } from "@mui/styles";
+import { Link } from "react-router-dom";
 import SocialMediaButtons from "./contact/SocialMediaButtons";
 import LOGO from "../assets/images/header/logo.png";
 import HEART from "../assets/images/header/heart.svg";
@@ -29,7 +30,7 @@ const styles = (theme) => ({
     textAlign: "center",
     [theme.breakpoints.up("md")]: {
       textAlign: "right",
-    }
+    },
   },
 
   logo: {
@@ -49,7 +50,6 @@ const styles = (theme) => ({
       color: "grey",
     },
   },
-
 });
 
 function Footer({ classes }) {
@@ -69,6 +69,10 @@ function Footer({ classes }) {
         </Typography>
         <img src={LOGO} className={classes.logo} alt="logo" />
         <Typography>Copyright &copy; 2021</Typography>
+        <Link to="/mentionslegales" className={classes.anchorLink}>
+          Mentions légales
+        </Link>
+
       </div>
 
       <div className={classes.navContainer}>
@@ -84,7 +88,6 @@ function Footer({ classes }) {
         <AnchorLink href="#contact" className={classes.anchorLink}>
           <Typography>Contact</Typography>
         </AnchorLink>
-        <Typography>Mentions légales</Typography>
       </div>
     </div>
   );
