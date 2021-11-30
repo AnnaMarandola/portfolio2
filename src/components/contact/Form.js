@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import {
   FormControl,
   InputLabel,
@@ -6,10 +7,17 @@ import {
   Select,
   Typography,
   TextareaAutosize,
+  Snackbar,
+  Button,
+  IconButton,
+  Alert,
 } from "@mui/material";
 import { withStyles } from "@mui/styles";
 import CTAButton from "../mui/CTAButton";
 import { useState } from "react";
+import emailjs from "emailjs-com";
+import emailKeys from "../../emailConfig";
+import { CloseIcon } from "@mui/icons-material/Close";
 
 const styles = (theme) => ({
   root: {
@@ -24,8 +32,8 @@ const styles = (theme) => ({
       width: "100%",
     },
     [theme.breakpoints.up("lg")]: {
-      borderRadius: "20px 0 0 20px",  
-      width: "60%"    
+      borderRadius: "20px 0 0 20px",
+      width: "60%",
     },
   },
   form: {
@@ -60,7 +68,7 @@ const styles = (theme) => ({
     borderRadius: "3px",
   },
   label: {
-    marginTop: "1rem"
+    marginTop: "1rem",
   },
   buttonSection: {
     width: "50%",
@@ -68,8 +76,8 @@ const styles = (theme) => ({
     justifyContent: "flex-start",
     paddingTop: "1rem",
     [theme.breakpoints.up("lg")]: {
-      padding: "2rem 0 4rem"
-    }
+      padding: "2rem 0 4rem",
+    },
   },
   submitButton: {},
 });
@@ -85,39 +93,107 @@ const options = [
   "conseils et accompagnement",
 ];
 
-const Form = ({ classes, props }) => {
-  const [selected, setSelected] = useState([]);
+const Form = ({ classes }) => {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [needs, setNeeds] = useState([]);
+  const [message, setMessage] = useState("");
+  const [emailSent, setEmailSent] = useState(false);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        emailKeys.service,
+        emailKeys.template,
+        e.target,
+        emailKeys.integration
+      )
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => console.log(err));
+    setFirstName("");
+    setLastName("");
+    setEmail("");
+    setNeeds([]);
+    setMessage("");
+    setEmailSent(true);
+  };
+
+  const handleCloseToast = (e, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+    setEmailSent(false);
+  };
+
   return (
     <div className={classes.root}>
+      <Snackbar
+        open={emailSent}
+        autoHideDuration={7000}
+        onClose={handleCloseToast}
+      >
+        <Alert
+          onClose={handleCloseToast}
+          severity="success"
+          sx={{ width: "100%" }}
+        >
+          Votre message à bien été envoyé ! je vous répondrai dans les plus
+          brefs délais
+        </Alert>
+      </Snackbar>
       <div className={classes.titleContainer}>
         <Typography variant="h5">Demandez votre devis !</Typography>
         <Typography variant="h5">[ gratuit ]</Typography>
       </div>
-      <form className={classes.form}>
-        <FormControl>
+      <form className={classes.form} onSubmit={sendEmail}>
+        <FormControl required>
           <InputLabel className={classes.label}>nom</InputLabel>
-          <OutlinedInput className={classes.input} />
+          <OutlinedInput
+            className={classes.input}
+            name="lastName"
+            onChange={(e) => setLastName(e.target.value)}
+            type="text"
+            value={lastName}
+          />
         </FormControl>
-        <FormControl>
+        <FormControl required>
           <InputLabel className={classes.label}>prénom</InputLabel>
-          <OutlinedInput className={classes.input} />
+          <OutlinedInput
+            className={classes.input}
+            name="firstName"
+            onChange={(e) => setFirstName(e.target.value)}
+            type="text"
+            value={firstName}
+          />
         </FormControl>
-        <FormControl>
+        <FormControl required>
           <InputLabel className={classes.label}>e-mail</InputLabel>
-          <OutlinedInput className={classes.input} />
+          <OutlinedInput
+            className={classes.input}
+            name="email"
+            onChange={(e) => setEmail(e.target.value)}
+            type="email"
+            value={email}
+          />
         </FormControl>
+
         <FormControl>
-          <InputLabel className={classes.label}>quels sont vos besoins ?</InputLabel>
+          <InputLabel className={classes.label}>
+            quels sont vos besoins ?
+          </InputLabel>
           <Select
             className={classes.selectInput}
-            label="quels sont vos besoins ?"
-            id="needs"
+            label={needs.length ? `${needs}` : "quels sont vos besoins ?"}
+            name="needs"
             multiple
-            input={
-              <OutlinedInput name="needs option" id="outlined need" notched />
-            }
+            input={<OutlinedInput name="needs option" id="need" />}
             placeholder="Select multiple"
-            value={props?.value ? props.value : selected}
+            value={needs}
+            onChange={(e) => setNeeds(e.target.value)}
           >
             {options.map((option, id) => (
               <MenuItem key={id} value={option} className={classes.menuItem}>
@@ -126,12 +202,19 @@ const Form = ({ classes, props }) => {
             ))}
           </Select>
         </FormControl>
+
         <FormControl>
-        <InputLabel className={classes.label}>quelques mots sur votre projet...</InputLabel>
+          <InputLabel className={classes.label}>
+            quelques mots sur votre projet...
+          </InputLabel>
           <TextareaAutosize
             aria-label="minimum height"
             minRows={8}
             className={classes.textArea}
+            name="message"
+            onChange={(e) => setMessage(e.target.value)}
+            type="text"
+            value={message}
           />
         </FormControl>
         <div className={classes.buttonSection}>
