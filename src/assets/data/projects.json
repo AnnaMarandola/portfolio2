@@ -1,6 +1,17 @@
-[
+[  {
+  "id": 0,
+  "img": "../../assets/images/projects/audiophile-preview.png",
+  "title": "Audiophile",
+  "description": "Boutique en ligne de materiel audio professionnel, ",
+  "client": "Frontend Mentor ",
+  "stack": ["React", "HTML5", "CSS3", "Javascript"],
+  "date": "novembre 2020",
+  "githubLink": "https://github.com/AnnaMarandola",
+  "visitLink": "https://adoring-saha-99f184.netlify.app/",
+  "tag": ["e-commerce", "landing page"]
+},
   {
-    "id": 0,
+    "id": 1,
     "img": "../../assets/images/projects/galleria-preview.png",
     "title": "Galleria",
     "description": "Galerie d’art virtuelle web/mobile avec visualisation chaque oeuvres dans une lighbox.",
@@ -12,7 +23,7 @@
     "tag": ["application", "landing page"]
   },
   {
-    "id": 1,
+    "id": 2,
     "img": "../../assets/images/projects/photosnap-preview.png",
     "title": "Photosnap",
     "description": "Landing page d'une application web/mobile de partage de photos collaborative. ",
@@ -23,7 +34,7 @@
     "tag": ["dévelopement front-end", "landing page"]
   },
   {
-    "id": 2,
+    "id": 3,
     "img": "../../assets/images/projects/dine-preview.png",
     "title": "Dine",
     "description": "Site vitrine de restaurant avec espace de réservation en ligne",
@@ -34,7 +45,7 @@
   },
 
   {
-    "id": 3,
+    "id": 4,
     "img": "../../assets/images/projects/shortly-preview.png",
     "title": "Shortly",
     "description": "Application permettant de raccourcir des adresses URL et de conserver les liens raccourcis dans le navigateur. ",
@@ -46,7 +57,7 @@
     "tag": ["application", "landing page"]
   },
   {
-    "id": 4,
+    "id": 5,
     "img": "../../assets/images/projects/yumi-preview.png",
     "title": "Yumi menu",
     "description": "Application de digitalisation des menus destinée aux professionnels de la restauration. Interface de mise à jour intuitive et authentification sécurisée",
@@ -58,7 +69,7 @@
     "tag": ["application", "landing page"]
   },
   {
-    "id": 5,
+    "id": 6,
     "img": "../../assets/images/projects/awesomeTable-preview.png",
     "title": "Application de gestion de fichier clients",
     "description": "Géolocalisation, recherche filtrée, e-mailing, ",
@@ -70,7 +81,7 @@
     "tag": ["application", "landing page"]
   },
   {
-    "id": 6,
+    "id": 7,
     "img": "../../assets/images/projects/boussole-preview.png",
     "title": "boussole.pro",
     "description": "Application permettant de raccourcir des adresses URL et de conserver les liens raccourcis dans le navigateur. ",
@@ -82,7 +93,7 @@
     "tag": ["application", "landing page"]
   },
   {
-    "id": 7,
+    "id": 8,
     "img": "../../assets/images/projects/neobserver-preview.png",
     "title": "Shortly",
     "description": "Application permettant de raccourcir des adresses URL et de conserver les liens raccourcis dans le navigateur. ",
@@ -94,7 +105,7 @@
     "tag": ["application", "landing page"]
   },
   {
-    "id": 8,
+    "id": 9,
     "img": "../../assets/images/projects/SanFeliu-preview.png",
     "title": "Shortly",
     "description": "Application permettant de raccourcir des adresses URL et de conserver les liens raccourcis dans le navigateur. ",
@@ -106,7 +117,7 @@
     "tag": ["application", "landing page"]
   },
   {
-    "id": 9,
+    "id": 10,
     "img": "../../assets/images/projects/deathQuizz-preview.png",
     "title": "Shortly",
     "description": "Application permettant de raccourcir des adresses URL et de conserver les liens raccourcis dans le navigateur. ",
@@ -118,7 +129,7 @@
     "tag": ["application", "landing page"]
   },
   {
-    "id": 10,
+    "id": 11,
     "img": "../../assets/images/projects/allergeek-preview.png",
     "title": "Shortly",
     "description": "Application permettant de raccourcir des adresses URL et de conserver les liens raccourcis dans le navigateur. ",
@@ -130,7 +141,7 @@
     "tag": ["application", "landing page"]
   },
   {
-    "id": 11,
+    "id": 12,
     "img": "../../assets/images/projects/videoChat-preview.png",
     "title": "VUo - vidéo chat",
     "description": "Application de chat vidéo sécurisée.",
