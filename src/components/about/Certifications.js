@@ -1,7 +1,8 @@
-import { Typography } from "@mui/material";
+import { Fab, Typography } from "@mui/material";
 import { withStyles } from "@mui/styles";
 import { Box } from "@mui/system";
 import certifications from "../../assets/data/certifications.json";
+import DownloadIcon from "@mui/icons-material/Download";
 
 const styles = (theme) => ({
   root: {
@@ -109,6 +110,13 @@ const Certifications = ({ classes }) => {
                   {info}
                 </Typography>
               ))}
+              { certif.url &&
+              <a href={certif.url} download target="_blank" rel="noreferrer">
+              <Fab size="small">
+                <DownloadIcon />{" "}
+                </Fab>
+              </a>
+              }
             </div>
           </Box>
         ))}

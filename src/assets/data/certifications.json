@@ -9,27 +9,28 @@
     "id": 1,
     "title": "Certification Google",
     "infos": ["Web marketing fundamentals", "12/2020"],
-    "logo": "../../assets/images/certif/image 3.png"
+    "logo": "../../assets/images/certif/image 3.png",
+    "url": "https://drive.google.com/file/d/1ADSVoTsceTl3B9kCTLaqiIlhPeh6e4_Z/view?usp=sharing"
   },
   {
     "id": 2,
     "title": "Titre professionnel développeur web/mobile",
     "infos": ["10/2020"],
-    "logo": "../../assets/images/certif/image 4.png"
+    "logo": "../../assets/images/certif/image 4.png",
+    "url": "https://drive.google.com/file/d/10L7o7TL-uN2PMCYF7xo97oet_XuTtSZq/view?usp=sharing"
   },
   {
     "id": 3,
     "title": "Wild Code School",
-    "infos": [
-      "Formation concepteur developpeur fullstack",
-      "2019/2020"
-    ],
-    "logo": "../../assets/images/certif/image 5.png"
+    "infos": ["Formation concepteur developpeur fullstack", "2019/2020"],
+    "logo": "../../assets/images/certif/image 5.png",
+    "url": "https://drive.google.com/file/d/10L7o7TL-uN2PMCYF7xo97oet_XuTtSZq/view?usp=sharing"
   },
   {
     "id": 4,
     "title": "Certificats OCR",
     "infos": ["auto-formation continue"],
-    "logo": "../../assets/images/certif/image 6.png"
+    "logo": "../../assets/images/certif/image 6.png",
+    "url": "https://drive.google.com/drive/folders/1fFiRbzAyY-d6y_BHFvI-t-lQsHsHvIko?usp=sharing"
   }
 ]
