@@ -19,7 +19,7 @@
 },
 {
     "id": 3,
-    "name": "Gestion de projet",
+    "name": "Conseils et accompagnement",
     "icon": "../../assets/images/services/fluent_book-search-20-filled.svg",
     "list": ["Achat de nom de domaine", "Rédaction des mentions légales", "Mise en conformité RGPD"]
 }

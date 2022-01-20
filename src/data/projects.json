@@ -24,6 +24,29 @@
   },
   {
     "id": 1,
+    "img": "../../assets/images/projects/galleria-preview.png",
+    "title": "Galleria",
+    "description": [
+      "Galerie d’art virtuelle web/mobile.",
+      "Le site permet de naviguer dans le diaporama et de visualiser chaque tableau dans une lighbox.",
+      "Site optimisé pour toutes les tailles d'écran",
+      "Présentation image/texte des œuvres présentées.",
+      "Projet redéployable pour un photographe ou un artiste."
+    ],
+    "client": "Frontend Mentor ",
+    "stack": ["React", "HTML5", "CSS3", "Javascript"],
+    "date": "novembre 2020",
+    "githubLink": "https://github.com/AnnaMarandola/Galleria",
+    "visitLink": "https://galleria-by-anna-m.netlify.app/",
+    "gallery": [
+      { "img": "SHORTLY", "subtitle": "Header" },
+      { "img": "SHORTLYD", "subtitle": "version laptop" },
+      { "img": "SHORTLYM", "subtitle": "version mobile" }
+    ],
+    "tag": ["application", "landing page"]
+  },
+  {
+    "id": 2,
     "img": "../../assets/images/projects/photosnap-preview.png",
     "title": "Photosnap",
     "description": [
@@ -40,7 +63,7 @@
     "tag": ["dévelopement front-end", "landing page"]
   },
   {
-    "id": 2,
+    "id": 3,
     "img": "../../assets/images/projects/SanFeliu-preview.png",
     "title": "Dine",
     "description": [
@@ -58,7 +81,7 @@
   },
 
   {
-    "id": 3,
+    "id": 4,
     "img": "../../assets/images/projects/shortly-preview.png",
     "title": "SHORTLY",
     "description": [

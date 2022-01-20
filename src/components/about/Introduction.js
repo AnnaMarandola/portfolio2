@@ -66,7 +66,7 @@ const Introduction = ({ classes }) => {
         </Typography>
         <Typography variant="body1" className={classes.paragraph}>
           Au fil des projets, j’ai progressivement élargi mon champ de
-          compétences au web marketing et au web design. Je et je mène une
+          compétences au web marketing et au web design. Je mène une
           veille active sur les nouvelles technologies et tendances du web.
         </Typography>
         <Typography variant="body2" className={classes.paragraph}>

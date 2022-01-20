@@ -4,16 +4,20 @@ import { Box } from "@mui/system";
 
 const styles = (theme) => ({
   card: {
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center center 8%",
+    backgroundSize: "cover",
     margin: "1rem",
     backgroundColor: theme.palette.background.dark,
     display: "flex",
-    justifyContent: "center",
+    justifyContent: "flex-end",
     alignItems: "flex-start",
     position: "relative",
     overflow: "hidden",
     borderRadius: "40px",
     width: "18rem",
-    height: "18rem",
+    height: "20rem",
+    filter: "grayscale(60%) brightness(80%)",
     "&:hover": {
       backgroundColor: theme.palette.background.light,
       "& $overlay": {
@@ -21,7 +25,7 @@ const styles = (theme) => ({
       },
     },
     [theme.breakpoints.up("lg")]: {
-      height: "20rem",
+      height: "25rem",
     },
 
   },
@@ -50,13 +54,13 @@ const styles = (theme) => ({
     transition: "0.7s ease-in-out",
   },
   image: {
-    width: "20%",
-    padding: "2rem",
+    width: "15%",
+    padding: "1rem",
     height: "auto",
     backgroundColor: theme.palette.background.default,
     borderRadius: "50%",
-    marginTop: "2.5rem",
-    border: "2px solid white",
+    margin: "1rem 1rem 0 0",
+    border: "2px solid grey",
   },
   svgArc: {
     width: "80px",
@@ -79,8 +83,8 @@ const styles = (theme) => ({
 
 const ServiceCard = ({ classes, service }) => {
   return (
-    <Box sx={{ boxShadow: 8 }} className={classes.card}>
-      <img src={service.icon} alt={service.name} className={classes.image} />
+    <Box sx={{ boxShadow: 8 }} className={classes.card} style={{ backgroundImage: `url(${service.bg})`}}>
+      {/* <img src={service.icon} alt={service.name} className={classes.image} /> */}
       <div className={classes.overlay}>
         <div className={classes.header}>
           <svg className={classes.svgArc} xmlns="http://www.w3.org/2000/svg">
