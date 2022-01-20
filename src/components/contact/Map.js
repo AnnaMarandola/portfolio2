@@ -28,8 +28,8 @@ const Map = ({ classes }) => {
 
   const adress = {
     center: {
-      lat: 60.192059,
-      lng: 24.945831
+      lat: 43.5970777,
+      lng: 1.4195984
     },
     zoom: 15
   };
