@@ -44,7 +44,6 @@ const styles = (theme) => ({
     [theme.breakpoints.up("lg")]: {
       height: "12.5rem",
     },
-
   },
   header: {
     padding: "2rem",

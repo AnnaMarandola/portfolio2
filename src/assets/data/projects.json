@@ -43,21 +43,8 @@
     "githubLink": "https://github.com/AnnaMarandola/photosnap_website",
     "tag": ["dévelopement front-end", "landing page"]
   },
-
   {
     "id": 4,
-    "img": "../../assets/images/projects/shortly-preview.png",
-    "title": "Shortly",
-    "description": "Application permettant de raccourcir des adresses URL et de conserver les liens raccourcis dans le navigateur. ",
-    "client": "Frontend Mentor ",
-    "stack": ["React", "HTML5", "CSS3", "APIrest", "Javascript", "Leaflet"],
-    "date": "novembre 2020",
-    "githubLink": "https://github.com/AnnaMarandola/shorten_links",
-    "visitLink": "",
-    "tag": ["application", "landing page"]
-  },
-  {
-    "id": 5,
     "img": "../../assets/images/projects/yumi-preview.png",
     "title": "Yumi menu",
     "description": "Application de digitalisation des menus destinée aux professionnels de la restauration. Interface de mise à jour intuitive et authentification sécurisée",
@@ -69,10 +56,22 @@
     "tag": ["application", "landing page"]
   },
   {
+    "id": 5,
+    "img": "../../assets/images/projects/bambou-preview.png",
+    "title": "Bambou crowdfund",
+    "description": "Page de financement participatif pour des supports d'écran de fabrication artisanale.",
+    "client": "Frontend Mentor",
+    "stack": ["React", "HTML5", "SCSS", "Javascript"],
+    "date": "novembre 2020",
+    "githubLink": "https://github.com/AnnaMarandola/bambou_crowdfunding",
+    "visitLink": "https://bambou-crowdfunding.vercel.app/",
+    "tag": ["application", "landing page"]
+  },
+  {
     "id": 6,
-    "img": "../../assets/images/projects/awesomeTable-preview.png",
-    "title": "Application de gestion de fichier clients",
-    "description": "Géolocalisation, recherche filtrée, e-mailing, ",
+    "img": "../../assets/images/projects/shortly-preview.png",
+    "title": "Shortly",
+    "description": "Application permettant de raccourcir des adresses URL et de conserver les liens raccourcis dans le navigateur. ",
     "client": "Frontend Mentor ",
     "stack": ["React", "HTML5", "CSS3", "APIrest", "Javascript", "Leaflet"],
     "date": "novembre 2020",
@@ -80,8 +79,22 @@
     "visitLink": "",
     "tag": ["application", "landing page"]
   },
+
   {
     "id": 7,
+    "img": "../../assets/images/projects/SanFeliu-preview.png",
+    "title": "San Feliu",
+    "description": "Site vitrine de restaurant avec gestion dynamique du menu",
+    "client": "le san féliu",
+    "stack": ["React", "HTML5", "CSS3", "APIrest", "Javascript", "Leaflet"],
+    "date": "novembre 2020",
+    "githubLink": "https://github.com/AnnaMarandola",
+    "visitLink": "",
+    "tag": ["application", "landing page"]
+  },
+
+  {
+    "id": 8,
     "img": "../../assets/images/projects/boussole-preview.png",
     "title": "boussole.pro",
     "description": "Application de management d'équipe basée sur un test de personalité. Stage de fin de formation",
@@ -92,7 +105,7 @@
     "tag": ["application", "landing page"]
   },
   {
-    "id": 8,
+    "id": 9,
     "img": "../../assets/images/projects/neobserver-preview.png",
     "title": "Neobserver",
     "description": "Site web dédié à l'observation des astéroides, utilisation des API de la NASA",
@@ -104,31 +117,19 @@
     "tag": ["application", "landing page"]
   },
   {
-    "id": 9,
-    "img": "../../assets/images/projects/SanFeliu-preview.png",
-    "title": "San Feliu",
-    "description": "Site vitrine de restaurant avec gestion dynamique du menu",
-    "client": "le san féliu",
-    "stack": ["React", "HTML5", "CSS3", "APIrest", "Javascript", "Leaflet"],
-    "date": "novembre 2020",
-    "githubLink": "https://github.com/AnnaMarandola",
-    "visitLink": "",
-    "tag": ["application", "landing page"]
-  },
-  {
     "id": 10,
-    "img": "../../assets/images/projects/deathQuizz-preview.png",
-    "title": "Death Quizz",
-    "description": "Jeu de quizz, utilsation de l'API Trivia db",
+    "img": "../../assets/images/projects/awesomeTable-preview.png",
+    "title": "Application de gestion de fichier clients",
+    "description": "Géolocalisation, recherche filtrée, e-mailing, ",
     "client": "Frontend Mentor ",
     "stack": ["React", "HTML5", "CSS3", "APIrest", "Javascript", "Leaflet"],
     "date": "novembre 2020",
-    "githubLink": "https://github.com/AnnaMarandola",
+    "githubLink": "https://github.com/AnnaMarandola/shorten_links",
     "visitLink": "",
     "tag": ["application", "landing page"]
   },
   {
-    "id": 11,
+    "id": 12,
     "img": "../../assets/images/projects/allergeek-preview.png",
     "title": "allergeek",
     "description": "Des milliers de recettes de cuisine adaptées aux allergies alimentaires",
@@ -140,7 +141,7 @@
     "tag": ["application", "landing page"]
   },
   {
-    "id": 12,
+    "id": 13,
     "img": "../../assets/images/projects/videoChat-preview.png",
     "title": "VUo - vidéo chat",
     "description": "Application de chat vidéo sécurisée.",
@@ -150,6 +151,17 @@
     "githubLink": "https://github.com/AnnaMarandola/video-chat",
     "visitLink": "https://chat-video-am.netlify.app/",
     "tag": ["application", "landing page"]
+  },
+  {
+    "id": 14,
+    "img": "../../assets/images/projects/deathQuizz-preview.png",
+    "title": "Death Quizz",
+    "description": "Jeu de quizz, utilsation de l'API Trivia db",
+    "client": "Frontend Mentor ",
+    "stack": ["React", "HTML5", "CSS3", "APIrest", "Javascript", "Leaflet"],
+    "date": "novembre 2020",
+    "githubLink": "https://github.com/AnnaMarandola",
+    "visitLink": "",
+    "tag": ["application", "landing page"]
   }
-
 ]
