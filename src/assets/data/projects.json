@@ -47,12 +47,12 @@
     "id": 4,
     "img": "../../assets/images/projects/yumi-preview.png",
     "title": "Yumi menu",
-    "description": "Application de digitalisation des menus destinée aux professionnels de la restauration. Interface de mise à jour intuitive et authentification sécurisée",
+    "description": "Application de digitalisation des menus destinée aux professionnels de la restauration. Interface de mise à jour intuitive et authentification sécurisée. REFONTE EN COURS... à tester sur écran mobile!",
     "client": "Frontend Mentor ",
     "stack": ["React", "HTML5", "CSS3", "APIrest", "Javascript", "Leaflet"],
     "date": "novembre 2020",
-    "githubLink": "https://github.com/AnnaMarandola/shorten_links",
-    "visitLink": "",
+    "githubLink": "https://github.com/AnnaMarandola/QR_menu",
+    "visitLink": "https://qrmenu-64802.firebaseapp.com/",
     "tag": ["application", "landing page"]
   },
   {
